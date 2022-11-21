@@ -83,11 +83,23 @@ nav * {
   text-shadow: 5px 5px 5px #999;
 }
 
-.workoutdescjeong {
+.workoutdescjeong,
+.studydescjeong,
+.bookdescjeong {
   display: none;
 }
 
 .workoutjeong:hover .workoutdescjeong {
+  display: block;
+  margin-top: 10px;
+}
+
+.studyjeong:hover .studydescjeong {
+  display: block;
+  margin-top: 10px;
+}
+
+.bookjeong:hover .bookdescjeong {
   display: block;
   margin-top: 10px;
 }
