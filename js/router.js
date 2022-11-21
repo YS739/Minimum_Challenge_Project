@@ -3,7 +3,7 @@ import { authService } from "./firebase.js";
 // 윤숙 - 페이지 경로 설정함 / "/"이 auth.html이 아니라 index.html(우리의 메인 페이지)
 const routes = {
   404: "/pages/404.html",
-  "/": "/pages/index.html",
+  "/": "index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
   mypage: "/pages/mypage.html",
