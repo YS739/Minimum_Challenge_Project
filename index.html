@@ -30,7 +30,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <title>Minimum_Challenge</title>
+    <title>Minimum Challenge</title>
   </head>
 
   <body>
@@ -45,7 +45,7 @@
           </div>
           <div class="loginbtnjeong">
             <button class="logbtnjeong">
-              <a href="#" onclick="route(event)">로그인</a>
+              <a href="#auth" onclick="route(event)">로그인</a>
             </button>
           </div>
         </div>
@@ -56,17 +56,31 @@
         <div class="allnavjeong">
           <a href="#" onclick="route(event)">전체보기</a>
         </div>
+
         <div class="workoutjeong">
-          <a href="#" onclick="route(event)">운동하기</a>
-          <div class="workoutdescjeong">
-            하루에 5분 운동하고 인증 사진을 올려주세요!
-          </div>
+          <label for="workoutys"
+            ><a href="#" onclick="route(event)" id="workoutys"
+              >운동하기
+              <div class="workoutdescjeong">딱 5분만 운동하자!</div>
+            </a></label
+          >
         </div>
+
         <div class="studyjeong">
-          <a href="#" onclick="route(event)">공부하기</a>
+          <label for="studyys">
+            <a href="#" onclick="route(event)" id="studyys"
+              >공부하기
+              <div class="studydescjeong">딱 10분만 공부하자!</div>
+            </a></label
+          >
         </div>
         <div class="bookjeong">
-          <a href="#" onclick="route(event)">독서하기</a>
+          <label for="studyys">
+            <a href="#" onclick="route(event)" id="studyys"
+              >독서하기
+              <div class="bookdescjeong">딱 1페이지만 읽자!</div>
+            </a></label
+          >
         </div>
         <div class="recentjeong">
           <a href="#" onclick="route(event)"
@@ -76,6 +90,11 @@
       </nav>
       <!-- 게시물 불러오는 곳 -->
 
+      <!-- 윤숙 - 여기에 해당 해쉬값을 가진 html이 붙는데 우리팀은 이 부분에 독서하기,
+      공부하기를 누르면 해당 게시물만 불러와지도록 하려고 함 그럼 div main-page가 게시물 불러오는 곳 위에 있고
+    해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!-->
+      <div id="main-page"></div>
+
       <div class="mainjeong">
         <div class="maincontainerjeong">
           <div class="postjeong">JS로 불러오는 게시글</div>
@@ -83,7 +102,8 @@
           <div class="postjeong">JS로 불러오는 게시글</div>
         </div>
       </div>
+
+      <script src="js/main.js" type="module"></script>
     </div>
-    <script src="js/main.js" type="module"></script>
   </body>
 </html>
