@@ -15,24 +15,21 @@
         <!-- 뒷배경 -->
         <div id="modikim" class="overlaykim"> <!--modikim 모든 스타일이 다 지워짐,오버레이킴은 상자가 왼쪽으로 감-->
             <!-- 프로필 관리창 -->
-            <div id="profilePage"> 
-                <section id="profileWrapper">
-            
             <div class="modi-windowkim">  <!-- 상자생김 -->
                 <div class="title">
                 <p>프로필 관리</p>
-                <form id="profileForm" onsubmit="changeProfile(event)"></form>
                 </div>
-<div id="profilePage"> 
-    <section id="profileWrapper">
-        <form id="profileForm" onsubmit="changeProfile(event)">
+
+                <!-- 복붙코드 <div id="profilePage"> -->
+    <!-- <section id="profileWrapper">
+        <form id="profileForm" onsubmit="changeProfile(event)"> -->
 
 
             <label id="imgLabel" for="imgInput">
                 <img id="profileView" src="/img/blankProfile.webp" />
                 <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
             </label>
-            <div>
+            <div class="prokim">
                 <input id="profileNickname" type="text" placeholder="현재 닉네임" value="" />
             </div>
             <br />

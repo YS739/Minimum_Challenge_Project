@@ -74,7 +74,7 @@
     margin-left: 15px;
 }
 
-.profileBtn:hover {                   /*수정하기 버튼 호버*/
+#profileBtn:hover {                   /*수정하기 버튼 호버*/
     border: 2px solid gray;
     cursor: pointer;  
 }
@@ -99,3 +99,10 @@
     margin-bottom: 20px;
 }
 
+/* .prokim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+ */
