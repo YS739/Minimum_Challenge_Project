@@ -6,47 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Minimum Challenge</title>
     <style>
-      .post-area {
-        background-color: lightsteelblue;
-      }
-      .category-select {
-        background-color: white;
-        width: 500px;
-        height: 40px;
-        border-radius: 5px;
-        padding: 0px 10px 0px 10px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: none;
-      }
-      .title-box {
-        width: 500px;
-        height: 40px;
-        border-radius: 5px;
-        background-color: lightgray;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: none;
-      }
-      .content-box {
-        width: 500px;
-        height: 100px;
-        border-radius: 5px;
-        background-color: lightgray;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        border: none;
-      }
-      .post-button {
-        width: 100px;
-        height: 30px;
-        border-radius: 5px;
-        background-color: black;
-        color: white;
-        border: none;
-        margin-top: 10px;
-        margin-bottom: 10px;
-      }
+        .post-area{
+            background-color:lightsteelblue;
+            width: 700px;
+
+            text-align: center;
+
+        }
+        .category-select{
+            background-color:white;
+            width: 500px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 0px 10px 0px 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border:none;
+
+        }
+        .title-box{
+            width: 500px;
+            height: 40px;
+            border-radius: 5px;
+            padding: 0px 10px 0px 10px;
+            background-color:lightgray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border:none;
+
+        }
+        .content-box{
+            width: 500px;
+            height: 100px;
+            border-radius: 5px;
+            padding: 0px 10px 0px 10px;
+            background-color:lightgray;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border:none;
+
+        }
+        .post-button{
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+            background-color:black;
+            color:white;
+            border:none;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
     </style>
   </head>
   <body>
@@ -84,6 +94,23 @@
       <!-- <div>
             <textarea placeholder="내용을 입력하세요" type="text"></textarea>
         </div> -->
+
+        <div class="content-box content" contenteditable="true"
+        style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;"
+        data-mce-style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 50px;"
+        role="textbox" aria-multiline="true" aria-label="글 내용 입력">
+        <p data-ke-size="size16"><br></p>
+        </div>  
+        <!-- data-mce-src는 게시판 에디터를 수정할 때 게시판 에디터가 이미지를 불러오는 경로-->
+
+        <button class="post-button" type="button">작성하기</button>
+
+        <div>
+            <input class="hashtag-box" placeholder="#태그를 입력해 주세요">
+        </div>
+        
+
+                <!-- 라벨태그 안에 이미지 넣기!!!!! onchange 함수가 실행이 되도록 할 수 있음!!! -->
 
       <div
         class="content-box content"

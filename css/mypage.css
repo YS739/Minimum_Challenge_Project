@@ -15,10 +15,15 @@
     left: 1750px;
     top: 10px;
     background-color: rgba(224, 239, 241, 0.8);
-    padding: 10px 15px 15px 15px;
+    padding: 10px 20px 15px 20px;
     font-size: 15px;
     border-radius: 50px;
-    border: none;
+    border: none;          
+}
+
+.logout-btn > .logout:hover {
+    border: 2px solid gray;
+    box-shadow: 1px 1px 2px gray;
     
 }
 .picture {
@@ -43,6 +48,7 @@
 }
 .edit {
     position: relative;
+    cursor: pointer;
 }
 .edit > p {
     position: absolute;
@@ -105,5 +111,53 @@
     top: -380px;
     height: 250px;
   }
+
+  .test {
+    position: relative;
+  }
+  .test > .testready {
+    position: absolute;
+    font-size: 20px;
+    left: 30px;
+    top: 30px;
+  }
+
+  .study {
+    position: relative;
+  }
+  .study > .contents {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+  }
+  .certificate {
+    position: relative;
+  }
+  .certificate > .article {
+    position: absolute;
+    top: 140px;
+    left: 30px;
+  }
+
+  .date {
+    position: relative;
+  }
+  .date > .day {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+  }
+  .good {
+    position: relative;
+  }
+  .good > p {
+    position: absolute;
+    top: 185px;
+    left: 250px;
+  }
+
+
+
+
   
  
