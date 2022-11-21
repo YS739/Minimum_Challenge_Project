@@ -146,3 +146,28 @@ a {                              /*회원가입 글자 스타일*/
     text-align: center;
     margin-top: 60px;
 }
+
+/* 11p- profile css */
+
+.title_profile {
+    margin-bottom: 700px;
+    margin-right: 30px;
+}
+
+.btn_profile {
+    background-color: skyblue;
+    width: 1000px;
+    height: 400px;
+}
+
+.input_profile {
+    background-color: gray;
+    width: 1000px;
+    height: 400px;
+}
+
+.photo_profile {
+    background-color: antiquewhite;
+    width: 200px;
+    height: 400px;
+}
