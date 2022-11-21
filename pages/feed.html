@@ -7,31 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css" />
     <title>Minimum_Challenge_feed</title>
-    <style>
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
+
 </head>
 
 <body>
-    <h1 class="title_feed">Minimum<br />Challenge</h1>
     <div>
-        <div class="btn_feed">
-            <button>뒤로가기</button>
-        </div>
-
-        <div class="input_feed">
-            <div class="photo_feed">
+        <div class="mypic">
+            <div class="font">
+                <p style="font-size: 20px"><b>Minimum<br>Challenge</b></p>
+            </div>
+            <div class="back">
 
             </div>
+            <div id="profileMngr">
+                <div class="viewmore">
+                    <p style="font-size: 80px">...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mypost">
+            <div class="form-floating mb-3">
+                <img id="profileImg" width="50px" height="50px" src="/assets/blankProfile.webp" />
+                <span id="nickname">닉네임</span>
+            </div>
+            <div class="form-floating">
+                <textarea class="form-control" placeholder="Leave a comment here" id="comment"
+                    style="height: 100px"></textarea>
+                <label for="floatingTextarea2">응원댓글</label>
+            </div>
+
+            <button>응원 남기기</button>
+        </div>
+        <div id="comment-list">
+
         </div>
     </div>
 
