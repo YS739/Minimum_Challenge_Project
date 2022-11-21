@@ -61,17 +61,11 @@
   </head>
   <body>
     <div class="post-area">
-      /* <input class="inp_file" type="file" /> */
+       <!-- <input class="inp_file" type="file" />  -->
 
       <fieldset class="fld_image">
         <div class="wrap_thumb photo_profile">
-          <img
-            src="기본 원컬러 사각형"
-            class="thumb_img"
-            width="180"
-            height="180"
-            alt=""
-          />
+          <img src="기본 원컬러 사각형" class="thumb_img" width="180" height="180" alt=""/>
           <label class="lab_btn lab_photo">
             <span class="ico_blog">블로그 이미지 찾아보기</span>
             <input type="file" class="btn_g" accept="image" />
@@ -103,6 +97,12 @@
         </div>  
         <!-- data-mce-src는 게시판 에디터를 수정할 때 게시판 에디터가 이미지를 불러오는 경로-->
 
+        <textarea class="content-box content" contenteditable="true"
+        data-mce-style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 50px;"
+        aria-multiline="true" aria-label="글 내용 입력">
+        <p data-ke-size="size16"><br></p>
+        </div>
+
         <button class="post-button" type="button">작성하기</button>
 
         <div>
@@ -112,28 +112,7 @@
 
                 <!-- 라벨태그 안에 이미지 넣기!!!!! onchange 함수가 실행이 되도록 할 수 있음!!! -->
 
-      <div
-        class="content-box content"
-        contenteditable="true"
-        spellcheck="false"
-        style="
-          overflow-y: hidden;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-bottom: 10px;
-        "
-        data-mce-style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 50px;"
-        role="textbox"
-        aria-multiline="true"
-        aria-label="글 내용 입력"
-      >
-        <p data-ke-size="size16"><br /></p>
-      </div>
-      <!-- data-mce-src는 게시판 에디터를 수정할 때 게시판 에디터가 이미지를 불러오는 경로-->
-
-      <button class="post-button" type="button">작성하기</button>
-
-      <!-- 라벨태그 안에 이미지 넣기!!!!! onchange 함수가 실행이 되도록 할 수 있음!!! -->
+      
     </div>
   </body>
 </html>
