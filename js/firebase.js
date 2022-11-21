@@ -3,7 +3,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 
-// 윤숙 firebase
+// 윤숙 firebase minimum project
 // 본인 프로젝트 script 코드 이 부분만 긁어오기
 const firebaseConfig = {
   apiKey: "AIzaSyD3o3-XC_gDlVs1ZjMyEap868XIXQUyjrc",
