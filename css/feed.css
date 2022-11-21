@@ -1,0 +1,52 @@
+.mypic {
+    width: 80%;
+    height: 300px;
+    box-shadow: 0px 0px 3px 0px gray;
+    position: relative;
+    left: 180px;
+    background-color: rgba(102, 163, 173, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .font {
+    position: relative;
+  }
+  .font >p {
+    position: absolute;
+    right: 810px;
+    top: -100px;
+  }
+
+  .back {
+    position: relative;
+  }
+.back >h1 {
+    position: absolute;
+    cursor: pointer;
+    right: 720px;
+    top: -120px;
+}
+.viewmore {
+    position: relative;
+}
+.viewmore >p {
+    position: absolute;
+    cursor: pointer;
+    left: 690px;
+    top: -240px;
+}
+
+  .mypost {
+    width: 80%;  
+    box-shadow: 0px 0px 3px 0px gray;
+    background-color: rgba(220, 230, 231, 0.8);
+    position: relative;
+    left: 180px;
+    height: 520px;
+  }
+  
+  .mypost > button {
+    margin-top: 15px;
+  }
