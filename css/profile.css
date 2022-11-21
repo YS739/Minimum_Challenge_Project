@@ -101,10 +101,10 @@
     justify-content: center;
 }
 
- .btnkim {                          /*닫기버튼 */
+.btnkim {                          /*닫기버튼 여기를 건들이면 닫기버튼이 길게 늘어짐 ;; 이거 도대체 왜이러는건데!!!!!!!!ㅡㅡ */
     position: relative;
     left: 480px;
-    bottom: 510px;
+    bottom: 500px;
     cursor: pointer;
 }
 
