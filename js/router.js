@@ -9,6 +9,7 @@ const routes = {
   mypage: "/pages/mypage.html",
   feed: "/pages/feed.html",
   auth: "/pages/auth.html",
+  loginmain: "/pages/loginmain.html",
 };
 
 // 윤숙 - 댓글을 다는 창이 feed.html이니까 feed.js로 수정함
@@ -32,7 +33,7 @@ export const handleLocation = async () => {
   const html = await fetch(route).then((data) => data.text());
   document.getElementById("root").innerHTML = html;
 
-  if (path === "fanLog") {
+  if (path === "loginmain") {
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "닉네임 없음";
@@ -48,7 +49,6 @@ export const handleLocation = async () => {
     // 윤숙 - 기본 프로필 사진을 정해서 "/assets~ 부분에 넣어야 함"
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "닉네임 없음";
-    // 윤숙 - 닉네임 없을 시 "닉네임 없음"으로 그대로 할 건지?
   }
 };
 
