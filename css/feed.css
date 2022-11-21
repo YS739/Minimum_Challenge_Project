@@ -10,9 +10,11 @@
     align-items: center;
     padding-top: 100px;
   }
+
   .font {
     position: relative;
   }
+
   .font >p {
     position: absolute;
     right: 810px;
@@ -22,15 +24,18 @@
   .back {
     position: relative;
   }
+
 .back >h1 {
     position: absolute;
     cursor: pointer;
     right: 720px;
     top: -120px;
 }
+
 .viewmore {
     position: relative;
 }
+
 .viewmore >p {
     position: absolute;
     cursor: pointer;
