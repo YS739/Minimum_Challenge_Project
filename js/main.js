@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const hash = window.location.hash;
     if (user) {
       if (hash === "") {
-        window.location.replace("");
+        window.location.replace("#loginmain");
       }
       //  윤숙- 로그인을 하고 로그인이 된 (글쓰기, 로그아웃, 프로필이 보이는)메인페이지로 보낼 건지,
       //  기존 메인페이지로 보내서 js로 글쓰기 버튼, 프로필을 추가해서 보여줄 건지 결정 필요
