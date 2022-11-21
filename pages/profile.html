@@ -13,43 +13,43 @@
       <button id="btn-modal">로그인</button>
       <div id="lorem-ipsum"></div>
     </div>
-    
+
     <!-- 뒷배경 -->
     <div id="modikim" class="overlaykim">
-        <!-- 닫기버튼 -->
-        <!-- <div class="close-btn" style="font-size: 25px">X</div> -->
-        <!-- 프로필 관리창 -->
-            <div class="modi-windowkim">
-                <div class="title">
-                <p>프로필 관리</p>
-                </div>
-                <div class="content">
-                <form>
-                    <!--여기서부터 폼 만들어짐-->
-                    <div>
-
-                        
-                    <input
-                        type="text"
-                        name="nickname"
-                        class="text-field"
-                        placeholder="닉네임"
-                    />
-                    </div>
-                    <div class="buttonskim">
-                    <button class="modifykim-btn">수정하기</button>
-                    <!-- <button class="github-btn">GitHub 로그인</button> -->
-                    </div>
-                </form>
-                <!-- <div class="logoskim"> -->
-                    <!--이미지로고들-->
-                    <!-- <div class="modifykim-logo"></div> -->
-                    <!-- <div class="github-logo"><img src="../img/깃허브로고.png" /></div> -->
-                    
-                    
-                </div>
-                </div>
-            </div>
-            </div>
-    </body>
-    </html>
+      <!-- 닫기버튼 -->
+      <!-- <div class="close-btn" style="font-size: 25px">X</div> -->
+      <!-- 프로필 관리창 -->
+      <div class="modi-windowkim">
+        <div class="title">
+          <p>프로필 관리</p>
+          <form id="profileForm" onsubmit="changeProfile(event)"></form>
+        </div>
+        <div id="profilePage">
+          <section id="profileWrapper">
+            <form id="profileForm" onsubmit="changeProfile(event)">
+              <label id="imgLabel" for="imgInput">
+                <img id="profileView" src="/img/blankProfile.webp" />
+                <input
+                  onchange="onFileChange(event)"
+                  id="imgInput"
+                  type="file"
+                  accept="images/*"
+                />
+              </label>
+              <div>
+                <input
+                  id="profileNickname"
+                  type="text"
+                  placeholder="현재 닉네임"
+                  value=""
+                />
+              </div>
+              <br />
+              <input id="profileBtn" type="submit" value="프로필 변경" />
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
