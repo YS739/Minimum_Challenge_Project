@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/profile.css" />
+        <title>Minimum_Challenge</title>
+      </head>
+      <body>
+        <div id="container">
+          <h2>메인화면</h2>
+          <button id="btn-modal">로그인</button>
+          <div id="lorem-ipsum"></div>
+        </div>
+        
+        <!-- 뒷배경 -->
+        <div id="modikim" class="overlaykim">
+            <!-- 닫기버튼 -->
+            <!-- <div class="close-btn" style="font-size: 25px">X</div> -->
+            <!-- 프로필 관리창 -->
+                <div class="modi-windowkim">
+                    <div class="title">
+                    <p>프로필 관리</p>
+                    </div>
+                    <div class="content">
+                    <form>
+                        <!--여기서부터 폼 만들어짐-->
+                        <div>
+                          <label id="imgLabel" for="imgInput">
+                            <img id="profileView" src="/assets/blankProfile.webp" />
+                            <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
+                        </label>
+                        <input
+                            type="text"
+                            name="nickname"
+                            class="text-field"
+                            placeholder="닉네임"
+                        />
+                        </div>
+                        <div class="buttonskim">
+                        <button class="modifykim-btn">수정하기</button>
+                        <!-- <button class="github-btn">GitHub 로그인</button> -->
+                        </div>
+                    </form>
+                    
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </body>
+        </html>
