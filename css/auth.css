@@ -146,3 +146,28 @@ a {                              /*회원가입 글자 스타일*/
     text-align: center;
     margin-top: 60px;
 }
+
+/* 11p- feed css */
+
+.title_feed {
+    margin-bottom: 700px;
+    margin-right: 30px;
+}
+
+.btn_feed {
+    background-color: skyblue;
+    width: 1000px;
+    height: 400px;
+}
+
+.input_feed {
+    background-color: gray;
+    width: 1000px;
+    height: 400px;
+}
+
+.photo_feed {
+    background-color: antiquewhite;
+    width: 200px;
+    height: 400px;
+}
