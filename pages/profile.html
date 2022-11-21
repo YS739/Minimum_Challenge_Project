@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,53 +13,43 @@
       <button id="btn-modal">로그인</button>
       <div id="lorem-ipsum"></div>
     </div>
-    
+
     <!-- 뒷배경 -->
     <div id="modikim" class="overlaykim">
-        <!-- 닫기버튼 -->
-        <!-- <div class="close-btn" style="font-size: 25px">X</div> -->
-        <!-- 프로필 관리창 -->
-            <div class="modi-windowkim">
-=======
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/profile.css" />
-        <title>Minimum_Challenge</title>
-      </head>
-      <body>
-        <div id="container">
-          <h2>메인화면</h2>
+      <!-- 닫기버튼 -->
+      <!-- <div class="close-btn" style="font-size: 25px">X</div> -->
+      <!-- 프로필 관리창 -->
+      <div class="modi-windowkim">
+        <div class="title">
+          <p>프로필 관리</p>
+          <form id="profileForm" onsubmit="changeProfile(event)"></form>
         </div>
-        
-        <!-- 뒷배경 -->
-        <div id="modikim" class="overlaykim"> <!--modikim 모든 스타일이 다 지워짐,오버레이킴은 상자가 왼쪽으로 감-->
-            <!-- 프로필 관리창 -->
-            <div id="profilePage"> 
-                <section id="profileWrapper">
-            
-            <div class="modi-windowkim">  <!-- 상자생김 -->
->>>>>>> 9b51ae87f5b429f9b4f36441f5df5274f446c58d
-                <div class="title">
-                <p>프로필 관리</p>
-                <form id="profileForm" onsubmit="changeProfile(event)"></form>
-                </div>
-<div id="profilePage"> 
-    <section id="profileWrapper">
-        <form id="profileForm" onsubmit="changeProfile(event)">
-
-
-            <label id="imgLabel" for="imgInput">
+        <div id="profilePage">
+          <section id="profileWrapper">
+            <form id="profileForm" onsubmit="changeProfile(event)">
+              <label id="imgLabel" for="imgInput">
                 <img id="profileView" src="/img/blankProfile.webp" />
-                <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
-            </label>
-            <div>
-                <input id="profileNickname" type="text" placeholder="현재 닉네임" value="" />
-            </div>
-            <br />
-            <input id="profileBtn" type="submit" value="프로필 변경" />
-        </form>
-    </section>
-</div>
+                <input
+                  onchange="onFileChange(event)"
+                  id="imgInput"
+                  type="file"
+                  accept="images/*"
+                />
+              </label>
+              <div>
+                <input
+                  id="profileNickname"
+                  type="text"
+                  placeholder="현재 닉네임"
+                  value=""
+                />
+              </div>
+              <br />
+              <input id="profileBtn" type="submit" value="프로필 변경" />
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
