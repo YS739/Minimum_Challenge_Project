@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { authService } from "./firebase.js";
 
 // 윤숙 - 페이지 경로 설정함 / "/"이 auth.html이 아니라 index.html(우리의 메인 페이지)
@@ -56,5 +55,3 @@ export const handleLocation = async () => {
 export const goToProfile = () => {
   window.location.hash = "#profile";
 };
-=======
->>>>>>> 9b51ae87f5b429f9b4f36441f5df5274f446c58d
