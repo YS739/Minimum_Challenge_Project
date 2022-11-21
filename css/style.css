@@ -147,26 +147,26 @@ a {                              /*회원가입 글자 스타일*/
     margin-top: 60px;
 }
 
-/* 11p- profile css */
+/* 11p- feed css */
 
-.title_profile {
+.title_feed {
     margin-bottom: 700px;
     margin-right: 30px;
 }
 
-.btn_profile {
+.btn_feed {
     background-color: skyblue;
     width: 1000px;
     height: 400px;
 }
 
-.input_profile {
+.input_feed {
     background-color: gray;
     width: 1000px;
     height: 400px;
 }
 
-.photo_profile {
+.photo_feed {
     background-color: antiquewhite;
     width: 200px;
     height: 400px;
