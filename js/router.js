@@ -23,6 +23,17 @@ const routes = {
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", "");
   const pathName = window.location.pathname;
+<<<<<<< HEAD
+=======
+}
+
+  // 윤숙 - 우리는 메인이 index.page니까 이 코드가 필요하지 않을 것 같아 일단 주석처리
+  // Live Server를 index.html에서 오픈할 경우
+  // if (pathName === "/index.html") {
+  //   window.history.pushState({}, "", "/");
+  // }
+
+>>>>>>> 8f14ce101754cff842487c43eaa1ba13c7b86e2c
   if (path.length == 0) {
     path = "/";
   }
