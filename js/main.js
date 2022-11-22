@@ -1,15 +1,16 @@
-import { handleAuth, onToggle, logout } from "./pages/auth.js";
-import { changeProfile, onFileChange } from "./pages/profile.js";
-import { socialLogin } from "./pages/auth.js";
-import { handleLocation, goToProfile } from "./router.js";
-import { authService } from "./firebase.js";
-import {
-  save_comment,
-  update_comment,
-  onEditing,
-  delete_comment,
-} from "./pages/fanLog.js";
+//유안 - 내가 코드 쓴거
+// import { authService } from "./firebase.js";
+import { handleLocation, route } from "./router.js";
 
+// 첫 랜딩 또는 새로고침 시 처리
+document.addEventListener("DOMContentLoaded", handleLocation);
+
+// 전역 함수 리스트
+window.route = route;
+
+
+
+//유안 - 여기부터 윤숙님 코드
 window.addEventListener("hashchange", handleLocation);
 
 document.addEventListener("DOMContentLoaded", function () {

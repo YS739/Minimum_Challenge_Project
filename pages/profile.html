@@ -39,14 +39,23 @@
             </div>
             <br />
                 <!-- nav bar -->
+                <!-- 자스가 다운되기 전에 보여줄 정적인 부분 -->
                 <nav class="profile-nav">
                     <label for="profile-navkim">
-                        <!-- #말고 #mypage로 넘어갔으면 좋겠어서 mypage로 해봄 -->
+                        <!-- #말고 #loginmain로 넘어갔으면 좋겠어서 mypage로 해봄 -->
                         <a href="#mypage" onclick="route(event)" id="profile-changekim">
+                            <!-- 프로필변경버튼을 누르면 변경된 마이페이지로 이동을 하고 싶은데 버튼은 이동이 안되고 h2글자를 눌러야 이동이 됨 -->
                             <input id="profileBtn" type="submit" value="프로필 변경" />
+                            <h2>프로필 변경</h2>
                         </a>
                     </label>
                 </nav>
+
+                <!-- 자스가 다운되고나서 보여줄 동적인 부분 -->
+                <div id="main-page"></div>
+                <!-- 다운받을 자스파일-->
+                <script src="js/main.js" type="module"></script>
+
         </div>
                 <!--닫기버튼-->
                 <div class="closeTabClick">
