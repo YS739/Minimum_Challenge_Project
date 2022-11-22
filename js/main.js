@@ -1,50 +1,25 @@
-import { handleAuth, onToggle } from "./pages/auth.js";
-import { logout } from "index.html";
-import { changeProfile, onFileChange } from "./pages/profile.js";
-import { socialLogin } from "./pages/auth.js";
-import { handleLocation, goToProfile } from "./router.js";
 import { authService } from "./firebase.js";
-import {
-  save_comment,
-  update_comment,
-  onEditing,
-  delete_comment,
-} from "./pages/feed.js";
+import { handleLocation, route } from "./router.js";
 
+// hash url 변경 시 처리
 window.addEventListener("hashchange", handleLocation);
 
-document.addEventListener("DOMContentLoaded", function () {
+// 첫 랜딩 또는 새로고침 시 처리
+document.addEventListener("DOMContentLoaded", () => {
+  // 로그인 상태 모니터링
   authService.onAuthStateChanged((user) => {
-    handleLocation();
-    const hash = window.location.hash;
+    // Firebase 연결되면 화면 표시
+    // user === authService.currentUser 와 같은 값
+    handleLocation(); //authService가 연결 되면 handleLocation 실행
     if (user) {
-      if (hash === "") {
-        alert("로그인 성공");
-        window.location.replace("#loginmain");
-      }
+      // 로그인 상태인 경우
+      alert("로그인 성공");
     } else {
-      if (hash !== "") {
-        alert("로그아웃 성공");
-        window.location.replace("");
-      }
+      // 로그아웃 상태인 경우
+      alert("로그아웃 완료");
     }
   });
 });
 
-// 유안 - 프로필수정 닫기 버튼
-window.close = closeTabClick;
-
-
-// onclick, onchange, onsubmit 이벤트 핸들러 리스트
+// 전역 함수 리스트
 window.route = route;
-window.onToggle = onToggle;
-window.handleAuth = handleAuth;
-window.goToProfile = goToProfile;
-window.socialLogin = socialLogin;
-window.logout = logout;
-window.onFileChange = onFileChange;
-window.changeProfile = changeProfile;
-window.save_comment = save_comment;
-window.update_comment = update_comment;
-window.onEditing = onEditing;
-window.delete_comment = delete_comment;
