@@ -1,9 +1,14 @@
-import { authService } from "./firebase.js";
+// import { authService } from "./firebase.js";
+
+export const route = (event) => {
+  event.preventDefault();
+  window.location.hash = event.target.hash;
+};
 
 // 윤숙 - 페이지 경로 설정함 / "/"이 auth.html이 아니라 index.html(우리의 메인 페이지)
 const routes = {
   404: "/pages/404.html",
-  "/": "/pages/index.html",
+  "/": "index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
   mypage: "/pages/mypage.html",
@@ -13,7 +18,7 @@ const routes = {
 };
 
 // 윤숙 - 댓글을 다는 창이 feed.html이니까 feed.js로 수정함
-import { getCommentList } from "./pages/feed.js";
+// import { getCommentList } from "./pages/feed.js";
 
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", "");
@@ -31,27 +36,29 @@ export const handleLocation = async () => {
 
   const route = routes[path] || routes[404];
   const html = await fetch(route).then((data) => data.text());
-  document.getElementById("root").innerHTML = html;
+  // document.getElementById("root").innerHTML = html;
+  document.getElementById("main-page").innerHTML = html;
 
-  if (path === "loginmain") {
-    // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
-    document.getElementById("nickname").textContent =
-      authService.currentUser.displayName ?? "닉네임 없음";
+  // if (path === "loginmain") {
+  //   // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
+  //   document.getElementById("nickname").textContent =
+  //     authService.currentUser.displayName ?? "닉네임 없음";
 
-    document.getElementById("profileImg").src =
-      authService.currentUser.photoURL ?? "../assets/blankProfile.webp";
+  //   document.getElementById("profileImg").src =
+  //     authService.currentUser.photoURL ?? "../assets/blankProfile.webp";
 
-    getCommentList();
-  }
-  if (path === "profile") {
-    document.getElementById("profileView").src =
-      authService.currentUser.photoURL ?? "/assets/blankProfile.webp";
-    // 윤숙 - 기본 프로필 사진을 정해서 "/assets~ 부분에 넣어야 함"
-    document.getElementById("profileNickname").placeholder =
-      authService.currentUser.displayName ?? "닉네임 없음";
-  }
-};
+//     getCommentList();
+  // }
+//   if (path === "profile") {
+//     document.getElementById("profileView").src =
+//       authService.currentUser.photoURL ?? "/assets/blankProfile.webp";
+//     // 윤숙 - 기본 프로필 사진을 정해서 "/assets~ 부분에 넣어야 함"
+//     document.getElementById("profileNickname").placeholder =
+//       authService.currentUser.displayName ?? "닉네임 없음";
+//   }
+// };
 
-export const goToProfile = () => {
-  window.location.hash = "#profile";
-};
+// export const goToProfile = () => {
+//   window.location.hash = "#profile";
+// };
+// 

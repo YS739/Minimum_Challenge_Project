@@ -1,10 +1,13 @@
+* {
+    font-family: 'Jua', sans-serif;
+}
 #modikim.overlaykim {                  /*뒷배경 */
     width: 100%;                     
     height: 100%;
     position: absolute;
     left: 0;
     top: 0;
-    display: flex;          /*여기서부터 3줄까지 웹개발종합반에서 나온거 */
+    display: flex;          
     align-items: center;
     justify-content: center;
 
@@ -43,20 +46,11 @@
 
 #modikim .title p {                     /*프로필 관리 글씨 세부*/
     display: inline-block;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 8px;
     
     
 }
-
-/* #modikim .close-btn {                  /* 닫기 버튼 */
-    /* float: top;
-    padding-right: 10px;
-    cursor: pointer;               /*이거 쓰면 커서 손모양으로 바뀜 굿 */
-    /* text-shadow: 1px 1px 2px gray;
-    color: black    
-}  */ 
-
 
 #modikim .content {                   /*닉네임, 수정하기 묶음 */
     margin-top: 220px;              /*닉네임 입력칸 위치*/
@@ -74,7 +68,7 @@
     margin-left: 15px;
 }
 
-.profileBtn:hover {                   /*수정하기 버튼 호버*/
+#profileBtn:hover {                   /*프로필 변경 버튼 호버*/
     border: 2px solid gray;
     cursor: pointer;  
 }
@@ -97,5 +91,24 @@
     width: 150px;
     height: 150px;
     margin-bottom: 20px;
+    padding-left: 120px;
 }
 
+.prokim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnkim {                          /*닫기버튼 여기를 건들이면 닫기버튼이 길게 늘어짐 ;; 이거 도대체 왜이러는건데!!!!!!!!ㅡㅡ */
+    position: relative;
+    left: 480px;
+    bottom: 500px;
+    cursor: pointer;
+}
+
+.btnkim:hover {
+    border: 2px solid white;
+    cursor: pointer;  
+}
