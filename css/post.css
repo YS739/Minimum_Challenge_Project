@@ -34,14 +34,14 @@
 }
 /* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
 
-.plus-logoson {
+.plus-btnson {
   width: 50px;
   heigth: auto;
   position:absolute;
   top:50%;
   left:50%;
-  opacity: 0.7;
-  background-color:grey;
+  opacity: 0.5;
+  background-color:white;
   padding: 10px;
 
 }
