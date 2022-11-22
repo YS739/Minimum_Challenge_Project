@@ -24,10 +24,6 @@ export const handleLocation = async () => {
     path = "/";
   }
 
-  // 윤숙 - 페이지 별 DOM 처리 시도
-  if (path === "post") {
-    path = "post";
-  }
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
 
   const html = await fetch(route).then((data) => data.text());
@@ -56,7 +52,7 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
   }
 };
-// 윤숙 - 다른 페이지 이동할 때 이렇게!
+// 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
   window.location.hash = "#post";
 };
