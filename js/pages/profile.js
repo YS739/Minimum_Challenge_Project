@@ -45,7 +45,9 @@ export const changeProfile = async (event) => {
     }  
       // 화면에 이미지를 뿌릴 때 downloadUrl을 이용해서 뿌릴 거기 때문이다.
       // imgDagaUrl은 임시적으로 업로드를 하기 위한 준비단계에서 필요한 것뿐 바로 날라갈 애(임시적)
-      // 영구적으로 쓸 건 downloadUrl
+      // 영구적으로 쓸 건 downloadUrl. 다운로드 유알엘을 받아서 핸들링을 할 것이다.
+
+    //프로필을 수정하기 위해서 updateProfile에다가 downloadUrl을 photourl로다가 집어넣을 것
     await updateProfile(authService.currentUser, {
       displayName: newNickname ? newNickname : null,
       photoURL: downloadUrl ? downloadUrl : null,
