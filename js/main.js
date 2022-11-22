@@ -1,5 +1,5 @@
 import { authService } from "./firebase.js";
-import { handleLocation, route } from "./router.js";
+import { handleLocation, route, goToPost, goToMyPage } from "./router.js";
 import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 
@@ -28,3 +28,6 @@ window.route = route;
 window.onToggle = onToggle;
 window.handleAuth = handleAuth;
 window.socialLogin = socialLogin;
+// 새로 만든 이벤트 추가
+window.goToPost = goToPost;
+window.goToMyPage = goToMyPage;
