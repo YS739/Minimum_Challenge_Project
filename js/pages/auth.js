@@ -14,7 +14,7 @@ export const handleAuth = (event) => {
   const email = document.getElementById("email");
   const emailVal = email.value;
   const password = document.getElementById("password");
-  const passwordVal = password.value;
+  const pwVal = password.value;
 
   // 유효성 검사 진행
   if (!emailVal) {
@@ -22,7 +22,7 @@ export const handleAuth = (event) => {
     email.focus();
     return;
   }
-  if (!passwordVal) {
+  if (!pwVal) {
     alert("비밀번호를 입력해 주세요");
     password.focus();
     return;
