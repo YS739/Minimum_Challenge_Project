@@ -1,5 +1,7 @@
 import { authService } from "./firebase.js";
 import { handleLocation, route } from "./router.js";
+import { socialLogin } from "./pages/auth.js";
+import { handleAuth, onToggle } from "./pages/auth.js";
 
 // hash url 변경 시 처리
 window.addEventListener("hashchange", handleLocation);
@@ -23,3 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 전역 함수 리스트
 window.route = route;
+window.onToggle = onToggle;
+window.handleAuth = handleAuth;
+window.socialLogin = socialLogin;

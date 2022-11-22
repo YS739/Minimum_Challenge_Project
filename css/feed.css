@@ -22,15 +22,16 @@
   .back {
     position: relative;
   }
-.back >a {
+.back >button {
     position: absolute;
-    cursor: pointer;
-    right: 700px;
-    top: -130px;
-    text-decoration: none;
+    right: 680px;
+    top: -95px;
+    border: none;
     outline: none;
     color: black;
     font-size: 25px;
+    background-color:transparent;
+    font-size: 50px;
     
 }
 .viewmore {
@@ -64,6 +65,7 @@ input#menu:checked + nav#main_nav{
   border: none;
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
+  padding-bottom: 20px;
   
 }
 .delete > .revicebtn > button:hover {
@@ -71,16 +73,18 @@ input#menu:checked + nav#main_nav{
   box-shadow: 1px 1px 2px gray;
 }
 .delete > .revicebtn > button > p {
-  font-size: 20px;
-  padding-right: 16px;
-  margin-left: 18px;
+    border-radius: 50px;
+    border: none;
+    width: 110px;
+    height: 10px;
+    font-size: 20px;
 }
 .delete > .deletebtn > button {
-  text-decoration: none;
   color: black;
   border: none;
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
+  padding-bottom: 20px;
   
 }
 .delete > .deletebtn > button:hover {
@@ -88,9 +92,12 @@ input#menu:checked + nav#main_nav{
   box-shadow: 1px 1px 2px gray;
 }
 .delete > .deletebtn > button > p {
-  font-size: 20px;
-  padding-right: 20px;
-  margin-left: 17px;
+    border-radius: 50px;
+    border: none;
+    width: 110px;
+    height: 10px;
+    font-size: 20px;
+     
 }
 .delete {
   position: relative;
@@ -98,13 +105,14 @@ input#menu:checked + nav#main_nav{
 
 .delete > .revicebtn {
   position: absolute;
-  top: 0px;
-  left: 680px;
+  top: -20px;
+  left: 610px;
   
 }
 .delete > .deletebtn {
   position: absolute;
-  left: 600px;
+  top: 55px;
+  left: 610px;
   
 }
 
