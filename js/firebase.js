@@ -14,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "minimum-3150e.appspot.com",
   messagingSenderId: "325755616401",
   appId: "1:325755616401:web:07f0d070065e0b8e8c5330",
-  measurementId: "G-5C66P5J89V",
+  measurementId: "G-5C66P5J89V"
 };
 export const app = initializeApp(firebaseConfig);
 export const dbService = getFirestore(app);
