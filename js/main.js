@@ -31,3 +31,4 @@ window.socialLogin = socialLogin;
 // 새로 만든 이벤트 추가
 window.goToPost = goToPost;
 window.goToMyPage = goToMyPage;
+window.logout = logout;
