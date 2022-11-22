@@ -1,10 +1,11 @@
 // import { handleAuth, onToggle } from "./pages/auth.js";
-// import { logout } from "index.html";
+// import { logout } from "loginmain.html"; // 윤숙 - index로 되어 있어서 loginmain으로 바꿈
 // import { changeProfile, onFileChange } from "./pages/profile.js";
 // import { socialLogin } from "./pages/auth.js";
 import { handleLocation, route } from "./router.js";
 // 윤숙 goToProfile 잠시 제외함!(페이지 이동이 안 돼서)
 // import { authService } from "./firebase.js";
+
 // import {
 //   save_comment,
 //   update_comment,
