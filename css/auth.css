@@ -46,14 +46,18 @@
     
 }
 
-#modal .close-area {                  /* x 스타일 */
-    float: right;
-    padding-right: 10px;
-    cursor: pointer;               /*이거 쓰면 커서 손모양으로 바뀜 굿 */
+#modal .close-area {                /* x 스타일 */    
+    position: relative;                                     
     text-shadow: 1px 1px 2px gray;
-    color: black
-    
-     
+    color: black     
+}
+#modal .close-area > button {
+    position: absolute;
+    top: -170px;
+    left: 470px;
+    border: none;
+    background-color:transparent;
+    font-size: 40px;
 }
 
 #modal .content {                   /*로그인폼 전체 스타일 지워도 잘 못느끼겠음 */
@@ -71,13 +75,8 @@
     padding: 20px;
     margin-left: 15px;
 }
-.buttons {                       /*버튼묶음 스타일 */
-    
-    text-align: center;   
-    margin-top: 40px;
-     
-}
-.github-btn {                    /*깃 버튼 스타일 */
+
+.login-btn > button {                   /*로그인 버튼 스타일*/
     background-color: white;
     border-radius: 50px;
     border: none;
@@ -85,10 +84,45 @@
     height: 50px;
     padding-right: 10px;
     font-size: 15px;
-    text-align: right;
-      
 }
-.twitter-btn {                   /*트위터 버튼 스타일 */
+
+.login-btn {
+    position: relative;
+}
+
+.login-btn >button {
+    position: absolute;
+    left: 160px;
+}
+
+.login-btn >button:hover {
+    border: 2px solid gray;
+}
+
+.buttons {                       /*버튼묶음 스타일 */
+    position: relative;
+    text-align: center;   
+    margin-top: 40px;
+     
+}
+.github-btn {  
+    position: absolute; 
+    top: 30px;
+    left: -5px;                  /*깃 버튼 스타일 */
+    background-color: white;
+    border-radius: 50px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    padding-right: 10px;
+    font-size: 15px;
+    text-align: right; 
+       
+}
+.twitter-btn {    
+    position: absolute;
+    top: 30px;
+    left: 160px;               /*트위터 버튼 스타일 */
     background-color: white;
     border-radius: 50px;
     border: none;
@@ -99,7 +133,10 @@
     text-align: right;
     
 }
-.google-btn {                        /*구글 버튼 스타일 */
+.google-btn {   
+    position: absolute;
+    top: 30px;
+    right: 0px;                     /*구글 버튼 스타일 */
     background-color: white;
     border-radius: 50px;
     border: none;
@@ -114,18 +151,18 @@
 }                                             
 .github-logo {                 /*깃헙 로고 위치 조정*/
     position: absolute;
-    top: -40px;
-    left: 20px;
+    bottom: -75px;
+    left: 3px;
 }
 .twitter-logo {                 /*트위터 로고 위치 조정*/
     position: absolute;
-    top: -40px;
-    left: 180px;
+    top: 40px;
+    left: 170px;
 }
 .google-logo {                   /*구글 로고 위치 조정*/
     position: absolute;
-    top: -40px;
-    left: 330px;
+    top: 40px;
+    left: 340px;
 }
 .github-btn:hover {                 /*이거 hover 왜 다 따로 설정해야하지 한꺼번에 설정 안되나*/
     border: 2px solid gray;
@@ -142,9 +179,15 @@ a {                              /*회원가입 글자 스타일*/
     color: blue;
   }
 
-.lastline {              /*버튼 아래 글자들 스타일*/
+.lastline { 
+    position: relative;             /*버튼 아래 글자들 스타일*/
     text-align: center;
     margin-top: 60px;
+}
+.lastline > p {
+    position: absolute;
+    top: 80px;
+    left: 120px;
 }
 
 /* 11p- feed css */
