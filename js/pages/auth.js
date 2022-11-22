@@ -9,7 +9,7 @@ import {
   signOut
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
-// 로그인 성공 시 로그인메인 화면으로 이동
+// 로그인 성공 시 loginmain 화면으로 이동
 export const handleAuth = (event) => {
   event.preventDefault();
   const email = document.getElementById("email");
@@ -17,7 +17,7 @@ export const handleAuth = (event) => {
   const pw = document.getElementById("pw");
   const pwVal = pw.value;
 
-  // 유효성 검사 진행
+  // 유효성 검사
   if (!emailVal) {
     alert("이메일을 입력해 주세요");
     email.focus();
@@ -47,7 +47,6 @@ export const handleAuth = (event) => {
   const loginBtnText = document.querySelector("#loginBtn").value;
   if (loginBtnText === "로그인") {
     // 유효성검사 후 로그인 성공 시 loginmain 화면으로
-
     signInWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
@@ -65,7 +64,7 @@ export const handleAuth = (event) => {
         }
       });
   } else {
-    // 회원가입 버튼 클릭의 경우
+    // 회원가입 버튼 클릭
     createUserWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
@@ -112,7 +111,6 @@ export const socialLogin = (event) => {
       const user = result.user;
     })
     .catch((error) => {
-      // Handle Errors here.
       console.log("error:", error);
       const errorCode = error.code;
       const errorMessage = error.message;
