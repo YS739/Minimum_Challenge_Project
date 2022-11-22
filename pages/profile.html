@@ -22,19 +22,17 @@
                 <form id="profileForm" onsubmit="changeProfile(event)"> 
         
         <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
-        <div class="modi-windowkim">  <!-- 상자생김 -->
-            <div class="title">
-            <p>프로필 관리</p>
-            </div>
-
+        <div class="modi-windowkim">  <!-- 상자생김 -->      
         <label id="imgLabel" for="imgInput">
-            <img id="profileView" src="/assets/blankProfile.webp" />
+            <div class="imagemove">
+                <img id="profileView" src="../img/1.jpg" />
+            </div>
             <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
         </label>
 
         <!--상자안에 글씨, 입력칸등의 위치 정렬-->
         <div class="prokim">        
-            <div>
+            <div class="myname">
                 <input id="profileNickname" type="text" placeholder="현재 닉네임" value="" />
             </div>
             <br />
@@ -44,9 +42,15 @@
                     <label for="profile-navkim">
                         <!-- #말고 #loginmain로 넘어갔으면 좋겠어서 mypage로 해봄 -->
                         <a href="#mypage" onclick="route(event)" id="profile-changekim">
+<<<<<<< HEAD
                             <!-- 프로필변경버튼을 누르면 변경된 마이페이지로 이동을 하고 싶은데 버튼은 이동이 안되고 h2글자를 눌러야 이동이 됨 -->
                             <input id="profileBtn" type="submit" value="프로필 변경" />
                             <h2>프로필 변경</h2>
+=======
+                            <div class="mybtn">
+                                <button>수정하기</button>
+                            </div>
+>>>>>>> a04e67e620085d02cce4feadb100b0ad311518e3
                         </a>
                     </label>
                 </nav>
