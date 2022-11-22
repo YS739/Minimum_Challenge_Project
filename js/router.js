@@ -23,6 +23,11 @@ export const handleLocation = async () => {
   if (path.length == 0) {
     path = "/";
   }
+
+  // 윤숙 - 페이지 별 DOM 처리 시도
+  if (path === "post") {
+    path = "post";
+  }
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
 
   const html = await fetch(route).then((data) => data.text());
@@ -49,10 +54,5 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
-  }
-
-  // 윤숙 - 페이지 별 DOM 처리 시도
-  if (path === "post") {
-    path = "post";
   }
 };
