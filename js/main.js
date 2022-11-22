@@ -1,7 +1,7 @@
 import { authService } from "./firebase.js";
 import { handleLocation, route } from "./router.js";
 import { socialLogin } from "./pages/auth.js";
-import { handleAuth, onToggle } from "./pages/auth.js";
+import { handleAuth, onToggle, logout } from "./pages/auth.js";
 
 // hash url 변경 시 처리
 window.addEventListener("hashchange", handleLocation);
@@ -28,3 +28,4 @@ window.route = route;
 window.onToggle = onToggle;
 window.handleAuth = handleAuth;
 window.socialLogin = socialLogin;
+window.logout = logout;

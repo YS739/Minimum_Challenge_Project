@@ -1,3 +1,5 @@
+
+
 export const route = (event) => {
   event.preventDefault();
   window.location.hash = event.target.hash;

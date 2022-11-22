@@ -6,6 +6,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
+  signOut
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 // 로그인 성공 시 로그인메인 화면으로 이동
@@ -101,10 +102,10 @@ export const onToggle = () => {
 export const socialLogin = (event) => {
   const { name } = event.target;
   let provider;
-  if (name === "github") {
-    provider = new GithubAuthProvider();
-  } else if (name === "google") {
+  if (name === "google") {
     provider = new GoogleAuthProvider();
+  } else if (name === "github") {
+    provider = new GithubAuthProvider();
   }
   signInWithPopup(authService, provider)
     .then((result) => {
@@ -115,5 +116,18 @@ export const socialLogin = (event) => {
       console.log("error:", error);
       const errorCode = error.code;
       const errorMessage = error.message;
+    });
+};
+
+export const logout = () => {
+  signOut(authService)
+    .then(() => {
+      // Sign-out successful.
+      localStorage.clear();
+      console.log("로그아웃 성공");
+    })
+    .catch((error) => {
+      // An error happened.
+      console.log("error:", error);
     });
 };
