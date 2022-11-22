@@ -1,12 +1,12 @@
 import { authService } from "./firebase.js";
 import { handleLocation, route, goToPost, goToMyPage } from "./router.js";
+// 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 
-// hash url 변경 시 처리
 window.addEventListener("hashchange", handleLocation);
 
-// 첫 랜딩 또는 새로고침 시 처리
+// 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
   authService.onAuthStateChanged((user) => {
     handleLocation();
@@ -28,6 +28,6 @@ window.route = route;
 window.onToggle = onToggle;
 window.handleAuth = handleAuth;
 window.socialLogin = socialLogin;
-// 새로 만든 이벤트 추가
+// 윤숙 - 새로 만든 이벤트 추가
 window.goToPost = goToPost;
 window.goToMyPage = goToMyPage;
