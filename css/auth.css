@@ -175,10 +175,17 @@
   border: 2px solid gray;
 }
 
-a {
+/* 윤숙 - 주석 처리 */
+/* a {
   /*회원가입 글자 스타일*/
-  text-decoration: none;
+/* text-decoration: none;
+  color: blue;}  */
+
+#authToggle {
   color: blue;
+  margin: 10px 0;
+  cursor: pointer;
+  user-select: none;
 }
 
 .lastline {
