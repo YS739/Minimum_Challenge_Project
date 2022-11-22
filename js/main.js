@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-function closeTabClick() {
-  window.close();
-}
+// 유안 - 프로필수정 닫기 버튼
+window.close = closeTabClick;
+
 
 // onclick, onchange, onsubmit 이벤트 핸들러 리스트
 window.onToggle = onToggle;
