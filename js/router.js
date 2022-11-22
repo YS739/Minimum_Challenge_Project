@@ -56,3 +56,11 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
   }
 };
+// 윤숙 - 다른 페이지 이동할 때 이렇게!
+export const goToPost = () => {
+  window.location.hash = "#post";
+};
+
+export const goToMyPage = () => {
+  window.location.hash = "#mypage";
+};
