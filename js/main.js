@@ -19,10 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const hash = window.location.hash;
     if (user) {
       if (hash === "") {
+        alert("로그인 성공");
         window.location.replace("#loginmain");
       }
     } else {
       if (hash !== "") {
+        alert("로그아웃 성공");
         window.location.replace("");
       }
     }
@@ -30,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // onclick, onchange, onsubmit 이벤트 핸들러 리스트
+window.route = route;
 window.onToggle = onToggle;
 window.handleAuth = handleAuth;
 window.goToProfile = goToProfile;
