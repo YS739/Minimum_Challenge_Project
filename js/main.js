@@ -9,6 +9,8 @@ window.addEventListener("hashchange", handleLocation);
 // 첫 랜딩 또는 새로고침 시 처리
 document.addEventListener("DOMContentLoaded", () => {
   authService.onAuthStateChanged((user) => {
+    handleLocation();
+    const hash = window.location.hash;
     if (user) {
       if (hash === "auth") {
         window.location.replace("#loginmain");
@@ -26,4 +28,3 @@ window.route = route;
 window.onToggle = onToggle;
 window.handleAuth = handleAuth;
 window.socialLogin = socialLogin;
-window.logout = logout;
