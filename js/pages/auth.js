@@ -88,11 +88,11 @@ export const onToggle = () => {
   const authTitle = document.querySelector("#authTitle");
   if (loginBtn.value === "로그인") {
     loginBtn.value = "회원가입";
-    authToggle.textContent = "로그인";
+    authToggle.textContent = "로그인하기";
     authTitle.textContent = "회원가입";
   } else {
     loginBtn.value = "로그인";
-    authToggle.textContent = "회원가입";
+    authToggle.textContent = "회원가입하기";
     authTitle.textContent = "로그인";
   }
 };
