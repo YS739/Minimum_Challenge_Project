@@ -46,14 +46,18 @@
     
 }
 
-#modal .close-area {                  /* x 스타일 */
-    float: right;
-    padding-right: 10px;
-    cursor: pointer;               /*이거 쓰면 커서 손모양으로 바뀜 굿 */
+#modal .close-area {                /* x 스타일 */    
+    position: relative;                                     
     text-shadow: 1px 1px 2px gray;
-    color: black
-    
-     
+    color: black     
+}
+#modal .close-area > button {
+    position: absolute;
+    top: -170px;
+    left: 470px;
+    border: none;
+    background-color:transparent;
+    font-size: 40px;
 }
 
 #modal .content {                   /*로그인폼 전체 스타일 지워도 잘 못느끼겠음 */
