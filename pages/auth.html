@@ -24,15 +24,17 @@
           <button><a href="/"> X</a></button>
         </div>
         <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
+
         <div class="content">
+          <!-- 윤숙 - form에 handleAuth 추가 -->
+
+          <!--여기서부터 폼 만들어짐-->
+          <!--윤숙 - input에 각 id 값 추가  -->
           <form onsubmit="handleAuth(event)">
-            <!--여기서부터 폼 만들어짐-->
-            <!--윤숙 - input에 각 id 값 추가  -->
             <div>
               <input
                 id="email"
                 type="text"
-                name="email"
                 class="text-field"
                 placeholder="이메일"
               />
@@ -41,9 +43,8 @@
 
             <div>
               <input
-                id="password"
+                id="pw"
                 type="password"
-                name="password"
                 class="text-field"
                 placeholder="비밀번호"
               />
@@ -52,44 +53,44 @@
 
             <!-- 윤숙 - 상위 div(login-btn)삭제 후 button을 input으로 바꾸고 id, value 값 추가  -->
             <input type="submit" id="loginBtn" value="로그인" />
-
-            <div class="buttons">
-              <!--버튼들폼-->
-              <!--윤숙 - button에 onclick, name 추가  -->
-              <button
-                name="github"
-                class="github-btn"
-                onclick="socialLogin(event)"
-              >
-                GitHub 로그인
-              </button>
-              <button class="twitter-btn">소셜 로그인</button>
-              <button
-                name="google"
-                class="google-btn"
-                onclick="socialLogin(event)"
-              >
-                구글 로그인
-              </button>
-            </div>
-
-            <div class="logos">
-              <!--이미지로고들-->
-              <div class="github-logo"><img src="../img/깃허브로고.png" /></div>
-              <div class="twitter-logo">
-                <img src="../img/트위터로고 .png" />
-              </div>
-              <div class="google-logo"><img src="../img/구글로고 .png" /></div>
-            </div>
-            <div class="lastline">
-              <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
-              <p>
-                계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-                  회원가입하기
-                </span>
-              </p>
-            </div>
           </form>
+
+          <div class="socialbuttons">
+            <!--버튼들폼-->
+            <!--윤숙 - button에 onclick, name 추가  -->
+            <button
+              name="github"
+              class="github-btn"
+              onclick="socialLogin(event)"
+            >
+              GitHub 로그인
+            </button>
+            <button class="twitter-btn">소셜 로그인</button>
+            <button
+              name="google"
+              class="google-btn"
+              onclick="socialLogin(event)"
+            >
+              구글 로그인
+            </button>
+          </div>
+
+          <div class="logos">
+            <!--이미지로고들-->
+            <div class="github-logo"><img src="../img/깃허브로고.png" /></div>
+            <div class="twitter-logo">
+              <img src="../img/트위터로고 .png" />
+            </div>
+            <div class="google-logo"><img src="../img/구글로고 .png" /></div>
+          </div>
+          <div class="lastline">
+            <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
+            <p>
+              계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
+                회원가입하기
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </div>

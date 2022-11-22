@@ -1,5 +1,5 @@
 import { authService } from "../firebase.js";
-import { emailRegex, passwordRegex } from "../util.js";
+import { emailRegex, pwRegex } from "../util.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -13,8 +13,8 @@ export const handleAuth = (event) => {
   event.preventDefault();
   const email = document.getElementById("email");
   const emailVal = email.value;
-  const password = document.getElementById("password");
-  const pwVal = password.value;
+  const pw = document.getElementById("pw");
+  const pwVal = pw.value;
 
   // 유효성 검사 진행
   if (!emailVal) {
@@ -24,12 +24,12 @@ export const handleAuth = (event) => {
   }
   if (!pwVal) {
     alert("비밀번호를 입력해 주세요");
-    password.focus();
+    pw.focus();
     return;
   }
 
   const matchedEmail = emailVal.match(emailRegex);
-  const matchedPw = passwordVal.match(passwordRegex);
+  const matchedPw = pwVal.match(pwRegex);
 
   if (matchedEmail === null) {
     alert("이메일 형식에 맞게 입력해 주세요");
@@ -38,16 +38,16 @@ export const handleAuth = (event) => {
   }
   if (matchedPw === null) {
     alert("비밀번호는 8자리 이상 영문자, 숫자, 특수문자 조합이어야 합니다.");
-    password.focus();
+    pw.focus();
     return;
   }
 
   // 유효성 검사 통과 후 로그인 또는 회원가입 API 요청
-  const authBtnText = document.querySelector("#loginBtn").value;
-  if (authBtnText === "로그인") {
+  const loginBtnText = document.querySelector("#loginBtn").value;
+  if (loginBtnText === "로그인") {
     // 유효성검사 후 로그인 성공 시 loginmain 화면으로
 
-    signInWithEmailAndPassword(authService, emailVal, passwordVal)
+    signInWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
@@ -65,7 +65,7 @@ export const handleAuth = (event) => {
       });
   } else {
     // 회원가입 버튼 클릭의 경우
-    createUserWithEmailAndPassword(authService, emailVal, passwordVal)
+    createUserWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
         console.log("회원가입 성공!");
