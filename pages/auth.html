@@ -25,7 +25,7 @@
         </div>
         <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
         <div class="content">
-          <form>
+          <form onsubmit="handleAuth(event)">
             <!--여기서부터 폼 만들어짐-->
             <!--윤숙 - input에 각 id 값 추가  -->
             <div>
@@ -38,6 +38,7 @@
               />
               <!--이메일폼-->
             </div>
+
             <div>
               <input
                 id="password"
@@ -71,21 +72,24 @@
                 구글 로그인
               </button>
             </div>
+
+            <div class="logos">
+              <!--이미지로고들-->
+              <div class="github-logo"><img src="../img/깃허브로고.png" /></div>
+              <div class="twitter-logo">
+                <img src="../img/트위터로고 .png" />
+              </div>
+              <div class="google-logo"><img src="../img/구글로고 .png" /></div>
+            </div>
+            <div class="lastline">
+              <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
+              <p>
+                계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
+                  회원가입하기
+                </span>
+              </p>
+            </div>
           </form>
-          <div class="logos">
-            <!--이미지로고들-->
-            <div class="github-logo"><img src="../img/깃허브로고.png" /></div>
-            <div class="twitter-logo"><img src="../img/트위터로고 .png" /></div>
-            <div class="google-logo"><img src="../img/구글로고 .png" /></div>
-          </div>
-          <div class="lastline">
-            <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
-            <p>
-              계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-                회원가입하기
-              </span>
-            </p>
-          </div>
         </div>
       </div>
     </div>
