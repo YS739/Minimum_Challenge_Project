@@ -69,7 +69,7 @@ export const handleAuth = (event) => {
       .then((userCredential) => {
         // Signed in
         console.log("회원가입 성공!");
-        // const user = userCredential.user;
+        window.location.hash = "#loginmain";
       })
       .catch((error) => {
         const errorMessage = error.message;
