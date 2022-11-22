@@ -1,55 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/profile.css" />
-    <title>Minimum Challenge</title>
-  </head>
-  <body>
-    <div id="container">
-      <h2>글씨안보이겠지</h2>
-      <button id="btn-modal">로그인</button>
-      <div id="lorem-ipsum"></div>
-    </div>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/profile.css" />
+        <title>Minimum_Challenge</title>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+      </head>
+      <body>
+        <div id="container">
+          <h2>Minimum Challenge</h2>
+        </div>
+        
+        <!-- 뒷배경 -->
+        <div id="modikim" class="overlaykim"> <!--modikim 모든 스타일이 다 지워짐,오버레이킴은 상자가 왼쪽으로 감-->
+            <!-- 프로필 관리창 -->
+            <div class="modi-windowkim">  <!-- 상자생김 -->
+                <div class="title">
+                <p>프로필 관리</p>
+                </div>
+                
+            <div id="profilePage">
+                <section id="profileWrapper">
+                <form id="profileForm" onsubmit="changeProfile(event)"> 
 
-    <!-- 뒷배경 -->
-    <div id="modikim" class="overlaykim">
-      <!-- 닫기버튼 -->
-      <!-- <div class="close-btn" style="font-size: 25px">X</div> -->
-      <!-- 프로필 관리창 -->
-      <div class="modi-windowkim">
-        <div class="title">
-          <p>프로필 관리</p>
-          <form id="profileForm" onsubmit="changeProfile(event)"></form>
-        </div>
-        <div id="profilePage">
-          <section id="profileWrapper">
-            <form id="profileForm" onsubmit="changeProfile(event)">
-              <label id="imgLabel" for="imgInput">
-                <img id="profileView" src="/img/blankProfile.webp" />
-                <input
-                  onchange="onFileChange(event)"
-                  id="imgInput"
-                  type="file"
-                  accept="images/*"
-                />
-              </label>
-              <div>
-                <input
-                  id="profileNickname"
-                  type="text"
-                  placeholder="현재 닉네임"
-                  value=""
-                />
-              </div>
-              <br />
-              <input id="profileBtn" type="submit" value="프로필 변경" />
-            </form>
-          </section>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+
+            <label id="imgLabel" for="imgInput">
+                <img id="profileView" src="/assets/blankProfile.webp" />
+                <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
+            </label>
+            <div class="prokim">
+                <div>
+                    <input id="profileNickname" type="text" placeholder="현재 닉네임" value="" />
+                </div>
+                <br />
+                    <!-- nav bar -->
+                    <nav class="profile-nav">
+                        <label for="profile-navkim">
+                            <a href="#" onclick="route(event)" id="profile-changekim">
+                                <input id="profileBtn" type="submit" value="프로필 변경" />
+                            </a>
+                        </label>
+                    </nav>
+            </div>
+                </form>
+                </section>
+            </div>
+
+<div class="closeTabClick">
+    <button onclick="closeTabClick()">
+        X
+    </button>
+</div>
+
+
+<!-- 닫기 버튼 시도 -->
+<!-- <button type="button" class="btnkim">
+    X
+</button> -->
+
+
+<!-- <input type='BUTTON' value=" X" onClick='self.close()'> -->

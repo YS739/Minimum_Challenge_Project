@@ -31,6 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function closeTabClick() {
+  window.close();
+}
+
 // onclick, onchange, onsubmit 이벤트 핸들러 리스트
 window.route = route;
 window.onToggle = onToggle;
