@@ -142,6 +142,12 @@ label .useryuns {
   height: 100%;
 }
 
+.useryuns img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
 .usersall label {
   cursor: pointer;
   position: fixed;
@@ -174,19 +180,4 @@ input#useridyuns:checked + nav#profilebtn {
 .fa-house-chimney {
   font-size: xx-large;
   margin-top: 10px;
-}
-
-#profilebtn .backgreen {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  border-radius: 50%;
-  background-color: (linear-) white;
-}
-
-#profilebtn .pencil {
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  z-index: 1000;
 }

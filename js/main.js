@@ -3,6 +3,7 @@ import { handleLocation, route, goToPost, goToMyPage } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
+import { save_post } from "./pages/post.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -31,3 +32,4 @@ window.socialLogin = socialLogin;
 // 윤숙 - 새로 만든 이벤트 추가
 window.goToPost = goToPost;
 window.goToMyPage = goToMyPage;
+window.save_post = save_post;
