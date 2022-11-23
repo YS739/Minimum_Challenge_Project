@@ -26,32 +26,28 @@ export const getPostList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     const isOwner = currentUid === ptObj.creatorId;
-    const temp_html = `<div class="card commentCard">
-    <div class="card-body">
-        <blockquote class="blockquote mb-0">
-            <p class="commentText">${ptObj.text}</p>
-            <p id="${
-              ptObj.id
-            }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
-            <footer class="quote-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
+    const temp_html = `<div class="postingbox">
+        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
+          ptObj.postpic
+        }"></div>
+        <div class="contentbox">
+            <p class="postTitle">${ptObj.title}</p>
+            <p class="postContent">${ptObj.post}</p>
+            <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
               ptObj.profileImg
             }" alt="profileImg" /><span>${
-      ptObj.nickname ?? "닉네임 없음"
-    }</span></div><div class="cmtAt">${new Date(ptObj.createdAt)
+      ptObj.nickname ?? "회원"
+    }</span></div><div class="postAt">${new Date(ptObj.createdAt)
       .toString()
       .slice(0, 25)}</div></footer>
-        </blockquote>
-        <div class="${isOwner ? "updateBtns" : "noDisplay"}">
-             <button onclick="onEditing(event)" class="editBtn btn btn-dark">수정</button>
-          <button name="${
-            ptObj.id
-          }" onclick="delete_comment(event)" class="deleteBtn btn btn-dark">삭제</button>
-        </div>            
-      </div>
-</div>`;
+            </div>
+          </div>`;
     const div = document.createElement("div");
     div.classList.add("mypost");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
 };
+// 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
+// pstObjList.value = "";
+getPostList();
