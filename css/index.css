@@ -181,3 +181,9 @@ input#useridyuns:checked + nav#profilebtn {
   font-size: xx-large;
   margin-top: 10px;
 }
+
+/* login modal */
+
+.modal-overlay {
+  display: none;
+}
