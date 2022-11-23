@@ -43,6 +43,18 @@ export const handleLocation = async () => {
     // getCommentList();
   }
 
+  if (path === "mypage") {
+    // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
+
+    document.getElementById("profileImg").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+
+    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
+    // getCommentList();
+  }
+
   // 윤숙 - post.html, js 수정할 때 같이 볼 것
   if (path === "profile") {
     // 프로필 관리 화면 일 때 현재 프로필 사진과 닉네임 할당
