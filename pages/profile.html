@@ -48,9 +48,10 @@
                 <nav class="profile-nav">
                     <label for="profile-navkim">
                         <!-- #말고 #mypage로 넘어갔으면 좋겠어서 mypage로 해봄 -->
-                        <a href="#mypage" onclick="route(event)" id="profile-changekim">
                             <div class="mybtn">
-                                <button id="profileBtn">수정하기</button>
+                                <button id="profileBtn" type="submit">
+                                    <a href="#mypage" onclick="route(event)" id="profile-changekim">수정하기</a>
+                                </button>
                             </div>
                         </a>
                     </label>

@@ -75,5 +75,3 @@ export const changeProfile = async (event) => {
       document.getElementById("profileView").src = imgDataUrl;
     };
   };
-  
-  window.onFileChange = onFileChange;
