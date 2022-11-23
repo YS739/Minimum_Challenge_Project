@@ -24,8 +24,22 @@
           <fieldset class="photo-areason">
             <!-- 사진이 올라올 영역+ -->
             <label>
-              <img class="photo-inputson" src="https://url.kr/tgq2bh" alt="" />
-              <input type="file" class="file-select-btnson" accept="image" />
+              <!--변동사항 img - id / input onPostChange 이벤트 추가  -->
+              <img
+                id="PostView"
+                class="photo-inputson"
+                src="https://url.kr/tgq2bh"
+                alt=""
+              />
+              <input
+                onchange="onPostChange(event)"
+                type="file"
+                class="file-select-btnson"
+                id="imgPost"
+                type="file"
+                accept="images/*"
+              />
+
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="currentColor"
@@ -48,7 +62,7 @@
 
           <div class="select-wrapson">
             <select class="category-selectson">
-              <option selected>카테고리 선택</option>
+              <option id="category" selected>카테고리 선택</option>
               <option value="execise">운동하기</option>
               <option value="study">공부하기</option>
               <option value="read">독서하기</option>
@@ -57,7 +71,12 @@
 
           <div>
             <!-- 윤숙 - id 추가 -->
-            <input class="title-boxson" id="" placeholder="제목을 입력하세요" />
+            <input
+              id="title"
+              class="title-boxson"
+              id=""
+              placeholder="제목을 입력하세요"
+            />
           </div>
 
           <!-- <div>
@@ -72,6 +91,7 @@
         </div> -->
 
           <textarea
+            id="posting"
             class="content-boxson"
             placeholder="내용을 입력하세요"
           ></textarea>
@@ -82,15 +102,10 @@
             <input class="hashtag-boxson" placeholder="#태그를 입력해 주세요" />
           </div>
           <!-- 윤숙 - save_post(event) 추가 -->
-
-          <button onclick="save_post(event)" class="post-btnson" type="button">
+          <button onclick="save_post(event)" class="post-btnson" type="submit">
             작성하기
           </button>
         </div>
-        <<<<<<< HEAD =======
-
-        <button class="post-btnson" type="submit">작성하기</button>
-        >>>>>>> cfe5fcc95a0004946a175e76b46252689334b792
       </div>
     </body>
     <html></html>
