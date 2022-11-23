@@ -33,6 +33,6 @@ window.socialLogin = socialLogin;
 // 윤숙 - 새로 만든 이벤트 추가
 window.goToPost = goToPost;
 window.goToMyPage = goToMyPage;
-// 유안 - 프로필 사진 변경 
+// 유안 - 프로필 사진 변경
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
