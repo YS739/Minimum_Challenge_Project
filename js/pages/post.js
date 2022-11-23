@@ -1,5 +1,8 @@
 import {
+  // doc,
   addDoc,
+  // updateDoc,
+  // deleteDoc,
   collection,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { dbService, authService } from "../firebase.js";
@@ -23,10 +26,18 @@ export const save_post = async (event) => {
       creatorId: uid,
       profileImg: photoURL,
       nickname: displayName,
-    });
-    // 이 화면에 포스트 내용을 불러오는 게 아니니까 일단 주석처리
-    // comment.value = "";
-    // getCommentList();
+    })
+      .then(() => {
+        alert("포스트 작성 완료");
+        window.location.hash = "#mypage";
+      })
+      .catch((error) => {
+        alert("포스트 작성 실패");
+        console.log("error:", error);
+      });
+    // 기존 내 포스트 초기화 - 다시 가져오기 일단 주석처리
+    // post.value = "";
+    getPostList();
   } catch (error) {
     alert(error);
     console.log("error in addDoc:", error);
