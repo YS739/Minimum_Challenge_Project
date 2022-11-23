@@ -43,3 +43,4 @@ window.getPostList = getPostList;
 // 유안 - 프로필 사진 변경
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
+

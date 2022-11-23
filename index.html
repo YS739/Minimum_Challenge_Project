@@ -40,8 +40,8 @@
             </a>
           </div>
           <div class="loginbtnjeong">
-            <button type="submit" class="logbtnjeong" />
-            <a href="#auth" onclick="route(event)">로그인</a>
+            <button type="submit" class="logbtnjeong" id="loginButton" >
+            로그인</button>
           </div>
         </div>
       </div>
@@ -99,7 +99,6 @@
       </div>
      <!-- 여기서 부터 모듈 -->
   <div id="login-modal">
-      <button id="btn-modal">로그인</button>
     <div id="modal" class="modal-overlay">
       <div class="modal-window">
         <div class="title">
@@ -107,7 +106,7 @@
         </div>
         <div class="close-area">
           <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
-          <button><a href="/"> X</a></button>
+          <button id="closeBtn"><a href="/"> X</a></button>
         </div>
         <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
 
