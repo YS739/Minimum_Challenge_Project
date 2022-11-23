@@ -26,17 +26,17 @@ export const getPostList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     const isOwner = currentUid === ptObj.creatorId;
-    const temp_html = `<div class="card commentCard">
+    const temp_html = `<div class="card postCard">
     <div class="card-body">
         <blockquote class="blockquote mb-0">
             <p class="commentText">${ptObj.text}</p>
             <p id="${
               ptObj.id
-            }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
+            }" class="noDisplay"><input class="newCmtInput" type="text" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
             <footer class="quote-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
               ptObj.profileImg
             }" alt="profileImg" /><span>${
-      ptObj.nickname ?? "닉네임 없음"
+      ptObj.nickname ?? "회원"
     }</span></div><div class="cmtAt">${new Date(ptObj.createdAt)
       .toString()
       .slice(0, 25)}</div></footer>
@@ -55,3 +55,6 @@ export const getPostList = async () => {
     postList.appendChild(div);
   });
 };
+// 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
+// pstObjList.value = "";
+getPostList();
