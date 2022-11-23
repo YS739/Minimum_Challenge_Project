@@ -67,6 +67,17 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
+
+  const modal = document.getElementById("login-modal");
+  const btnModal = document.getElementById("loginButton");
+  btnModal.addEventListener("click", (e) => {
+    modal.style.display = "flex";
+  });
+
+  const closeBtn = modal.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {

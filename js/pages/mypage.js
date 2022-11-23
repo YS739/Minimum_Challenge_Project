@@ -25,7 +25,7 @@ export const getPostList = async () => {
   const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    const isOwner = currentUid === ptObj.creatorId;
+    const isOwner = currentUid === ptObj.creatorId
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
           ptObj.postpic
