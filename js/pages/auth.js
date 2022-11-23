@@ -14,7 +14,7 @@ export const handleAuth = (event) => {
   event.preventDefault();
   const email = document.getElementById("email");
   const emailVal = email.value;
-  const pw = document.getElementById("pw");
+  const pw = document.getElementById("pw"); 
   const pwVal = pw.value;
 
   // 유효성 검사

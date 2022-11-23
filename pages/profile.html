@@ -23,12 +23,13 @@
         
         <!-- 유안 - X버튼에 a 링크로 홈으로 이동 -->
         <div class="close-kim">
-            <button><a href="/"> X</a></button>
+            <button><a href="#mypage"> X</a></button>
         </div>
         
         <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
         <div class="modi-windowkim">  <!-- 상자생김 -->      
             
+        <!-- 이미지 라벨을 클릭하면 이미지 인풋이 클릭된거랑 똑같은 걸 나타낸다.     -->
         <label id="imgLabel" for="imgInput">
             <div class="imagemove">
                 <img id="profileView" src="../img/1.jpg" />
@@ -46,10 +47,10 @@
                 <!-- 자스가 다운되기 전에 보여줄 정적인 부분 -->
                 <nav class="profile-nav">
                     <label for="profile-navkim">
-                        <!-- #말고 #loginmain로 넘어갔으면 좋겠어서 mypage로 해봄 -->
-                        <a href="#mypage" onclick="route(event)" id="profile-changekim">
+                        <!-- #말고 #mypage로 넘어갔으면 좋겠어서 mypage로 해봄 -->
+                        
                             <div class="mybtn">
-                                <button>수정하기</button>
+                                <button id="profileBtn"><a href="#mypage" onclick="route(event)" id="profile-changekim"></a>수정하기</button>
                             </div>
                         </a>
                     </label>
