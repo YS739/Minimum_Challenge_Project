@@ -62,22 +62,16 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
+
   const modal = document.getElementById("login-modal");
-  const btnModal = document.getElementById("loginModalBtn");
+  const btnModal = document.getElementById("loginButton");
   btnModal.addEventListener("click", (e) => {
     modal.style.display = "flex";
   });
 
-  const closeLoginBtn = modal.querySelector("#closeBtn");
-  closeLoginBtn.addEventListener("click", (e) => {
+  const closeBtn = modal.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
     modal.style.display = "none";
-  });
-
-  modal.addEventListener("click", (e) => {
-    const evTarget = e.target;
-    if (evTarget.classList.contains("modal-overlay")) {
-      modal.style.display = "none";
-    }
   });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
