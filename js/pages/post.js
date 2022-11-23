@@ -1,5 +1,8 @@
 import {
+  // doc,
   addDoc,
+  // updateDoc,
+  // deleteDoc,
   collection,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { dbService, authService } from "../firebase.js";
@@ -32,6 +35,9 @@ export const save_post = async (event) => {
         alert("포스트 작성 실패");
         console.log("error:", error);
       });
+    // 기존 내 포스트 초기화 - 다시 가져오기
+    post.value = "";
+    getPostList();
   } catch (error) {
     alert(error);
     console.log("error in addDoc:", error);
