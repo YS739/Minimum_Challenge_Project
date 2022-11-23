@@ -4,7 +4,7 @@ import { handleLocation, route, goToPost, goToMyPage } from "./router.js";
 import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
-// import { changeProfile, onFileChange } from "./pages/profile.js";
+import { changeProfile, onFileChange } from "./pages/profile.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -34,5 +34,5 @@ window.socialLogin = socialLogin;
 window.goToPost = goToPost;
 window.goToMyPage = goToMyPage;
 // 유안 - 프로필 사진 변경 
-// window.onFileChange = onFileChange;
-// window.changeProfile = changeProfile;
+window.onFileChange = onFileChange;
+window.changeProfile = changeProfile;

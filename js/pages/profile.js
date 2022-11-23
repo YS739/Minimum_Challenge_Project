@@ -6,7 +6,6 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 import { updateProfile } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
-import { changeProfile, onFileChange } from "./pages/profile.js";
 
 export const changeProfile = async (event) => {
     event.preventDefault();
@@ -78,4 +77,3 @@ export const changeProfile = async (event) => {
   };
   
   window.onFileChange = onFileChange;
-  window.changeProfile = changeProfile;
