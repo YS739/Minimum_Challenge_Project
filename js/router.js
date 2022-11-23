@@ -45,6 +45,7 @@ export const handleLocation = async () => {
 
   if (path === "mypage") {
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
+    getPostList();
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 

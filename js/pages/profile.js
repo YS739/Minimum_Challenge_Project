@@ -63,20 +63,6 @@ export const changeProfile = async (event) => {
     });
 };
 
-<<<<<<< HEAD
-  //프로필 사진을 클릭했을 때 나오는 동작 
-  export const onFileChange = (event) => {
-    const theFile = event.target.files[0]; // file 객체
-    const reader = new FileReader();
-    reader.readAsDataURL(theFile); // file 객체를 브라우저가 읽을 수 있는 data URL로 읽음.
-    reader.onloadend = (finishedEvent) => {
-      // 파일리더가 파일객체를 data URL로 변환 작업을 끝났을 때
-      const imgDataUrl = finishedEvent.currentTarget.result;
-      localStorage.setItem("imgDataUrl", imgDataUrl);
-      document.getElementById("profileView").src = imgDataUrl;
-    };
-  };
-=======
 //프로필 사진을 클릭했을 때 나오는 동작
 export const onFileChange = (event) => {
   const theFile = event.target.files[0]; // file 객체
@@ -89,4 +75,3 @@ export const onFileChange = (event) => {
     document.getElementById("profileView").src = imgDataUrl;
   };
 };
->>>>>>> 13faaede2991bb1c44cf9b89da5a79ae8e6d736a
