@@ -36,8 +36,8 @@ export const save_post = async (event) => {
         console.log("error:", error);
       });
     // 기존 내 포스트 초기화 - 다시 가져오기 일단 주석처리
-    // post.value = "";
-    // getPostList();
+    post.value = "";
+    getPostList();
   } catch (error) {
     alert(error);
     console.log("error in addDoc:", error);

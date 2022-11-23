@@ -1,4 +1,5 @@
 import { authService } from "./firebase.js";
+import { getPostList } from "./pages/mypage.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -49,6 +50,7 @@ export const handleLocation = async () => {
 
   if (path === "mypage") {
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
+    getPostList(); // 여기서 getPosList();를 호출해야 마이페이지 들어가서 새로고침 안 해도 포스트 불러오기가 됨
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
