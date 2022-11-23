@@ -6,6 +6,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 import { updateProfile } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+import { changeProfile, onFileChange } from "./pages/profile.js";
 
 export const changeProfile = async (event) => {
     event.preventDefault();
@@ -49,6 +50,32 @@ export const changeProfile = async (event) => {
 
     //프로필을 수정하기 위해서 updateProfile에다가 downloadUrl을 photourl로다가 집어넣을 것
     await updateProfile(authService.currentUser, {
+      //displayName에 새로운 닉네임을 집어넣는다.
       displayName: newNickname ? newNickname : null,
       photoURL: downloadUrl ? downloadUrl : null,
     })
+      .then(() => {
+        alert("프로필 수정 완료");
+        window.location.hash = "#mypage";
+      })
+      .catch((error) => {
+        alert("프로필 수정 실패");
+        console.log("error:", error);
+      });
+  };
+
+  //프로필 사진을 클릭했을 때 나오는 동작 
+  export const onFileChange = (event) => {
+    const theFile = event.target.files[0]; // file 객체
+    const reader = new FileReader();
+    reader.readAsDataURL(theFile); // file 객체를 브라우저가 읽을 수 있는 data URL로 읽음.
+    reader.onloadend = (finishedEvent) => {
+      // 파일리더가 파일객체를 data URL로 변환 작업을 끝났을 때
+      const imgDataUrl = finishedEvent.currentTarget.result;
+      localStorage.setItem("imgDataUrl", imgDataUrl);
+      document.getElementById("profileView").src = imgDataUrl;
+    };
+  };
+  
+  window.onFileChange = onFileChange;
+  window.changeProfile = changeProfile;
