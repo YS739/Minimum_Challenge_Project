@@ -36,3 +36,14 @@ window.goToMyPage = goToMyPage;
 // 유안 - 프로필 사진 변경 
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
+
+const modal = document.getElementById("login-modal")
+const btnModal = document.getElementById("loginBtn")
+btnModal.addEventListener("click", e => {
+    modal.style.display = "flex"
+})
+
+const closeBtn = modal.querySelector("#closeBtn")
+closeBtn.addEventListener("click", e => {
+    modal.style.display = "none"
+})

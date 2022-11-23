@@ -60,3 +60,14 @@ export const goToPost = () => {
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
 };
+
+const modal = document.getElementById("login-modal")
+const btnModal = document.getElementById("loginBtn")
+btnModal.addEventListener("click", e => {
+    modal.style.display = "flex"
+})
+
+const closeBtn = modal.querySelector("#closeBtn")
+closeBtn.addEventListener("click", e => {
+    modal.style.display = "none"
+})
