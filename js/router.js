@@ -43,6 +43,17 @@ export const handleLocation = async () => {
     // getCommentList();
   }
 
+  if (path === "mypage") {
+    // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
+    // 여기서 getpostlist 함수를 호출해야 마이페이지만 들어가도 포스트 불러오기가 됨
+    getPostList();
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
+
+    document.getElementById("profileImg").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+  }
+
   // 윤숙 - post.html, js 수정할 때 같이 볼 것
   if (path === "profile") {
     // 프로필 관리 화면 일 때 현재 프로필 사진과 닉네임 할당
@@ -51,6 +62,17 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
+
+  const modal = document.getElementById("login-modal");
+  const btnModal = document.getElementById("loginButton");
+  btnModal.addEventListener("click", (e) => {
+    modal.style.display = "flex";
+  });
+
+  const closeBtn = modal.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
