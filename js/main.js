@@ -5,6 +5,7 @@ import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
 import { changeProfile, onFileChange } from "./pages/profile.js";
+import { onPostChange, save_post } from "./pages/post.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -33,6 +34,9 @@ window.socialLogin = socialLogin;
 // 윤숙 - 새로 만든 이벤트 추가
 window.goToPost = goToPost;
 window.goToMyPage = goToMyPage;
+// post page에서 쓰는 이벤트
+window.onPostChange = onPostChange;
+window.save_post = save_post;
 // 유안 - 프로필 사진 변경
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
