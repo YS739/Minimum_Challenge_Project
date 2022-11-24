@@ -7,6 +7,7 @@ import { handleAuth, onToggle } from "./pages/auth.js";
 import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
+import { getFeedCommentList,onEditing,update_comment, delete_comment, save_comment} from "./pages/feed.js";
 
 
 window.addEventListener("hashchange", handleLocation);
@@ -49,3 +50,8 @@ window.getPostList = getPostList;
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
+window.getFeedCommentList = getFeedCommentList;
+window.onEditing = onEditing;
+window.update_comment = update_comment;
+window.delete_comment = delete_comment;
+window.save_comment = save_comment;
