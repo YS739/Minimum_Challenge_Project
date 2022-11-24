@@ -44,3 +44,4 @@ window.getPostList = getPostList;
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 
+window.goToIndex = goToIndex;

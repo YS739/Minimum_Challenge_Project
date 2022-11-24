@@ -87,3 +87,9 @@ export const goToPost = () => {
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
 };
+
+export const goToIndex = () => {
+  window.location.hash = "/";
+};
+
+
