@@ -1,9 +1,9 @@
-/* 여기염 */
 .main-logoson{
   width: 300px;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .mypic {

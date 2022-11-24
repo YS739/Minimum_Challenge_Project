@@ -1,4 +1,3 @@
-// 여기염
 import { authService, storageService } from "../firebase.js";
 import {
   ref,

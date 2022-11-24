@@ -17,6 +17,7 @@ const routes = {
   404: "/pages/404.html",
 };
 
+
 export const handleLocation = async () => {
   
   let path = window.location.hash.replace("#", ""); // ""
@@ -86,9 +87,9 @@ export const goToPost = () => {
 
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
+
 };
 
-// 유진 - 로고 누르면 메인으로 감
-export const goToIndex = () => {
+export const goToHome = () => {
   window.location.hash = "";
 };
