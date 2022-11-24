@@ -101,6 +101,7 @@ export const getFeedCommentList = async () => {
   commentList.innerHTML = "";
   cmtObjList.forEach((cmtObj) => {
     const isOwner = currentUid === cmtObj.creatorId;
+<<<<<<< HEAD
     const temp_html = `<div class="feed-commentCard">
             <div class="feed-cards">
                 <blockquote class="blockquote mb-0">
@@ -111,10 +112,23 @@ export const getFeedCommentList = async () => {
                     <footer class="feedCards-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
                       cmtObj.profileImg
                     }" alt="profileImg" /><span>${
+=======
+    const temp_html = `<div class="card commentCard">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p class="commentText">${cmtObj.text}</p>
+            <p id="${
+              cmtObj.id
+            }" class="noDisplay"><input class="newCmtInput" type="text"  /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
+            <footer class="quote-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
+              cmtObj.profileImg
+            }" alt="profileImg" /><span>${
+>>>>>>> 83f388ceef8911e3b3e5b9533b863a74f3f091ec
       cmtObj.nickname ?? "회원"
     }</span></div><div class="cmtAt">${new Date(cmtObj.createdAt)
       .toString()
       .slice(0, 25)}</div></footer>
+<<<<<<< HEAD
                 </blockquote>
                 <div class="${isOwner ? "updateBtns" : "noDisplay"}">
                      <button onclick="onEditing(event)" class="cmtEditBt">수정</button>
@@ -124,8 +138,19 @@ export const getFeedCommentList = async () => {
                 </div>            
               </div>
        </div>`;
+=======
+        </blockquote>
+        <div class="${isOwner ? "updateBtns" : "noDisplay"}">
+             <button onclick="onEditing(event)" class="cmtEditBtn">수정</button>
+          <button name="${
+            cmtObj.id
+          }" onclick="delete_comment(event)" class="cmtDelBtn">삭제</button>
+        </div>            
+      </div>
+</div>`;
+>>>>>>> 83f388ceef8911e3b3e5b9533b863a74f3f091ec
     const div = document.createElement("div");
-    div.classList.add("feedCards");
+    div.classList.add("mycards");
     div.innerHTML = temp_html;
     commentList.appendChild(div);
   });
