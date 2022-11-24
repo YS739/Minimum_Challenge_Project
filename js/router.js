@@ -90,6 +90,6 @@ export const goToMyPage = () => {
 
 };
 
-export const goToIndex = () => {
+export const goToHome = () => {
   window.location.hash = "#loginmain";
 };
