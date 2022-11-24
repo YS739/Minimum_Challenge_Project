@@ -28,33 +28,29 @@
   flex-direction: row;
   justify-content: right;
   align-items: center;
-}
 
+  position: fixed;
+}
+/* <!-- 검색창구현 시 살리기  --> */
+/* 
 .fa-magnifying-glass {
   font-size: x-large;
-}
+  position: fixed;
+  margin-right: 10px;
+} */
 
-.loginbtnjeong a {
-  text-decoration: none;
-}
-
-.loginbtnjeong {
-  width: 100px;
+/* 다시 확인 필요 */
+#loginButton {
+  width: 80px;
   height: 30px;
   font-size: 25px;
-  background-color: white;
-  margin: 0 20px;
+  background-color: rgb(211, 248, 241);
+  border-radius: 30%;
+  margin: 20px 20px;
   padding: 5px;
+
   text-align: center;
-
-  border: 1px solid black;
-  border-radius: 45%;
-}
-
-.logbtnjeong {
-  border: none;
-  background-color: transparent;
-  color: black;
+  cursor: pointer;
 }
 
 .loginbtnjeong:hover {
@@ -130,7 +126,21 @@ nav * {
   margin: 0 auto;
 }
 
-/* loginmain */
+/* loginmain page */
+
+#logoutbtnjeong {
+  width: 80px;
+  height: 30px;
+  font-size: 25px;
+  background-color: rgb(211, 248, 241);
+  border-radius: 30%;
+  margin: 20px 20px;
+  padding: 5px;
+
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .usersall {
   width: 100px;
