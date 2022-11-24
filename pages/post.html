@@ -12,14 +12,8 @@
     <title>Minimum Challenge</title>
   </head>
   <body>
-    <body>
-      <a href="/" onclick="route(event)"
-        ><img
-          class="main-logoson"
-          src="https://url.kr/nkmebz"
-          alt="Minimum Challenge"
-      /></a>
-
+      <span onclick="goToHome()"><img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge"></span>
+    
       <div id="root">
         <div class="post-areason">
           <!-- 전체영역 -->
@@ -105,12 +99,16 @@
             <input class="hashtag-boxson" placeholder="#태그를 입력해 주세요" />
           </div>
           <!-- 윤숙 - save_post(event) 추가 / id추가 for disabled=true -->
-          <button onclick="save_post(event)" class="post-btnson" type="submit">
+          <button
+           
+            onclick="save_post(event)"
+            class="post-btnson"
+            type="submit"
+          >
             작성하기
           </button>
         </div>
       </div>
-    </body>
     <html></html>
   </body>
 </html>

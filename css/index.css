@@ -3,11 +3,12 @@
   font-family: "Jua", sans-serif;
 }
 
-.main-logoson {
+.main-logoson{
   width: 300px;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .navjeong a {
@@ -195,7 +196,10 @@ input#useridyuns:checked + nav#profilebtn {
   display: none;
 }
 
-/* loginmain getPostList */
+
+/* login-menu */
+
+
 .mypost {
   width: 95%;
   max-width: 300px;
