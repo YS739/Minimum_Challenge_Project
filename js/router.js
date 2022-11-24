@@ -77,16 +77,16 @@ export const handleLocation = async () => {
   });
 
   // 프로필 모달창 코드
-  const modalprofile = document.getElementById("profile-modal");
-  const editModal = document.getElementById("editBtn");
-  editModal.addEventListener("click", (e) => {
-    modalprofile.style.display = "flex";
-  });
+  // const modalprofile = document.getElementById("profile-modal");
+  // const editModal = document.getElementById("editBtn");
+  // editModal.addEventListener("click", (e) => {
+  //   modalprofile.style.display = "flex";
+  // });
 
-  const closeBtnprofile = modal.querySelector("#closeBtn1");
-  closeBtnprofile.addEventListener("click", (e) => {
-    modalprofile.style.display = "none";
-  });
+  // const closeBtnprofile = modal.querySelector("#closeBtn1");
+  // closeBtnprofile.addEventListener("click", (e) => {
+  //   modalprofile.style.display = "none";
+  // });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToMyPage = () => {
