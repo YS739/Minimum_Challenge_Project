@@ -135,3 +135,14 @@
   top: 185px;
   left: 250px;
 }
+/* 유안 - 글쓰기버튼 */
+#goProfile,
+#goWriBtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  left: 50px;
+  top: 440px;
+  
+}

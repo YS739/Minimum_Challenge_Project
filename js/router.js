@@ -98,3 +98,13 @@ export const goToPost = () => {
   document.getElementById("goPoBtn").disabled = true;
   window.location.hash = "#post";
 };
+
+export const goToWrite = () => {
+  document.getElementById("goWriBtn").disabled = true;
+  window.location.hash = "#post";
+};
+
+export const goToMyProfile = () => {
+  document.getElementById("goProfile").disabled = true;
+  window.location.hash = "#profile";
+};
