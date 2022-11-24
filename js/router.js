@@ -20,9 +20,6 @@ const routes = {
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", ""); // ""
 
-
-
-
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
@@ -67,7 +64,7 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
-
+  // 로그인 모달창 코드
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");
   btnModal.addEventListener("click", (e) => {
@@ -78,14 +75,28 @@ export const handleLocation = async () => {
   closeBtn.addEventListener("click", (e) => {
     modal.style.display = "none";
   });
+
+  // 프로필 모달창 코드
+  const modalprofile = document.getElementById("profile-modal");
+  const editModal = document.getElementById("editBtn");
+  editModal.addEventListener("click", (e) => {
+    modalprofile.style.display = "flex";
+  });
+
+  const closeBtnprofile = modal.querySelector("#closeBtn1");
+  closeBtnprofile.addEventListener("click", (e) => {
+    modalprofile.style.display = "none";
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
-export const goToPost = () => {
-  window.location.hash = "#post";
-};
-
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
+  document.getElementById("goMYBtn").disabled = true;
+};
+
+export const goToPost = () => {
+  document.getElementById("goPoBtn").disabled = true;
+  window.location.hash = "#post";
 };
 
 export const goToIndex = () => {

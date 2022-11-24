@@ -8,9 +8,9 @@ import {
 import { dbService, authService } from "../firebase.js";
 
 export const save_post = async (event) => {
-  event.preventDefault();
   // 윤숙 - 작성하기 버튼 비활성화했음
   document.getElementById("savePostBtn").disabled = true;
+  event.preventDefault();
 
   // posting 내용에 따라 const 추가
   const postpic = document.getElementByI("PostView").src;

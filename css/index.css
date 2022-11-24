@@ -176,11 +176,15 @@ nav#profilebtn {
 
 input#useridyuns:checked + nav#profilebtn {
   display: block;
-  margin-top: 100px;
+  margin-top: 150px;
+  margin-right: 10px;
 }
 
-#profilebtn a {
-  text-decoration: none;
+#goMyBtn,
+#goPoBtn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
 }
 
 .fa-pen-to-square,

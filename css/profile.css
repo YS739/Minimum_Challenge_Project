@@ -166,5 +166,9 @@
     justify-content: center;
 }
 
+#profile-modal {
+    display: none;
+  }
+
 
 
