@@ -30,22 +30,24 @@
 
   <body>
     <div class="headjeong">
-      <img
-        class="main-logoson"
-        src="https://url.kr/nkmebz"
-        alt="Minimum Challenge"
-      />
+      <!-- 윤숙 - 로고 이미지로 대체할 것 -->
+
+      <a href="/" onclick="goToIndex()"
+        ><img
+          class="main-logoson"
+          src="https://url.kr/nkmebz"
+          alt="Minimum Challenge"
+      /></a>
 
       <div class="headcontainerjeong">
-        <!-- 검색창구현 시 살리기  -->
-        <!-- <div class="searchjeong">
+        <div class="searchjeong">
           <a href="#" onclick="route(event)">
             <i class="fa-solid fa-magnifying-glass"></i>
           </a>
-        </div> -->
-        <label for="logoutbtnjeong">
-          <a href="#" onclick="route(event)" id="logoutbtnjeong">로그아웃</a>
-        </label>
+        </div>
+        <div class="loginbtnjeong">
+          <a href="#" onclick="route(event)">로그아웃</a>
+        </div>
 
         <!-- 윤숙 - 00님에 auth? storage에서 닉네임 불러오고 없으면null "회원님!"이라고 하기 -->
         <div class="welcomeyuns">반갑습니다 <span id="nickname"></span>님!</div>
@@ -79,7 +81,9 @@
 
     <!-- nav bar -->
     <nav class="navjeong">
-      <a href="#" onclick="route(event)">전체보기</a>
+      <div class="allnavjeong">
+        <a href="#" onclick="route(event)">전체보기</a>
+      </div>
 
       <div class="workoutjeong">
         <label for="workoutys"

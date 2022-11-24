@@ -8,8 +8,12 @@
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
+}
 
-  position: fixed;
+.navjeong a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 .headjeong {
@@ -21,6 +25,10 @@
   align-items: center;
 }
 
+.headjeong h1 {
+  margin-left: 20px;
+}
+
 .headcontainerjeong {
   width: 100%;
   height: 100%;
@@ -28,29 +36,33 @@
   flex-direction: row;
   justify-content: right;
   align-items: center;
-
-  position: fixed;
 }
-/* <!-- 검색창구현 시 살리기  --> */
-/* 
+
 .fa-magnifying-glass {
   font-size: x-large;
-  position: fixed;
-  margin-right: 10px;
-} */
+}
 
-/* 다시 확인 필요 */
-#loginButton {
-  width: 80px;
+.loginbtnjeong a {
+  text-decoration: none;
+}
+
+.loginbtnjeong {
+  width: 100px;
   height: 30px;
   font-size: 25px;
-  background-color: rgb(211, 248, 241);
-  border-radius: 30%;
-  margin: 20px 20px;
+  background-color: white;
+  margin: 0 20px;
   padding: 5px;
-
   text-align: center;
-  cursor: pointer;
+
+  border: 1px solid black;
+  border-radius: 45%;
+}
+
+.logbtnjeong {
+  border: none;
+  background-color: transparent;
+  color: black;
 }
 
 .loginbtnjeong:hover {
@@ -68,12 +80,6 @@
   margin-bottom: 20px;
 
   font-size: 1.2rem;
-}
-
-.navjeong a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
 }
 
 nav * {
@@ -126,21 +132,7 @@ nav * {
   margin: 0 auto;
 }
 
-/* loginmain page */
-
-#logoutbtnjeong {
-  width: 80px;
-  height: 30px;
-  font-size: 25px;
-  background-color: rgb(211, 248, 241);
-  border-radius: 30%;
-  margin: 20px 20px;
-  padding: 5px;
-
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-}
+/* loginmain */
 
 .usersall {
   width: 100px;
@@ -180,7 +172,6 @@ input#useridyuns {
 
 nav#profilebtn {
   display: none;
-  position: fixed;
 }
 
 input#useridyuns:checked + nav#profilebtn {
