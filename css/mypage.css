@@ -28,8 +28,8 @@
 }
 .picture > img {
   position: absolute;
-  left: 75px;
-  top: 170px;
+  left: 150px;
+  top: 100px;
   border-radius: 50%;
   border: none;
 }
@@ -144,5 +144,9 @@
   position: relative;
   left: 50px;
   top: 440px;
-  
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
