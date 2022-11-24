@@ -1,3 +1,10 @@
+.main-logoson {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 #modal.modal-overlay {
   /*전체화면 시작 */
   width: 100%;
@@ -216,4 +223,8 @@
   background-color: antiquewhite;
   width: 200px;
   height: 400px;
+}
+
+#login-modal {
+  display: none;
 }

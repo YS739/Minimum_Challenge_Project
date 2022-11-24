@@ -1,4 +1,4 @@
-.main-logoson{
+.main-logoson {
   width: 300px;
   margin-top: 20px;
   margin-left: 20px;
@@ -24,8 +24,7 @@
   overflow: hidden;
   margin: 0 auto;
   border: none;
-  position:relative;
-
+  position: relative;
 }
 .photo-inputson {
   width: 100%;
@@ -36,17 +35,14 @@
 
 .plus-btnson {
   width: 50px;
-  heigth: auto;
-  position:absolute;
-  top:50%;
-  left:50%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   opacity: 0.5;
-  background-color:white;
+  background-color: white;
   padding: 10px;
-
 }
-
-
 
 .file-select-btnson {
   display: none;
@@ -104,4 +100,6 @@
   border: none;
   margin-top: 10px;
   margin-bottom: 10px;
+
+  cursor: pointer;
 }

@@ -1,4 +1,5 @@
 import { authService } from "./firebase.js";
+import { getPostList } from "./pages/loginmain.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -38,21 +39,17 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
-    // getCommentList();
   }
 
   if (path === "mypage") {
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
+    // 여기서 getpostlist 함수를 호출해야 마이페이지만 들어가도 포스트 불러오기가 됨
+    getPostList();
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
-    // getCommentList();
   }
 
   // 윤숙 - post.html, js 수정할 때 같이 볼 것
@@ -63,6 +60,17 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
+
+  const modal = document.getElementById("login-modal");
+  const btnModal = document.getElementById("loginButton");
+  btnModal.addEventListener("click", (e) => {
+    modal.style.display = "flex";
+  });
+
+  const closeBtn = modal.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
