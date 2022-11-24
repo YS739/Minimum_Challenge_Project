@@ -1,5 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
+import { getFeedCommentList } from "./pages/feed.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -27,12 +28,18 @@ export const handleLocation = async () => {
     path = "/";
     getPostList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
   }
+  if (path === "feed") {
+    
+    getFeedCommentList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
+  }
 
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
 
   const html = await fetch(route).then((data) => data.text());
 
   document.getElementById("root").innerHTML = html;
+
+
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
   if (path === "loginmain") {
