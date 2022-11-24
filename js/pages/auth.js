@@ -1,3 +1,4 @@
+/* 체크 */
 import { authService } from "../firebase.js";
 import { emailRegex, pwRegex } from "../util.js";
 import {
@@ -121,9 +122,3 @@ export const socialLogin = (event) => {
     });
 };
 
-
-
-//////////////
-
-
-const loginFireBase(emailVal, pwVal)

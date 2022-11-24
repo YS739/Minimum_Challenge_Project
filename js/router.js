@@ -1,3 +1,4 @@
+/* 체크 */
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/mypage.js";
 

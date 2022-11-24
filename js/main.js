@@ -1,3 +1,4 @@
+/* 체크 */
 import { authService } from "./firebase.js";
 import { handleLocation, route, goToPost, goToMyPage, goToIndex } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
@@ -9,6 +10,7 @@ import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
 
 window.addEventListener("hashchange", handleLocation);
+
 
 
 
