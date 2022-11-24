@@ -5,17 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/mypage.css" />
-    
     <title>Minimum Challenge</title>
   </head>
-  <body></body>
-
+  <body>
     <div>
-      <image class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
+      <div class="title">
+        <p style="font-size: 20px">
+          <b
+            >Minumum<br />
+            Challenge</b
+          >
+        </p>
+      </div>
       <div class="logout-btn">
         <button class="logout"><b>로그아웃</b></button>
-      </div>
-
       </div>
       <div class="picture">
         <img id="profileImg" width="200px" height="200px" src="/img/1.jpg" />
@@ -23,34 +26,11 @@
       <div class="name">
         <p class="myname" id="nickname"><b></b></p>
       </div>
-        
-        <!-- 윤숙 - save_post(event) 추가 / id추가 for disabled=true -->
-        <!-- <button
-          id="savePostBtn"
-          onclick="save_post(event)"
-          class="post-btnson"
-          type="submit"
-        >
-          작성하기
-        </button> -->
-        
-        <!-- 유안 -  -->
-        <button
-          id="writeBtn"
-          onclick="write_post(event)"
-          class="write-btnkim"
-          type="submit"
-        >
-          글쓰기
-        </button>
-      </div>
       <div class="edit">
-        <a href="#profile" onclick="route(event)"edit &#128394;>
+        <a href="#profile" onclick="route(event)">edit &#128394;</a>
       </div>
 
       <div id="post-list"></div>
     </div>
-
-   
   </body>
 </html>
