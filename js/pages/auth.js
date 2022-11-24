@@ -6,6 +6,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
+  signOut
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 // 로그인 성공 시 loginmain 화면으로 이동
@@ -100,15 +101,10 @@ export const onToggle = () => {
 export const socialLogin = (event) => {
   const { name } = event.target;
   let provider;
-  if (name === "github") {
-    // 윤숙 - 소셜로그인 버튼 비활성화 취소 for UX
-    // document.getElementById("gitLoginBtn").disabled = true;
-
-    provider = new GithubAuthProvider();
-  } else if (name === "google") {
-    // document.getElementById("gooLoginBtn").disabled = true;
-
+  if (name === "google") {
     provider = new GoogleAuthProvider();
+  } else if (name === "github") {
+    provider = new GithubAuthProvider();
   }
   signInWithPopup(authService, provider)
     .then((result) => {
@@ -118,5 +114,18 @@ export const socialLogin = (event) => {
       console.log("error:", error);
       const errorCode = error.code;
       const errorMessage = error.message;
+    });
+};
+
+export const logout = () => {
+  signOut(authService)
+    .then(() => {
+      // Sign-out successful.
+      localStorage.clear();
+      console.log("로그아웃 성공");
+    })
+    .catch((error) => {
+      // An error happened.
+      console.log("error:", error);
     });
 };
