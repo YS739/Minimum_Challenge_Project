@@ -3,17 +3,13 @@
   font-family: "Jua", sans-serif;
 }
 
-.main-logoson{
+.main-logoson {
   width: 300px;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-}
 
-.navjeong a {
-  text-decoration: none;
-  color: black;
-  cursor: pointer;
+  position: fixed;
 }
 
 .headjeong {
@@ -23,10 +19,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-}
-
-.headjeong h1 {
-  margin-left: 20px;
 }
 
 .headcontainerjeong {
@@ -80,6 +72,12 @@
   margin-bottom: 20px;
 
   font-size: 1.2rem;
+}
+
+.navjeong a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
 }
 
 nav * {
@@ -172,6 +170,7 @@ input#useridyuns {
 
 nav#profilebtn {
   display: none;
+  position: fixed;
 }
 
 input#useridyuns:checked + nav#profilebtn {
