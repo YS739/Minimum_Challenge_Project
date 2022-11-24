@@ -13,7 +13,7 @@ export const save_post = async (event) => {
   // document.getElementById("savePostBtn").disabled = true;
 
   // posting 내용에 따라 const 추가
-  const postpic = document.getElementByI("PostView").src;
+  const postpic = document.getElementById("PostView").src;
   const category = document.getElementById("category");
   const title = document.getElementById("title");
   const content = document.getElementById("posting");

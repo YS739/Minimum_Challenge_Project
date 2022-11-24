@@ -24,6 +24,7 @@ export const handleLocation = async () => {
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
+    getPostList();
   }
 
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
