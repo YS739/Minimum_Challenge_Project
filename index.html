@@ -7,7 +7,6 @@
 
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <link rel="stylesheet" type="text/css" href="./css/auth.css" />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
@@ -31,10 +30,13 @@
   </head>
 
   <body>
-    
     <div id="root">
       <div class="headjeong">
-        <image class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
+        <img
+          class="main-logoson"
+          src="https://url.kr/nkmebz"
+          alt="Minimum Challenge"
+        />
         <div class="headcontainerjeong">
           <div class="searchjeong">
             <a href="#" onclick="route(event)">
@@ -93,13 +95,6 @@
     해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!-->
       <div id="main-page"></div>
 
-      <div class="mainjeong">
-        <div class="maincontainerjeong">
-          <div class="postjeong">JS로 불러오는 게시글</div>
-          <div class="postjeong">JS로 불러오는 게시글</div>
-          <div class="postjeong">JS로 불러오는 게시글</div>
-        </div>
-      </div>
       <!-- 여기서 부터 모듈 -->
       <div id="login-modal">
         <div id="modal" class="modal-overlay">
@@ -147,7 +142,6 @@
                 <!--버튼들폼-->
                 <!--윤숙 - button에 onclick, name 추가  -->
                 <button
-                  id="gitLoginBtn"
                   name="github"
                   class="github-btn"
                   onclick="socialLogin(event)"
@@ -156,7 +150,6 @@
                 </button>
                 <button class="twitter-btn">소셜 로그인</button>
                 <button
-                  id="gooLoginBtn"
                   name="google"
                   class="google-btn"
                   onclick="socialLogin(event)"
@@ -190,95 +183,7 @@
         </div>
       </div>
 
-      <!-- 여기서부터 로그인 모달 창입니다 -->
-
-      <div id="login-modal" class="modal-overlay">
-        <div class="modal-window">
-          <div class="title">
-            <p id="authTitle">로그인</p>
-          </div>
-          <div class="close-area">
-            <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
-            <button id="closeBtn" class="close-area">
-              <a href="/"> X</a>
-            </button>
-          </div>
-          <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
-
-          <div class="content">
-            <!-- 윤숙 - form에 handleAuth 추가 -->
-
-            <!--여기서부터 폼 만들어짐-->
-            <!--윤숙 - input에 각 id 값 추가  -->
-            <form onsubmit="handleAuth(event)">
-              <div>
-                <input
-                  id="email"
-                  type="text"
-                  class="text-field"
-                  placeholder="이메일"
-                />
-                <!--이메일폼-->
-              </div>
-
-              <div>
-                <input
-                  id="pw"
-                  type="password"
-                  class="text-field"
-                  placeholder="비밀번호"
-                />
-                <!--비밀번호폼-->
-              </div>
-
-              <!-- 윤숙 - 상위 div(login-btn)삭제 후 button을 input으로 바꾸고 id, value 값 추가  -->
-              <input type="submit" id="loginBtn" value="로그인" />
-            </form>
-
-            <div class="socialbuttons">
-              <!--버튼들폼-->
-              <!--윤숙 - button에 onclick, name 추가  -->
-              <button
-                name="github"
-                class="github-btn"
-                onclick="socialLogin(event)"
-              >
-                GitHub 로그인
-              </button>
-              <button class="twitter-btn">소셜 로그인</button>
-              <button
-                name="google"
-                class="google-btn"
-                onclick="socialLogin(event)"
-              >
-                구글 로그인
-              </button>
-            </div>
-
-            <div class="logos">
-              <!--이미지로고들-->
-              <div class="github-logo"><img src="../img/깃허브로고.png" /></div>
-              <div class="twitter-logo">
-                <img src="../img/트위터로고 .png" />
-              </div>
-              <div class="google-logo"><img src="../img/구글로고 .png" /></div>
-            </div>
-            <div class="lastline">
-              <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
-              <p>
-                계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-                  회원가입하기
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- 로그인 모달 -->
-
-
       <script src="js/main.js" type="module"></script>
-      <script src="js/index.js" type="module"></script>
     </div>
   </body>
 </html>

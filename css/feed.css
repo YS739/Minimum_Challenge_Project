@@ -1,4 +1,4 @@
-.main-logoson{
+.main-logoson {
   width: 300px;
   margin-top: 20px;
   margin-left: 20px;
@@ -6,49 +6,48 @@
 }
 
 .mypic {
-    width: 80%;
-    height: 360px;
-    box-shadow: 0px 0px 3px 0px gray;
-    position: relative;
-    left: 180px;
-    background-color: rgba(102, 163, 173, 0.8);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-  }
-  .font {
-    position: relative;
-  }
-  .font >p {
-    position: absolute;
-    right: 810px;
-    top: -100px;
-  }
+  width: 80%;
+  height: 360px;
+  box-shadow: 0px 0px 3px 0px gray;
+  position: relative;
+  left: 180px;
+  background-color: rgba(102, 163, 173, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+.font {
+  position: relative;
+}
+.font > p {
+  position: absolute;
+  right: 810px;
+  top: -100px;
+}
 
-  .back {
-    position: relative;
-  }
-.back >button {
-    position: absolute;
-    right: 680px;
-    top: -95px;
-    border: none;
-    outline: none;
-    color: black;
-    font-size: 25px;
-    background-color:transparent;
-    font-size: 50px;
-    
+.back {
+  position: relative;
+}
+.back > button {
+  position: absolute;
+  right: 680px;
+  top: -95px;
+  border: none;
+  outline: none;
+  color: black;
+  font-size: 25px;
+  background-color: transparent;
+  font-size: 50px;
 }
 .viewmore {
-    position: relative;
+  position: relative;
 }
-.viewmore >.menu >h1 {
+.viewmore > .menu > h1 {
   font-size: 80px;
 }
- 
-label.menu{
+
+label.menu {
   border: none;
   padding: 10px;
   position: absolute;
@@ -56,13 +55,13 @@ label.menu{
   top: -205px;
 }
 
-input#menu{
+input#menu {
   display: none;
 }
-nav#main_nav{
+nav#main_nav {
   display: none;
 }
-input#menu:checked + nav#main_nav{
+input#menu:checked + nav#main_nav {
   display: block;
 }
 
@@ -73,18 +72,17 @@ input#menu:checked + nav#main_nav{
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
   padding-bottom: 20px;
-  
 }
 .delete > .revicebtn > button:hover {
   border: 2px solid gray;
   box-shadow: 1px 1px 2px gray;
 }
 .delete > .revicebtn > button > p {
-    border-radius: 50px;
-    border: none;
-    width: 110px;
-    height: 10px;
-    font-size: 20px;
+  border-radius: 50px;
+  border: none;
+  width: 110px;
+  height: 10px;
+  font-size: 20px;
 }
 .delete > .deletebtn > button {
   color: black;
@@ -92,19 +90,17 @@ input#menu:checked + nav#main_nav{
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
   padding-bottom: 20px;
-  
 }
 .delete > .deletebtn > button:hover {
   border: 2px solid gray;
   box-shadow: 1px 1px 2px gray;
 }
 .delete > .deletebtn > button > p {
-    border-radius: 50px;
-    border: none;
-    width: 110px;
-    height: 10px;
-    font-size: 20px;
-     
+  border-radius: 50px;
+  border: none;
+  width: 110px;
+  height: 10px;
+  font-size: 20px;
 }
 .delete {
   position: relative;
@@ -114,212 +110,206 @@ input#menu:checked + nav#main_nav{
   position: absolute;
   top: -20px;
   left: 610px;
-  
 }
 .delete > .deletebtn {
   position: absolute;
   top: 55px;
   left: 610px;
-  
 }
 
+.mypost {
+  width: 80%;
+  box-shadow: 0px 0px 3px 0px gray;
+  background-color: rgba(220, 230, 231, 0.8);
+  position: relative;
+  left: 180px;
+  height: 460px;
+}
 
-  .mypost {
-    width: 80%;  
-    box-shadow: 0px 0px 3px 0px gray;
-    background-color: rgba(220, 230, 231, 0.8);
-    position: relative;
-    left: 180px;
-    height: 460px;
-  }
+.image-1 {
+  position: relative;
+}
 
-  .image-1 {
-    position: relative;
-  }
+.image-1 > img {
+  position: absolute;
+  top: 30px;
+  left: 60px;
+  border-radius: 50%;
+}
 
-  .image-1 > img {
-    position: absolute;
-    top: 30px;
-    left: 60px;
-    border-radius: 50%;
-  }
+.nickname {
+  position: relative;
+}
+.nickname > p {
+  position: absolute;
+  top: 95px;
+  left: 70px;
+}
 
+.studyready {
+  position: relative;
+}
 
-  .nickname {
-    position: relative;
-  }
-  .nickname > p {
-    position: absolute;
-    top: 95px;
-    left: 70px;
-  }
+.studyready > p {
+  position: absolute;
+  top: 10px;
+  left: 200px;
+}
 
-  .studyready {
-    position: relative;
-  }
+.text-1 {
+  position: relative;
+}
+.text-1 > p {
+  position: absolute;
+  top: 60px;
+  left: 200px;
+}
 
-  .studyready > p {
-    position: absolute;
-    top: 10px;
-    left: 200px;
-  }
+.text-2 {
+  position: relative;
+}
+.text-2 > p {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+}
 
-  .text-1 {
-    position: relative;
-  }
-  .text-1 > p {
-    position: absolute;
-    top: 60px;
-    left: 200px;
-  }
+.text-3 {
+  position: relative;
+}
+.text-3 > p {
+  position: absolute;
+  top: 130px;
+  left: 200px;
+}
 
-  .text-2 {
-    position: relative;
-  }
-  .text-2 >p {
-    position: absolute;
-    top: 100px;
-    left: 200px;
-  }
+.text-4 {
+  position: relative;
+}
+.text-4 > p {
+  position: absolute;
+  top: 180px;
+  left: 200px;
+}
 
-  .text-3 {
-    position: relative;
-  }
-  .text-3 >p {
-    position: absolute;
-    top: 130px;
-    left: 200px;
-  }
+.image-2 {
+  position: relative;
+}
+.image-2 > img {
+  position: absolute;
+  top: 260px;
+  left: 200px;
+  border-radius: 50%;
+}
 
-  .text-4 {
-    position: relative;
-  }
-  .text-4 >p {
-    position: absolute;
-    top: 180px;
-    left: 200px;
-  }
+.text-5 {
+  position: relative;
+}
+.text-5 > p {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+}
 
-  .image-2 {
-    position: relative;
-  }
-  .image-2 > img {
-    position: absolute;
-    top: 260px;
-    left: 200px;
-    border-radius: 50%;
-  }
+.comment-1 {
+  position: relative;
+}
+.comment-1 > textarea {
+  position: absolute;
+  top: 260px;
+  left: 300px;
+}
+.btn-1 {
+  position: relative;
+}
+.btn-1 > button {
+  position: absolute;
+  top: 250px;
+  left: 820px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 150px;
+  height: 50px;
+  padding-right: 10px;
+  font-size: 15px;
+}
+.btn-1 > button:hover {
+  border: 2px solid gray;
+}
 
-  .text-5 {
-    position: relative;
-  }
-  .text-5 > p {
-    position: absolute;
-    top: 250px;
-    left: 250px;
-  }
+.image-3 {
+  position: relative;
+}
+.image-3 > img {
+  position: absolute;
+  top: 330px;
+  left: 200px;
+  border-radius: 50%;
+}
+.text-6 {
+  position: relative;
+}
+.text-6 > p {
+  position: absolute;
+  top: 320px;
+  left: 250px;
+}
 
-  .comment-1 {
-    position: relative;
-  }
-  .comment-1 >textarea {
-    position: absolute;
-    top: 260px;
-    left: 300px;
-  }
-  .btn-1 {
-    position: relative;
-  }
-  .btn-1 >button {
-    position: absolute;
-    top: 250px;
-    left: 820px;
-    background-color: white;
-    border-radius: 50px;
-    border: none;
-    width: 150px;
-    height: 50px;
-    padding-right: 10px;
-    font-size: 15px;
-  }
-  .btn-1 >button:hover {
-    border: 2px solid gray;
-  }
+.comment-2 {
+  position: relative;
+}
+.comment-2 > textarea {
+  position: absolute;
+  top: 330px;
+  left: 300px;
+}
 
-  .image-3 {
-    position: relative;
-  }
-  .image-3 >img {
-    position: absolute;
-    top: 330px;
-    left: 200px;
-    border-radius: 50%;
-  }
-  .text-6 {
-    position: relative;
-  }
-  .text-6 >p {
-    position: absolute;
-    top: 320px;
-    left: 250px;
-  }
+.day {
+  position: relative;
+}
+.day > p {
+  position: absolute;
+  top: 320px;
+  left: 810px;
+}
 
-  .comment-2 {
-    position: relative;
-  }
-  .comment-2 >textarea {
-    position: absolute;
-    top: 330px;
-    left: 300px;
-  }
+.btn-2 {
+  position: relative;
+}
+.btn-2 > button {
+  position: absolute;
+  top: 320px;
+  left: 900px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 80px;
+  height: 50px;
+  padding-right: 10px;
+  font-size: 15px;
+}
 
-  .day {
-    position: relative;
-  }
-  .day > p {
-    position: absolute;
-    top: 320px;
-    left: 810px;
-  }
+.btn-2 > button:hover {
+  border: 2px solid gray;
+}
 
-  .btn-2 {
-    position: relative;
-  }
-  .btn-2 >button {
-    position: absolute;
-    top: 320px;
-    left: 900px;
-    background-color: white;
-    border-radius: 50px;
-    border: none;
-    width: 80px;
-    height: 50px;
-    padding-right: 10px;
-    font-size: 15px;
-  }
+.btn-3 {
+  position: relative;
+}
+.btn-3 > button {
+  position: absolute;
+  top: 320px;
+  left: 990px;
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 80px;
+  height: 50px;
+  padding-right: 10px;
+  font-size: 15px;
+}
 
-  .btn-2 >button:hover {
-    border: 2px solid gray;
-  }
-
-  .btn-3 {
-    position: relative;
-  }
-  .btn-3 >button {
-    position: absolute;
-    top: 320px;
-    left: 990px;
-    background-color: white;
-    border-radius: 50px;
-    border: none;
-    width: 80px;
-    height: 50px;
-    padding-right: 10px;
-    font-size: 15px;
-  }
-
-  .btn-3 >button:hover {
-    border: 2px solid gray;
-  }
-  
-  
+.btn-3 > button:hover {
+  border: 2px solid gray;
+}

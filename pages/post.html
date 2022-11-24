@@ -13,8 +13,13 @@
   </head>
   <body>
     <body>
-    <image class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
-    
+      <a href="/" onclick="route(event)"
+        ><img
+          class="main-logoson"
+          src="https://url.kr/nkmebz"
+          alt="Minimum Challenge"
+      /></a>
+
       <div id="root">
         <div class="post-areason">
           <!-- 전체영역 -->
@@ -77,6 +82,17 @@
             />
           </div>
 
+          <!-- <div>
+            <textarea placeholder="내용을 입력하세요" type="text"></textarea>
+        </div> -->
+
+          <!-- <div class="content-box content" contenteditable="true"
+        style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;"
+        data-mce-style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 50px;"
+        role="textbox" aria-multiline="true" aria-label="글 내용 입력">
+        <p data-ke-size="size16"><br></p>
+        </div> -->
+
           <textarea
             id="posting"
             class="content-boxson"
@@ -89,12 +105,7 @@
             <input class="hashtag-boxson" placeholder="#태그를 입력해 주세요" />
           </div>
           <!-- 윤숙 - save_post(event) 추가 / id추가 for disabled=true -->
-          <button
-            id="savePostBtn"
-            onclick="save_post(event)"
-            class="post-btnson"
-            type="submit"
-          >
+          <button onclick="save_post(event)" class="post-btnson" type="submit">
             작성하기
           </button>
         </div>

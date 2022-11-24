@@ -1,5 +1,5 @@
 import { authService } from "./firebase.js";
-import { getPostList } from "./pages/mypage.js";
+import { getPostList } from "./pages/loginmain.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -23,6 +23,7 @@ export const handleLocation = async () => {
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
+    getPostList();
   }
 
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
@@ -32,17 +33,15 @@ export const handleLocation = async () => {
   document.getElementById("root").innerHTML = html;
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
-
   if (path === "loginmain") {
+    getPostList();
+
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
-    // getCommentList();
   }
 
   if (path === "mypage") {
@@ -64,7 +63,7 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
-  // 로그인 모달창 코드
+
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");
   btnModal.addEventListener("click", (e) => {
@@ -75,36 +74,12 @@ export const handleLocation = async () => {
   closeBtn.addEventListener("click", (e) => {
     modal.style.display = "none";
   });
-
-  // 프로필 모달창 코드
-  const modalprofile = document.getElementById("profile-modal");
-  const editModal = document.getElementById("editBtn");
-  editModal.addEventListener("click", (e) => {
-    modalprofile.style.display = "flex";
-  });
-
-  const closeBtnprofile = modal.querySelector("#closeBtn1");
-  closeBtnprofile.addEventListener("click", (e) => {
-    modalprofile.style.display = "none";
-  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
+export const goToPost = () => {
+  window.location.hash = "#post";
+};
+
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
-  document.getElementById("goMYBtn").disabled = true;
-};
-
-export const goToPost = () => {
-  document.getElementById("goPoBtn").disabled = true;
-  window.location.hash = "#post";
-};
-
-export const goToWrite = () => {
-  document.getElementById("goWriBtn").disabled = true;
-  window.location.hash = "#post";
-};
-
-export const goToMyProfile = () => {
-  document.getElementById("goProfile").disabled = true;
-  window.location.hash = "#profile";
 };
