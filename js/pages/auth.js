@@ -1,4 +1,3 @@
-/* 체크 */
 import { authService } from "../firebase.js";
 import { emailRegex, pwRegex } from "../util.js";
 import {

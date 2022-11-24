@@ -1,4 +1,3 @@
-/* 체크 */
 import {
   // doc,
   addDoc,

@@ -1,4 +1,3 @@
-/* 체크 */
 // 더 이상 수정 안 해도 됩니다!! 건들지 마세욤!!
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
