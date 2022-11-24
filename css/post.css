@@ -1,0 +1,105 @@
+.main-logoson {
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.post-areason {
+  background-color: lightsteelblue;
+  width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* .photo-wrapson {
+  background-color:white;
+  margin: 20px;
+  position:relative;
+} */
+
+.photo-areason {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: none;
+  position: relative;
+}
+.photo-inputson {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
+
+.plus-btnson {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.5;
+  background-color: white;
+  padding: 10px;
+}
+
+.file-select-btnson {
+  display: none;
+}
+.category-selectson {
+  background-color: white;
+  padding: 0px 10px 0px 10px;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border: none;
+}
+.title-boxson {
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+.content-boxson {
+  width: 500px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  resize: none;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px;
+}
+.hashtag-boxson {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+.post-btnson {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
