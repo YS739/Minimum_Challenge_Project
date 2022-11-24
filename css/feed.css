@@ -3,6 +3,7 @@
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .mypic {
@@ -312,4 +313,11 @@ input#menu:checked + nav#main_nav {
 
 .btn-3 > button:hover {
   border: 2px solid gray;
+}
+
+/* comments */
+.feedCards {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
 }

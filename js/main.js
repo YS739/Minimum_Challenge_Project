@@ -1,5 +1,11 @@
 import { authService } from "./firebase.js";
-import { handleLocation, route, goToPost, goToMyPage, goToHome } from "./router.js";
+import {
+  handleLocation,
+  route,
+  goToPost,
+  goToMyPage,
+  goToHome,
+} from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
@@ -7,8 +13,13 @@ import { handleAuth, onToggle } from "./pages/auth.js";
 import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
-import { getFeedCommentList,onEditing,update_comment, delete_comment, save_comment} from "./pages/feed.js";
-
+import {
+  save_comment,
+  getFeedCommentList,
+  onEditing,
+  update_comment,
+  delete_comment,
+} from "./pages/feed.js";
 
 window.addEventListener("hashchange", handleLocation);
 
