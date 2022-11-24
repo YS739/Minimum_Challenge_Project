@@ -15,6 +15,7 @@ window.addEventListener("hashchange", handleLocation);
 document.addEventListener("DOMContentLoaded", () => {
   authService.onAuthStateChanged((user) => {
     handleLocation();
+
     const hash = window.location.hash;
     if (user) {
       if (hash === "auth") {

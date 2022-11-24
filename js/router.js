@@ -19,7 +19,6 @@ const routes = {
 
 
 export const handleLocation = async () => {
-  
   let path = window.location.hash.replace("#", ""); // ""
 
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
@@ -43,9 +42,6 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
-    
   }
 
   if (path === "mypage") {
@@ -66,19 +62,18 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
-
   }
 
-      const modal = document.getElementById("login-modal")
-    const btnModal = document.getElementById("loginButton")
-    btnModal.addEventListener("click", e => {
-        modal.style.display = "flex"
-    })
+  const modal = document.getElementById("login-modal");
+  const btnModal = document.getElementById("loginButton");
+  btnModal.addEventListener("click", (e) => {
+    modal.style.display = "flex";
+  });
 
-    const closeBtn = modal.querySelector("#closeBtn")
-    closeBtn.addEventListener("click", e => {
-        modal.style.display = "none"
-    })
+  const closeBtn = modal.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
