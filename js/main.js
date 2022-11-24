@@ -7,6 +7,7 @@ import { handleAuth, onToggle } from "./pages/auth.js";
 import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
+import { goToWrite, goToMyProfile } from "./router.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -43,4 +44,7 @@ window.getPostList = getPostList;
 // 유안 - 프로필 사진 변경
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
+// 유안 - 마이페이지에서 작성하기링크로
+window.goToWrite = goToWrite;
+window.goToMyProfile = goToMyProfile;
 
