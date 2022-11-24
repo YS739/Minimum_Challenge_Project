@@ -75,10 +75,12 @@ export const handleLocation = async () => {
   });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
-export const goToPost = () => {
-  window.location.hash = "#post";
-};
-
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
+  document.getElementById("goMYBtn").disabled = true;
+};
+
+export const goToPost = () => {
+  document.getElementById("goPoBtn").disabled = true;
+  window.location.hash = "#post";
 };

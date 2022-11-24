@@ -13,7 +13,7 @@ export const handleAuth = (event) => {
   event.preventDefault();
   const email = document.getElementById("email");
   const emailVal = email.value;
-  const pw = document.getElementById("pw"); 
+  const pw = document.getElementById("pw");
   const pwVal = pw.value;
 
   // 유효성 검사
@@ -101,8 +101,13 @@ export const socialLogin = (event) => {
   const { name } = event.target;
   let provider;
   if (name === "github") {
+    // 윤숙 - 소셜로그인 버튼 비활성화 취소 for UX
+    // document.getElementById("gitLoginBtn").disabled = true;
+
     provider = new GithubAuthProvider();
   } else if (name === "google") {
+    // document.getElementById("gooLoginBtn").disabled = true;
+
     provider = new GoogleAuthProvider();
   }
   signInWithPopup(authService, provider)
