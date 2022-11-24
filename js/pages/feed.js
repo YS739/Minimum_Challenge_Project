@@ -67,7 +67,7 @@ import {
       alert(error);
     }
   }
-};
+
 
 export const getFeedCommentList = async () => {
   let cmtObjList = [];
