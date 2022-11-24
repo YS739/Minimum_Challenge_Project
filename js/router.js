@@ -1,5 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
+import { getFeedCommentList } from "./pages/feed.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -24,6 +25,10 @@ export const handleLocation = async () => {
   if (path.length == 0) {
     path = "/";
     getPostList();
+  }
+
+  if (path === "feed") {
+    getFeedCommentList();
   }
 
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
