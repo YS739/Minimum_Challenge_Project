@@ -64,9 +64,9 @@
         <div class="text-4">
           <p>+ comment.</p>
         </div>
-            <!-- 여기가 댓글시작 -->
-            <div id="feedCmt-list"></div>
-            <!-- 밑에는 삭제할거임 -->
+          <!--여기가 댓글시작  -->
+          <div id="feedCmt-list"></div>
+          <!-- 밑에는삭제할거임 -->
 
         <div class="image-2">
           <img class="profileImg" width="30px" height="30px" src="/img/1.jpg" />
@@ -76,15 +76,21 @@
         </div>
         <div class="comment-1">
           <textarea
+          id="feedComment"
             name="comment"
             placeholder="댓글달기"
             style="width: 450px"
           ></textarea>
         </div>
         <div class="btn-1">
+<<<<<<< HEAD
           <button>댓글달기</button>
         </div>
         
+=======
+          <button onclick="save_comment(event)" type="button" class="btn btn-dark">댓글 달기</button>
+        </div>
+>>>>>>> 51545e557ad8eecb30cbaedef1a3c7c7d72d2183
       </div>
     </div>
   </body>

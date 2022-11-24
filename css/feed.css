@@ -314,3 +314,12 @@ input#menu:checked + nav#main_nav {
 .btn-3 > button:hover {
   border: 2px solid gray;
 }
+
+/* 댓글달기 및수정삭제 */
+
+
+.feedCards {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+}
