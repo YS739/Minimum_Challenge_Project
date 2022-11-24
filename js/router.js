@@ -64,7 +64,7 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
 
   }
-
+    // 로그인 모달창 코드
       const modal = document.getElementById("login-modal")
     const btnModal = document.getElementById("loginButton")
     btnModal.addEventListener("click", e => {
@@ -74,6 +74,18 @@ export const handleLocation = async () => {
     const closeBtn = modal.querySelector("#closeBtn")
     closeBtn.addEventListener("click", e => {
         modal.style.display = "none"
+    })
+
+    // 프로필 모달창 코드
+    const modalprofile = document.getElementById("profile-modal")
+    const editModal = document.getElementById("editBtn")
+    editModal.addEventListener("click", e => {
+      modalprofile.style.display = "flex"
+    })
+
+    const closeBtnprofile = modal.querySelector("#closeBtn1")
+    closeBtnprofile.addEventListener("click", e => {
+      modalprofile.style.display = "none"
     })
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
