@@ -17,6 +17,7 @@ const routes = {
   404: "/pages/404.html",
 };
 
+
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", ""); // ""
 
@@ -41,9 +42,6 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
-    
   }
 
   if (path === "mypage") {
@@ -84,4 +82,9 @@ export const goToPost = () => {
 
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
+
+};
+
+export const goToIndex = () => {
+  window.location.hash = "#loginmain";
 };

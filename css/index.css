@@ -195,10 +195,7 @@ input#useridyuns:checked + nav#profilebtn {
   display: none;
 }
 
-
-/* login-menu */
-
-
+/* loginmain getPostList */
 .mypost {
   width: 95%;
   max-width: 300px;
