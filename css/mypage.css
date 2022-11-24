@@ -1,11 +1,10 @@
-.title {
-  position: relative;
+.main-logoson{
+  width: 300px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-.title > p {
-  position: absolute;
-  left: 120px;
-}
 .logout-btn {
   position: relative;
 }

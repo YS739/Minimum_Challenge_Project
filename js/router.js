@@ -1,4 +1,5 @@
 import { authService } from "./firebase.js";
+import { getPostList } from "./pages/mypage.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -19,6 +20,9 @@ const routes = {
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", ""); // ""
 
+
+
+
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
@@ -31,6 +35,7 @@ export const handleLocation = async () => {
   document.getElementById("root").innerHTML = html;
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
+
   if (path === "loginmain") {
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
     document.getElementById("nickname").textContent =
