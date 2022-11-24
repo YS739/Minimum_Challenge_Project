@@ -16,6 +16,7 @@ const routes = {
   404: "/pages/404.html",
 };
 
+
 export const handleLocation = async () => {
   
   let path = window.location.hash.replace("#", ""); // ""
@@ -83,4 +84,10 @@ export const goToPost = () => {
 
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
+
+};
+
+export const goToIndex = () => {
+  window.location.hash = "#loginmain";
+
 };
