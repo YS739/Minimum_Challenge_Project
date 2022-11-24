@@ -11,6 +11,9 @@ import { getPostList } from "./pages/mypage.js";
 window.addEventListener("hashchange", handleLocation);
 
 
+
+
+
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
   authService.onAuthStateChanged((user) => {
