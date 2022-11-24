@@ -41,10 +41,9 @@ window.onPostChange = onPostChange;
 window.save_post = save_post;
 // my page event
 window.getPostList = getPostList;
-// 유안 - 프로필 사진 변경
+// 유안 - 프로필 사진 변경, 마이페이지에서 작성하기링크로
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
-// 유안 - 마이페이지에서 작성하기링크로
 window.goToWrite = goToWrite;
 window.goToMyProfile = goToMyProfile;
 

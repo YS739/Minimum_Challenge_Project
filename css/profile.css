@@ -146,19 +146,6 @@
     color: black;
   }
 
-/*  내꺼 버튼 스타일참고만 하고 삭제하기
-    .closeTabClick {
-    position: relative;
-}
-
-.closeTabClick >button {
-    position: absolute;
-    top: -90px;
-    left: 470px;
-    border: none;
-    background-color:transparent;
-    font-size: 40px;
-} */
 .prokim {
     display: flex;
     flex-direction: column;
