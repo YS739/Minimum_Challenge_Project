@@ -8,7 +8,12 @@
     <title>게시글페이지</title>
   </head>
   <body>
-    <span onclick="goToHome()"><img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge"></span>
+    <span onclick="goToHome()"
+      ><img
+        class="main-logoson"
+        src="https://url.kr/nkmebz"
+        alt="Minimum Challenge"
+    /></span>
 
     <div>
       <div class="mypic">
@@ -61,29 +66,36 @@
         <div class="text-3">
           <p>20xx.xx.xx</p>
         </div>
-        <div class="text-4">
-          <p>+ comment.</p>
-        </div>
-          <!--여기가 댓글시작  -->
-          <div id="feedCmt-list"></div>
-          <!-- 밑에는삭제할거임 -->
 
+        <div class="text-4">
+          <p>comment.</p>
+        </div>
+        <!-- 댓글 시작 -->
+        <div id="feedCmt-list"></div>
+        <!-- 밑에는 삭제할 거이ㅓㅁ  -->
         <div class="image-2">
           <img class="profileImg" width="30px" height="30px" src="/img/1.jpg" />
         </div>
         <div class="text-5">
           <p>대호</p>
         </div>
+
         <div class="comment-1">
           <textarea
-          id="feedComment"
+            id="feedComment"
             name="comment"
             placeholder="댓글달기"
             style="width: 450px"
           ></textarea>
         </div>
         <div class="btn-1">
-          <button onclick="save_comment(event)" type="button" class="btn btn-dark">댓글 달기</button>
+          <button
+            onclick="save_comment(event)"
+            type="button"
+            class="btn btn-dark"
+          >
+            댓글달기
+          </button>
         </div>
       </div>
     </div>
