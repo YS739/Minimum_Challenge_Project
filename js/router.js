@@ -99,6 +99,7 @@ export const goToPost = () => {
   window.location.hash = "#post";
 };
 
+// 유진 - 로고 누르면 메인으로 감
 export const goToIndex = () => {
   window.location.hash = "/";
 };

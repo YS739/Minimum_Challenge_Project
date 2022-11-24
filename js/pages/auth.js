@@ -120,3 +120,10 @@ export const socialLogin = (event) => {
       const errorMessage = error.message;
     });
 };
+
+
+
+//////////////
+
+
+const loginFireBase(emailVal, pwVal)

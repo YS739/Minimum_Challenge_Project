@@ -1,5 +1,5 @@
 import { authService } from "./firebase.js";
-import { handleLocation, route, goToPost, goToMyPage } from "./router.js";
+import { handleLocation, route, goToPost, goToMyPage, goToIndex } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
@@ -9,6 +9,7 @@ import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
 
 window.addEventListener("hashchange", handleLocation);
+
 
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
@@ -44,4 +45,5 @@ window.getPostList = getPostList;
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 
+// 유진-로고 클릭 시 메인으로 이동
 window.goToIndex = goToIndex;
