@@ -3,13 +3,6 @@
   font-family: "Jua", sans-serif;
 }
 
-.main-logoson {
-  width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-}
-
 .navjeong a {
   text-decoration: none;
   color: black;
@@ -195,7 +188,10 @@ input#useridyuns:checked + nav#profilebtn {
   display: none;
 }
 
-/* loginmain getPostList */
+
+/* login-menu */
+
+
 .mypost {
   width: 95%;
   max-width: 300px;
