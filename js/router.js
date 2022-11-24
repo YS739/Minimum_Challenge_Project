@@ -26,10 +26,6 @@ export const handleLocation = async () => {
     path = "/";
     getPostList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
   }
-  if (path === "feed") {
-    
-    getFeedCommentList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
-  }
 
   if (path === "feed") {
     getFeedCommentList();
@@ -40,8 +36,6 @@ export const handleLocation = async () => {
   const html = await fetch(route).then((data) => data.text());
 
   document.getElementById("root").innerHTML = html;
-
-
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
   if (path === "loginmain") {

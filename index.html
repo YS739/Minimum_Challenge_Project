@@ -1,193 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/profile.css" />
+        <title>Minimum_Challenge</title>
+        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+      </head>
+      <body>
+        <image class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
 
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="stylesheet" type="text/css" href="./css/auth.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
-      rel="stylesheet"
-    />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/54db7ce8fa.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>Minimum Challenge</title>
-  </head>
-
-  <body>
-    <div id="root">
-      <div class="headjeong">
-        <span onclick="goToHome()"
-          ><img
-            class="main-logoson"
-            src="https://url.kr/nkmebz"
-            alt="Minimum Challenge"
-        /></span>
-        <div class="headcontainerjeong">
-          <div class="searchjeong">
-            <a href="#" onclick="route(event)">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </a>
-          </div>
-          <div class="loginbtnjeong">
-            <button type="submit" class="logbtnjeong" id="loginButton">
-              로그인
-            </button>
-          </div>
+        <div id="container">
+          <h2>Minimum Challenge</h2>
         </div>
-      </div>
-
-      <!-- nav bar -->
-      <nav class="navjeong">
-        <div class="allnavjeong">
-          <a href="#" onclick="route(event)">전체보기</a>
+        
+        <!-- 뒷배경 -->
+        <div id="modikim" class="overlaykim"> <!--modikim 모든 스타일이 다 지워짐,오버레이킴은 상자가 왼쪽으로 감-->
+            
+<!-- 파이어베이스 시작 -->
+        <div id="profilePage">
+            <section id="profileWrapper">
+                <form id="profileForm" onsubmit="changeProfile(event)"> 
+        
+        <!-- 유안 - X버튼에 a 링크로 홈으로 이동 -->
+        <div class="close-kim">
+            <button><a href="#mypage"> X</a></button>
         </div>
-
-        <div class="workoutjeong">
-          <label for="workoutys"
-            ><a href="#404" onclick="route(event)" id="workoutys"
-              >운동하기
-              <div class="workoutdescjeong">딱 5분만 운동하자!</div>
-            </a></label
-          >
-        </div>
-
-        <div class="studyjeong">
-          <label for="studyys">
-            <a href="#" onclick="route(event)" id="studyys"
-              >공부하기
-              <div class="studydescjeong">딱 10분만 공부하자!</div>
-            </a></label
-          >
-        </div>
-        <div class="bookjeong">
-          <label for="studyys">
-            <a href="#" onclick="route(event)" id="studyys"
-              >독서하기
-              <div class="bookdescjeong">딱 1페이지만 읽자!</div>
-            </a></label
-          >
-        </div>
-        <div class="recentjeong">
-          <a href="#" onclick="route(event)"
-            ><i class="fa-solid fa-rotate"></i> 최신</a
-          >
-        </div>
-      </nav>
-      <!-- 게시물 불러오는 곳 -->
-
-      <!-- 윤숙 - 여기에 해당 해쉬값을 가진 html이 붙는데 우리팀은 이 부분에 독서하기,
-      공부하기를 누르면 해당 게시물만 불러와지도록 하려고 함 그럼 div main-page가 게시물 불러오는 곳 위에 있고
-    해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!-->
-      <div id="main-page"></div>
-
-
-     
-      <!-- 여기서 부터 모듈 -->
-      <div id="login-modal">
-        <div id="modal" class="modal-overlay">
-          <div class="modal-window">
-            <div class="title">
-              <p id="authTitle">로그인</p>
+        
+        <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
+        <div class="modi-windowkim">  <!-- 상자생김 -->      
+            
+        <!-- 이미지 라벨을 클릭하면 이미지 인풋이 클릭된거랑 똑같은 걸 나타낸다.     -->
+        <label id="imgLabel" for="imgInput">
+            <div class="imagemove">
+                <img id="profileView" src="../img/1.jpg" />
             </div>
-            <div class="close-area">
-              <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
-              <button id="closeBtn"><a href="/"> X</a></button>
+            <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
+        </label>
+
+        <!--상자안에 글씨, 입력칸등의 위치 정렬-->
+        <div class="prokim">        
+            <div class="myname">
+                <input id="profileNickname" type="text" placeholder="현재 닉네임" value="" />
             </div>
-            <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
-
-            <div class="content">
-              <!-- 윤숙 - form에 handleAuth 추가 -->
-
-              <!--여기서부터 폼 만들어짐-->
-              <!--윤숙 - input에 각 id 값 추가  -->
-              <form onsubmit="handleAuth(event)">
-                <div>
-                  <input
-                    id="email"
-                    type="text"
-                    class="text-field"
-                    placeholder="이메일"
-                  />
-                  <!--이메일폼-->
-                </div>
-
-                <div>
-                  <input
-                    id="pw"
-                    type="password"
-                    class="text-field"
-                    placeholder="비밀번호"
-                  />
-                  <!--비밀번호폼-->
-                </div>
-
-                <!-- 윤숙 - 상위 div(login-btn)삭제 후 button을 input으로 바꾸고 id, value 값 추가  -->
-                <input type="submit" id="loginBtn" value="로그인" />
-              </form>
-
-              <div class="socialbuttons">
-                <!--버튼들폼-->
-                <!--윤숙 - button에 onclick, name 추가  -->
-                <button
-                  name="github"
-                  class="github-btn"
-                  onclick="socialLogin(event)"
-                >
-                  GitHub 로그인
-                </button>
-                <button class="twitter-btn">소셜 로그인</button>
-                <button
-                  name="google"
-                  class="google-btn"
-                  onclick="socialLogin(event)"
-                >
-                  구글 로그인
-                </button>
-              </div>
-
-              <div class="logos">
-                <!--이미지로고들-->
-                <div class="github-logo">
-                  <img src="../img/깃허브로고.png" />
-                </div>
-                <div class="twitter-logo">
-                  <img src="../img/트위터로고 .png" />
-                </div>
-                <div class="google-logo">
-                  <img src="../img/구글로고 .png" />
-                </div>
-              </div>
-              <div class="lastline">
-                <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
-                <p>
-                  계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-                    회원가입하기
-                  </span>
-                </p>
-              </div>
+            <br />
+                <!-- nav bar -->
+                <!-- 자스가 다운되기 전에 보여줄 정적인 부분 -->
+                <nav class="profile-nav">
+                    <label for="profile-navkim">
+                        <!-- #말고 #mypage로 넘어갔으면 좋겠어서 mypage로 해봄 -->
+                        
+                            <div class="mybtn">
+                                <button id="profileBtn"><a href="#mypage" onclick="route(event)" id="profile-changekim"></a>수정하기</button>
+                            </div>
+                    </label>
+                </nav>
             </div>
-          </div>
+        
+        </form>
+        <section> 
         </div>
-      </div>
-
-      <script src="js/main.js" type="module"></script>
-    </div>
-  </body>
-</html>

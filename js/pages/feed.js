@@ -1,73 +1,86 @@
-// 댓글부분 입니다.
+//  댓글 부분
 import {
-    doc,
-    addDoc,
-    updateDoc,
-    deleteDoc,
-    collection,
-    orderBy,
-    query,
-    getDocs,
-  } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-  import { dbService, authService } from "../firebase.js";
-  
-  export const save_comment = async (event) => {
-    event.preventDefault();
-    const comment = document.getElementById("feedComment");
-    const { uid, photoURL, displayName } = authService.currentUser;
+  doc,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  collection,
+  orderBy,
+  query,
+  getDocs,
+} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
+import { dbService, authService } from "../firebase.js";
+
+export const save_comment = async (event) => {
+  event.preventDefault();
+  const comment = document.getElementById("feedComment");
+  const { uid, photoURL, displayName } = authService.currentUser;
+  try {
+    await addDoc(collection(dbService, "feedCommentList"), {
+      text: comment.value,
+      createdAt: Date.now(),
+      creatorId: uid,
+      profileImg: photoURL,
+      nickname: displayName,
+    });
+    comment.value = "";
+    getFeedCommentList();
+  } catch (error) {
+    alert(error);
+    console.log("error in addDoc:", error);
+  }
+};
+
+export const onEditing = (event) => {
+  // 수정버튼 클릭
+  event.preventDefault();
+  const udBtns = document.querySelectorAll(".cmtEditBtn, .cmtDelBtn");
+  udBtns.forEach((udBtn) => (udBtn.disabled = "true"));
+
+  const cardBody = event.target.parentNode.parentNode;
+  const commentText = cardBody.children[0].children[0];
+  const commentInputP = cardBody.children[0].children[1];
+
+  commentText.classList.add("noDisplay");
+  commentInputP.classList.add("d-flex");
+  commentInputP.classList.remove("noDisplay");
+  commentInputP.children[0].focus();
+};
+
+export const update_comment = async (event) => {
+  event.preventDefault();
+  const newComment = event.target.parentNode.children[0].value;
+  const id = event.target.parentNode.id;
+
+  const parentNode = event.target.parentNode.parentNode;
+  const commentText = parentNode.children[0];
+  commentText.classList.remove("noDisplay");
+  const commentInputP = parentNode.children[1];
+  commentInputP.classList.remove("d-flex");
+  commentInputP.classList.add("noDisplay");
+
+  const commentRef = doc(dbService, "feedCommentList", id);
+  try {
+    await updateDoc(commentRef, { text: newComment });
+    getFeedCommentList();
+  } catch (error) {
+    alert(error);
+  }
+};
+
+export const delete_comment = async (event) => {
+  event.preventDefault();
+  const id = event.target.name;
+  const ok = window.confirm("해당 응원글을 정말 삭제하시겠습니까?");
+  if (ok) {
     try {
-      await addDoc(collection(dbService, "feedCommentList"), {  // feedCommentList = firestore 저장되는 이름
-        text: comment.value,
-        createdAt: Date.now(),
-        creatorId: uid, //id값을 만들어줘야 그 해당 id값을 가진 사람이 올린 댓글을 찾아 수정삭제할수잇어서
-        profileImg: photoURL,
-        nickname: displayName,
-      });
-      comment.value = "";
-      getFeedCommentList();
-    } catch (error) {
-      alert(error);
-      console.log("error in addDoc:", error);
-    }
-  };
-  
-  export const onEditing = (event) => {
-    // 수정버튼 클릭
-    event.preventDefault();
-    const udBtns = document.querySelectorAll(".cmtEditBtn, .cmtDelBtn");
-    udBtns.forEach((udBtn) => (udBtn.disabled = "true"));
-  
-    const cardBody = event.target.parentNode.parentNode;
-    const commentText = cardBody.children[0].children[0];
-    const commentInputP = cardBody.children[0].children[1];
-  
-    commentText.classList.add("noDisplay");
-    commentInputP.classList.add("d-flex");
-    commentInputP.classList.remove("noDisplay");
-    commentInputP.children[0].focus();
-  };
-  
-  export const update_comment = async (event) => {
-    event.preventDefault();
-    const newComment = event.target.parentNode.children[0].value;
-    const id = event.target.parentNode.id;
-  
-    const parentNode = event.target.parentNode.parentNode;
-    const commentText = parentNode.children[0];
-    commentText.classList.remove("noDisplay");
-    const commentInputP = parentNode.children[1];
-    commentInputP.classList.remove("d-flex");
-    commentInputP.classList.add("noDisplay");
-  
-    const commentRef = doc(dbService, "feedCommentList", id);
-    try {
-      await updateDoc(commentRef, { text: newComment });
+      await deleteDoc(doc(dbService, "feedCommentList", id));
       getFeedCommentList();
     } catch (error) {
       alert(error);
     }
   }
-
+};
 
 export const getFeedCommentList = async () => {
   let cmtObjList = [];
