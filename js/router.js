@@ -1,4 +1,5 @@
 import { authService } from "./firebase.js";
+import { getPostList } from "./pages/loginmain.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -33,6 +34,7 @@ export const handleLocation = async () => {
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
   if (path === "loginmain") {
+    getPostList();
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
@@ -41,7 +43,7 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
 
     //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
-    // getCommentList();
+    
   }
 
   if (path === "mypage") {

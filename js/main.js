@@ -14,6 +14,7 @@ import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
 
+
 window.addEventListener("hashchange", handleLocation);
 
 // 첫 랜딩 또는 새로고침 시
@@ -32,6 +33,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+
+
 
 // 전역 함수 리스트
 window.route = route;
