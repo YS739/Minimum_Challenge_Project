@@ -91,5 +91,5 @@ export const goToMyPage = () => {
 };
 
 export const goToHome = () => {
-  window.location.hash = "/";
+  window.location.hash = "";
 };
