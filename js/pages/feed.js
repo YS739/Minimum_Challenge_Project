@@ -66,67 +66,54 @@ import {
     } catch (error) {
       alert(error);
     }
-  };
-  
-  export const delete_comment = async (event) => {
-    event.preventDefault();
-    const id = event.target.name;
-    const ok = window.confirm("해당 응원글을 정말 삭제하시겠습니까?");
-    if (ok) {
-      try {
-        await deleteDoc(doc(dbService, "feedCommentList", id));
-        getFeedCommentList();
-      } catch (error) {
-        alert(error);
-      }
-    }
-  };
-  
-  export const getFeedCommentList = async () => {
-    let cmtObjList = [];
-    const q = query(
-      collection(dbService, "feedCommentList"),
-      orderBy("createdAt", "desc")
-    );
-    const querySnapshot = await getDocs(q);
-    querySnapshot.forEach((doc) => {    //배열메소드 foreach아님 querySnapshot안에있는 키값임
-      const commentObj = {
-        id: doc.id,
-        ...doc.data(),
-      };
-      cmtObjList.push(commentObj);
-    });
-    const commentList = document.getElementById("feedCmt-list");
-    const currentUid = authService.currentUser.uid;
-    commentList.innerHTML = "";           //댓글넣는방법
-    cmtObjList.forEach((cmtObj) => {
-      const isOwner = currentUid === cmtObj.creatorId;
-      const temp_html = `<div class="card commentCard">
-            <div class="card-body">
-                <blockquote class="blockquote mb-0">
-                    <p class="commentText">${cmtObj.text}</p>
-                    <p id="${
-                      cmtObj.id
-                    }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
-                    <footer class="quote-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
-                      cmtObj.profileImg
-                    }" alt="profileImg" /><span>${
-        cmtObj.nickname ?? "회원"
-      }</span></div><div class="cmtAt">${new Date(cmtObj.createdAt)
-        .toString()
-        .slice(0, 25)}</div></footer>
-                </blockquote>
-                <div class="${isOwner ? "updateBtns" : "noDisplay"}">
-                     <button onclick="onEditing(event)" class="editBtn btn btn-dark">수정</button>
-                  <button name="${
-                    cmtObj.id
-                  }" onclick="delete_comment(event)" class="deleteBtn btn btn-dark">삭제</button>
-                </div>            
-              </div>
-       </div>`;
-      const div = document.createElement("div");
-      div.classList.add("feedCards");
-      div.innerHTML = temp_html;
-      commentList.appendChild(div);
-    });
-  };
+  }
+};
+
+export const getFeedCommentList = async () => {
+  let cmtObjList = [];
+  const q = query(
+    collection(dbService, "feedCommentList"),
+    orderBy("createdAt", "desc")
+  );
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    const commentObj = {
+      id: doc.id,
+      ...doc.data(),
+    };
+    cmtObjList.push(commentObj);
+  });
+  const commentList = document.getElementById("feedCmt-list");
+  const currentUid = authService.currentUser.uid;
+  commentList.innerHTML = "";
+  cmtObjList.forEach((cmtObj) => {
+    const isOwner = currentUid === cmtObj.creatorId;
+    const temp_html = `<div class="card commentCard">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p class="commentText">${cmtObj.text}</p>
+            <p id="${
+              cmtObj.id
+            }" class="noDisplay"><input class="newCmtInput" type="text"  /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
+            <footer class="quote-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
+              cmtObj.profileImg
+            }" alt="profileImg" /><span>${
+      cmtObj.nickname ?? "회원"
+    }</span></div><div class="cmtAt">${new Date(cmtObj.createdAt)
+      .toString()
+      .slice(0, 25)}</div></footer>
+        </blockquote>
+        <div class="${isOwner ? "updateBtns" : "noDisplay"}">
+             <button onclick="onEditing(event)" class="cmtEditBtn">수정</button>
+          <button name="${
+            cmtObj.id
+          }" onclick="delete_comment(event)" class="cmtDelBtn">삭제</button>
+        </div>            
+      </div>
+</div>`;
+    const div = document.createElement("div");
+    div.classList.add("mycards");
+    div.innerHTML = temp_html;
+    commentList.appendChild(div);
+  });
+};

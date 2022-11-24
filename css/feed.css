@@ -315,11 +315,50 @@ input#menu:checked + nav#main_nav {
   border: 2px solid gray;
 }
 
+<<<<<<< HEAD
 /* 댓글달기 및수정삭제 */
 
 
 .feedCards {
+=======
+/* comments */
+.mycards {
+>>>>>>> 83f388ceef8911e3b3e5b9533b863a74f3f091ec
   width: 95%;
   max-width: 500px;
   margin: auto;
+}
+
+.mycards > .card {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.updateBtns {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.noDisplay {
+  display: none;
+}
+.updateBtn {
+  min-width: 70px;
+}
+.newCmtInput {
+  width: 100%;
+}
+.cmtImg {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.quote-footer {
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
