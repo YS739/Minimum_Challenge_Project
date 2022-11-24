@@ -1,4 +1,4 @@
-import { authService } from "./firebase.js";
+import { authService, dbService } from "./firebase.js";
 import { handleLocation, route, goToPost, goToMyPage } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin } from "./pages/auth.js";
@@ -15,6 +15,7 @@ window.addEventListener("hashchange", handleLocation);
 document.addEventListener("DOMContentLoaded", () => {
   authService.onAuthStateChanged((user) => {
     handleLocation();
+
     const hash = window.location.hash;
     if (user) {
       if (hash === "auth") {
