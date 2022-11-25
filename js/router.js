@@ -106,3 +106,15 @@ export const goToMyPage = () => {
 export const goToHome = () => {
   window.location.hash = "";
 };
+
+export const goToMyWrite = () => {
+  window.location.hash = "#post";
+};
+
+export const goToMyEdit = () => {
+  window.location.hash = "#profile";
+};
+
+export const goToLogout = () => {
+  window.location.hash = "";
+};
