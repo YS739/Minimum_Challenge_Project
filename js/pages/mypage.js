@@ -48,5 +48,3 @@ export const getPostList = async () => {
     postList.appendChild(div);
   });
 };
-// 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
-getPostList();
