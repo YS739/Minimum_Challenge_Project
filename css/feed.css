@@ -362,3 +362,55 @@ input#menu:checked + nav#main_nav {
   align-items: center;
   justify-content: space-between;
 }
+
+/* feed page getOnePost class */
+
+.myFeed {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.myFeed .postBox {
+}
+
+/* 포스팅 사진 */
+.onePostPic {
+}
+
+.onePostPic img {
+  width: 95%;
+  max-width: 800px;
+  height: 400px;
+}
+
+.updatePostBtn {
+}
+
+.editPostBtn,
+.deletePostBtn {
+}
+
+/* user 프로필, 포스팅 내용 */
+.allPostingBox {
+}
+
+.postUserBox {
+}
+
+.userPofile img {
+  width: 100px;
+  height: 100px;
+}
+
+.postUserName {
+}
+
+.postCmtBox {
+}
+
+.postContentBox {
+}
+
+.onePostAt {
+}

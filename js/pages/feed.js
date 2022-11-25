@@ -26,25 +26,32 @@ export const getOnePost = async () => {
     pstObjList.push(postObj);
   });
   console.log(pstObjList);
-  const postList = document.getElementById("showPostPic");
+  const onePostList = document.getElementById("showPostCmt");
   const currentUid = authService.currentUser.uid;
-  postList.innerHTML = "";
+  onePostList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    // const isOwner = currentUid === ptObj.creatorId;
-    const temp_html = `<a href="#feed" onclick="route(event)" class="postingbox">
-    <div class="postPic">
+    const isOwner = currentUid === ptObj.creatorId;
+    const temp_html = `<div class="postBox">
+    <div class="onePostPic">
       <img
         class="postPicImg"
         width="100px"
         height="100px"
         src="${ptObj.postpic}"
       />
+      <p id="$p{
+          cmtObj.id
+        }" class="noDisplay"><button class="updatePostBtn" onclick="update_post(event)">완료</button></p>
+      <div class="${isOwner ? "updatePostBtn" : "noDisplay"}">
+          <button onclick="edit_PostPic(event)" class="editPostBtn">수정</button>
+       <button name="${
+         cmtObj.id
+       }" onclick="delete_Post(event)" class="deletePostBtn">삭제</button>
+     </div>  
     </div>
-    <div class="contentbox">
-      <p class="postTitle">${ptObj.title}</p>
-      <p class="postContent">${ptObj.post}</p>
-      <footer class="posting-footer">
-        <div>
+    <div class="allPostingBox">
+      <div class="postUserBox">
+        <div class="userPofile">
           <img
             class="myProfileImg"
             width="50px"
@@ -53,16 +60,27 @@ export const getOnePost = async () => {
             alt="profileImg"
           /><span>${ptObj.nickname ?? "회원"}</span>
         </div>
-        <div class="postAt">
-          ${new Date(ptObj.createdAt).toString().slice(0, 25)}
+        <div class="userName"></div>
+      </div>
+      <div class="postCmtBox">
+        <div class="postContentBox">
+          <p class="contentTitle">${ptObj.title}</p>
+          <p class="contentMain">${ptObj.post}</p>
+          <div class="onePostAt">
+            ${new Date(ptObj.createdAt).toString().slice(0, 25)}
+          </div>
         </div>
-      </footer>
+        <!-- <div class="postCmtBox">
+                  <div class="inputCmt"></div>
+                  <div class="postComments"></div>
+              </div> -->
+      </div>
     </div>
-  </a>`;
+  </div>`;
     const div = document.createElement("div");
-    div.classList.add("mypost");
+    div.classList.add("myFeed");
     div.innerHTML = temp_html;
-    postList.appendChild(div);
+    onePostList.appendChild(div);
   });
 };
 // 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
@@ -91,7 +109,6 @@ export const save_comment = async (event) => {
 };
 
 export const onEditing = (event) => {
-  // 수정버튼 클릭
   event.preventDefault();
   const udBtns = document.querySelectorAll(".cmtEditBtn, .cmtDelBtn");
   udBtns.forEach((udBtn) => (udBtn.disabled = "true"));
