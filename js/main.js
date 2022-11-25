@@ -19,6 +19,7 @@ import {
   onEditing,
   update_comment,
   delete_comment,
+  getOnePost,
 } from "./pages/feed.js";
 
 window.addEventListener("hashchange", handleLocation);
@@ -64,3 +65,4 @@ window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
+window.getOnePost = getOnePost;

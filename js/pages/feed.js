@@ -1,4 +1,3 @@
-// 댓글부분
 import {
   doc,
   addDoc,
@@ -12,7 +11,7 @@ import {
 import { dbService, authService } from "../firebase.js";
 
 // 내가 클릭한 post 불러오기
-export const getPostList = async () => {
+export const getOnePost = async () => {
   let pstObjList = [];
   const q = query(
     collection(dbService, "minipost"),
@@ -27,7 +26,7 @@ export const getPostList = async () => {
     pstObjList.push(postObj);
   });
   console.log(pstObjList);
-  const postList = document.getElementById("main-page");
+  const postList = document.getElementById("showPostPic");
   const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
@@ -68,7 +67,7 @@ export const getPostList = async () => {
 };
 // 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
 // pstObjList.value = "";
-getPostList();
+getOnePost();
 
 // 댓글 부분
 export const save_comment = async (event) => {
