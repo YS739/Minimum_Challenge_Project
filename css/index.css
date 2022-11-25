@@ -243,6 +243,17 @@ input#useridyuns:checked + nav#profilebtn {
   margin-top: 10px;
 }
 
+.goToHome,
+.goToMyPost {
+  border: none;
+  position: relative;
+  top: 40px;
+  background-color: transparent;
+}
+.goToMyPost {
+  margin-top: 10px;
+}
+
 /* login modal */
 
 .modal-overlay {
