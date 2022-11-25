@@ -5,12 +5,9 @@ import {
   goToPost,
   goToMyPage,
   goToHome,
-  goToMyWrite,
-  goToMyEdit,
-  goToLogout,
 } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
-import { socialLogin, logout } from "./pages/auth.js";
+import { socialLogin } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
 import { changeProfile, onFileChange } from "./pages/profile.js";
@@ -67,7 +64,3 @@ window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
-window.logout = logout;
-window.goToMyWrite = goToMyWrite;
-window.goToMyEdit = goToMyEdit;
-window.goToLogout = goToLogout;

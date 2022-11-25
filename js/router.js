@@ -24,7 +24,7 @@ export const handleLocation = async () => {
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
-    getPostList(); //이 함수땜에 로그아웃해도 나오네요 이미지
+    getPostList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
   }
 
   if (path === "feed") {
@@ -59,25 +59,6 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    //프로필 모달 기능 구현 자바스크립트
-    const modal1 = document.getElementById("profile-modal");
-    const btnModal1 = document.getElementById("editLogin");
-    btnModal1.addEventListener("click", (e) => {
-      modal1.style.display = "flex";
-    });
-
-    const closeBtn1 = modal1.querySelector("#closeBtn1");
-    closeBtn1.addEventListener("click", (e) => {
-      modal1.style.display = "none";
-    });
-
-    modal1.addEventListener("click", (e) => {
-      const evTarget1 = e.target;
-      if (evTarget1.classList.contains("overlaykim")) {
-        modal1.style.display = "none";
-      }
-    });
   }
 
   // 윤숙 - post.html, js 수정할 때 같이 볼 것
@@ -88,10 +69,10 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
-  // 로그인 모달 기능 구현 자바스크립트
+   // 로그인 모달 기능 구현 자바스크립트
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");
-  btnModal.addEventListener("click", (e) => {
+  btnModal.addEventListener("click", (e) => {    
     modal.style.display = "flex";
   });
 
@@ -100,12 +81,12 @@ export const handleLocation = async () => {
     modal.style.display = "none";
   });
 
-  modal.addEventListener("click", (e) => {
-    const evTarget = e.target;
-    if (evTarget.classList.contains("modal-overlay")) {
-      modal.style.display = "none";
+  modal.addEventListener("click", e => {
+    const evTarget = e.target
+    if(evTarget.classList.contains("modal-overlay")) {
+        modal.style.display = "none"
     }
-  });
+})
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
@@ -117,17 +98,5 @@ export const goToMyPage = () => {
 };
 
 export const goToHome = () => {
-  window.location.hash = "#loginmain";
-};
-
-export const goToMyWrite = () => {
-  window.location.hash = "#post";
-};
-
-export const goToMyEdit = () => {
-  window.location.hash = "#profile";
-};
-
-export const goToLogout = () => {
   window.location.hash = "";
 };

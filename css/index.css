@@ -48,27 +48,16 @@
 }
 
 .loginbtnjeong {
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 30px;
-  font-size: 20px;
-  letter-spacing: 4px;
-  padding: 15px 20px;
-  color: black;
   width: 100px;
   height: 30px;
+  font-size: 25px;
+  background-color: white;
   margin: 0 20px;
-  cursor: pointer;
-  /* text-align: center; */
-}
+  padding: 5px;
+  text-align: center;
 
-.loginbtnjeong:hover {
-  background-color: black;
-  color: white;
-}
-
-.loginbtnjeong:focus {
-  outline: none;
+  border: 1px solid black;
+  border-radius: 45%;
 }
 
 .logbtnjeong {
@@ -77,13 +66,9 @@
   color: black;
 }
 
-.logbtnjeong:hover {
-  background-color: black;
-  color: white;
-}
-
-.logbtnjeong:focus {
-  outline: none;
+.loginbtnjeong:hover {
+  color: rgb(143, 200, 249);
+  background-color: rgb(254, 237, 237);
 }
 
 .navjeong {
@@ -203,11 +188,6 @@ input#useridyuns:checked + nav#profilebtn {
 .fa-house-chimney {
   font-size: xx-large;
   margin-top: 10px;
-}
-
-.goToHome,
-.goToMyPost {
-  border: none;
 }
 
 /* login modal */

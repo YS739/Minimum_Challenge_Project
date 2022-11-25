@@ -40,7 +40,7 @@ export const onEditing = (event) => {
   const cardBody = event.target.parentNode.parentNode;
   const commentText = cardBody.children[0].children[0];
   const commentInputP = cardBody.children[0].children[1];
-  
+
   commentText.classList.add("noDisplay");
   commentInputP.classList.add("d-flex");
   commentInputP.classList.remove("noDisplay");
@@ -70,7 +70,7 @@ export const update_comment = async (event) => {
 
 export const delete_comment = async (event) => {
   event.preventDefault();
-  const id = event.target.nickname;
+  const id = event.target.name;
   const ok = window.confirm("해당 댓글을 정말 삭제하시겠습니까?");
   if (ok) {
     try {

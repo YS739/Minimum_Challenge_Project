@@ -28,6 +28,8 @@ export const getPostList = async () => {
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
+
+
         <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
           ptObj.postpic
         }"></div>
@@ -51,7 +53,7 @@ export const getPostList = async () => {
   });
 };
 // 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
-pstObjList.value = "";
+// pstObjList.value = "";
 getPostList();
 
 
