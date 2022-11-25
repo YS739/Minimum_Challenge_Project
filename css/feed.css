@@ -6,109 +6,6 @@
   cursor: pointer;
 }
 
-/* post  */
-
-.post-areason {
-  background-color: lightsteelblue;
-  width: 700px;
-  margin: 0px auto;
-  padding: 20px;
-}
-
-/* .photo-wrapson {
-  background-color:white;
-  margin: 20px;
-  position:relative;
-} */
-
-.photo-areason {
-  width: 500px;
-  height: 300px;
-  overflow: hidden;
-  margin: 0 auto;
-  border: none;
-  position: relative;
-}
-.photo-inputson {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
-
-.plus-btnson {
-  width: 50px;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  opacity: 0.5;
-  background-color: white;
-  padding: 10px;
-}
-
-.file-select-btnson {
-  display: none;
-}
-.category-selectson {
-  background-color: white;
-  padding: 0px 10px 0px 10px;
-  width: 500px;
-  height: 40px;
-  border-radius: 5px;
-
-  margin-top: 50px;
-  margin-bottom: 10px;
-  border: none;
-}
-.title-boxson {
-  width: 500px;
-  height: 40px;
-  border-radius: 5px;
-  padding: 0px 10px 0px 10px;
-  background-color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-}
-.content-boxson {
-  width: 500px;
-  height: 100px;
-  border-radius: 5px;
-  padding: 0px 10px 0px 10px;
-  background-color: white;
-  resize: none;
-
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-  padding: 10px;
-}
-.hashtag-boxson {
-  width: 500px;
-  height: 30px;
-  border-radius: 5px;
-  padding: 0px 10px 0px 10px;
-  background-color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border: none;
-}
-.post-btnson {
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  background-color: black;
-  color: white;
-  border: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
-
-  cursor: pointer;
-}
-
-/* feed  */
-
 .mypic {
   width: 80%;
   height: 360px;
@@ -130,7 +27,7 @@
   top: -100px;
 }
 
-.back {
+/* .back {
   position: relative;
 }
 .back > button {
@@ -145,12 +42,8 @@
   font-size: 50px;
 }
 .viewmore {
-  display: block;
   position: relative;
-  left: 180px;
-  bottom: 350px;
 }
-
 .viewmore > .menu > h1 {
   font-size: 80px;
 }
@@ -161,7 +54,6 @@ label.menu {
   position: absolute;
   left: 630px;
   top: -205px;
-  cursor: pointer;
 }
 
 input#menu {
@@ -181,7 +73,6 @@ input#menu:checked + nav#main_nav {
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
   padding-bottom: 20px;
-  cursor: pointer;
 }
 .delete > .revicebtn > button:hover {
   border: 2px solid gray;
@@ -200,7 +91,6 @@ input#menu:checked + nav#main_nav {
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
   padding-bottom: 20px;
-  cursor: pointer;
 }
 .delete > .deletebtn > button:hover {
   border: 2px solid gray;
@@ -226,8 +116,8 @@ input#menu:checked + nav#main_nav {
   position: absolute;
   top: 55px;
   left: 610px;
-}
-
+} */
+/* 
 .mypost {
   width: 80%;
   box-shadow: 0px 0px 3px 0px gray;
@@ -235,73 +125,7 @@ input#menu:checked + nav#main_nav {
   position: relative;
   left: 180px;
   height: 460px;
-}
-
-.image-1 {
-  position: relative;
-}
-
-.image-1 > img {
-  position: absolute;
-  top: 30px;
-  left: 60px;
-  border-radius: 50%;
-}
-
-.nickname {
-  position: relative;
-}
-.nickname > p {
-  position: absolute;
-  top: 95px;
-  left: 70px;
-}
-
-.studyready {
-  position: relative;
-}
-
-.studyready > p {
-  position: absolute;
-  top: 10px;
-  left: 200px;
-}
-
-.text-1 {
-  position: relative;
-}
-.text-1 > p {
-  position: absolute;
-  top: 60px;
-  left: 200px;
-}
-
-.text-2 {
-  position: relative;
-}
-.text-2 > p {
-  position: absolute;
-  top: 100px;
-  left: 200px;
-}
-
-.text-3 {
-  position: relative;
-}
-.text-3 > p {
-  position: absolute;
-  top: 130px;
-  left: 200px;
-}
-
-.text-4 {
-  position: relative;
-}
-.text-4 > p {
-  position: absolute;
-  top: 180px;
-  left: 200px;
-}
+} */
 
 .image-2 {
   position: relative;
@@ -311,15 +135,6 @@ input#menu:checked + nav#main_nav {
   top: 260px;
   left: 200px;
   border-radius: 50%;
-}
-
-.text-5 {
-  position: relative;
-}
-.text-5 > p {
-  position: absolute;
-  top: 250px;
-  left: 250px;
 }
 
 .comment-1 {
@@ -346,82 +161,6 @@ input#menu:checked + nav#main_nav {
   font-size: 15px;
 }
 .btn-1 > button:hover {
-  border: 2px solid gray;
-}
-
-.image-3 {
-  position: relative;
-}
-.image-3 > img {
-  position: absolute;
-  top: 330px;
-  left: 200px;
-  border-radius: 50%;
-}
-.text-6 {
-  position: relative;
-}
-.text-6 > p {
-  position: absolute;
-  top: 320px;
-  left: 250px;
-}
-
-.comment-2 {
-  position: relative;
-}
-.comment-2 > textarea {
-  position: absolute;
-  top: 330px;
-  left: 300px;
-}
-
-.day {
-  position: relative;
-}
-.day > p {
-  position: absolute;
-  top: 320px;
-  left: 810px;
-}
-
-.btn-2 {
-  position: relative;
-}
-.btn-2 > button {
-  position: absolute;
-  top: 320px;
-  left: 900px;
-  background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 80px;
-  height: 50px;
-  padding-right: 10px;
-  font-size: 15px;
-}
-
-.btn-2 > button:hover {
-  border: 2px solid gray;
-}
-
-.btn-3 {
-  position: relative;
-}
-.btn-3 > button {
-  position: absolute;
-  top: 320px;
-  left: 990px;
-  background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 80px;
-  height: 50px;
-  padding-right: 10px;
-  font-size: 15px;
-}
-
-.btn-3 > button:hover {
   border: 2px solid gray;
 }
 
@@ -464,4 +203,118 @@ input#menu:checked + nav#main_nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* posting  */
+
+.post-areason {
+  background-color: lightsteelblue;
+  width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* feed post */
+.myFeed {
+  background-color: lightsteelblue;
+  width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.myFeed .postBox {
+  width: 100%;
+  height: 100%;
+}
+
+/* 포스팅 사진 */
+.onePostPic {
+  width: 100%;
+  height: 100%;
+}
+
+.onePostPic img {
+  width: 95%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.updatePostBtn {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.editPostBtn {
+  width: 100px;
+  height: 100px;
+}
+
+.deletePostBtn {
+  width: 100px;
+  height: 100px;
+}
+
+/* user 프로필, 포스팅 내용 */
+.allPostingBox {
+  width: 95%;
+  max-width: 800px;
+  height: 100%;
+  display: inherit;
+  flex-direction: row;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.postUserBox {
+  width: 30%;
+  height: 200px;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userPofile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.postUserName {
+  font-size: large;
+}
+
+.postCmtBox {
+  width: 70%;
+  height: 100%;
+  display: inherit;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.postContentBox {
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+.onePostAt {
+  margin: 20px 10px;
+}
+
+/* 포스트 수정, 삭제 */
+.noPostDisplay {
+  display: none;
 }

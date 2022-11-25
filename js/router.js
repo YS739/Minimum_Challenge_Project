@@ -21,13 +21,10 @@ const routes = {
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", ""); // ""
 
+  // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
     getPostList(); //이 함수땜에 로그아웃해도 나오네요 이미지
-  }
-
-  if (path === "feed") {
-    getFeedCommentList();
   }
 
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
@@ -45,8 +42,16 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
+  }
 
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
+  if (path === "feed") {
+    getOnePost();
+    getFeedCommentList();
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
+
+    document.getElementById("profileImg").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
   if (path === "mypage") {
