@@ -5,7 +5,7 @@ import { getAuth } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { getStorage } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
 
-// 윤숙 firebase minimumproject 사용량 초과로 SpaPrac 프로젝트 키 사용
+// 윤숙 firebase minimumproject
 // 본인 프로젝트 script 코드 이 부분만 긁어오기
 const firebaseConfig = {
   apiKey: "AIzaSyA-RnOOymnWgkfryru8lWITGO21QRrX20w",
