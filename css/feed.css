@@ -6,7 +6,7 @@
   cursor: pointer;
 }
 
-.mypic {
+/* .mypic {
   width: 80%;
   height: 360px;
   box-shadow: 0px 0px 3px 0px gray;
@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-}
+} */
 .font {
   position: relative;
 }
@@ -385,9 +385,22 @@ input#menu:checked + nav#main_nav {
 }
 
 .updatePostBtn {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 5px;
 }
 
-.editPostBtn,
+.editPostBtn {
+  text-decoration: none;
+  color: black;
+  border: none;
+  background-color: rgba(234, 239, 240, 0.8);
+  border-radius: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
 .deletePostBtn {
 }
 
@@ -401,6 +414,8 @@ input#menu:checked + nav#main_nav {
 .userPofile img {
   width: 100px;
   height: 100px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .postUserName {
@@ -413,4 +428,9 @@ input#menu:checked + nav#main_nav {
 }
 
 .onePostAt {
+}
+
+/* 포스트 수정, 삭제 */
+.noPostDisplay {
+  display: none;
 }

@@ -35,15 +35,14 @@ export const getOnePost = async () => {
     <div class="onePostPic">
       <img
         class="postPicImg"
-        width="100px"
-        height="100px"
+  
         src="${ptObj.postpic}"
       />
       <p id="$p{
           cmtObj.id
-        }" class="noDisplay"><button class="updatePostBtn" onclick="update_post(event)">완료</button></p>
-      <div class="${isOwner ? "updatePostBtn" : "noDisplay"}">
-          <button onclick="edit_PostPic(event)" class="editPostBtn">수정</button>
+        }" class="noPostDisplay"><button class="updatePostBtn" onclick="update_post(event)">완료</button></p>
+      <div class="${isOwner ? "updatePostBtn" : "noPostDisplay"}">
+          <button onclick="edit_Post(event)" class="editPostBtn">수정</button>
        <button name="${
          cmtObj.id
        }" onclick="delete_Post(event)" class="deletePostBtn">삭제</button>
@@ -54,13 +53,12 @@ export const getOnePost = async () => {
         <div class="userPofile">
           <img
             class="myProfileImg"
-            width="50px"
-            height="50px"
+  
             src="${ptObj.profileImg}"
             alt="profileImg"
           /><span>${ptObj.nickname ?? "회원"}</span>
         </div>
-        <div class="userName"></div>
+        <div class="postUserName"></div>
       </div>
       <div class="postCmtBox">
         <div class="postContentBox">
@@ -76,7 +74,8 @@ export const getOnePost = async () => {
               </div> -->
       </div>
     </div>
-  </div>`;
+  </div>
+  `;
     const div = document.createElement("div");
     div.classList.add("myFeed");
     div.innerHTML = temp_html;
@@ -86,6 +85,59 @@ export const getOnePost = async () => {
 // 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
 // pstObjList.value = "";
 getOnePost();
+
+// 포스트 수정, 삭제
+export const edit_Post = (event) => {
+  event.preventDefault();
+  const postUdBtns = document.querySelectorAll(".editPostBtn, .deletePostBtn");
+  postUdBtns.forEach((udBtn) => (udBtn.disabled = "true"));
+  // 수정하는 부분(제목, 글, 사진)마다 parentNode? 다 있어야함..
+
+  const cardBody = event.target.parentNode.parentNode;
+  const commentText = cardBody.children[0].children[0];
+  const commentInputP = cardBody.children[0].children[1];
+
+  commentText.classList.add("noDisplay");
+  commentInputP.classList.add("d-flex");
+  commentInputP.classList.remove("noDisplay");
+  commentInputP.children[0].focus();
+};
+
+export const update_post = async (event) => {
+  event.preventDefault();
+  const newPost = event.target.parentNode.children[0].value;
+  const id = event.target.parentNode.id;
+
+  const parentNode = event.target.parentNode.parentNode;
+  const commentText = parentNode.children[0];
+  commentText.classList.remove("noDisplay");
+  const commentInputP = parentNode.children[1];
+  commentInputP.classList.remove("d-flex");
+  commentInputP.classList.add("noDisplay");
+
+  const postRef = doc(dbService, "minipost", id);
+  try {
+    await updateDoc(postRef, { text: newPost });
+    // text, postPic 등 다 추가해야함
+    getOnePost();
+  } catch (error) {
+    alert(error);
+  }
+};
+
+export const delete_Post = async (event) => {
+  event.preventDefault();
+  const id = event.target.nickname;
+  const ok = window.confirm("해당 글을 정말 삭제하시겠습니까?");
+  if (ok) {
+    try {
+      await deleteDoc(doc(dbService, "minipost", id));
+      getOnePost();
+    } catch (error) {
+      alert(error);
+    }
+  }
+};
 
 // 댓글 부분
 export const save_comment = async (event) => {
@@ -146,7 +198,7 @@ export const update_comment = async (event) => {
 
 export const delete_comment = async (event) => {
   event.preventDefault();
-  const id = event.target.nickname;
+  const id = event.target.name;
   const ok = window.confirm("해당 댓글을 정말 삭제하시겠습니까?");
   if (ok) {
     try {

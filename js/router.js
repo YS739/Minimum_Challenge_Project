@@ -1,6 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getFeedCommentList } from "./pages/feed.js";
+import { getFeedCommentList, getOnePost } from "./pages/feed.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -21,14 +21,14 @@ const routes = {
 export const handleLocation = async () => {
   let path = window.location.hash.replace("#", ""); // ""
 
-  // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
-    getPostList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
+    getPostList(); //이 함수땜에 로그아웃해도 나오네요 이미지
   }
 
   if (path === "feed") {
     getFeedCommentList();
+    getOnePost();
   }
 
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
@@ -69,10 +69,10 @@ export const handleLocation = async () => {
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
   }
-   // 로그인 모달 기능 구현 자바스크립트
+  // 로그인 모달 기능 구현 자바스크립트
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");
-  btnModal.addEventListener("click", (e) => {    
+  btnModal.addEventListener("click", (e) => {
     modal.style.display = "flex";
   });
 
@@ -81,12 +81,12 @@ export const handleLocation = async () => {
     modal.style.display = "none";
   });
 
-  modal.addEventListener("click", e => {
-    const evTarget = e.target
-    if(evTarget.classList.contains("modal-overlay")) {
-        modal.style.display = "none"
+  modal.addEventListener("click", (e) => {
+    const evTarget = e.target;
+    if (evTarget.classList.contains("modal-overlay")) {
+      modal.style.display = "none";
     }
-})
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
