@@ -42,8 +42,12 @@
   font-size: 50px;
 }
 .viewmore {
+  display: block;
   position: relative;
+  left: 180px;
+  bottom: 350px;
 }
+
 .viewmore > .menu > h1 {
   font-size: 80px;
 }
@@ -54,6 +58,7 @@ label.menu {
   position: absolute;
   left: 630px;
   top: -205px;
+  cursor: pointer;
 }
 
 input#menu {
@@ -73,6 +78,7 @@ input#menu:checked + nav#main_nav {
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 .delete > .revicebtn > button:hover {
   border: 2px solid gray;
@@ -91,6 +97,7 @@ input#menu:checked + nav#main_nav {
   background-color: rgba(234, 239, 240, 0.8);
   border-radius: 20px;
   padding-bottom: 20px;
+  cursor: pointer;
 }
 .delete > .deletebtn > button:hover {
   border: 2px solid gray;
