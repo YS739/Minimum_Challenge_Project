@@ -60,6 +60,11 @@ export const handleLocation = async () => {
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
 
+      document.getElementById("profileView").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+    document.getElementById("profileNickname").placeholder =
+      authService.currentUser.displayName ?? "회원";
+
       //프로필 모달 기능 구현 자바스크립트
     const modal1 = document.getElementById("profile-modal");
     const btnModal1 = document.getElementById("editLogin");
@@ -82,14 +87,14 @@ export const handleLocation = async () => {
   }
   
 
-  // 윤숙 - post.html, js 수정할 때 같이 볼 것
-  if (path === "profile") {
-    // 프로필 관리 화면 일 때 현재 프로필 사진과 닉네임 할당
-    document.getElementById("profileView").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
-    document.getElementById("profileNickname").placeholder =
-      authService.currentUser.displayName ?? "회원";
-  }
+  // // 윤숙 - post.html, js 수정할 때 같이 볼 것
+  // if (path === "profile") {
+  //   // 프로필 관리 화면 일 때 현재 프로필 사진과 닉네임 할당
+  //   document.getElementById("profileView").src =
+  //     authService.currentUser.photoURL ?? "/img/강아지.jpg";
+  //   document.getElementById("profileNickname").placeholder =
+  //     authService.currentUser.displayName ?? "회원";
+  // }
 
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");

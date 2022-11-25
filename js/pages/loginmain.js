@@ -1,5 +1,5 @@
 import {
-
+  
   collection,
   orderBy,
   query,
@@ -21,10 +21,8 @@ export const getPostList = async () => {
     };
     pstObjList.push(postObj);
   });
-  console.log(pstObjList);
   const postList = document.getElementById("main-page");
   const currentUid = authService.currentUser.uid;
-  postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
