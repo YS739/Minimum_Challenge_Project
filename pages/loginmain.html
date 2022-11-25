@@ -32,7 +32,12 @@
     <div class="headjeong">
       <!-- 윤숙 - 로고 이미지로 대체할 것 -->
 
-      <span onclick="goToHome()"><img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge"></span>
+      <span onclick="goToHome()"
+        ><img
+          class="main-logoson"
+          src="https://url.kr/nkmebz"
+          alt="Minimum Challenge"
+      /></span>
 
       <div class="headcontainerjeong">
         <div class="searchjeong">
@@ -41,7 +46,7 @@
           </a>
         </div>
         <div class="loginbtnjeong">
-          <a href='' onclick="logout()">로그아웃</a>
+          <a href="" onclick="route(event)">로그아웃</a>
         </div>
 
         <!-- 윤숙 - 00님에 auth? storage에서 닉네임 불러오고 없으면null "회원님!"이라고 하기 -->
@@ -82,7 +87,7 @@
 
       <div class="workoutjeong">
         <label for="workoutys"
-          ><a href="#" onclick="route(event)" id="workoutys"
+          ><a onclick="getWorkoutList()" id="workoutys"
             >운동하기
             <div class="workoutdescjeong">딱 5분만 운동하자!</div>
           </a></label
@@ -91,7 +96,7 @@
 
       <div class="studyjeong">
         <label for="studyys">
-          <a href="#" onclick="route(event)" id="studyys"
+          <a onclick="getStudyList()" id="studyys"
             >공부하기
             <div class="studydescjeong">딱 10분만 공부하자!</div>
           </a></label
@@ -99,7 +104,7 @@
       </div>
       <div class="bookjeong">
         <label for="studyys">
-          <a href="#" onclick="route(event)" id="studyys"
+          <a onclick="getBookList()" id="bookys"
             >독서하기
             <div class="bookdescjeong">딱 1페이지만 읽자!</div>
           </a></label
@@ -118,6 +123,5 @@
     해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!
     근데 생각해보면 페이지가 붙는 게 아니라 댓글 붙듯이 해당 부분만 불러오는 건데..!-->
     <div id="main-page"></div>
-
   </body>
 </html>
