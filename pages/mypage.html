@@ -13,19 +13,30 @@
       
       <span onclick="goToHome()"><img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge"></span>
 
-      <div class="logout-btn">
-        <button class="logout"><b>로그아웃</b></button>
-      </div>
-      <div class="picture">
-        <img id="profileImg" width="200px" height="200px" src="/img/1.jpg" />
-      </div>
-      <div class="name">
-        <p class="myname" id="nickname"><b></b></p>
-      </div>
-      <div class="edit">
-        <button id="editLogin">edit &#128394;</button></a>
-      </div>
-
+        <button id="logoutMyPost" class="logoutMyPostB" onclick="goToLogout()">
+          LOGOUT
+        </button>
+        <div class="myPageBox">  
+          <div class="picture">
+            <img id="profileImg" width="200px" height="200px" src="/img/1.jpg" />
+          </div>
+          <div class="name">
+            <p class="myname" id="nickname"><b></b></p>
+          </div>
+          
+          <nav id="editWriteBtn" class="editWriteBtnAll">
+            <ul>
+              <li>
+                <button id="writeMyPost" class="writeMyPostB" onclick="goToMyWrite()">
+                  POST
+                </button>
+                <button id="editMyProfile" class="editMyProfileB" onclick="goToMyEdit()">
+                  PROFILE
+                </button>
+              </li>
+            </ul>
+          </nav>
+        </div>  
       <div id="post-list"></div>
     </div>
 

@@ -18,7 +18,9 @@ const routes = {
   404: "/pages/404.html",
 };
 
+
 export const handleLocation = async () => {
+  
   let path = window.location.hash.replace("#", ""); // ""
 
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
@@ -36,6 +38,8 @@ export const handleLocation = async () => {
   const html = await fetch(route).then((data) => data.text());
 
   document.getElementById("root").innerHTML = html;
+
+
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
   if (path === "loginmain") {
@@ -87,6 +91,7 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
+
   }
   // 모달 기능
   const modal = document.getElementById("login-modal");
@@ -114,8 +119,21 @@ export const goToPost = () => {
 
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
+
 };
 
 export const goToHome = () => {
   window.location.hash = "#loginmain";
+};
+
+export const goToMyWrite = () => {
+  window.location.hash = "#post";
+};
+
+export const goToMyEdit = () => {
+  window.location.hash = "#profile";
+};
+
+export const goToLogout = () => {
+  window.location.hash = "";
 };
