@@ -34,17 +34,23 @@
     <div id="root">
       <div class="headjeong">
         <span onclick="goToHome()">
-          <img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge"/>
+          <img
+            class="main-logoson"
+            src="https://url.kr/nkmebz"
+            alt="Minimum Challenge"
+          />
         </span>
 
         <div class="headcontainerjeong">
-          <div class="searchjeong"> <!--이 부분은 꼭 태그가 두개나 필요한가요??-->
+          <div class="searchjeong">
+            <!--이 부분은 꼭 태그가 두개나 필요한가요??-->
             <a href="#" onclick="route(event)">
               <i class="fa-solid fa-magnifying-glass"></i>
             </a>
           </div>
 
-          <div class="loginbtnjeong"> <!--여기도...-->
+          <div class="loginbtnjeong">
+            <!--여기도...-->
             <button type="submit" class="logbtnjeong" id="loginButton">
               로그인
             </button>
@@ -60,22 +66,22 @@
 
         <span class="workoutjeong">
           <label for="workoutys">
-            <a href="#404" onclick="route(event)" id="workoutys">운동하기
-            </a></label>
+            <a onclick="getWorkoutList()" id="workoutys">운동하기 </a></label
+          >
           <span class="workoutdescjeong">딱 5분만 운동하자!</span>
         </span>
 
         <span class="studyjeong">
           <label for="studyys">
-            <a href="#" onclick="route(event)" id="studyys"
-              >공부하기</a></label>
+            <a onclick="getStudyList()" id="studyys">공부하기</a></label
+          >
           <span class="studydescjeong">딱 10분만 공부하자!</span>
         </span>
 
         <span class="bookjeong">
           <label for="bookys">
-            <a href="#" onclick="route(event)" id="bookys"
-              >독서하기</a></label>
+            <a onclick="getBookList()" id="bookys">독서하기</a></label
+          >
           <span class="bookdescjeong">딱 1페이지만 읽자!</span>
         </span>
         <span class="recentjeong">
