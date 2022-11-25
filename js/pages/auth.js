@@ -6,7 +6,7 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
   GithubAuthProvider,
-  signOut
+  signOut,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
 
 // 로그인 성공 시 loginmain 화면으로 이동
@@ -28,7 +28,7 @@ export const handleAuth = (event) => {
     pw.focus();
     return;
   }
- 
+
   const matchedEmail = emailVal.match(emailRegex);
   const matchedPw = pwVal.match(pwRegex);
 
