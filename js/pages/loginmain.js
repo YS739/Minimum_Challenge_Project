@@ -1,5 +1,4 @@
 import {
-
   collection,
   orderBy,
   query,
@@ -27,25 +26,34 @@ export const getPostList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
-    const temp_html = `<div class="postingbox">
-
-
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
-        <div class="contentbox">
-            <p class="postTitle">${ptObj.title}</p>
-            <p class="postContent">${ptObj.post}</p>
-            <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg
-            }" alt="profileImg" /><span>${
-
-      ptObj.nickname ?? "회원"
-    }</span></div><div class="postAt">${new Date(ptObj.createdAt)
-      .toString()
-      .slice(0, 25)}</div></footer>
-            </div>
-          </div>`;
+    const temp_html = `<a href="#feed" onclick="route(event)" class="postingbox">
+    <div class="postPic">
+      <img
+        class="postPicImg"
+        width="100px"
+        height="100px"
+        src="${ptObj.postpic}"
+      />
+    </div>
+    <div class="contentbox">
+      <p class="postTitle">${ptObj.title}</p>
+      <p class="postContent">${ptObj.post}</p>
+      <footer class="posting-footer">
+        <div>
+          <img
+            class="myProfileImg"
+            width="50px"
+            height="50px"
+            src="${ptObj.profileImg}"
+            alt="profileImg"
+          /><span>${ptObj.nickname ?? "회원"}</span>
+        </div>
+        <div class="postAt">
+          ${new Date(ptObj.createdAt).toString().slice(0, 25)}
+        </div>
+      </footer>
+    </div>
+  </a>`;
     const div = document.createElement("div");
     div.classList.add("mypost");
     div.innerHTML = temp_html;
@@ -55,5 +63,3 @@ export const getPostList = async () => {
 // 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
 // pstObjList.value = "";
 getPostList();
-
-
