@@ -1,118 +1,185 @@
 * {
   font-family: "Roboto", sans-serif;
   font-family: "Jua", sans-serif;
+  text-decoration : none;
 }
 
-.main-logoson{
+/* 헤더 고정하기 */
+
+
+
+
+.main-logoson {
   width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.navjeong a {
-  text-decoration: none;
-  color: black;
+  
   cursor: pointer;
 }
 
 .headjeong {
+  position:fixed;
   width: 100%;
   height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.headjeong h1 {
-  margin-left: 20px;
-}
-
-.headcontainerjeong {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-  align-items: center;
+.headcontainerjeong{
+  align-items:center;
+  display:flex;
+  float:left;
 }
 
 .fa-magnifying-glass {
-  font-size: x-large;
+  font-size: xx-large;
+  margin:20px;
 }
 
-.loginbtnjeong a {
+.logbtnjeong{
+  width: 130px;
+  height: 45px;
+  border-radius: 70px;
+  margin:20px;
+  border:none;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.logbtnjeong a {
   text-decoration: none;
 }
 
-.loginbtnjeong {
-  width: 100px;
-  height: 30px;
-  font-size: 25px;
-  background-color: white;
-  margin: 0 20px;
-  padding: 5px;
-  text-align: center;
-
-  border: 1px solid black;
-  border-radius: 45%;
+.logbtnjeong:hover {
+  background-color: lightsalmon;
 }
 
-.logbtnjeong {
-  border: none;
-  background-color: transparent;
-  color: black;
-}
+/* 여기까지 헤드부분! */
 
-.loginbtnjeong:hover {
-  color: rgb(143, 200, 249);
-  background-color: rgb(254, 237, 237);
+
+* nav{
+  margin-left: 30px;
+  margin-top : 30px;
+  font-size: 1.2rem;
+
+  flex-direction: row;
+  align-items: flex-start;
 }
 
 .navjeong {
-  width: 100%;
-  height: 80px;
+  position:fixed;
+
+  margin-top: 170px;
+
+  color: black;
+
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  align-items:flex-start;
+}
+
+.workoutjeong,
+.studyjeong,
+.bookjeong {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-
-  font-size: 1.2rem;
 }
 
-nav * {
-  margin-left: 30px;
+/* 카테고리 위치 */
+
+
+
+/* 호버 선택자 묶어서는 적용이 안 되나 봅니다ㅠㅠ */
+.allnavjeong :hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+.recentjeong :hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+#workoutys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
 }
 
-.navjeong *:hover {
-  text-shadow: 5px 5px 5px #999;
+#studyys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
 }
+#bookys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+
+/* 호버시 그림자 */
+
+
 
 .workoutdescjeong,
 .studydescjeong,
 .bookdescjeong {
-  display: none;
+  margin-top: 10px;
+  display:none;
 }
+
+/* 카테고리 선택 전에는 글자 안뜸 */
+
+
 
 .workoutjeong:hover .workoutdescjeong {
   display: block;
-  margin-top: 10px;
+  opacity: 50%;
 }
 
 .studyjeong:hover .studydescjeong {
   display: block;
-  margin-top: 10px;
+  opacity: 50%;
 }
 
 .bookjeong:hover .bookdescjeong {
   display: block;
-  margin-top: 10px;
+  opacity: 50%;
 }
 
+/* 글자뜨기 */
+
+
+#workoutys,
+#studyys,
+#bookys {
+ margin-left: 50px;
+ margin-right: 50px;
+}
+
+.allnavjeong,
+.recentjeong {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.recentjeong {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* 카테고리 간격맞추기!!! */
+
+
+
+/* 여기부터는 메인 */
+
+
 .mainjeong {
+  
   width: 100%;
   height: 100%;
 }

@@ -5,6 +5,9 @@ import {
   goToPost,
   goToMyPage,
   goToHome,
+  goToMyWrite,
+  goToMyEdit,
+  goToLogout,
 } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin } from "./pages/auth.js";
@@ -20,6 +23,11 @@ import {
   update_comment,
   delete_comment,
 } from "./pages/feed.js";
+import {
+  getWorkoutList,
+  getStudyList,
+  getBookList,
+} from "./pages/loginmain.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -64,3 +72,9 @@ window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
+window.getBookList = getBookList;
+window.getStudyList = getStudyList;
+window.getWorkoutList = getWorkoutList;
+window.goToMyWrite = goToMyWrite;
+window.goToMyEdit = goToMyEdit;
+window.goToLogout = goToLogout;
