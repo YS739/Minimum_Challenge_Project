@@ -39,6 +39,7 @@
   height: 500px;
   /* position: relative;            이거 없어도 잘 작동되긴하는데 왜있는지 모르겠음 */
   padding: 10px;
+  position:relative;
 }
 
 #modikim .title {                     /*프로필 관리 글씨*/
@@ -101,8 +102,11 @@
   position: absolute;
   width: 500px;
   height: 500px;
-  top: 250px;
-  left: 820px;
+  padding-top: 30px;
+  padding-left: 120px;
+
+
+
 }
 .myname {
   position: relative;
