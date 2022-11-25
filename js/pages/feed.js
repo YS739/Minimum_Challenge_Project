@@ -40,7 +40,7 @@ export const onEditing = (event) => {
   const cardBody = event.target.parentNode.parentNode;
   const commentText = cardBody.children[0].children[0];
   const commentInputP = cardBody.children[0].children[1];
-  
+
   commentText.classList.add("noDisplay");
   commentInputP.classList.add("d-flex");
   commentInputP.classList.remove("noDisplay");
@@ -70,7 +70,7 @@ export const update_comment = async (event) => {
 
 export const delete_comment = async (event) => {
   event.preventDefault();
-  const id = event.target.nickname;
+  const id = event.target.name;
   const ok = window.confirm("해당 댓글을 정말 삭제하시겠습니까?");
   if (ok) {
     try {
@@ -107,7 +107,7 @@ export const getFeedCommentList = async () => {
                     <p class="commentText">${cmtObj.text}</p>
                     <p id="${
                       cmtObj.id
-                    }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
+                    }" class="noDisplay"><input class="newCmtInput" type="text"  /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
                     <footer class="feedCards-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
                       cmtObj.profileImg
                     }" alt="profileImg" /><span>${
