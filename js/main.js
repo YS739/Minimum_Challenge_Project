@@ -19,10 +19,6 @@ import {
   onEditing,
   update_comment,
   delete_comment,
-  getOnePost,
-  edit_Post,
-  update_post,
-  delete_Post,
 } from "./pages/feed.js";
 
 window.addEventListener("hashchange", handleLocation);
@@ -69,8 +65,3 @@ window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
-// feed에 글 가져오기
-window.getOnePost = getOnePost;
-window.delete_Post = delete_Post;
-window.update_post = update_post;
-window.edit_Post = edit_Post;

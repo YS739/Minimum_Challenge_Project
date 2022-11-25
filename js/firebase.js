@@ -7,14 +7,14 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-s
 
 // 윤숙 firebase minimumproject
 // 본인 프로젝트 script 코드 이 부분만 긁어오기
-// 또 사용량 초과로 대호님 key로 바꿈
+// 또 사용량 초과 spaprac key
 const firebaseConfig = {
-  apiKey: "AIzaSyDh1ZLFhgMWfNb5SEUfEOcnBaYXaL7HVRE",
-  authDomain: "minimum-eb41f.firebaseapp.com",
-  projectId: "minimum-eb41f",
-  storageBucket: "minimum-eb41f.appspot.com",
-  messagingSenderId: "674228747687",
-  appId: "1:674228747687:web:ce945df4d785b57753ca82",
+  apiKey: "AIzaSyBRPVg8-dgA06Dq8JbVllOF04T8e2ZgA4w",
+  authDomain: "spaprac-82004.firebaseapp.com",
+  projectId: "spaprac-82004",
+  storageBucket: "spaprac-82004.appspot.com",
+  messagingSenderId: "91765872556",
+  appId: "1:91765872556:web:4effc865167d38058b0c09",
 };
 export const app = initializeApp(firebaseConfig);
 export const dbService = getFirestore(app);

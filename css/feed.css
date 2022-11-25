@@ -6,7 +6,110 @@
   cursor: pointer;
 }
 
-/* .mypic {
+/* post  */
+
+.post-areason {
+  background-color: lightsteelblue;
+  width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+/* .photo-wrapson {
+  background-color:white;
+  margin: 20px;
+  position:relative;
+} */
+
+.photo-areason {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: none;
+  position: relative;
+}
+.photo-inputson {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
+
+.plus-btnson {
+  width: 50px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0.5;
+  background-color: white;
+  padding: 10px;
+}
+
+.file-select-btnson {
+  display: none;
+}
+.category-selectson {
+  background-color: white;
+  padding: 0px 10px 0px 10px;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+
+  margin-top: 50px;
+  margin-bottom: 10px;
+  border: none;
+}
+.title-boxson {
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+.content-boxson {
+  width: 500px;
+  height: 100px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  resize: none;
+
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  padding: 10px;
+}
+.hashtag-boxson {
+  width: 500px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 0px 10px 0px 10px;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+.post-btnson {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+/* feed  */
+
+.mypic {
   width: 80%;
   height: 360px;
   box-shadow: 0px 0px 3px 0px gray;
@@ -17,7 +120,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 100px;
-} */
+}
 .font {
   position: relative;
 }
@@ -361,76 +464,4 @@ input#menu:checked + nav#main_nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-/* feed page getOnePost class */
-
-.myFeed {
-  width: 95%;
-  max-width: 500px;
-  margin: auto;
-}
-
-.myFeed .postBox {
-}
-
-/* 포스팅 사진 */
-.onePostPic {
-}
-
-.onePostPic img {
-  width: 95%;
-  max-width: 800px;
-  height: 400px;
-}
-
-.updatePostBtn {
-  display: flex;
-  justify-content: end;
-  margin-top: 5px;
-  gap: 5px;
-}
-
-.editPostBtn {
-  text-decoration: none;
-  color: black;
-  border: none;
-  background-color: rgba(234, 239, 240, 0.8);
-  border-radius: 20px;
-  padding-bottom: 20px;
-  cursor: pointer;
-}
-
-.deletePostBtn {
-}
-
-/* user 프로필, 포스팅 내용 */
-.allPostingBox {
-}
-
-.postUserBox {
-}
-
-.userPofile img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.postUserName {
-}
-
-.postCmtBox {
-}
-
-.postContentBox {
-}
-
-.onePostAt {
-}
-
-/* 포스트 수정, 삭제 */
-.noPostDisplay {
-  display: none;
 }
