@@ -1,4 +1,5 @@
 import {
+
   collection,
   orderBy,
   query,
@@ -22,6 +23,7 @@ export const getPostList = async () => {
   });
   console.log(pstObjList);
   const postList = document.getElementById("main-page");
+  const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
@@ -35,6 +37,7 @@ export const getPostList = async () => {
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
               ptObj.profileImg
             }" alt="profileImg" /><span>${
+
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
       .toString()
@@ -50,3 +53,5 @@ export const getPostList = async () => {
 // 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
 pstObjList.value = "";
 getPostList();
+
+
