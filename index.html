@@ -33,24 +33,19 @@
   <body>
     <div id="root">
       <div class="headjeong">
-        <span onclick="goToHome()">
-          <img
+        <span onclick="goToHome()"
+          ><img
             class="main-logoson"
             src="https://url.kr/nkmebz"
             alt="Minimum Challenge"
-          />
-        </span>
-
+        /></span>
         <div class="headcontainerjeong">
           <div class="searchjeong">
-            <!--이 부분은 꼭 태그가 두개나 필요한가요??-->
             <a href="#" onclick="route(event)">
               <i class="fa-solid fa-magnifying-glass"></i>
             </a>
           </div>
-
           <div class="loginbtnjeong">
-            <!--여기도...-->
             <button type="submit" class="logbtnjeong" id="loginButton">
               로그인
             </button>
@@ -60,35 +55,40 @@
 
       <!-- nav bar -->
       <nav class="navjeong">
-        <span class="allnavjeong">
+        <div class="allnavjeong">
           <a href="#" onclick="route(event)">전체보기</a>
-        </span>
+        </div>
 
-        <span class="workoutjeong">
-          <label for="workoutys">
-            <a onclick="getWorkoutList()" id="workoutys">운동하기 </a></label
+        <div class="workoutjeong">
+          <label for="workoutys"
+            ><a onclick="getWorkoutList()" id="workoutys"
+            >운동하기
+              <span class="workoutdescjeong">딱 5분만 운동하자!</span>
+            </a></label
           >
-          <span class="workoutdescjeong">딱 5분만 운동하자!</span>
-        </span>
+        </div>
 
-        <span class="studyjeong">
+        <div class="studyjeong">
           <label for="studyys">
-            <a onclick="getStudyList()" id="studyys">공부하기</a></label
+            <a onclick="getStudyList()" id="studyys"
+            >공부하기
+              <span class="studydescjeong">딱 10분만 공부하자!</span>
+            </a></label
           >
-          <span class="studydescjeong">딱 10분만 공부하자!</span>
-        </span>
-
-        <span class="bookjeong">
-          <label for="bookys">
-            <a onclick="getBookList()" id="bookys">독서하기</a></label
+        </div>
+        <div class="bookjeong">
+          <label for="studyys">
+            <a onclick="getBookList()" id="bookys"
+            >독서하기
+              <div class="bookdescjeong">딱 1페이지만 읽자!</div>
+            </a></label
           >
-          <span class="bookdescjeong">딱 1페이지만 읽자!</span>
-        </span>
-        <span class="recentjeong">
+        </div>
+        <div class="recentjeong">
           <a href="#" onclick="route(event)"
             ><i class="fa-solid fa-rotate"></i> 최신</a
           >
-        </span>
+        </div>
       </nav>
       <!-- 게시물 불러오는 곳 -->
 

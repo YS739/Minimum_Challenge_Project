@@ -12,16 +12,13 @@
     />
   </head>
   <body>
-    < class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge" >
-    <div id="container">
-      <h2>Minimum Challenge</h2>
-    </div>
+    <img
+      class="main-logoson"
+      src="https://url.kr/nkmebz"
+      alt="Minimum Challenge"
+    />
 
-    <!-- 뒷배경 -->
-    <div id="modikim" class="overlaykim">
-      <!--modikim 모든 스타일이 다 지워짐,오버레이킴은 상자가 왼쪽으로 감-->
-
-      <!-- 파이어베이스 시작 -->
+    <div id="profileAll">
       <div id="profilePage">
         <section id="profileWrapper">
           <form id="profileForm" onsubmit="changeProfile(event)">
@@ -29,8 +26,8 @@
             <div class="profileBox">
               <!-- 상자생김 -->
               <!-- <div class="close-kim"></div> -->
-              <button>
-                <a href="#mypage">X</a>
+              <button class="myPageClose">
+                <a href="#mypage">닫기</a>
               </button>
               <label id="imgLabel" for="imgInput">
                 <div class="imagemove">
@@ -74,5 +71,6 @@
         </section>
       </div>
     </div>
+    <script src="../js/pages/profile.js" type="module"></script>
   </body>
 </html>

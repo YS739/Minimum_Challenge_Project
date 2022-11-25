@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 export const changeProfile = async (event) => {
   event.preventDefault();
-  document.getElementById("profileBtn").disabled = true;
+  document.getElementById("profileBtnEdit").disabled = true;
   const imgRef = ref(
     storageService,
     `${authService.currentUser.uid}/${uuidv4()}`
