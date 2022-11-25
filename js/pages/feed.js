@@ -40,7 +40,7 @@ export const onEditing = (event) => {
   const cardBody = event.target.parentNode.parentNode;
   const commentText = cardBody.children[0].children[0];
   const commentInputP = cardBody.children[0].children[1];
-  
+
   commentText.classList.add("noDisplay");
   commentInputP.classList.add("d-flex");
   commentInputP.classList.remove("noDisplay");

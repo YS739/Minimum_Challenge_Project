@@ -1,58 +1,76 @@
 <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../css/profile.css" />
-        <title>Minimum_Challenge</title>
-        <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-      </head>
-      <body>
-        <img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <title>Minimum_Challenge</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <img
+      class="main-logoson"
+      src="https://url.kr/nkmebz"
+      alt="Minimum Challenge"
+    />
 
-        <div id="container">
-          <h2>Minimum Challenge</h2>
-        </div>
-        
     <div id="profileAll">
-            
-        <div id="profilePage">
-            <section id="profileWrapper">
-                <form id="profileForm" onsubmit="changeProfile(event)"> 
-        
-                    <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
-                    <div class="profileBox">  <!-- 상자생김 -->      
-                        <!-- <div class="close-kim"></div> -->
-                        <button class="myPageClose">
-                            <a href="#mypage">닫기</a>
-                        </button>
-                        <label id="imgLabel" for="imgInput">
-                            <div class="imagemove">
-                                <img id="profileView" src="../img/강아지.jpg" />
-                            </div>
-                            <input onchange="onFileChange(event)" id="imgInput" type="file" accept="images/*" />
-                        </label>
-                        
-                        <div class="prokim">        
-                            <div class="myname">
-                                <input id="profileNickname" type="text" placeholder="현재 닉네임" value="" />
-                            </div>
-                                <nav class="profile-nav">
-                                    <label for="profile-navkim">
-                                            <div class="mybtn">
-                                                <button id="profileBtnEdit">
-                                                    <a href="#mypage" onclick="route(event)" id="profile-changekim" type="submit">
-                                                    </a>수정하기
-                                                </button>
-                                            </div>
-                                    </label>
-                                </nav>
-                        </div>
+      <div id="profilePage">
+        <section id="profileWrapper">
+          <form id="profileForm" onsubmit="changeProfile(event)">
+            <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
+            <div class="profileBox">
+              <!-- 상자생김 -->
+              <!-- <div class="close-kim"></div> -->
+              <button class="myPageClose">
+                <a href="#mypage">닫기</a>
+              </button>
+              <label id="imgLabel" for="imgInput">
+                <div class="imagemove">
+                  <img id="profileView" src="../img/강아지.jpg" />
+                </div>
+                <input
+                  onchange="onFileChange(event)"
+                  id="imgInput"
+                  type="file"
+                  accept="images/*"
+                />
+              </label>
+
+              <div class="prokim">
+                <div class="myname">
+                  <input
+                    id="profileNickname"
+                    type="text"
+                    placeholder="현재 닉네임"
+                    value=""
+                  />
+                </div>
+                <nav class="profile-nav">
+                  <label for="profile-navkim">
+                    <div class="mybtn">
+                      <button id="profileBtnEdit">
+                        <a
+                          href="#mypage"
+                          onclick="route(event)"
+                          id="profile-changekim"
+                          type="submit"
+                        ></a
+                        >수정하기
+                      </button>
                     </div>
-                </form>
-            </section> 
-        </div>
+                  </label>
+                </nav>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
     </div>
-    <script src="../js/pages/profile.js" type="module">
-    </script>    
+    <script src="../js/pages/profile.js" type="module"></script>
+  </body>
+</html>

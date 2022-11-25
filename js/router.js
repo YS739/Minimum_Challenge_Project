@@ -18,15 +18,13 @@ const routes = {
   404: "/pages/404.html",
 };
 
-
 export const handleLocation = async () => {
-  
   let path = window.location.hash.replace("#", ""); // ""
 
   // "http://example.com/"가 아니라 도메인 뒤에 / 없이 "http://example.com" 으로 나오는 경우
   if (path.length == 0) {
     path = "/";
-    getPostList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
+    getPostList(); //이 함수땜에 로그아웃해도 나오네요 이미지
   }
 
   if (path === "feed") {
@@ -38,8 +36,6 @@ export const handleLocation = async () => {
   const html = await fetch(route).then((data) => data.text());
 
   document.getElementById("root").innerHTML = html;
-
-
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
   if (path === "loginmain") {
@@ -72,12 +68,11 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
     document.getElementById("profileNickname").placeholder =
       authService.currentUser.displayName ?? "회원";
-
   }
-   // 로그인 모달 기능 구현 자바스크립트
+  // 로그인 모달 기능 구현 자바스크립트
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");
-  btnModal.addEventListener("click", (e) => {    
+  btnModal.addEventListener("click", (e) => {
     modal.style.display = "flex";
   });
 
@@ -86,12 +81,12 @@ export const handleLocation = async () => {
     modal.style.display = "none";
   });
 
-  modal.addEventListener("click", e => {
-    const evTarget = e.target
-    if(evTarget.classList.contains("modal-overlay")) {
-        modal.style.display = "none"
+  modal.addEventListener("click", (e) => {
+    const evTarget = e.target;
+    if (evTarget.classList.contains("modal-overlay")) {
+      modal.style.display = "none";
     }
-})
+  });
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
@@ -100,7 +95,6 @@ export const goToPost = () => {
 
 export const goToMyPage = () => {
   window.location.hash = "#mypage";
-
 };
 
 export const goToHome = () => {

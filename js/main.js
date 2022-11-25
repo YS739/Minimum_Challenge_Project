@@ -23,6 +23,11 @@ import {
   update_comment,
   delete_comment,
 } from "./pages/feed.js";
+import {
+  getWorkoutList,
+  getStudyList,
+  getBookList,
+} from "./pages/loginmain.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -44,10 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
-
-
-
 
 // 전역 함수 리스트
 window.route = route;
@@ -71,6 +72,9 @@ window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
+window.getBookList = getBookList;
+window.getStudyList = getStudyList;
+window.getWorkoutList = getWorkoutList;
 window.goToMyWrite = goToMyWrite;
 window.goToMyEdit = goToMyEdit;
 window.goToLogout = goToLogout;

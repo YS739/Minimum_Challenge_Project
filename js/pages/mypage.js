@@ -23,7 +23,7 @@ export const getPostList = async () => {
   console.log(pstObjList);
   const postList = document.getElementById("post-list");
   const currentUid = authService.currentUser.uid;
-  postList.innerHTML = "";
+  // postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
@@ -48,6 +48,3 @@ export const getPostList = async () => {
     postList.appendChild(div);
   });
 };
-// 어떤 값을 초기화 해야 할지 몰라서 일단 주석 처리
-// pstObjList.value = "";
-getPostList();
