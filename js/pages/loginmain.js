@@ -1,8 +1,4 @@
 import {
-<<<<<<< HEAD
-  
-=======
->>>>>>> 2fd22058f19bc8009267c26a65f21a613a34fa9c
   collection,
   orderBy,
   query,
