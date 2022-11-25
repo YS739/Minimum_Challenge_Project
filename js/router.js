@@ -59,7 +59,21 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
+
+      //프로필 모달 기능 구현 자바스크립트
+    const modal1 = document.getElementById("profile-modal");
+    const btnModal1 = document.getElementById("editLogin");
+    btnModal1.addEventListener("click", (e) => {    
+      modal1.style.display = "flex";
+    });
+
+    const closeBtn1 = modal1.querySelector("#closeBtn1");
+    closeBtn1.addEventListener("click", (e) => {
+      modal1.style.display = "none";
+    }); 
+      
   }
+  
 
   // 윤숙 - post.html, js 수정할 때 같이 볼 것
   if (path === "profile") {
@@ -87,6 +101,8 @@ export const handleLocation = async () => {
         modal.style.display = "none"
     }
 })
+
+
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
