@@ -4,18 +4,25 @@
   text-decoration : none;
 }
 
+/* 헤더 고정하기 */
+
+
+
+
 .main-logoson {
-  align-items:flex-start;
   width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
+  
   cursor: pointer;
 }
 
 .headjeong {
+  position:fixed;
   width: 100%;
   height: 100px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -63,7 +70,12 @@
   flex-direction: row;
   align-items: flex-start;
 }
+
 .navjeong {
+  position:fixed;
+
+  margin-top: 170px;
+
   color: black;
 
   display: flex;
@@ -165,7 +177,9 @@
 
 /* 여기부터는 메인 */
 
+
 .mainjeong {
+  
   width: 100%;
   height: 100%;
 }

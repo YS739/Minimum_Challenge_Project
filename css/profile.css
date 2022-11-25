@@ -123,9 +123,11 @@
 }
 
 .mybtn > button {
-  position: absolute;
-  top: 400px;
-  left: -75px;
+  position: fixed;
+  top: 620px;
+  left: 870px;
+  justify-content: center;
+
   background-color: white;
   border-radius: 50px;
   border: none;
