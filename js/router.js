@@ -28,10 +28,6 @@ export const handleLocation = async () => {
     path = "/";
     getPostList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
   }
-  if (path === "feed") {
-    
-    getFeedCommentList();                      //이 함수땜에 로그아웃해도 나오네요 이미지
-  }
 
   if (path === "feed") {
     getFeedCommentList();
@@ -78,17 +74,24 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
 
   }
+   // 로그인 모달 기능 구현 자바스크립트
+  const modal = document.getElementById("login-modal");
+  const btnModal = document.getElementById("loginButton");
+  btnModal.addEventListener("click", (e) => {    
+    modal.style.display = "flex";
+  });
 
-      const modal = document.getElementById("login-modal")
-    const btnModal = document.getElementById("loginButton")
-    btnModal.addEventListener("click", e => {
-        modal.style.display = "flex"
-    })
+  const closeBtn = modal.querySelector("#closeBtn");
+  closeBtn.addEventListener("click", (e) => {
+    modal.style.display = "none";
+  });
 
-    const closeBtn = modal.querySelector("#closeBtn")
-    closeBtn.addEventListener("click", e => {
+  modal.addEventListener("click", e => {
+    const evTarget = e.target
+    if(evTarget.classList.contains("modal-overlay")) {
         modal.style.display = "none"
-    })
+    }
+})
 };
 // 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
 export const goToPost = () => {
