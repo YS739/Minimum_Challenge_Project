@@ -9,7 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
       </head>
       <body>
-        <image class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
+        <img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge">
 
         <div id="container">
           <h2>Minimum Challenge</h2>
@@ -24,8 +24,8 @@
                     <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
                     <div class="profileBox">  <!-- 상자생김 -->      
                         <!-- <div class="close-kim"></div> -->
-                        <button>
-                            <a href="#mypage">X</a>
+                        <button class="myPageClose">
+                            <a href="#mypage">닫기</a>
                         </button>
                         <label id="imgLabel" for="imgInput">
                             <div class="imagemove">
@@ -41,16 +41,18 @@
                                 <nav class="profile-nav">
                                     <label for="profile-navkim">
                                             <div class="mybtn">
-                                                <button id="profileBtnEdit"><a href="#mypage" onclick="route(event)" id="profile-changekim" type="submit"></a>수정하기</button>
+                                                <button id="profileBtnEdit">
+                                                    <a href="#mypage" onclick="route(event)" id="profile-changekim" type="submit">
+                                                    </a>수정하기
+                                                </button>
                                             </div>
                                     </label>
                                 </nav>
                         </div>
                     </div>
                 </form>
-            <section> 
+            </section> 
         </div>
     </div>
     <script src="../js/pages/profile.js" type="module">
-        
     </script>    
