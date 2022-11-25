@@ -70,7 +70,8 @@ export const update_comment = async (event) => {
 
 export const delete_comment = async (event) => {
   event.preventDefault();
-  const id = event.target.nickname;
+  const id = event.target.name;
+  console.log(id)
   const ok = window.confirm("해당 댓글을 정말 삭제하시겠습니까?");
   if (ok) {
     try {

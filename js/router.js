@@ -71,6 +71,13 @@ export const handleLocation = async () => {
     closeBtn1.addEventListener("click", (e) => {
       modal1.style.display = "none";
     }); 
+
+    modal1.addEventListener("click" , e => {
+      const evTarget1 = e.target
+      if(evTarget1.classList.contains("overlaykim")) {
+        modal1.style.display = "none"
+      }
+    })
       
   }
   
