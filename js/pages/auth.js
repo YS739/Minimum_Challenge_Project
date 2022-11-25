@@ -28,7 +28,7 @@ export const handleAuth = (event) => {
     pw.focus();
     return;
   }
-
+ 
   const matchedEmail = emailVal.match(emailRegex);
   const matchedPw = pwVal.match(pwRegex);
 
