@@ -117,7 +117,6 @@ export const getWorkoutList = async () => {
     };
     pstObjList.push(postObj);
   });
-  console.log(pstObjList);
   const postList = document.getElementById("main-page");
   const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";

@@ -23,7 +23,7 @@ export const getPostList = async () => {
   console.log(pstObjList);
   const postList = document.getElementById("post-list");
   const currentUid = authService.currentUser.uid;
-  postList.innerHTML = "";
+  // postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
