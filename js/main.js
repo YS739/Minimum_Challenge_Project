@@ -3,7 +3,7 @@ import {
   handleLocation,
   route,
   goToPost,
-  goToMyPage,
+  goToProfile,
   goToHome,
   goToMyWrite,
   goToMyEdit,
@@ -21,6 +21,7 @@ import {
   onEditing,
   update_comment,
   delete_comment,
+  getOnePost,
 } from "./pages/feed.js";
 import {
   getWorkoutList,
@@ -56,7 +57,7 @@ window.handleAuth = handleAuth;
 window.socialLogin = socialLogin;
 // 윤숙 - 새로 만든 이벤트 추가
 window.goToPost = goToPost;
-window.goToMyPage = goToMyPage;
+window.goToProfile = goToProfile;
 // post page에서 쓰는 이벤트
 window.onPostChange = onPostChange;
 window.save_post = save_post;
@@ -66,15 +67,20 @@ window.getPostList = getPostList;
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
+// feed에 댓글
 window.getFeedCommentList = getFeedCommentList;
 window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
+// 카테고리 버튼
 window.getBookList = getBookList;
 window.getStudyList = getStudyList;
 window.getWorkoutList = getWorkoutList;
+// loginmain btn
 window.goToMyWrite = goToMyWrite;
 window.goToMyEdit = goToMyEdit;
 
 window.logout = logout;
+// feed 글 가져오기
+window.getOnePost = getOnePost;

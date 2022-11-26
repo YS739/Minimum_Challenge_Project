@@ -5,7 +5,7 @@ import {
   getDocs,
   where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import { dbService, authService } from "../firebase.js";
+import { dbService } from "../firebase.js";
 
 export const getPostList = async () => {
   let pstObjList = [];
@@ -22,9 +22,12 @@ export const getPostList = async () => {
     pstObjList.push(postObj);
   });
   const postList = document.getElementById("main-page");
+<<<<<<< HEAD
   const currentUid = authService.currentUser.uid;
+=======
+  postList.innerHTML = "";
+>>>>>>> e5ec9ad43a1e6160e054c889a67f40412b33d931
   pstObjList.forEach((ptObj) => {
-    // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
 
 
@@ -35,7 +38,7 @@ export const getPostList = async () => {
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg
+              ptObj.profileImg ?? "/img/강아지.jpg"
             }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -69,7 +72,6 @@ export const getStudyList = async () => {
   });
   console.log(pstObjList);
   const postList = document.getElementById("main-page");
-  const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
@@ -116,10 +118,8 @@ export const getWorkoutList = async () => {
     pstObjList.push(postObj);
   });
   const postList = document.getElementById("main-page");
-  const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
 
 
@@ -164,7 +164,6 @@ export const getBookList = async () => {
   });
   console.log(pstObjList);
   const postList = document.getElementById("main-page");
-  const currentUid = authService.currentUser.uid;
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
