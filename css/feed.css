@@ -27,7 +27,7 @@
   top: -100px;
 }
 
-.back {
+/* .back {
   position: relative;
 }
 .back > button {
@@ -116,8 +116,8 @@ input#menu:checked + nav#main_nav {
   position: absolute;
   top: 55px;
   left: 610px;
-}
-
+} */
+/* 
 .mypost {
   width: 80%;
   box-shadow: 0px 0px 3px 0px gray;
@@ -125,73 +125,7 @@ input#menu:checked + nav#main_nav {
   position: relative;
   left: 180px;
   height: 460px;
-}
-
-.image-1 {
-  position: relative;
-}
-
-.image-1 > img {
-  position: absolute;
-  top: 30px;
-  left: 60px;
-  border-radius: 50%;
-}
-
-.nickname {
-  position: relative;
-}
-.nickname > p {
-  position: absolute;
-  top: 95px;
-  left: 70px;
-}
-
-.studyready {
-  position: relative;
-}
-
-.studyready > p {
-  position: absolute;
-  top: 10px;
-  left: 200px;
-}
-
-.text-1 {
-  position: relative;
-}
-.text-1 > p {
-  position: absolute;
-  top: 60px;
-  left: 200px;
-}
-
-.text-2 {
-  position: relative;
-}
-.text-2 > p {
-  position: absolute;
-  top: 100px;
-  left: 200px;
-}
-
-.text-3 {
-  position: relative;
-}
-.text-3 > p {
-  position: absolute;
-  top: 130px;
-  left: 200px;
-}
-
-.text-4 {
-  position: relative;
-}
-.text-4 > p {
-  position: absolute;
-  top: 180px;
-  left: 200px;
-}
+} */
 
 .image-2 {
   position: relative;
@@ -199,17 +133,14 @@ input#menu:checked + nav#main_nav {
 .image-2 > img {
   position: absolute;
   top: 260px;
-  left: 200px;
+  left: 180px;
   border-radius: 50%;
 }
 
-.text-5 {
-  position: relative;
-}
-.text-5 > p {
+.image-2 .cmtUserName {
   position: absolute;
-  top: 250px;
-  left: 250px;
+  top: 280px;
+  left: 235px;
 }
 
 .comment-1 {
@@ -236,82 +167,6 @@ input#menu:checked + nav#main_nav {
   font-size: 15px;
 }
 .btn-1 > button:hover {
-  border: 2px solid gray;
-}
-
-.image-3 {
-  position: relative;
-}
-.image-3 > img {
-  position: absolute;
-  top: 330px;
-  left: 200px;
-  border-radius: 50%;
-}
-.text-6 {
-  position: relative;
-}
-.text-6 > p {
-  position: absolute;
-  top: 320px;
-  left: 250px;
-}
-
-.comment-2 {
-  position: relative;
-}
-.comment-2 > textarea {
-  position: absolute;
-  top: 330px;
-  left: 300px;
-}
-
-.day {
-  position: relative;
-}
-.day > p {
-  position: absolute;
-  top: 320px;
-  left: 810px;
-}
-
-.btn-2 {
-  position: relative;
-}
-.btn-2 > button {
-  position: absolute;
-  top: 320px;
-  left: 900px;
-  background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 80px;
-  height: 50px;
-  padding-right: 10px;
-  font-size: 15px;
-}
-
-.btn-2 > button:hover {
-  border: 2px solid gray;
-}
-
-.btn-3 {
-  position: relative;
-}
-.btn-3 > button {
-  position: absolute;
-  top: 320px;
-  left: 990px;
-  background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 80px;
-  height: 50px;
-  padding-right: 10px;
-  font-size: 15px;
-}
-
-.btn-3 > button:hover {
   border: 2px solid gray;
 }
 
@@ -354,4 +209,112 @@ input#menu:checked + nav#main_nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+/* feed page  */
+
+.post-areason {
+  background-color: lightsteelblue;
+  width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+}
+
+.myFeed {
+  background-color: lightsteelblue;
+  width: 700px;
+  margin: 0px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.myFeed .postBox {
+  width: 100%;
+  height: 100%;
+}
+
+/* 포스팅 사진 */
+.onePostPic {
+  width: 100%;
+  height: 100%;
+}
+
+.onePostPic img {
+  width: 95%;
+  max-width: 800px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.updatePostBtn {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.editPostBtn {
+  width: 100px;
+  height: 100px;
+}
+
+.deletePostBtn {
+  width: 100px;
+  height: 100px;
+}
+
+/* user 프로필, 포스팅 내용 */
+.allPostingBox {
+  width: 95%;
+  max-width: 800px;
+  height: 100%;
+  display: inherit;
+  flex-direction: row;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.postUserBox {
+  width: 30%;
+  height: 200px;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userProfile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.postUserName {
+  font-size: large;
+}
+
+.postCmtBox {
+  width: 70%;
+  height: 100%;
+  display: inherit;
+  flex-direction: column;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.postContentBox {
+  width: 100%;
+  height: 100%;
+  display: inherit;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+.onePostAt {
+  margin: 20px 10px;
 }

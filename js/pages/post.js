@@ -32,7 +32,7 @@ export const save_post = async (event) => {
     })
       .then(() => {
         alert("포스트 작성 완료");
-        window.location.hash = "#mypage";
+        window.location.hash = "#loginmain";
       })
       .catch((error) => {
         alert("포스트 작성 실패");
