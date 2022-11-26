@@ -181,7 +181,15 @@ a {
   cursor: pointer;
 }
 
-/* 호버시 그림자 */
+.goToHome,
+.goToMyPost {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 35px;
+  margin-left: 50px;
+}
 
 .workoutdescjeong,
 .studydescjeong,
@@ -302,7 +310,7 @@ nav#profilebtn {
 
 input#useridyuns:checked + nav#profilebtn {
   display: block;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 #profilebtn a {
