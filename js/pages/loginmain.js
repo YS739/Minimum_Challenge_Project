@@ -26,16 +26,8 @@ export const getPostList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox" >
         <div class="postPic"><img class="postPicImg" 
-<<<<<<< HEAD
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        width="100px" height="100px"  src="${ptObj.postpic}"></div>
-        <div class="contentbox">
-=======
         width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
         <div class="contentbox" >
->>>>>>> 2f2c3cfa2307e071973dc05c9947c2bf1b91e536
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
