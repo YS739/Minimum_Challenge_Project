@@ -51,7 +51,7 @@ export const getPostList = async () => {
 };
 
 // 운동하기 버튼
-export const getStudyList = async () => {
+export const getWorkoutList = async () => {
   let pstObjList = [];
   const q = query(
     collection(dbService, "minipost"),
@@ -98,7 +98,7 @@ export const getStudyList = async () => {
 };
 
 // 공부하기 버튼
-export const getWorkoutList = async () => {
+export const getStudyList = async () => {
   let pstObjList = [];
   const q = query(
     collection(dbService, "minipost"),
