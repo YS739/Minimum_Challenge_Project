@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="stylesheet" type="text/css" href="./css/profile.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
@@ -22,7 +21,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
-      src="https://kit.fontawesome.com/54db7ce8fa.js"
+      src="https://kit.fontawesome.com/446701298e.js"
       crossorigin="anonymous"
     ></script>
 
@@ -58,13 +57,13 @@
           <nav id="profilebtn">
             <ul>
               <li>
-                <button id="goMyBtn" class="goToHome">
-                  <i class="fa-solid fa-house-chimney"></i>
+                <button id="" onclick="goToProfile()" class="goToHome">
+                  <g class="fa-solid fa-user"></g>
                 </button>
               </li>
               <li>
                 <button id="goPoBtn" onclick="goToPost()" class="goToMyPost">
-                  <i class="fa-regular fa-pen-to-square"></i>
+                  <g class="fa-regular fa-pen-to-square"></g>
                 </button>
               </li>
             </ul>
@@ -107,7 +106,7 @@
         >
       </div>
       <div class="recentjeong">
-        <a href="#" onclick="route(event)"
+        <a href="" onclick="route(event)"
           ><i class="fa-solid fa-rotate"></i> 최신</a
         >
       </div>
@@ -125,9 +124,7 @@
               <div class="profileBox">
                 <!-- 상자생김 -->
                 <!-- <div class="close-kim"></div> -->
-                <a href="#mypage">
-                  <i class="fa-solid fa-xmark close"></i>
-                </a>
+                <i class="fa-solid fa-xmark close"></i>
 
                 <label id="imgLabel" for="imgInput">
                   <input
@@ -169,14 +166,9 @@
         </div>
       </div>
     </div>
-    =======
+
     <!-- 여기서 부터 프로필 모달 시작 -->
 
-    <img
-      class="main-logoson"
-      src="https://url.kr/nkmebz"
-      alt="Minimum Challenge"
-    />
     <div id="profile-modal">
       <div id="profileAll" class="blackModal">
         <div id="profilePage">
@@ -229,7 +221,5 @@
         </div>
       </div>
     </div>
-    <script src="../js/pages/profile.js" type="module"></script>
-    >>>>>>> 8d7940733bbbf3a843c7817c881a94b6fac86c42
   </body>
 </html>

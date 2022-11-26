@@ -1,13 +1,13 @@
 * {
   font-family: "Roboto", sans-serif;
   font-family: "Jua", sans-serif;
-  text-decoration : none;
+  text-decoration: none;
 }
 
 /* 헤더 고정하기 */
 
-a{
-  text-decoration : none;
+a {
+  text-decoration: none;
 }
 
 /* 원래 로그인버튼 코드!!! .logbtnjeong{
@@ -28,8 +28,6 @@ a{
 .logbtnjeong:hover {
   background-color: lightsalmon;
 } 원래 코드!!!! */
-
-
 
 /* .editMyProfileB {
   cursor: pointer;
@@ -69,23 +67,23 @@ a{
 }
 
 .headjeong {
-  position:fixed;
+  position: fixed;
   width: 100%;
   height: 100px;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-  
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-.headcontainerjeong{
-  align-items:center;
-  display:flex;
-  float:left;
+.headcontainerjeong {
+  align-items: center;
+  display: flex;
+  float: left;
 }
 
 /* .fa-magnifying-glass {
@@ -93,12 +91,11 @@ a{
   margin:20px;
 } */
 
-
-.logbtnjeong{
+.logbtnjeong {
   width: 130px;
   height: 45px;
   cursor: pointer;
-  background-color:transparent;
+  background-color: transparent;
 
   margin-right: 50px;
   text-align: center;
@@ -111,7 +108,7 @@ a{
   padding: 15px 20px;
   background-color: white;
   color: black;
-  
+
   border: 2px solid black;
   border-radius: 30px;
   letter-spacing: 4px;
@@ -126,13 +123,11 @@ a{
   color: white;
 }
 
-
 /* 여기까지 헤드부분! */
 
-
-* nav{
+* nav {
   margin-left: 30px;
-  margin-top : 30px;
+  margin-top: 30px;
   font-size: 1.2rem;
 
   flex-direction: row;
@@ -140,8 +135,8 @@ a{
 }
 
 .navjeong {
-  text-decoration : none;
-  position:fixed;
+  text-decoration: none;
+  position: fixed;
 
   margin-top: 170px;
 
@@ -149,7 +144,7 @@ a{
 
   display: flex;
   flex-direction: row;
-  align-items:flex-start;
+  align-items: flex-start;
 }
 
 .workoutjeong,
@@ -162,8 +157,6 @@ a{
 }
 
 /* 카테고리 위치 */
-
-
 
 /* 호버 선택자 묶어서는 적용이 안 되나 봅니다ㅠㅠ */
 .allnavjeong :hover {
@@ -188,20 +181,24 @@ a{
   cursor: pointer;
 }
 
-/* 호버시 그림자 */
-
-
+.goToHome,
+.goToMyPost {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 35px;
+  margin-left: 50px;
+}
 
 .workoutdescjeong,
 .studydescjeong,
 .bookdescjeong {
   margin-top: 10px;
-  display:none;
+  display: none;
 }
 
 /* 카테고리 선택 전에는 글자 안뜸 */
-
-
 
 .workoutjeong:hover .workoutdescjeong {
   display: block;
@@ -220,17 +217,20 @@ a{
 
 /* 글자뜨기 */
 
-
-.allnavjeong > a {color : black;}
-.recentjeong > a {color : black;}
+.allnavjeong > a {
+  color: black;
+}
+.recentjeong > a {
+  color: black;
+}
 /* 카테고리 폰트 컬러 검은색으로 */
 
 #workoutys,
 #studyys,
 #bookys {
- color : black; /* 카테고리 폰트 컬러 검은색으로 */
- margin-left: 50px;
- margin-right: 50px;
+  color: black; /* 카테고리 폰트 컬러 검은색으로 */
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .allnavjeong,
@@ -243,13 +243,9 @@ a{
 
 /* 카테고리 간격맞추기!!! */
 
-
-
 /* 여기부터는 메인 */
 
-
 .mainjeong {
-  
   width: 100%;
   height: 100%;
 }
@@ -314,7 +310,7 @@ nav#profilebtn {
 
 input#useridyuns:checked + nav#profilebtn {
   display: block;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 #profilebtn a {
@@ -333,9 +329,7 @@ input#useridyuns:checked + nav#profilebtn {
   display: none;
 }
 
-
 /* login-menu */
-
 
 .mypost {
   width: 95%;
@@ -347,4 +341,121 @@ input#useridyuns:checked + nav#profilebtn {
   left: 500px;
   top: 170px;
   height: 250px;
+}
+
+/* profile modal + profile css */
+#profile-modal {
+  display: none;
+}
+/*뒷배경 */
+#profileAll {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(145, 138, 138, 0.8); /*배경색 넣는방법 */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /*그림자 효과 넣는방법 */
+  backdrop-filter: blur(2.5px); /*필터넣는방법 이거쓰시면 됩니다. */
+  -webkit-backdrop-filter: blur(2.5px);
+  border-radius: 10px; /*테두리 둥글게 하기 */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  /*테두리 두껍게 설정 */
+}
+
+/*프로필 관리창 */
+.profileBox {
+  border-radius: 10px;
+  background-color: rgba(224, 220, 215, 0.911);
+  box-shadow: 0 8px 32px 0 rgba(101, 104, 150, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 95%;
+  max-width: 600px;
+  height: 500px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#profileBtnEdit {
+  cursor: pointer;
+  background-color: transparent;
+
+  font-size: 30px;
+  padding: 15px 30px;
+  background-color: white;
+  color: rgb(209, 188, 188);
+
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 10px;
+
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#profileBtnEdit:focus {
+  outline: none;
+}
+
+#profileBtnEdit:hover {
+  /*프로필 변경 버튼 호버*/
+  background-color: rgb(209, 188, 188);
+  color: white;
+  transition: 1s;
+}
+
+#profileView {
+  cursor: pointer;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.fa-xmark {
+  position: relative;
+  top: 25px;
+  right: 15px;
+  font-size: 50px;
+  cursor: pointer;
+
+  color: rgb(253, 241, 241);
+  transition: all;
+  padding-left: 435px;
+}
+
+.fa-xmark:active {
+  transform: translateY(10px);
+}
+
+#imgInput {
+  display: none;
+}
+
+#profileNickname {
+  /* bottom: 50px;
+  right: 110px; */
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  width: 200px;
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.nickEdit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
