@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/446701298e.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <img
@@ -26,9 +27,10 @@
             <div class="profileBox">
               <!-- 상자생김 -->
               <!-- <div class="close-kim"></div> -->
-              <button class="myPageClose">
-                <a href="#mypage">닫기</a>
-              </button>
+                <a href="#mypage">
+                  <i class="fa-solid fa-xmark close"></i>
+                </a>
+              
               <label id="imgLabel" for="imgInput">
                 <div class="imagemove">
                   <img id="profileView" src="../img/강아지.jpg" />
@@ -41,18 +43,17 @@
                 />
               </label>
 
-              <div class="prokim">
+              <div class="nickEdit">
                 <div class="myname">
-                  <input
+                  <input class="memberName"
                     id="profileNickname"
                     type="text"
                     placeholder="현재 닉네임"
                     value=""
                   />
                 </div>
-                <nav class="profile-nav">
+                <nav class="profileView">
                   <label for="profile-navkim">
-                    <div class="mybtn">
                       <button id="profileBtnEdit">
                         <a
                           href="#mypage"
@@ -60,9 +61,8 @@
                           id="profile-changekim"
                           type="submit"
                         ></a
-                        >수정하기
+                        >EDIT
                       </button>
-                    </div>
                   </label>
                 </nav>
               </div>
