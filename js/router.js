@@ -15,6 +15,7 @@ const routes = {
   feed: "/pages/feed.html",
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
+  community: "/pages/community.html",
   404: "/pages/404.html",
 };
 
@@ -48,6 +49,15 @@ export const handleLocation = async () => {
 
   if (path === "feed") {
     getOnePost();
+    getFeedCommentList();
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
+
+    document.getElementById("profileImg").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+  }
+
+  if (path === "community") {
     getFeedCommentList();
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
