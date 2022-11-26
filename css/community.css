@@ -1,3 +1,5 @@
+/* 로고 */
+
 .main-logoson {
   width: 300px;
   margin-top: 20px;
@@ -6,171 +8,65 @@
   cursor: pointer;
 }
 
-.mypic {
-  width: 80%;
-  height: 360px;
-  box-shadow: 0px 0px 3px 0px gray;
-  position: relative;
-  left: 180px;
-  background-color: rgba(102, 163, 173, 0.8);
+/* .commu-comment {
+  width: 95%;
+  max-width: 800px;
+  height: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 100px;
-}
-.font {
-  position: relative;
-}
-.font > p {
-  position: absolute;
-  right: 810px;
-  top: -100px;
+  margin: 0 auto;
+} */
+
+/* 댓글창 */
+.commu-comment {
+  width: 700px;
+  margin: 20px auto;
+
+  box-shadow: 0px 0px 3px 0px black;
+  padding: 20px;
 }
 
-/* .back {
-    position: relative;
-  }
-  .back > button {
-    position: absolute;
-    right: 680px;
-    top: -95px;
-    border: none;
-    outline: none;
-    color: black;
-    font-size: 25px;
-    background-color: transparent;
-    font-size: 50px;
-  }
-  .viewmore {
-    position: relative;
-  }
-  .viewmore > .menu > h1 {
-    font-size: 80px;
-  }
-  
-  label.menu {
-    border: none;
-    padding: 10px;
-    position: absolute;
-    left: 630px;
-    top: -205px;
-  }
-  
-  input#menu {
-    display: none;
-  }
-  nav#main_nav {
-    display: none;
-  }
-  input#menu:checked + nav#main_nav {
-    display: block;
-  }
-  
-  .delete > .revicebtn > button {
-    text-decoration: none;
-    color: black;
-    border: none;
-    background-color: rgba(234, 239, 240, 0.8);
-    border-radius: 20px;
-    padding-bottom: 20px;
-  }
-  .delete > .revicebtn > button:hover {
-    border: 2px solid gray;
-    box-shadow: 1px 1px 2px gray;
-  }
-  .delete > .revicebtn > button > p {
-    border-radius: 50px;
-    border: none;
-    width: 110px;
-    height: 10px;
-    font-size: 20px;
-  }
-  .delete > .deletebtn > button {
-    color: black;
-    border: none;
-    background-color: rgba(234, 239, 240, 0.8);
-    border-radius: 20px;
-    padding-bottom: 20px;
-  }
-  .delete > .deletebtn > button:hover {
-    border: 2px solid gray;
-    box-shadow: 1px 1px 2px gray;
-  }
-  .delete > .deletebtn > button > p {
-    border-radius: 50px;
-    border: none;
-    width: 110px;
-    height: 10px;
-    font-size: 20px;
-  }
-  .delete {
-    position: relative;
-  }
-  
-  .delete > .revicebtn {
-    position: absolute;
-    top: -20px;
-    left: 610px;
-  }
-  .delete > .deletebtn {
-    position: absolute;
-    top: 55px;
-    left: 610px;
-  } */
-/* 
-  .mypost {
-    width: 80%;
-    box-shadow: 0px 0px 3px 0px gray;
-    background-color: rgba(220, 230, 231, 0.8);
-    position: relative;
-    left: 180px;
-    height: 460px;
-  } */
-
-.image-2 {
-  position: relative;
+.community-leaveCmt {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
-.image-2 > img {
-  position: absolute;
-  top: 260px;
-  left: 180px;
+
+.commu-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+#cm-profileImg {
   border-radius: 50%;
 }
 
-.image-2 .cmtUserName {
-  position: absolute;
-  top: 280px;
-  left: 235px;
+#community-nickname {
+  padding: 20px;
+  font-size: large;
 }
 
-.comment-1 {
-  position: relative;
-}
-.comment-1 > textarea {
-  position: absolute;
-  top: 260px;
-  left: 300px;
-}
-.btn-1 {
-  position: relative;
-}
-.btn-1 > button {
-  position: absolute;
-  top: 250px;
-  left: 820px;
-  background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 150px;
-  height: 50px;
-  padding-right: 10px;
-  font-size: 15px;
-}
-.btn-1 > button:hover {
-  border: 2px solid gray;
+.leaveBtn {
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
 }
 
-/* comments */
+.leaveBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+/* 댓글 불러오기 */
 .mycards {
   width: 95%;
   max-width: 500px;
@@ -178,10 +74,73 @@
 }
 
 .mycards > .card {
+  border-radius: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+.cmtCards {
+  width: 95%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 95%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cmt-img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.commentText {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-right: 20px;
+}
+
+.cmtImg {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.quote-footer {
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quote-footer span {
+  font-size: large;
+  color: black;
+}
+
+/* 댓글 수정, 삭제 */
 .updateBtns {
   display: flex;
   justify-content: end;
@@ -194,127 +153,37 @@
 }
 .updateBtn {
   min-width: 70px;
+  border-radius: 30px;
+  margin-left: 10px;
 }
+
+.updateBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
 .newCmtInput {
   width: 100%;
-}
-.cmtImg {
-  border-radius: 50%;
-  margin-right: 10px;
-}
-.quote-footer {
-  margin-top: 20px;
-  color: #6c757d;
-  font-size: 0.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  border-color: pink;
 }
 
-/* feed page  */
-
-.post-areason {
-  background-color: lightsteelblue;
-  width: 700px;
-  margin: 0px auto;
-  padding: 20px;
+.editBtn,
+.deleteBtn {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.myFeed {
-  background-color: lightsteelblue;
-  width: 700px;
-  margin: 0px auto;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.editBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
 }
 
-.myFeed .postBox {
-  width: 100%;
-  height: 100%;
-}
-
-/* 포스팅 사진 */
-.onePostPic {
-  width: 100%;
-  height: 100%;
-}
-
-.onePostPic img {
-  width: 95%;
-  max-width: 800px;
-  height: 400px;
-  object-fit: cover;
-}
-
-.updatePostBtn {
-  display: flex;
-  justify-content: end;
-  margin-top: 5px;
-  gap: 5px;
-}
-
-.editPostBtn {
-  width: 100px;
-  height: 100px;
-}
-
-.deletePostBtn {
-  width: 100px;
-  height: 100px;
-}
-
-/* user 프로필, 포스팅 내용 */
-.allPostingBox {
-  width: 95%;
-  max-width: 800px;
-  height: 100%;
-  display: inherit;
-  flex-direction: row;
-  justify-content: inherit;
-  align-items: inherit;
-}
-
-.postUserBox {
-  width: 30%;
-  height: 200px;
-  display: inherit;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.userProfile img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.postUserName {
-  font-size: large;
-}
-
-.postCmtBox {
-  width: 70%;
-  height: 100%;
-  display: inherit;
-  flex-direction: column;
-  justify-content: inherit;
-  align-items: inherit;
-}
-
-.postContentBox {
-  width: 100%;
-  height: 100%;
-  display: inherit;
-  flex-direction: row;
-  justify-content: left;
-  align-items: left;
-}
-
-.onePostAt {
-  margin: 20px 10px;
+.deleteBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
 }

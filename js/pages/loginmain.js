@@ -25,11 +25,8 @@ export const getPostList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
-
-
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -43,7 +40,7 @@ export const getPostList = async () => {
             </div>
           </div>`;
     const div = document.createElement("div");
-    div.classList.add("mypost");
+    div.classList.add("postcards");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
@@ -74,9 +71,11 @@ export const getWorkoutList = async () => {
     const temp_html = `<div class="postingbox">
 
 
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -119,9 +118,11 @@ export const getStudyList = async () => {
     const temp_html = `<div class="postingbox">
 
 
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -164,11 +165,8 @@ export const getBookList = async () => {
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
-
-
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -186,4 +184,49 @@ export const getBookList = async () => {
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
+};
+
+// profile.js for modal
+
+export const changeProfile = async (event) => {
+  event.preventDefault();
+  document.getElementById("profileBtnEdit").disabled = true;
+  const imgRef = ref(
+    storageService,
+    `${authService.currentUser.uid}/${uuidv4()}`
+  );
+
+  const newNickname = document.getElementById("nickname").value;
+  const imgDataUrl = localStorage.getItem("imgDataUrl");
+  let downloadUrl;
+  if (imgDataUrl) {
+    const response = await uploadString(imgRef, imgDataUrl, "data_url");
+    downloadUrl = await getDownloadURL(response.ref);
+  }
+
+  await updateProfile(authService.currentUser, {
+    displayName: newNickname ? newNickname : null,
+    photoURL: downloadUrl ? downloadUrl : null,
+  })
+    .then(() => {
+      alert("프로필 수정 완료");
+      window.location.hash = "#loginmain";
+    })
+    .catch((error) => {
+      alert("프로필 수정 실패");
+      console.log("error:", error);
+    });
+};
+
+//프로필 사진을 클릭했을 때 나오는 동작
+export const onFileChange = (event) => {
+  const theFile = event.target.files[0]; // file 객체
+  const reader = new FileReader();
+  reader.readAsDataURL(theFile); // file 객체를 브라우저가 읽을 수 있는 data URL로 읽음.
+  reader.onloadend = (finishedEvent) => {
+    // 파일리더가 파일객체를 data URL로 변환 작업을 끝났을 때
+    const imgDataUrl = finishedEvent.currentTarget.result;
+    localStorage.setItem("imgDataUrl", imgDataUrl);
+    document.getElementById("profileView").src = imgDataUrl;
+  };
 };

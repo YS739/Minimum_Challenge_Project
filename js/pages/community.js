@@ -13,7 +13,7 @@ import { dbService, authService } from "../firebase.js";
 // 댓글부분
 export const save_comment = async (event) => {
   event.preventDefault();
-  const comment = document.getElementById("feedComment");
+  const comment = document.getElementById("commuComment");
   const { uid, photoURL, displayName } = authService.currentUser;
   try {
     await addDoc(collection(dbService, "feedCommentList"), {
@@ -24,7 +24,7 @@ export const save_comment = async (event) => {
       nickname: displayName,
     });
     comment.value = "";
-    getFeedCommentList();
+    getCommunityCommentList();
   } catch (error) {
     alert(error);
     console.log("error in addDoc:", error);
@@ -34,7 +34,7 @@ export const save_comment = async (event) => {
 export const onEditing = (event) => {
   // 수정버튼 클릭
   event.preventDefault();
-  const udBtns = document.querySelectorAll(".cmtEditBtn, .cmtDelBtn");
+  const udBtns = document.querySelectorAll(".editBtn, .deleteBtn");
   udBtns.forEach((udBtn) => (udBtn.disabled = "true"));
 
   const cardBody = event.target.parentNode.parentNode;
@@ -44,7 +44,7 @@ export const onEditing = (event) => {
   commentText.classList.add("noDisplay");
   commentInputP.classList.add("d-flex");
   commentInputP.classList.remove("noDisplay");
-  commentInputP.children[0].focus();
+  commentInputP.children[0];
 };
 
 export const update_comment = async (event) => {
@@ -62,7 +62,7 @@ export const update_comment = async (event) => {
   const commentRef = doc(dbService, "feedCommentList", id);
   try {
     await updateDoc(commentRef, { text: newComment });
-    getFeedCommentList();
+    getCommunityCommentList();
   } catch (error) {
     alert(error);
   }
@@ -75,14 +75,14 @@ export const delete_comment = async (event) => {
   if (ok) {
     try {
       await deleteDoc(doc(dbService, "feedCommentList", id));
-      getFeedCommentList();
+      getCommunityCommentList();
     } catch (error) {
       alert(error);
     }
   }
 };
 
-export const getFeedCommentList = async () => {
+export const getCommunityCommentList = async () => {
   let cmtObjList = [];
   const q = query(
     collection(dbService, "feedCommentList"),
@@ -96,36 +96,36 @@ export const getFeedCommentList = async () => {
     };
     cmtObjList.push(commentObj);
   });
-  const commentList = document.getElementById("feedCmt-list");
+  const commentList = document.getElementById("commuCmt-list");
   const currentUid = authService.currentUser.uid;
   commentList.innerHTML = "";
   cmtObjList.forEach((cmtObj) => {
     const isOwner = currentUid === cmtObj.creatorId;
-    const temp_html = `<div class="feed-commentCard">
-              <div class="feed-cards">
-                  <blockquote class="blockquote mb-0">
-                      <p class="commentText">${cmtObj.text}</p>
-                      <p id="${
-                        cmtObj.id
-                      }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
-                      <footer class="feedCards-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
-                        cmtObj.profileImg ?? "/img/강아지.jpg"
-                      }" alt="profileImg" /><span>${
+    const temp_html = `<div class="card commentCard">
+    <div class="card-body">
+        <blockquote class="blockquote mb-0">
+            <p class="commentText">${cmtObj.text}</p>
+            <p id="${
+              cmtObj.id
+            }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
+            <footer class="quote-footer"><div>BY&nbsp;&nbsp;<img class="cmt-img" width="50px" height="50px" src="${
+              cmtObj.profileImg
+            }" alt="profileImg" /><span>${
       cmtObj.nickname ?? "회원"
     }</span></div><div class="cmtAt">${new Date(cmtObj.createdAt)
       .toString()
       .slice(0, 25)}</div></footer>
-                  </blockquote>
-                  <div class="${isOwner ? "updateBtns" : "noDisplay"}">
-                       <button onclick="onEditing(event)" class="cmtEditBt">수정</button>
-                    <button name="${
-                      cmtObj.id
-                    }" onclick="delete_comment(event)" class="cmtDelBtn">삭제</button>
-                  </div>            
-                </div>
-         </div>`;
+        </blockquote>
+        <div class="${isOwner ? "updateBtns" : "noDisplay"}">
+             <button onclick="onEditing(event)" class="editBtn">수정</button>
+          <button name="${
+            cmtObj.id
+          }" onclick="delete_comment(event)" class="deleteBtn">삭제</button>
+        </div>            
+      </div>
+</div>`;
     const div = document.createElement("div");
-    div.classList.add("feedCards");
+    div.classList.add("mycards");
     div.innerHTML = temp_html;
     commentList.appendChild(div);
   });

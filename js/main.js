@@ -14,14 +14,15 @@ import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
 import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
-import { getPostList } from "./pages/mypage.js";
+
 import {
+  getPostList,
   getWorkoutList,
   getStudyList,
   getBookList,
 } from "./pages/loginmain.js";
 import {
-  getFeedCommentList,
+  getCommunityCommentList,
   save_comment,
   onEditing,
   update_comment,
@@ -32,8 +33,6 @@ window.addEventListener("hashchange", handleLocation);
 
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
-  // getPostList(); 주석처리 하니까 index.html에서 더 이상 null 오류 안 뜸!
-
   authService.onAuthStateChanged((user) => {
     handleLocation();
     const hash = window.location.hash;
@@ -67,7 +66,7 @@ window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
 // feed에 댓글
-window.getFeedCommentList = getFeedCommentList;
+window.getCommunityCommentList = getCommunityCommentList;
 window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
