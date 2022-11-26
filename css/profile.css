@@ -124,7 +124,6 @@
 i {
   font-size: 50px;
   cursor: pointer;
-<<<<<<< HEAD
   color: rgb(253, 241, 241);
   transition: all;
   padding-left: 435px;
@@ -133,10 +132,7 @@ i {
 i:active {
   transform: translateY(10px);
 }
-=======
-}
 
 #profile-modal {
   display: none;
 }
->>>>>>> 13e416666eff231cafd75f624f2218b4f9705a2e
