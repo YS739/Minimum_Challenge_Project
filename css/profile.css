@@ -31,20 +31,42 @@
 }
 
 #profileAll .profileBox {                  /*프로필 관리창 */
-
-  background: rgba(245, 243, 241, 0.863);
-  box-shadow: 0 8px 32px 0 rgba(101, 104, 150, 0.37);
+  
   border-radius: 10px;
+  background-color: rgba(224, 220, 215, 0.911);
+  box-shadow: 0 8px 32px 0 rgba(101, 104, 150, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 500px;
-  height: 500px;
+  width: 480px;
+  height: 620px;
   padding: 10px;
+}
+
+#profileBtnEdit {
+  position: relative;
+  top: 50px;
+  cursor: pointer;
+  background-color:transparent;
+
+  margin: 0px 80px 20px 50px;
+
+  font-size: 30px;
+  padding: 15px 30px;
+  background-color: white;
+  color: rgb(209, 188, 188);
+  
+  border: none;
+  border-radius: 30px;
+  letter-spacing: 10px;
+}
+
+#profileBtnEdit:focus {
+  outline: none;
 }
 
 #profileBtnEdit:hover {
   /*프로필 변경 버튼 호버*/
-  border: 2px solid gray;
-  cursor: pointer;
+  background-color: rgb(209, 188, 188);
+  color: white;
 }
 
 #profileView {
@@ -66,41 +88,16 @@
   padding-top: 30px;
   padding-left: 120px;
 }
-.myname {
-  position: relative;
-}
 
-.myname > #profileNickname {
-  position: absolute;
-  top: 320px;
-  right: -110px;
+#profileNickname {
+  /* bottom: 50px;
+  right: 110px; */
   border: none;
+  border-radius: 10px;
   padding: 13px;
+  margin-top: 320px;
   width: 200px;
   font-size: 20px;
-}
-.mybtn {
-  position: relative;
-}
-
-.mybtn > button {
-  position: fixed;
-  top: 620px;
-  left: 870px;
-  justify-content: center;
-
-  background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 150px;
-  height: 50px;
-  padding-right: 10px;
-  font-size: 20px;
-  text-align: center;
-}
-
-.mybtn > button:hover {
-  border: 2px solid gray;
 }
 
 .close-kim {
@@ -111,13 +108,22 @@
   color: black;
 }
 
-.prokim {
+.nickEdit {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.myPageClose {
-  text-decoration: none;
+
+i {
+  font-size: 50px;
   cursor: pointer;
+  color: rgb(253, 241, 241);
+  transition: all;
+  padding-left: 435px;
 }
+
+i:active {
+  transform: translateY(10px);
+}
+
