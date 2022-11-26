@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
@@ -114,5 +116,59 @@
     <!-- 게시물 불러오는 곳 -->
 
     <div id="main-page"></div>
+    <!-- 프로필 모달 시작 -->
+    <div id="profile-modal">
+      <div id="profileAll" class="blackModal">
+        <div id="profilePage">
+          <section id="profileWrapper">
+            <form id="profileForm" onsubmit="changeProfile(event)">
+              <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
+              <div class="profileBox">
+                <!-- 상자생김 -->
+                <!-- <div class="close-kim"></div> -->
+                <a href="#mypage">
+                  <i class="fa-solid fa-xmark close"></i>
+                </a>
+
+                <label id="imgLabel" for="imgInput">
+                  <input
+                    onchange="onFileChange(event)"
+                    id="imgInput"
+                    type="file"
+                    accept="images/*"
+                    class="imagemove"
+                  />
+                  <img id="profileView" src="../img/강아지.jpg" />
+                </label>
+
+                <div class="nickEdit">
+                  <div class="myname">
+                    <input
+                      class="memberName"
+                      id="profileNickname"
+                      type="text"
+                      placeholder="현재 닉네임"
+                      value=""
+                    />
+                  </div>
+
+                  <label for="profile-navkim">
+                    <button id="profileBtnEdit">
+                      <a
+                        href="#mypage"
+                        onclick="route(event)"
+                        id="profile-changekim"
+                        type="submit"
+                      ></a
+                      >EDIT
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
