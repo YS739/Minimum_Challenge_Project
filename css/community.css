@@ -105,9 +105,9 @@
   gap: 5px;
 }
 
-/*.noDisplay {
+.noDisplay {
   display: none;
-} */
+}
 .updateBtn {
   color: black;
 }
