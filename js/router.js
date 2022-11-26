@@ -94,7 +94,7 @@ export const handleLocation = async () => {
     }
   });
 };
-// 윤숙 - 다른 페이지 이동할 때 이렇게 이벤트를 만들기!
+// 윤숙 - 다른 페이지 이동할 때!
 export const goToPost = () => {
   window.location.hash = "#post";
 };

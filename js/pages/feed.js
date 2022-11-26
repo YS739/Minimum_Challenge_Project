@@ -7,7 +7,7 @@ import {
   orderBy,
   query,
   getDocs,
-  // where,
+  where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { dbService, authService } from "../firebase.js";
 
@@ -16,7 +16,7 @@ export const getOnePost = async () => {
   let pstObjList = [];
   const q = query(
     collection(dbService, "minipost"),
-    // where("creatorId", "=", "RHgHMa337Tf78rGrqp7Hydkd2083"),
+    where("category", "==", "공부하기"),
     orderBy("createdAt", "desc")
   );
   const querySnapshot = await getDocs(q);
