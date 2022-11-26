@@ -10,7 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
       rel="stylesheet"
     />
-    <script src="https://kit.fontawesome.com/446701298e.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/446701298e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <img
@@ -27,44 +30,43 @@
             <div class="profileBox">
               <!-- 상자생김 -->
               <!-- <div class="close-kim"></div> -->
-                <a href="#mypage">
-                  <i class="fa-solid fa-xmark close"></i>
-                </a>
-              
+              <a href="#mypage">
+                <i class="fa-solid fa-xmark close"></i>
+              </a>
+
               <label id="imgLabel" for="imgInput">
-                <div class="imagemove">
-                  <img id="profileView" src="../img/강아지.jpg" />
-                </div>
                 <input
                   onchange="onFileChange(event)"
                   id="imgInput"
                   type="file"
                   accept="images/*"
+                  class="imagemove"
                 />
+                <img id="profileView" src="../img/강아지.jpg" />
               </label>
 
               <div class="nickEdit">
                 <div class="myname">
-                  <input class="memberName"
+                  <input
+                    class="memberName"
                     id="profileNickname"
                     type="text"
                     placeholder="현재 닉네임"
                     value=""
                   />
                 </div>
-                <nav class="profileView">
-                  <label for="profile-navkim">
-                      <button id="profileBtnEdit">
-                        <a
-                          href="#mypage"
-                          onclick="route(event)"
-                          id="profile-changekim"
-                          type="submit"
-                        ></a
-                        >EDIT
-                      </button>
-                  </label>
-                </nav>
+
+                <label for="profile-navkim">
+                  <button id="profileBtnEdit">
+                    <a
+                      href="#mypage"
+                      onclick="route(event)"
+                      id="profile-changekim"
+                      type="submit"
+                    ></a
+                    >EDIT
+                  </button>
+                </label>
               </div>
             </div>
           </form>
