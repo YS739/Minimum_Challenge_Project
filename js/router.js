@@ -11,7 +11,7 @@ const routes = {
   "/": "/index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
-  mypage: "/pages/mypage.html",
+
 
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",

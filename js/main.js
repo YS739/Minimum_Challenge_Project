@@ -13,8 +13,9 @@ import { socialLogin, logout } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
 import { onPostChange, save_post } from "./pages/post.js";
-import { getPostList } from "./pages/mypage.js";
+
 import {
+  getPostList,
   getWorkoutList,
   getStudyList,
   getBookList,
