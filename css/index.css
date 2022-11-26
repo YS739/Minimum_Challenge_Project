@@ -343,10 +343,6 @@ input#useridyuns:checked + nav#profilebtn {
   height: 250px;
 }
 
-/* profile modal + profile css */
-#profile-modal {
-  display: none;
-}
 /*뒷배경 */
 #profileAll {
   width: 100%;
