@@ -1,6 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getCommunityCommentList } from "./pages/community.js";
+import { getFeedCommentList } from "./pages/community.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -11,6 +11,7 @@ const routes = {
   "/": "/index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
+  mypage: "/pages/mypage.html",
 
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
@@ -64,11 +65,11 @@ export const handleLocation = async () => {
   }
 
   if (path === "community") {
-    getCommunityCommentList();
-    document.getElementById("community-nickname").textContent =
+    getFeedCommentList();
+    document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
-    document.getElementById("cm-profileImg").src =
+    document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
@@ -80,14 +81,6 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("profileImg").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
-  }
-
-  if (path === "profile") {
-    document.getElementById("nickname").textContent =
-      authService.currentUser.displayName ?? "회원";
-
-    document.getElementById("profileView").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
