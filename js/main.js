@@ -23,7 +23,7 @@ import {
   onFileChange,
 } from "./pages/loginmain.js";
 import {
-  getFeedCommentList,
+  getCommunityCommentList,
   save_comment,
   onEditing,
   update_comment,
@@ -67,7 +67,7 @@ window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
 // feed에 댓글
-window.getFeedCommentList = getFeedCommentList;
+window.getCommunityCommentList = getCommunityCommentList;
 window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;

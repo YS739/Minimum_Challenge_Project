@@ -1,6 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getFeedCommentList } from "./pages/community.js";
+import { getCommunityCommentList } from "./pages/community.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -11,7 +11,6 @@ const routes = {
   "/": "/index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
-
 
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
@@ -65,7 +64,7 @@ export const handleLocation = async () => {
   }
 
   if (path === "community") {
-    getFeedCommentList();
+    getCommunityCommentList();
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 

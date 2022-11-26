@@ -24,7 +24,7 @@ export const save_comment = async (event) => {
       nickname: displayName,
     });
     comment.value = "";
-    getFeedCommentList();
+    getCommunityCommentList();
   } catch (error) {
     alert(error);
     console.log("error in addDoc:", error);
@@ -62,7 +62,7 @@ export const update_comment = async (event) => {
   const commentRef = doc(dbService, "feedCommentList", id);
   try {
     await updateDoc(commentRef, { text: newComment });
-    getFeedCommentList();
+    getCommunityCommentList();
   } catch (error) {
     alert(error);
   }
@@ -75,14 +75,14 @@ export const delete_comment = async (event) => {
   if (ok) {
     try {
       await deleteDoc(doc(dbService, "feedCommentList", id));
-      getFeedCommentList();
+      getCommunityCommentList();
     } catch (error) {
       alert(error);
     }
   }
 };
 
-export const getFeedCommentList = async () => {
+export const getCommunityCommentList = async () => {
   let cmtObjList = [];
   const q = query(
     collection(dbService, "feedCommentList"),
