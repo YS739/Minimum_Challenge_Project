@@ -459,8 +459,9 @@ input#useridyuns:checked + nav#profilebtn {
   align-items: center;
   justify-content: center;
 }
-/* . {
+
+.postPicImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-} */
+}

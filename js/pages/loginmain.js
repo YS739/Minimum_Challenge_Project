@@ -35,9 +35,6 @@ export const getPostList = async () => {
 
 
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         width="100px" height="100px"  src="${
           ptObj.postpic
         }"></div>
@@ -86,9 +83,6 @@ export const getWorkoutList = async () => {
 
 
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         width="100px" height="100px"  src="${
           ptObj.postpic
         }"></div>
@@ -135,9 +129,6 @@ export const getStudyList = async () => {
 
 
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         width="100px" height="100px"  src="${
           ptObj.postpic
         }"></div>
@@ -186,9 +177,6 @@ export const getBookList = async () => {
 
 
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
         width="100px" height="100px"  src="${
           ptObj.postpic
         }"></div>
