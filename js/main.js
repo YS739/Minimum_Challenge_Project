@@ -32,7 +32,7 @@ window.addEventListener("hashchange", handleLocation);
 
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
-  getPostList();
+  // getPostList(); 주석처리 하니까 index.html에서 더 이상 null 오류 안 뜸!
 
   authService.onAuthStateChanged((user) => {
     handleLocation();
