@@ -5,14 +5,7 @@ import {
   getDocs,
   where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import { dbService, authService, storageService } from "../firebase.js";
-import {
-  ref,
-  uploadString,
-  getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
-import { updateProfile } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+import { dbService } from "../firebase.js";
 
 export const getPostList = async () => {
   let pstObjList = [];
@@ -34,9 +27,11 @@ export const getPostList = async () => {
     const temp_html = `<div class="postingbox">
 
 
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -81,9 +76,11 @@ export const getWorkoutList = async () => {
     const temp_html = `<div class="postingbox">
 
 
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -126,9 +123,11 @@ export const getStudyList = async () => {
     const temp_html = `<div class="postingbox">
 
 
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -171,11 +170,8 @@ export const getBookList = async () => {
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
-
-
-        <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        <div class="postPic"><img class="postPicImg" 
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -205,7 +201,7 @@ export const changeProfile = async (event) => {
     `${authService.currentUser.uid}/${uuidv4()}`
   );
 
-  const newNickname = document.getElementById("profileNickname").value;
+  const newNickname = document.getElementById("nickname").value;
   const imgDataUrl = localStorage.getItem("imgDataUrl");
   let downloadUrl;
   if (imgDataUrl) {

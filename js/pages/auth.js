@@ -122,7 +122,7 @@ export const logout = () => {
     .then(() => {
       // Sign-out successful.
       localStorage.clear();
-      alert("로그아웃이 완료되었습니다.");
+      console.log("로그아웃 성공");
     })
     .catch((error) => {
       // An error happened.
