@@ -22,11 +22,7 @@ export const getPostList = async () => {
     pstObjList.push(postObj);
   });
   const postList = document.getElementById("main-page");
-<<<<<<< HEAD
-  const currentUid = authService.currentUser.uid;
-=======
   postList.innerHTML = "";
->>>>>>> e5ec9ad43a1e6160e054c889a67f40412b33d931
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
 
