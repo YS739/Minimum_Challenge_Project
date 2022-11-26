@@ -15,6 +15,7 @@ const routes = {
   feed: "/pages/feed.html",
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
+  community: "/pages/community.html",
   404: "/pages/404.html",
 };
 
