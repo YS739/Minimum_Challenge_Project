@@ -99,8 +99,8 @@ export const goToPost = () => {
   window.location.hash = "#post";
 };
 
-export const goToMyPage = () => {
-  window.location.hash = "#mypage";
+export const goToProfile = () => {
+  window.location.hash = "#profile";
 };
 
 export const goToHome = () => {

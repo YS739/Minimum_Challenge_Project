@@ -5,7 +5,7 @@ import {
   getDocs,
   where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import { dbService, authService } from "../firebase.js";
+import { dbService } from "../firebase.js";
 
 export const getPostList = async () => {
   let pstObjList = [];
