@@ -6,12 +6,65 @@
 
 /* 헤더 고정하기 */
 
+a{
+  text-decoration : none;
+}
+
+/* 원래 로그인버튼 코드!!! .logbtnjeong{
+  width: 130px;
+  height: 45px;
+  border-radius: 70px;
+  margin:20px;
+  border:none;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.logbtnjeong a {
+  text-decoration: none;
+}
+
+.logbtnjeong:hover {
+  background-color: lightsalmon;
+} 원래 코드!!!! */
 
 
+
+/* .editMyProfileB {
+  cursor: pointer;
+  background-color:transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+
+  font-size: 15px;
+  padding: 15px 20px;
+  background-color: white;
+  color: black;
+  
+  border: 2px solid black;
+  border-radius: 30px;
+  letter-spacing: 4px;
+}
+
+.editMyProfileB:focus {
+  outline: none;
+}
+
+.editMyProfileB:hover {
+  background-color: black;
+  color: white;
+}
+
+*/
 
 .main-logoson {
   width: 300px;
-  
   cursor: pointer;
 }
 
@@ -35,29 +88,44 @@
   float:left;
 }
 
-.fa-magnifying-glass {
+/* .fa-magnifying-glass {
   font-size: xx-large;
   margin:20px;
-}
+} */
+
 
 .logbtnjeong{
   width: 130px;
   height: 45px;
-  border-radius: 70px;
-  margin:20px;
-  border:none;
-  text-align: center;
-
   cursor: pointer;
+  background-color:transparent;
+
+  margin-right: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  padding: 15px 20px;
+  background-color: white;
+  color: black;
+  
+  border: 2px solid black;
+  border-radius: 30px;
+  letter-spacing: 4px;
 }
 
-.logbtnjeong a {
-  text-decoration: none;
+.logbtnjeong:focus {
+  outline: none;
 }
 
 .logbtnjeong:hover {
-  background-color: lightsalmon;
+  background-color: black;
+  color: white;
 }
+
 
 /* 여기까지 헤드부분! */
 
@@ -72,6 +140,7 @@
 }
 
 .navjeong {
+  text-decoration : none;
   position:fixed;
 
   margin-top: 170px;
@@ -152,9 +221,14 @@
 /* 글자뜨기 */
 
 
+.allnavjeong > a {color : black;}
+.recentjeong > a {color : black;}
+/* 카테고리 폰트 컬러 검은색으로 */
+
 #workoutys,
 #studyys,
 #bookys {
+ color : black; /* 카테고리 폰트 컬러 검은색으로 */
  margin-left: 50px;
  margin-right: 50px;
 }
@@ -163,10 +237,6 @@
 .recentjeong {
   display: flex;
   align-items: flex-start;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.recentjeong {
   margin-left: 50px;
   margin-right: 50px;
 }

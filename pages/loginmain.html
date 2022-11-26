@@ -39,15 +39,12 @@
       /></span>
 
       <div class="headcontainerjeong">
-        <div class="searchjeong">
-          <a href="#" onclick="route(event)">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-        </div>
-        <div class="loginbtnjeong">
+        <!-- <div class="loginbtnjeong">
           <a onclick="logout()">LOGOUT</a>
-        </div>
-
+        </div> -->
+        <a onclick="logout()">
+          <button class="logbtnjeong">LOGOUT</button>
+        </a>
         <!-- 윤숙 - 00님에 auth? storage에서 닉네임 불러오고 없으면null "회원님!"이라고 하기 -->
         <div class="welcomeyuns">반갑습니다 <span id="nickname"></span>님!</div>
 
@@ -81,7 +78,7 @@
     <!-- nav bar -->
     <nav class="navjeong">
       <div class="allnavjeong">
-        <a href="#" onclick="route(event)">전체보기</a>
+        <a href="#community" onclick="route(event)">커뮤니티</a>
       </div>
 
       <div class="workoutjeong">
@@ -102,7 +99,7 @@
         >
       </div>
       <div class="bookjeong">
-        <label for="studyys">
+        <label for="bookys">
           <a onclick="getBookList()" id="bookys"
             >독서하기
             <div class="bookdescjeong">딱 1페이지만 읽자!</div>
