@@ -72,19 +72,8 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
-  if (path === "mypage") {
-    // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
-    // 여기서 getpostlist 함수를 호출해야 마이페이지만 들어가도 포스트 불러오기가 됨
-    getPostList();
-    document.getElementById("nickname").textContent =
-      authService.currentUser.displayName ?? "회원";
-
-    document.getElementById("profileImg").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
-  }
-
   if (path === "profile") {
-    document.getElementById("nickname").textContent =
+    document.getElementById("profileNickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("profileView").src =
