@@ -21,6 +21,7 @@ import {
   onEditing,
   update_comment,
   delete_comment,
+  getOnePost,
 } from "./pages/feed.js";
 import {
   getWorkoutList,
@@ -66,15 +67,20 @@ window.getPostList = getPostList;
 window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
+// feed에 댓글
 window.getFeedCommentList = getFeedCommentList;
 window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
 window.save_comment = save_comment;
+// 카테고리 버튼
 window.getBookList = getBookList;
 window.getStudyList = getStudyList;
 window.getWorkoutList = getWorkoutList;
+// loginmain btn
 window.goToMyWrite = goToMyWrite;
 window.goToMyEdit = goToMyEdit;
 
 window.logout = logout;
+// feed 글 가져오기
+window.getOnePost = getOnePost;

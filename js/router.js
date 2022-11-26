@@ -1,6 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getFeedCommentList } from "./pages/feed.js";
+import { getFeedCommentList, getOnePost } from "./pages/feed.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -27,10 +27,6 @@ export const handleLocation = async () => {
     getPostList(); //이 함수땜에 로그아웃해도 나오네요 이미지
   }
 
-  if (path === "feed") {
-    getFeedCommentList();
-  }
-
   const route = routes[path] || routes[404]; // truthy 하면 route[path], falsy 하면 routes[404]
 
   const html = await fetch(route).then((data) => data.text());
@@ -48,6 +44,16 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
 
     //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
+  }
+
+  if (path === "feed") {
+    getOnePost();
+    getFeedCommentList();
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
+
+    document.getElementById("profileImg").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
   if (path === "mypage") {

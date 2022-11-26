@@ -4,7 +4,7 @@ import {
   query,
   getDocs,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import { dbService, authService } from "../firebase.js";
+import { dbService } from "../firebase.js";
 
 export const getPostList = async () => {
   let pstObjList = [];
@@ -22,10 +22,8 @@ export const getPostList = async () => {
   });
   console.log(pstObjList);
   const postList = document.getElementById("post-list");
-  const currentUid = authService.currentUser.uid;
-  // postList.innerHTML = "";
+  postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" width="100px" height="100px"  src="${
           ptObj.postpic
