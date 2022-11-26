@@ -12,13 +12,14 @@ import {
 import { socialLogin, logout } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
-import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
 import {
   getWorkoutList,
   getStudyList,
   getBookList,
+  changeProfile,
+  onFileChange,
 } from "./pages/loginmain.js";
 import {
   getFeedCommentList,
@@ -32,8 +33,6 @@ window.addEventListener("hashchange", handleLocation);
 
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
-  // getPostList();
-
   authService.onAuthStateChanged((user) => {
     handleLocation();
     const hash = window.location.hash;

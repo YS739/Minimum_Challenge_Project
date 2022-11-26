@@ -44,7 +44,24 @@ export const handleLocation = async () => {
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
 
-    //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
+    // 프로필 모달 기능 구현
+    const modalProfile = document.getElementById("profile-modal");
+    const btnModalProfile = document.getElementById("goMyBtn");
+    btnModalProfile.addEventListener("click", (f) => {
+      modalProfile.style.display = "flex";
+    });
+
+    const closeProBtn = modalProfile.querySelector("#closeProfileBtn");
+    closeProBtn.addEventListener("click", (f) => {
+      modalProfile.style.display = "none";
+    });
+
+    modalProfile.addEventListener("click", (f) => {
+      const evTarget1 = f.target;
+      if (evTarget1.classList.contains("blackModal")) {
+        modalProfile.style.display = "none";
+      }
+    });
   }
 
   if (path === "community") {
@@ -67,14 +84,6 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
-  // 윤숙 - post.html, js 수정할 때 같이 볼 것
-  if (path === "profile") {
-    // 프로필 관리 화면 일 때 현재 프로필 사진과 닉네임 할당
-    document.getElementById("profileView").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
-    document.getElementById("profileNickname").placeholder =
-      authService.currentUser.displayName ?? "회원";
-  }
   // 로그인 모달 기능 구현 자바스크립트
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");
