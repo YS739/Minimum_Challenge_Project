@@ -105,9 +105,9 @@
   gap: 5px;
 }
 
-/*.noDisplay {
+.noDisplay {
   display: none;
-} */
+}
 .updateBtn {
   color: black;
 }
@@ -115,5 +115,5 @@
   margin-top: 400px;
   width: 100%;
   display: block;
-  background-color: white;
+  background-color: black;
 }
