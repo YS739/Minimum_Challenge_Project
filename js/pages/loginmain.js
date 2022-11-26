@@ -25,8 +25,6 @@ export const getPostList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
-
-
         <div class="postPic"><img class="postPicImg" 
         width: 100%;
         height: 100%;
