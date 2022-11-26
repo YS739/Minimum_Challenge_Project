@@ -26,11 +26,16 @@ export const getPostList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox" >
         <div class="postPic"><img class="postPicImg" 
+<<<<<<< HEAD
         width: 100%;
         height: 100%;
         object-fit: cover;
         width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
+=======
+        width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
+        <div class="contentbox" >
+>>>>>>> 2f2c3cfa2307e071973dc05c9947c2bf1b91e536
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
@@ -70,20 +75,14 @@ export const getWorkoutList = async () => {
   const postList = document.getElementById("main-page");
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
-
-
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        width="100px" height="100px"  src="${ptObj.postpic}"></div>
-        <div class="contentbox">
+        width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
+        <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg
+              ptObj.profileImg ?? "/img/강아지.jpg"
             }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -92,7 +91,7 @@ export const getWorkoutList = async () => {
             </div>
           </div>`;
     const div = document.createElement("div");
-    div.classList.add("mypost");
+    div.classList.add("postcards");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
@@ -119,18 +118,13 @@ export const getStudyList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
-
-
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        width="100px" height="100px"  src="${ptObj.postpic}"></div>
-        <div class="contentbox">
+        width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
+        <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg
+              ptObj.profileImg ?? "/img/강아지.jpg"
             }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -139,7 +133,7 @@ export const getStudyList = async () => {
             </div>
           </div>`;
     const div = document.createElement("div");
-    div.classList.add("mypost");
+    div.classList.add("postcards");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
@@ -166,15 +160,14 @@ export const getBookList = async () => {
   const postList = document.getElementById("main-page");
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" 
-        width="100px" height="100px"  src="${ptObj.postpic}"></div>
-        <div class="contentbox">
+        width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
+        <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg
+              ptObj.profileImg ?? "/img/강아지.jpg"
             }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -183,7 +176,7 @@ export const getBookList = async () => {
             </div>
           </div>`;
     const div = document.createElement("div");
-    div.classList.add("mypost");
+    div.classList.add("postcards");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
