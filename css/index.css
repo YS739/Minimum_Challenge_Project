@@ -6,12 +6,13 @@
 
 /* 헤더 고정하기 */
 
-
+a{
+  text-decoration : none;
+}
 
 
 .main-logoson {
   width: 300px;
-  
   cursor: pointer;
 }
 
@@ -72,6 +73,7 @@
 }
 
 .navjeong {
+  text-decoration : none;
   position:fixed;
 
   margin-top: 170px;
@@ -152,9 +154,14 @@
 /* 글자뜨기 */
 
 
+.allnavjeong > a {color : black;}
+.recentjeong > a {color : black;}
+/* 카테고리 폰트 컬러 검은색으로 */
+
 #workoutys,
 #studyys,
 #bookys {
+ color : black; /* 카테고리 폰트 컬러 검은색으로 */
  margin-left: 50px;
  margin-right: 50px;
 }
@@ -163,10 +170,6 @@
 .recentjeong {
   display: flex;
   align-items: flex-start;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-.recentjeong {
   margin-left: 50px;
   margin-right: 50px;
 }
