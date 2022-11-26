@@ -1,6 +1,6 @@
-import { authService, } from "./firebase.js";
+import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getFeedCommentList } from "./pages/community.js";
+import { getCommunityCommentList } from "./pages/community.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -11,7 +11,6 @@ const routes = {
   "/": "/index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
-  mypage: "/pages/mypage.html",
 
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
@@ -44,47 +43,32 @@ export const handleLocation = async () => {
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
 
-      document.getElementById("profileView").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
-    document.getElementById("profileNickname").placeholder =
-      authService.currentUser.displayName ?? "회원";
+    // 프로필 모달 기능 구현
+    const modalProfile = document.getElementById("profile-modal");
+    const btnModalProfile = document.getElementById("goMyBtn");
+    btnModalProfile.addEventListener("click", (f) => {
+      modalProfile.style.display = "flex";
+    });
 
-      // 프로필 모달 기능 구현
-      const modalprofile = document.getElementById("profile-modal");
-      const btnModalprofile = document.getElementById("goMyBtn");
-      btnModalprofile.addEventListener("click", (f) => {
-        modalprofile.style.display = "flex";
-      });
-    
-      const closeProBtn = modalprofile.querySelector("#closeProfileBtn");
-      closeProBtn.addEventListener("click", (f) => {
-        modalprofile.style.display = "none";
-      });
+    const closeProBtn = modalProfile.querySelector("#closeProfileBtn");
+    closeProBtn.addEventListener("click", (f) => {
+      modalProfile.style.display = "none";
+    });
 
-      
-      modalprofile.addEventListener("click", (f) => {
-        const evTarget1 = f.target;
-        if (evTarget1.classList.contains("blackModal")) {
-          modalprofile.style.display = "none";
-        }
-      });
+    modalProfile.addEventListener("click", (f) => {
+      const evTarget1 = f.target;
+      if (evTarget1.classList.contains("blackModal")) {
+        modalProfile.style.display = "none";
+      }
+    });
   }
 
   if (path === "community") {
-    getFeedCommentList();
-    document.getElementById("nickname").textContent =
+    getCommunityCommentList();
+    document.getElementById("community-nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
-    document.getElementById("profileImg").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
-  }
-
-  if (path === "community") {
-    getFeedCommentList();
-    document.getElementById("nickname").textContent =
-      authService.currentUser.displayName ?? "회원";
-
-    document.getElementById("profileImg").src =
+    document.getElementById("cm-profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
@@ -99,25 +83,32 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
-  
-  // 로그인 모달 기능 구현 자바스크립트
-  const modal = document.getElementById("login-modal");
-  const btnModal = document.getElementById("loginButton");
-  btnModal.addEventListener("click", (e) => {
-    modal.style.display = "flex";
-  });
+  if (path === "profile") {
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
 
-  const closeBtn = modal.querySelector("#closeBtn");
-  closeBtn.addEventListener("click", (e) => {
-    modal.style.display = "none";
-  });
+    document.getElementById("profileView").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+  }
 
-  modal.addEventListener("click", (e) => {
-    const evTarget = e.target;
-    if (evTarget.classList.contains("modal-overlay")) {
-      modal.style.display = "none";
-    }
-  });
+  // // 로그인 모달 기능 구현 자바스크립트
+  // const modal = document.getElementById("login-modal");
+  // const btnModal = document.getElementById("loginButton");
+  // btnModal.addEventListener("click", (e) => {
+  //   modal.style.display = "flex";
+  // });
+
+  // const closeBtn = modal.querySelector("#closeBtn");
+  // closeBtn.addEventListener("click", (e) => {
+  //   modal.style.display = "none";
+  // });
+
+  // modal.addEventListener("click", (e) => {
+  //   const evTarget = e.target;
+  //   if (evTarget.classList.contains("modal-overlay")) {
+  //     modal.style.display = "none";
+  //   }
+  // });
 };
 // 윤숙 - 다른 페이지 이동할 때!
 export const goToPost = () => {
