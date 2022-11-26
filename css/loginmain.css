@@ -80,8 +80,9 @@ a {
 
 .navjeong {
   text-decoration: none;
-  position: fixed;
-
+  /* position: fixed; */
+  display : absolute;  
+  /* 수정  position fixed 주석 display fixed 추가  */
   margin-top: 170px;
 
   color: black;
@@ -276,7 +277,7 @@ input#useridyuns:checked + nav#profilebtn {
 /* login-menu */
 
 .postcards {
-  width: 95%;
+  width: 100%;
   max-width: 800px;
   margin: 0 auto;
 }
