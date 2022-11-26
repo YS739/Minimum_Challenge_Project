@@ -1,70 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/profile.css" />
-    <title>Minimum_Challenge</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/446701298e.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <img
-      class="main-logoson"
-      src="https://url.kr/nkmebz"
-      alt="Minimum Challenge"
-    />
+<img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge" />
 
-    <div id="profileAll">
-      <div id="profilePage">
-        <section id="profileWrapper">
-          <form id="profileForm" onsubmit="changeProfile(event)">
-            <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
-            <div class="profileBox">
-              <!-- 상자생김 -->
-              <!-- <div class="close-kim"></div> -->
-              <a href="#loginmain">
-                <i class="fa-solid fa-xmark close"></i>
-              </a>
+<div id="profileAll">
+  <div id="profilePage">
+    <section id="profileWrapper">
+      <form id="profileForm" onsubmit="changeProfile(event)">
+        <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
+        <div class="profileBox">
+          <!-- 상자생김 -->
+          <!-- <div class="close-kim"></div> -->
+          <a href="#loginmain">
+            <i class="fa-solid fa-xmark close"></i>
+          </a>
 
-              <label id="imgLabel" for="imgInput">
-                <input
-                  onchange="onFileChange(event)"
-                  id="imgInput"
-                  type="file"
-                  accept="images/*"
-                  class="imagemove"
-                />
-                <img id="profileView" src="../img/강아지.jpg" />
-              </label>
+          <label id="imgLabel" for="imgInput">
+            <input
+              onchange="onFileChange(event)"
+              id="imgInput"
+              type="file"
+              accept="images/*"
+              class="imagemove"
+            />
+            <img id="profileView" src="../img/강아지.jpg" />
+          </label>
 
-              <div class="nickEdit">
-                <div class="myname">
-                  <input
-                    class="memberName"
-                    id="profileNickname"
-                    type="text"
-                    placeholder=""
-                  />
-                </div>
-
-                <label for="profile-navkim">
-                  <button id="profileBtnEdit">
-                    <a id="profile-changekim" type="submit"></a>EDIT
-                  </button>
-                </label>
-              </div>
+          <div class="nickEdit">
+            <div class="myname">
+              <input
+                class="memberName"
+                id="profileNickname"
+                type="text"
+                placeholder=""
+              />
             </div>
-          </form>
-        </section>
-      </div>
-    </div>
-  </body>
-</html>
+
+            <label for="profile-navkim">
+              <button id="profileBtnEdit">
+                <a id="profile-changekim" type="submit"></a>EDIT
+              </button>
+            </label>
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

@@ -5,185 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link rel="stylesheet" type="text/css" href="./css/auth.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap"
       rel="stylesheet"
     />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
-      src="https://kit.fontawesome.com/54db7ce8fa.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
 
-    <title>Minimum Challenge</title>
+    <title>Minimum_Challenge</title>
   </head>
 
   <body>
-    <div id="root">
-      <div class="headjeong">
-        <span onclick="goToHome()">
-          <img
-            class="main-logoson"
-            src="https://url.kr/nkmebz"
-            alt="Minimum Challenge"
-          />
-        </span>
-
-        <!-- <div class="loginbtnjeong"> -->
-        <!--여기도...-->
-        <button type="submit" class="logbtnjeong" id="loginButton">
-          LOGIN
-        </button>
-        <!-- </div> -->
-      </div>
-
-      <!-- nav bar -->
-      <nav class="navjeong">
-        <span class="allnavjeong">
-          <a href="#community" onclick="route(event)">커뮤니티</a>
-        </span>
-
-        <span class="workoutjeong">
-          <label for="workoutys">
-            <a onclick="getWorkoutList()" id="workoutys">운동하기 </a></label
-          >
-          <span class="workoutdescjeong">딱 5분만 운동하자!</span>
-        </span>
-
-        <span class="studyjeong">
-          <label for="studyys">
-            <a onclick="getStudyList()" id="studyys">공부하기</a></label
-          >
-          <span class="studydescjeong">딱 10분만 공부하자!</span>
-        </span>
-
-        <span class="bookjeong">
-          <label for="bookys">
-            <a onclick="getBookList()" id="bookys">독서하기</a></label
-          >
-          <span class="bookdescjeong">딱 1페이지만 읽자!</span>
-        </span>
-        <span class="recentjeong">
-          <a href="#" onclick="route(event)"
-            ><i class="fa-solid fa-rotate"></i> 최신</a
-          >
-        </span>
-      </nav>
-      <!-- 게시물 불러오는 곳 -->
-
-      <!-- 윤숙 - 여기에 해당 해쉬값을 가진 html이 붙는데 우리팀은 이 부분에 독서하기,
-      공부하기를 누르면 해당 게시물만 불러와지도록 하려고 함 그럼 div main-page가 게시물 불러오는 곳 위에 있고
-    해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!-->
-      <div id="main-page"></div>
-
-      <!-- 여기서 부터 모듈 -->
-      <div id="login-modal">
-        <div id="modal" class="modal-overlay">
-          <div class="modal-window">
-            <div class="title">
-              <p id="authTitle">로그인</p>
-            </div>
-            <div class="close-area">
-              <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
-              <button id="closeBtn">X</button>
-            </div>
-            <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
-
-            <div class="content">
-              <!-- 윤숙 - form에 handleAuth 추가 -->
-
-              <!--여기서부터 폼 만들어짐-->
-              <!--윤숙 - input에 각 id 값 추가  -->
-              <form onsubmit="handleAuth(event)">
-                <div>
-                  <input
-                    id="email"
-                    type="text"
-                    class="text-field"
-                    placeholder="이메일"
-                  />
-                  <!--이메일폼-->
-                </div>
-
-                <div>
-                  <input
-                    id="pw"
-                    type="password"
-                    class="text-field"
-                    placeholder="비밀번호"
-                  />
-                  <!--비밀번호폼-->
-                </div>
-
-                <!-- 윤숙 - 상위 div(login-btn)삭제 후 button을 input으로 바꾸고 id, value 값 추가  -->
-                <input type="submit" id="loginBtn" value="로그인" />
-              </form>
-
-              <div class="socialbuttons">
-                <!--버튼들폼-->
-                <!--윤숙 - button에 onclick, name 추가  -->
-                <button
-                  name="github"
-                  class="github-btn"
-                  onclick="socialLogin(event)"
-                >
-                  GitHub 로그인
-                </button>
-                <button class="twitter-btn">소셜 로그인</button>
-                <button
-                  name="google"
-                  class="google-btn"
-                  onclick="socialLogin(event)"
-                >
-                  구글 로그인
-                </button>
-              </div>
-
-              <div class="logos">
-                <!--이미지로고들-->
-                <div class="github-logo">
-                  <img src="../img/깃허브로고.png" />
-                </div>
-                <div class="twitter-logo">
-                  <img src="../img/트위터로고 .png" />
-                </div>
-                <div class="google-logo">
-                  <img src="../img/구글로고 .png" />
-                </div>
-              </div>
-              <div class="lastline">
-                <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
-                <p>
-                  계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-                    회원가입하기
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <script src="js/main.js" type="module"></script>
-    </div>
+    <div id="root"></div>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
