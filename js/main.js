@@ -17,7 +17,6 @@ import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
 import {
   save_comment,
-  getFeedCommentList,
   onEditing,
   update_comment,
   delete_comment,
@@ -28,6 +27,7 @@ import {
   getStudyList,
   getBookList,
 } from "./pages/loginmain.js";
+import { getFeedCommentList } from "./pages/community.js";
 
 window.addEventListener("hashchange", handleLocation);
 
