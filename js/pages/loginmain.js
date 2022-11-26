@@ -21,7 +21,6 @@ export const getPostList = async () => {
     };
     pstObjList.push(postObj);
   });
-  console.log(pstObjList);
   const postList = document.getElementById("main-page");
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
