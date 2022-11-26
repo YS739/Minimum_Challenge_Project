@@ -30,9 +30,12 @@
 
   <body>
     <div class="headjeong">
-      <!-- 윤숙 - 로고 이미지로 대체할 것 -->
-
-      <span onclick="goToHome()"><img class="main-logoson" src="https://url.kr/nkmebz" alt="Minimum Challenge"></span>
+      <span onclick="goToHome()"
+        ><img
+          class="main-logoson"
+          src="https://url.kr/nkmebz"
+          alt="Minimum Challenge"
+      /></span>
 
       <div class="headcontainerjeong">
         <div class="searchjeong">
@@ -41,7 +44,7 @@
           </a>
         </div>
         <div class="loginbtnjeong">
-          <a href='' onclick="logout()">로그아웃</a>
+          <a onclick="logout()">LOGOUT</a>
         </div>
 
         <!-- 윤숙 - 00님에 auth? storage에서 닉네임 불러오고 없으면null "회원님!"이라고 하기 -->
@@ -57,12 +60,12 @@
           <nav id="profilebtn">
             <ul>
               <li>
-                <button id="goMyBtn" onclick="goToMyPage()">
+                <button id="goMyBtn" onclick="goToProfile()" class="goToHome">
                   <i class="fa-solid fa-house-chimney"></i>
                 </button>
               </li>
               <li>
-                <button id="goPoBtn" onclick="goToPost()">
+                <button id="goPoBtn" onclick="goToPost()" class="goToMyPost">
                   <i class="fa-regular fa-pen-to-square"></i>
                 </button>
               </li>
@@ -82,7 +85,7 @@
 
       <div class="workoutjeong">
         <label for="workoutys"
-          ><a href="#" onclick="route(event)" id="workoutys"
+          ><a onclick="getWorkoutList()" id="workoutys"
             >운동하기
             <div class="workoutdescjeong">딱 5분만 운동하자!</div>
           </a></label
@@ -91,7 +94,7 @@
 
       <div class="studyjeong">
         <label for="studyys">
-          <a href="#" onclick="route(event)" id="studyys"
+          <a onclick="getStudyList()" id="studyys"
             >공부하기
             <div class="studydescjeong">딱 10분만 공부하자!</div>
           </a></label
@@ -99,7 +102,7 @@
       </div>
       <div class="bookjeong">
         <label for="studyys">
-          <a href="#" onclick="route(event)" id="studyys"
+          <a onclick="getBookList()" id="bookys"
             >독서하기
             <div class="bookdescjeong">딱 1페이지만 읽자!</div>
           </a></label
@@ -113,11 +116,6 @@
     </nav>
     <!-- 게시물 불러오는 곳 -->
 
-    <!-- 윤숙 - 여기에 해당 해쉬값을 가진 html이 붙는데 우리팀은 이 부분에 독서하기,
-      공부하기를 누르면 해당 게시물만 불러와지도록 하려고 함 그럼 div main-page가 게시물 불러오는 곳 위에 있고
-    해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!
-    근데 생각해보면 페이지가 붙는 게 아니라 댓글 붙듯이 해당 부분만 불러오는 건데..!-->
     <div id="main-page"></div>
-
   </body>
 </html>

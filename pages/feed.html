@@ -16,89 +16,35 @@
     /></span>
 
     <div>
-      <div class="mypic">
-        <div class="font">
-          <p style="font-size: 20px">
-            <b>Minimum<br />Challenge</b>
-          </p>
-        </div>
-        <div class="back">
-          <button>&#128412;</button>
-        </div>
-
-        <div class="viewmore">
-          <label class="menu" for="menu"><h1>...</h1></label>
-          <input id="menu" type="checkbox" />
-          <nav id="main_nav">
-            <div class="delete">
-              <div class="revicebtn">
-                <button><p>수정</p></button>
-              </div>
-              <div class="deletebtn">
-                <button><p>삭제</p></button>
-              </div>
-            </div>
-          </nav>
-        </div>
+      <div class="post-areason">
+        <div id="showPostCmt"></div>
       </div>
 
-      <div class="mypost">
-        <div class="image-1">
-          <img class="profileImg" width="70px" height="70px" src="/img/1.jpg" />
-        </div>
-        <div class="nickname">
-          <p style="font-size: 20px"><b>대호</b></p>
-        </div>
-        <div class="studyready">
-          <p style="font-size: 25px"><b>시험준비</b></p>
-        </div>
-        <div class="text-1">
-          <p>
-            <b
-              >공부한 내용 정리하기! 오늘은 하루종일 자격증 공부만 했다. 정말
-              보람찬 하루였다.</b
-            >
-          </p>
-        </div>
-        <div class="text-2">
-          <p><b>#열공 #토익</b></p>
-        </div>
-        <div class="text-3">
-          <p>20xx.xx.xx</p>
-        </div>
+      <!-- 댓글 시작 -->
+      <div id="feedCmt-list"></div>
 
-        <div class="text-4">
-          <p>comment.</p>
-        </div>
-        <!-- 댓글 시작 -->
-        <div id="feedCmt-list"></div>
-        <!-- 밑에는 삭제할 거이ㅓㅁ  -->
-        <div class="image-2">
-          <img class="profileImg" width="30px" height="30px" src="/img/1.jpg" />
-        </div>
-        <div class="text-5">
-          <p>대호</p>
-        </div>
+      <div class="image-2">
+        <img id="profileImg" width="50px" height="50px" />
+        <div class="cmtUserName" id="nickname"></div>
+      </div>
 
-        <div class="comment-1">
-          <textarea
-            id="feedComment"
-            name="comment"
-            placeholder="댓글달기"
-            style="width: 450px"
-          ></textarea>
-        </div>
-        <div class="btn-1">
-          <button
-            onclick="save_comment(event)"
-            type="button"
-            class="btn btn-dark"
-          >
-            댓글달기
-          </button>
-        </div>
+      <div class="comment-1">
+        <textarea
+          id="feedComment"
+          name="comment"
+          placeholder="댓글달기"
+          style="width: 450px"
+        ></textarea>
+      </div>
+      <div class="btn-1">
+        <button
+          onclick="save_comment(event)"
+          type="button"
+          class="btn btn-dark"
+        >
+          댓글달기
+        </button>
       </div>
     </div>
   </body>
 </html>
-s

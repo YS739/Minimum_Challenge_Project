@@ -1,8 +1,5 @@
 import {
-  // doc,
   addDoc,
-  // updateDoc,
-  // deleteDoc,
   collection,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { dbService, authService } from "../firebase.js";
@@ -32,7 +29,7 @@ export const save_post = async (event) => {
     })
       .then(() => {
         alert("포스트 작성 완료");
-        window.location.hash = "#mypage";
+        window.location.hash = "#loginmain";
       })
       .catch((error) => {
         alert("포스트 작성 실패");

@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 export const changeProfile = async (event) => {
   event.preventDefault();
-  document.getElementById("profileBtn").disabled = true;
+  document.getElementById("profileBtnEdit").disabled = true;
   const imgRef = ref(
     storageService,
     `${authService.currentUser.uid}/${uuidv4()}`
@@ -29,7 +29,7 @@ export const changeProfile = async (event) => {
   })
     .then(() => {
       alert("프로필 수정 완료");
-      window.location.hash = "#mypage";
+      window.location.hash = "#loginmain";
     })
     .catch((error) => {
       alert("프로필 수정 실패");

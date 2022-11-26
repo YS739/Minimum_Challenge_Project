@@ -31,7 +31,6 @@
   </head>
 
   <body>
-    
     <div id="root">
       <div class="headjeong">
         <span onclick="goToHome()"
@@ -62,8 +61,8 @@
 
         <div class="workoutjeong">
           <label for="workoutys"
-            ><a href="#404" onclick="route(event)" id="workoutys"
-              >운동하기
+            ><a onclick="getWorkoutList()" id="workoutys"
+            >운동하기
               <span class="workoutdescjeong">딱 5분만 운동하자!</span>
             </a></label
           >
@@ -71,16 +70,16 @@
 
         <div class="studyjeong">
           <label for="studyys">
-            <a href="#" onclick="route(event)" id="studyys"
-              >공부하기
+            <a onclick="getStudyList()" id="studyys"
+            >공부하기
               <span class="studydescjeong">딱 10분만 공부하자!</span>
             </a></label
           >
         </div>
         <div class="bookjeong">
           <label for="studyys">
-            <a href="#" onclick="route(event)" id="studyys"
-              >독서하기
+            <a onclick="getBookList()" id="bookys"
+            >독서하기
               <div class="bookdescjeong">딱 1페이지만 읽자!</div>
             </a></label
           >
@@ -107,7 +106,7 @@
             </div>
             <div class="close-area">
               <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
-              <button id="closeBtn"> X</button>
+              <button id="closeBtn"><a href="/"> X</a></button>
             </div>
             <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
 
@@ -185,8 +184,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
       <script src="js/main.js" type="module"></script>
     </div>
