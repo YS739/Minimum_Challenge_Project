@@ -1,4 +1,3 @@
-// 댓글부분
 import {
   doc,
   addDoc,
@@ -8,9 +7,73 @@ import {
   orderBy,
   query,
   getDocs,
+  // where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { dbService, authService } from "../firebase.js";
 
+// post 부분
+export const getOnePost = async () => {
+  let pstObjList = [];
+  const q = query(
+    collection(dbService, "minipost"),
+    // where("creatorId", "=", "RHgHMa337Tf78rGrqp7Hydkd2083"),
+    orderBy("createdAt", "desc")
+  );
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((doc) => {
+    const postObj = {
+      id: doc.id,
+      ...doc.data(),
+    };
+    pstObjList.push(postObj);
+  });
+  const onePostList = document.getElementById("showPostCmt");
+  onePostList.innerHTML = "";
+  pstObjList.forEach((ptObj) => {
+    const temp_html = `<div class="postBox">
+    <div class="onePostPic">
+      <img
+        class="postPicImg"
+  
+        src="${ptObj.postpic}"
+      />
+      <p id="${ptObj.id}" class="noPostDisplay"></p>
+      
+    </div>
+    <div class="allPostingBox">
+      <div class="postUserBox">
+        <div class="userProfile">
+          <img
+            class="myProfileImg"
+  
+            src="${ptObj.profileImg ?? "/img/강아지.jpg"}"
+            alt="profileImg"
+          /><span class="postUserName">${ptObj.nickname ?? "회원"}</span>
+        </div>
+
+      </div>
+      <div class="postCmtBox">
+        <div class="postContentBox">
+          <p class="contentTitle">${ptObj.title}</p>
+          <p class="contentMain">${ptObj.post}</p>
+          <div class="onePostAt">
+            ${new Date(ptObj.createdAt).toString().slice(0, 25)}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  `;
+
+    const div = document.createElement("div");
+    div.classList.add("myFeed");
+    div.innerHTML = temp_html;
+    onePostList.appendChild(div);
+  });
+};
+
+// 댓글부분
 export const save_comment = async (event) => {
   event.preventDefault();
   const comment = document.getElementById("feedComment");
@@ -109,7 +172,7 @@ export const getFeedCommentList = async () => {
                       cmtObj.id
                     }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
                     <footer class="feedCards-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
-                      cmtObj.profileImg
+                      cmtObj.profileImg ?? "/img/강아지.jpg"
                     }" alt="profileImg" /><span>${
       cmtObj.nickname ?? "회원"
     }</span></div><div class="cmtAt">${new Date(cmtObj.createdAt)
