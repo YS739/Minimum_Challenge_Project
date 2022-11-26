@@ -94,7 +94,7 @@ export const handleLocation = async () => {
     }
   });
 };
-// 윤숙 - 다른 페이지 이동할 때!
+// 윤숙 - 다른 페이지 이동
 export const goToPost = () => {
   window.location.hash = "#post";
 };
