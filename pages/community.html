@@ -1,42 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/community.css" />
-    <title>게시글페이지</title>
-  </head>
-  <body>
-    <span onclick="goToHome()"
-      ><img
-        class="main-logoson"
-        src="https://url.kr/nkmebz"
-        alt="Minimum Challenge"
-    /></span>
-    <div class="commu-comment">
-      <div class="community-leaveCmt">
-        <div class="commu-user">
-          <img id="cm-profileImg" width="50px" height="50px" />
-          <div class="cmtUserName" id="community-nickname"></div>
-        </div>
-
-        <div class="writeComment">
-          <textarea
-            id="commuComment"
-            name="comment"
-            placeholder="댓글달기"
-            style="width: 450px"
-          ></textarea>
-        </div>
-        <div class="cmt-leaveBtn">
-          <button onclick="save_comment(event)" type="button" class="leaveBtn">
-            댓글달기
-          </button>
-        </div>
-      </div>
-
-      <div id="commuCmt-list"></div>
+<span onclick="goToHome()"
+  ><img
+    class="main-logoson"
+    src="https://url.kr/nkmebz"
+    alt="Minimum Challenge"
+/></span>
+<div class="commu-comment">
+  <div class="community-leaveCmt">
+    <div class="commu-user">
+      <img id="cm-profileImg" width="50px" height="50px" />
+      <div class="cmtUserName" id="community-nickname"></div>
     </div>
-  </body>
-</html>
+
+    <div class="writeComment">
+      <textarea
+        id="commuComment"
+        name="comment"
+        placeholder="댓글달기"
+        style="width: 450px"
+      ></textarea>
+    </div>
+    <div class="cmt-leaveBtn">
+      <button onclick="save_comment(event)" type="button" class="leaveBtn">
+        댓글달기
+      </button>
+    </div>
+  </div>
+
+  <div id="commuCmt-list"></div>
+</div>
