@@ -1,8 +1,5 @@
 import {
-  // doc,
   addDoc,
-  // updateDoc,
-  // deleteDoc,
   collection,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
 import { dbService, authService } from "../firebase.js";
