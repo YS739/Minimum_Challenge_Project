@@ -16,18 +16,17 @@ import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
 import { getPostList } from "./pages/mypage.js";
 import {
-  save_comment,
-  getFeedCommentList,
-  onEditing,
-  update_comment,
-  delete_comment,
-  getOnePost,
-} from "./pages/feed.js";
-import {
   getWorkoutList,
   getStudyList,
   getBookList,
 } from "./pages/loginmain.js";
+import {
+  getFeedCommentList,
+  save_comment,
+  onEditing,
+  update_comment,
+  delete_comment,
+} from "./pages/community.js";
 
 window.addEventListener("hashchange", handleLocation);
 
@@ -82,5 +81,3 @@ window.goToMyWrite = goToMyWrite;
 window.goToMyEdit = goToMyEdit;
 
 window.logout = logout;
-// feed 글 가져오기
-window.getOnePost = getOnePost;
