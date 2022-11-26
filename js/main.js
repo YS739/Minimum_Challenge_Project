@@ -3,7 +3,7 @@ import {
   handleLocation,
   route,
   goToPost,
-  goToMyPage,
+  goToProfile,
   goToHome,
   goToMyWrite,
   goToMyEdit,
@@ -57,7 +57,7 @@ window.handleAuth = handleAuth;
 window.socialLogin = socialLogin;
 // 윤숙 - 새로 만든 이벤트 추가
 window.goToPost = goToPost;
-window.goToMyPage = goToMyPage;
+window.goToProfile = goToProfile;
 // post page에서 쓰는 이벤트
 window.onPostChange = onPostChange;
 window.save_post = save_post;

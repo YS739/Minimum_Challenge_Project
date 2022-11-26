@@ -29,7 +29,7 @@ export const changeProfile = async (event) => {
   })
     .then(() => {
       alert("프로필 수정 완료");
-      window.location.hash = "#mypage";
+      window.location.hash = "#loginmain";
     })
     .catch((error) => {
       alert("프로필 수정 실패");
