@@ -133,7 +133,3 @@ i {
 i:active {
   transform: translateY(10px);
 }
-
-#profile-modal {
-  display: none;
-}
