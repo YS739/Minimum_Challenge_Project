@@ -10,57 +10,6 @@ a {
   text-decoration: none;
 }
 
-/* 원래 로그인버튼 코드!!! .logbtnjeong{
-  width: 130px;
-  height: 45px;
-  border-radius: 70px;
-  margin:20px;
-  border:none;
-  text-align: center;
-
-  cursor: pointer;
-}
-
-.logbtnjeong a {
-  text-decoration: none;
-}
-
-.logbtnjeong:hover {
-  background-color: lightsalmon;
-} 원래 코드!!!! */
-
-/* .editMyProfileB {
-  cursor: pointer;
-  background-color:transparent;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  margin-top: 20px;
-
-  font-size: 15px;
-  padding: 15px 20px;
-  background-color: white;
-  color: black;
-  
-  border: 2px solid black;
-  border-radius: 30px;
-  letter-spacing: 4px;
-}
-
-.editMyProfileB:focus {
-  outline: none;
-}
-
-.editMyProfileB:hover {
-  background-color: black;
-  color: white;
-}
-
-*/
-
 .main-logoson {
   width: 300px;
   cursor: pointer;
@@ -460,4 +409,10 @@ input#useridyuns:checked + nav#profilebtn {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+i{
+  font-size: 50px;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
 }
