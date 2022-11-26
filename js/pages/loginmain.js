@@ -31,9 +31,7 @@ export const getPostList = async () => {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -82,9 +80,7 @@ export const getWorkoutList = async () => {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -131,9 +127,7 @@ export const getStudyList = async () => {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -176,15 +170,8 @@ export const getBookList = async () => {
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
-
-
         <div class="postPic"><img class="postPicImg" 
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        width="100px" height="100px"  src="${
-          ptObj.postpic
-        }"></div>
+        width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
