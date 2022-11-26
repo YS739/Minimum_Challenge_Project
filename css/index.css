@@ -440,7 +440,7 @@ input#useridyuns:checked + nav#profilebtn {
   display: none;
 }
 
-#profileNickname {
+#nickname {
   /* bottom: 50px;
   right: 110px; */
   border: none;

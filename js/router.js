@@ -84,6 +84,14 @@ export const handleLocation = async () => {
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
+  if (path === "profile") {
+    document.getElementById("nickname").textContent =
+      authService.currentUser.displayName ?? "회원";
+
+    document.getElementById("profileView").src =
+      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+  }
+
   // 로그인 모달 기능 구현 자바스크립트
   const modal = document.getElementById("login-modal");
   const btnModal = document.getElementById("loginButton");

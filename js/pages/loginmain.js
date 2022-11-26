@@ -205,7 +205,7 @@ export const changeProfile = async (event) => {
     `${authService.currentUser.uid}/${uuidv4()}`
   );
 
-  const newNickname = document.getElementById("profileNickname").value;
+  const newNickname = document.getElementById("nickname").value;
   const imgDataUrl = localStorage.getItem("imgDataUrl");
   let downloadUrl;
   if (imgDataUrl) {
