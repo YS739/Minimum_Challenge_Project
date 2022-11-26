@@ -13,7 +13,7 @@ import { dbService, authService } from "../firebase.js";
 // 댓글부분
 export const save_comment = async (event) => {
   event.preventDefault();
-  const comment = document.getElementById("feedComment");
+  const comment = document.getElementById("commuComment");
   const { uid, photoURL, displayName } = authService.currentUser;
   try {
     await addDoc(collection(dbService, "feedCommentList"), {
@@ -96,34 +96,40 @@ export const getFeedCommentList = async () => {
     };
     cmtObjList.push(commentObj);
   });
-  const commentList = document.getElementById("feedCmt-list");
+  const commentList = document.getElementById("commuCmt-list");
   const currentUid = authService.currentUser.uid;
   commentList.innerHTML = "";
   cmtObjList.forEach((cmtObj) => {
     const isOwner = currentUid === cmtObj.creatorId;
-    const temp_html = `<div class="feed-commentCard">
-              <div class="feed-cards">
-                  <blockquote class="blockquote mb-0">
-                      <p class="commentText">${cmtObj.text}</p>
-                      <p id="${
-                        cmtObj.id
-                      }" class="noDisplay"><input class="newCmtInput" type="text" maxlength="30" /><button class="updateBtn" onclick="update_comment(event)">완료</button></p>
-                      <footer class="feedCards-footer"><div>BY&nbsp;&nbsp;<img class="cmtImg" width="50px" height="50px" src="${
-                        cmtObj.profileImg ?? "/img/강아지.jpg"
-                      }" alt="profileImg" /><span>${
-      cmtObj.nickname ?? "회원"
-    }</span></div><div class="cmtAt">${new Date(cmtObj.createdAt)
-      .toString()
-      .slice(0, 25)}</div></footer>
-                  </blockquote>
-                  <div class="${isOwner ? "updateBtns" : "noDisplay"}">
-                       <button onclick="onEditing(event)" class="cmtEditBt">수정</button>
-                    <button name="${
-                      cmtObj.id
-                    }" onclick="delete_comment(event)" class="cmtDelBtn">삭제</button>
-                  </div>            
-                </div>
-         </div>`;
+    const temp_html = `<div class="commu-commentCard">
+    <div class="comment-user">
+      <img class="cmtImg" width="50px" height="50px" src="${
+        cmtObj.profileImg ?? "/img/강아지.jpg"
+      }" alt="profileImg" />
+      <span>${cmtObj.nickname ?? "회원"}</span>
+    </div>
+    <p class="commentText">${cmtObj.text}</p>
+    <div class="cmtSide">
+      <p id="${cmtObj.id}" class="noDisplay">
+        <input class="newCmtInput" type="text" maxlength="50" />
+        <button class="updateBtn" onclick="update_comment(event)">
+          완료
+        </button>
+      </p>
+      <div class="${isOwner ? "updateBtns" : "noDisplay"}">
+      <button onclick="onEditing(event)" class="cmtEditBt">수정</button>
+      <button
+        name="${cmtObj.id}"
+        onclick="delete_comment(event)"
+        class="cmtDelBtn"
+      >
+        삭제
+      </button>
+    </div>
+    <div class="cmtAt">
+      ${new Date(cmtObj.createdAt).toString().slice(0, 25)}
+    </div>
+  </div>`;
     const div = document.createElement("div");
     div.classList.add("feedCards");
     div.innerHTML = temp_html;

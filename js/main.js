@@ -32,8 +32,6 @@ window.addEventListener("hashchange", handleLocation);
 
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
-  getPostList();
-
   authService.onAuthStateChanged((user) => {
     handleLocation();
     const hash = window.location.hash;
