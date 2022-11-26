@@ -21,7 +21,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
-      src="https://kit.fontawesome.com/54db7ce8fa.js"
+      src="https://kit.fontawesome.com/446701298e.js"
       crossorigin="anonymous"
     ></script>
 
@@ -57,13 +57,13 @@
           <nav id="profilebtn">
             <ul>
               <li>
-                <button id="goMyBtn" onclick="goToProfile()" class="goToHome">
-                  <i class="fa-solid fa-house-chimney"></i>
+                <button id="" onclick="goToProfile()" class="goToHome">
+                  <g class="fa-solid fa-user"></g>
                 </button>
               </li>
               <li>
                 <button id="goPoBtn" onclick="goToPost()" class="goToMyPost">
-                  <i class="fa-regular fa-pen-to-square"></i>
+                  <g class="fa-regular fa-pen-to-square"></g>
                 </button>
               </li>
             </ul>
@@ -76,38 +76,150 @@
 
     <!-- nav bar -->
     <nav class="navjeong">
-      <span class="allnavjeong">
+      <div class="allnavjeong">
         <a href="#community" onclick="route(event)">커뮤니티</a>
-      </span>
+      </div>
 
-      <span class="workoutjeong">
-        <label for="workoutys">
-          <a onclick="getWorkoutList()" id="workoutys">운동하기 </a></label
+      <div class="workoutjeong">
+        <label for="workoutys"
+          ><a onclick="getWorkoutList()" id="workoutys"
+            >운동하기
+            <div class="workoutdescjeong">딱 5분만 운동하자!</div>
+          </a></label
         >
-        <span class="workoutdescjeong">딱 5분만 운동하자!</span>
-      </span>
+      </div>
 
-      <span class="studyjeong">
+      <div class="studyjeong">
         <label for="studyys">
-          <a onclick="getStudyList()" id="studyys">공부하기</a></label
+          <a onclick="getStudyList()" id="studyys"
+            >공부하기
+            <div class="studydescjeong">딱 10분만 공부하자!</div>
+          </a></label
         >
-        <span class="studydescjeong">딱 10분만 공부하자!</span>
-      </span>
-
-      <span class="bookjeong">
+      </div>
+      <div class="bookjeong">
         <label for="bookys">
-          <a onclick="getBookList()" id="bookys">독서하기</a></label
+          <a onclick="getBookList()" id="bookys"
+            >독서하기
+            <div class="bookdescjeong">딱 1페이지만 읽자!</div>
+          </a></label
         >
-        <span class="bookdescjeong">딱 1페이지만 읽자!</span>
-      </span>
-      <span class="recentjeong">
-        <a href="#" onclick="route(event)"
+      </div>
+      <div class="recentjeong">
+        <a href="" onclick="route(event)"
           ><i class="fa-solid fa-rotate"></i> 최신</a
         >
-      </span>
+      </div>
     </nav>
     <!-- 게시물 불러오는 곳 -->
 
     <div id="main-page"></div>
+    <!-- 프로필 모달 시작 -->
+    <div id="profile-modal">
+      <div id="profileAll" class="blackModal">
+        <div id="profilePage">
+          <section id="profileWrapper">
+            <form id="profileForm" onsubmit="changeProfile(event)">
+              <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
+              <div class="profileBox">
+                <!-- 상자생김 -->
+                <!-- <div class="close-kim"></div> -->
+                <i class="fa-solid fa-xmark close"></i>
+
+                <label id="imgLabel" for="imgInput">
+                  <input
+                    onchange="onFileChange(event)"
+                    id="imgInput"
+                    type="file"
+                    accept="images/*"
+                    class="imagemove"
+                  />
+                  <img id="profileView" src="../img/강아지.jpg" />
+                </label>
+
+                <div class="nickEdit">
+                  <div class="myname">
+                    <input
+                      class="memberName"
+                      id="profileNickname"
+                      type="text"
+                      placeholder="현재 닉네임"
+                      value=""
+                    />
+                  </div>
+
+                  <label for="profile-navkim">
+                    <button id="profileBtnEdit">
+                      <a
+                        href="#mypage"
+                        onclick="route(event)"
+                        id="profile-changekim"
+                        type="submit"
+                      ></a
+                      >EDIT
+                    </button>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- 여기서 부터 프로필 모달 시작 -->
+
+    <div id="profile-modal">
+      <div id="profileAll" class="blackModal">
+        <div id="profilePage">
+          <section id="profileWrapper">
+            <form id="profileForm" onsubmit="changeProfile(event)">
+              <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
+              <div class="profileBox">
+                <!-- 상자생김 -->
+                <!-- <div class="close-kim"></div> -->
+                <button class="myPageClose" id="closeProfileBtn">닫기</button>
+                <label id="imgLabel" for="imgInput">
+                  <div class="imagemove">
+                    <img id="profileView" src="../img/강아지.jpg" />
+                  </div>
+                  <input
+                    onchange="onFileChange(event)"
+                    id="imgInput"
+                    type="file"
+                    accept="images/*"
+                  />
+                </label>
+
+                <div class="prokim">
+                  <div class="myname">
+                    <input
+                      id="profileNickname"
+                      type="text"
+                      placeholder="현재 닉네임"
+                      value=""
+                    />
+                  </div>
+                  <nav class="profile-nav">
+                    <label for="profile-navkim">
+                      <div class="mybtn">
+                        <button id="profileBtnEdit">
+                          <a
+                            href="#loginmain"
+                            id="profile-changekim"
+                            type="submit"
+                          ></a
+                          >수정하기
+                        </button>
+                      </div>
+                    </label>
+                  </nav>
+                </div>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
