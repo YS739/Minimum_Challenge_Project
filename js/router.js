@@ -1,6 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getFeedCommentList } from "./pages/community.js";
+import { getCommunityCommentList } from "./pages/community.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -11,7 +11,6 @@ const routes = {
   "/": "/index.html",
   post: "/pages/post.html",
   profile: "/pages/profile.html",
-  mypage: "/pages/mypage.html",
 
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
@@ -65,22 +64,19 @@ export const handleLocation = async () => {
   }
 
   if (path === "community") {
-    getFeedCommentList();
-    document.getElementById("nickname").textContent =
+    getCommunityCommentList();
+    document.getElementById("community-nickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
-    document.getElementById("profileImg").src =
+    document.getElementById("cm-profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 
-  if (path === "mypage") {
-    // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
-    // 여기서 getpostlist 함수를 호출해야 마이페이지만 들어가도 포스트 불러오기가 됨
-    getPostList();
-    document.getElementById("nickname").textContent =
+  if (path === "profile") {
+    document.getElementById("profileNickname").textContent =
       authService.currentUser.displayName ?? "회원";
 
-    document.getElementById("profileImg").src =
+    document.getElementById("profileView").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
   }
 

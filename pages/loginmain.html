@@ -106,7 +106,7 @@
         >
       </div>
       <div class="recentjeong">
-        <a href="" onclick="route(event)"
+        <a href="#" onclick="route(event)"
           ><i class="fa-solid fa-rotate"></i> 최신</a
         >
       </div>
@@ -114,112 +114,5 @@
     <!-- 게시물 불러오는 곳 -->
 
     <div id="main-page"></div>
-    <!-- 프로필 모달 시작 -->
-    <div id="profile-modal">
-      <div id="profileAll" class="blackModal">
-        <div id="profilePage">
-          <section id="profileWrapper">
-            <form id="profileForm" onsubmit="changeProfile(event)">
-              <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
-              <div class="profileBox">
-                <!-- 상자생김 -->
-                <!-- <div class="close-kim"></div> -->
-                <i class="fa-solid fa-xmark close"></i>
-
-                <label id="imgLabel" for="imgInput">
-                  <input
-                    onchange="onFileChange(event)"
-                    id="imgInput"
-                    type="file"
-                    accept="images/*"
-                    class="imagemove"
-                  />
-                  <img id="profileView" src="../img/강아지.jpg" />
-                </label>
-
-                <div class="nickEdit">
-                  <div class="myname">
-                    <input
-                      class="memberName"
-                      id="profileNickname"
-                      type="text"
-                      placeholder="현재 닉네임"
-                      value=""
-                    />
-                  </div>
-
-                  <label for="profile-navkim">
-                    <button id="profileBtnEdit">
-                      <a
-                        href="#mypage"
-                        onclick="route(event)"
-                        id="profile-changekim"
-                        type="submit"
-                      ></a
-                      >EDIT
-                    </button>
-                  </label>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
-      </div>
-    </div>
-
-    <!-- 여기서 부터 프로필 모달 시작 -->
-
-    <div id="profile-modal">
-      <div id="profileAll" class="blackModal">
-        <div id="profilePage">
-          <section id="profileWrapper">
-            <form id="profileForm" onsubmit="changeProfile(event)">
-              <!-- 프로필 관리창 이미지라벨 밑으로 넣으면 이상하게 됨 -->
-              <div class="profileBox">
-                <!-- 상자생김 -->
-                <!-- <div class="close-kim"></div> -->
-                <button class="myPageClose" id="closeProfileBtn">닫기</button>
-                <label id="imgLabel" for="imgInput">
-                  <div class="imagemove">
-                    <img id="profileView" src="../img/강아지.jpg" />
-                  </div>
-                  <input
-                    onchange="onFileChange(event)"
-                    id="imgInput"
-                    type="file"
-                    accept="images/*"
-                  />
-                </label>
-
-                <div class="prokim">
-                  <div class="myname">
-                    <input
-                      id="profileNickname"
-                      type="text"
-                      placeholder="현재 닉네임"
-                      value=""
-                    />
-                  </div>
-                  <nav class="profile-nav">
-                    <label for="profile-navkim">
-                      <div class="mybtn">
-                        <button id="profileBtnEdit">
-                          <a
-                            href="#loginmain"
-                            id="profile-changekim"
-                            type="submit"
-                          ></a
-                          >수정하기
-                        </button>
-                      </div>
-                    </label>
-                  </nav>
-                </div>
-              </div>
-            </form>
-          </section>
-        </div>
-      </div>
-    </div>
   </body>
 </html>

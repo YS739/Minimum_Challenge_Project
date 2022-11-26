@@ -5,14 +5,7 @@ import {
   getDocs,
   where,
 } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-firestore.js";
-import { dbService, authService, storageService } from "../firebase.js";
-import {
-  ref,
-  uploadString,
-  getDownloadURL,
-} from "https://www.gstatic.com/firebasejs/9.14.0/firebase-storage.js";
-import { updateProfile } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-auth.js";
-import { v4 as uuidv4 } from "https://jspm.dev/uuid";
+import { dbService } from "../firebase.js";
 
 export const getPostList = async () => {
   let pstObjList = [];
@@ -174,8 +167,6 @@ export const getBookList = async () => {
   pstObjList.forEach((ptObj) => {
     // const isOwner = currentUid === ptObj.creatorId;
     const temp_html = `<div class="postingbox">
-
-
         <div class="postPic"><img class="postPicImg" 
         width="100px" height="100px"  src="${
           ptObj.postpic
@@ -209,7 +200,7 @@ export const changeProfile = async (event) => {
     `${authService.currentUser.uid}/${uuidv4()}`
   );
 
-  const newNickname = document.getElementById("profileNickname").value;
+  const newNickname = document.getElementById("nickname").value;
   const imgDataUrl = localStorage.getItem("imgDataUrl");
   let downloadUrl;
   if (imgDataUrl) {
