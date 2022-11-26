@@ -39,25 +39,6 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-
-    // 프로필 모달 기능 구현
-    const modalProfile = document.getElementById("profile-modal");
-    const btnModalProfile = document.getElementById("goMyBtn");
-    btnModalProfile.addEventListener("click", (f) => {
-      modalProfile.style.display = "flex";
-    });
-
-    const closeProBtn = modalProfile.querySelector("#closeProfileBtn");
-    closeProBtn.addEventListener("click", (f) => {
-      modalProfile.style.display = "none";
-    });
-
-    modalProfile.addEventListener("click", (f) => {
-      const evTarget1 = f.target;
-      if (evTarget1.classList.contains("blackModal")) {
-        modalProfile.style.display = "none";
-      }
-    });
   }
 
   if (path === "community") {
