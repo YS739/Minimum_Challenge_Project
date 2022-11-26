@@ -24,8 +24,11 @@ export const getPostList = async () => {
   const postList = document.getElementById("main-page");
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    const temp_html = `<div class="postingbox">
+    const temp_html = `<div class="postingbox" >
         <div class="postPic"><img class="postPicImg" 
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         width="100px" height="100px"  src="${ptObj.postpic}"></div>
         <div class="contentbox">
             <p class="postTitle">${ptObj.title}</p>
@@ -40,7 +43,7 @@ export const getPostList = async () => {
             </div>
           </div>`;
     const div = document.createElement("div");
-    div.classList.add("postcards");
+    div.classList.add("mypost");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });

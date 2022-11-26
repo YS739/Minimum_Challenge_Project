@@ -39,10 +39,6 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ?? "/img/강아지.jpg";
-<<<<<<< HEAD
-
-=======
->>>>>>> 7ce2e458667f8b8b2f0efc44113ecc0350a6bd62
   }
 
   if (path === "community") {

@@ -36,11 +36,7 @@ export const save_post = async (event) => {
         console.log("error:", error);
       });
     // 기존 내 포스트 초기화 - 다시 가져오기 일단 주석처리
-<<<<<<< HEAD
-    // post.value = "";
-=======
     // post.value = ""; 오류나니까 주석처리함
->>>>>>> 7ce2e458667f8b8b2f0efc44113ecc0350a6bd62
     getPostList();
   } catch (error) {
     alert(error);
