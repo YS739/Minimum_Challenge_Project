@@ -343,10 +343,6 @@ input#useridyuns:checked + nav#profilebtn {
   height: 250px;
 }
 
-/* profile modal + profile css */
-#profile-modal {
-  display: none;
-}
 /*뒷배경 */
 #profileAll {
   width: 100%;
@@ -440,7 +436,7 @@ input#useridyuns:checked + nav#profilebtn {
   display: none;
 }
 
-#profileNickname {
+#nickname {
   /* bottom: 50px;
   right: 110px; */
   border: none;
@@ -459,3 +455,8 @@ input#useridyuns:checked + nav#profilebtn {
   align-items: center;
   justify-content: center;
 }
+/* . {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
