@@ -12,17 +12,17 @@ import {
 import { socialLogin, logout } from "./pages/auth.js";
 import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
-import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
-
+import { getPostList } from "./pages/mypage.js";
 import {
-  getPostList,
   getWorkoutList,
   getStudyList,
   getBookList,
+  changeProfile,
+  onFileChange,
 } from "./pages/loginmain.js";
 import {
-  getCommunityCommentList,
+  getFeedCommentList,
   save_comment,
   onEditing,
   update_comment,
@@ -66,7 +66,7 @@ window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
 // feed에 댓글
-window.getCommunityCommentList = getCommunityCommentList;
+window.getFeedCommentList = getFeedCommentList;
 window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;

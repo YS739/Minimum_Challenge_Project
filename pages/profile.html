@@ -30,7 +30,7 @@
             <div class="profileBox">
               <!-- 상자생김 -->
               <!-- <div class="close-kim"></div> -->
-              <a href="#loginmain">
+              <a href="#mypage">
                 <i class="fa-solid fa-xmark close"></i>
               </a>
 
@@ -51,13 +51,20 @@
                     class="memberName"
                     id="profileNickname"
                     type="text"
-                    placeholder=""
+                    placeholder="현재 닉네임"
+                    value=""
                   />
                 </div>
 
                 <label for="profile-navkim">
                   <button id="profileBtnEdit">
-                    <a id="profile-changekim" type="submit"></a>EDIT
+                    <a
+                      href="#mypage"
+                      onclick="route(event)"
+                      id="profile-changekim"
+                      type="submit"
+                    ></a
+                    >EDIT
                   </button>
                 </label>
               </div>
