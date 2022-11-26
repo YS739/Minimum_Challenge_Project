@@ -1,6 +1,6 @@
 import { authService } from "./firebase.js";
 import { getPostList } from "./pages/loginmain.js";
-import { getFeedCommentList, getOnePost } from "./pages/feed.js";
+import { getFeedCommentList } from "./pages/community.js";
 
 export const route = (event) => {
   event.preventDefault();
@@ -12,7 +12,7 @@ const routes = {
   post: "/pages/post.html",
   profile: "/pages/profile.html",
   mypage: "/pages/mypage.html",
-  feed: "/pages/feed.html",
+
   auth: "/pages/auth.html",
   loginmain: "/pages/loginmain.html",
   community: "/pages/community.html",
@@ -47,8 +47,7 @@ export const handleLocation = async () => {
     //윤숙 - 이 부분은 포스트를 불러올 거라 일단 보류
   }
 
-  if (path === "feed") {
-    getOnePost();
+  if (path === "community") {
     getFeedCommentList();
     document.getElementById("nickname").textContent =
       authService.currentUser.displayName ?? "회원";
