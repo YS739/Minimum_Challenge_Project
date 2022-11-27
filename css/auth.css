@@ -1,11 +1,3 @@
-.main-logoson {
-  width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
 #modal.modal-overlay {
   /*전체화면 시작 */
   width: 100%;
@@ -51,6 +43,7 @@
   display: inline-block;
   font-size: 30px;
   letter-spacing: 8px;
+  margin-top: 15px;
 }
 
 #modal .close-area {
@@ -60,6 +53,12 @@
   cursor: pointer; /*이거 쓰면 커서 손모양으로 바뀜 굿 */
   text-shadow: 1px 1px 2px gray;
   color: black;
+}
+
+.close-area > button{
+  border: none;
+  font-size: 40px;
+  background-color: transparent;
 }
 
 #modal .content {
@@ -107,7 +106,7 @@
 .github-btn {
   position: absolute;
   top: 30px;
-  left: -5px; /*깃 버튼 스타일 */
+  left: 60px; /*깃 버튼 스타일 */
   background-color: white;
   border-radius: 50px;
   border: none;
@@ -117,10 +116,10 @@
   font-size: 15px;
   text-align: right;
 }
-.twitter-btn {
+ /*.twitter-btn {
   position: absolute;
   top: 30px;
-  left: 160px; /*트위터 버튼 스타일 */
+  left: 160px;         트위터 버튼 스타일 
   background-color: white;
   border-radius: 50px;
   border: none;
@@ -129,11 +128,11 @@
   padding-right: 10px;
   font-size: 15px;
   text-align: right;
-}
+}*/
 .google-btn {
   position: absolute;
   top: 30px;
-  right: 0px; /*구글 버튼 스타일 */
+  right: 50px; /*구글 버튼 스타일 */
   background-color: white;
   border-radius: 50px;
   border: none;
@@ -150,20 +149,20 @@
 .github-logo {
   /*깃헙 로고 위치 조정*/
   position: absolute;
-  bottom: -75px;
-  left: 3px;
+  bottom: -70px;
+  left: 75px;
 }
-.twitter-logo {
-  /*트위터 로고 위치 조정*/
+/*.twitter-logo {
+         트위터 로고 위치 조정
   position: absolute;
   top: 40px;
   left: 170px;
-}
+}*/
 .google-logo {
   /*구글 로고 위치 조정*/
   position: absolute;
   top: 40px;
-  left: 340px;
+  left: 270px;
 }
 .github-btn:hover {
   /*이거 hover 왜 다 따로 설정해야하지 한꺼번에 설정 안되나*/
@@ -192,7 +191,7 @@
 .lastline {
   position: relative; /*버튼 아래 글자들 스타일*/
   text-align: center;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 .lastline > p {
   position: absolute;

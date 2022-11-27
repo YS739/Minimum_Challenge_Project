@@ -51,6 +51,7 @@ export const handleAuth = (event) => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        alert("로그인 성공!");
         window.location.hash = "#loginmain";
       })
       .catch((error) => {
@@ -68,7 +69,7 @@ export const handleAuth = (event) => {
     createUserWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
-        console.log("회원가입 성공!");
+        alert("회원가입 성공!");
         window.location.hash = "#loginmain";
       })
       .catch((error) => {
@@ -122,6 +123,7 @@ export const logout = () => {
     .then(() => {
       // Sign-out successful.
       localStorage.clear();
+      alert("로그아웃 성공");
       console.log("로그아웃 성공");
     })
     .catch((error) => {
@@ -131,14 +133,15 @@ export const logout = () => {
 };
 
 // 유진 - 모달 열 때 :
-$('html, body').css({'overflow': 'hidden', 'height': '100%'}); // 모달on 중 html,body의 scroll을 hidden시킴
-$('#element').on('scroll touchmove mousewheel', function(event) { // 터치무브 & 마우스휠 스크롤 방지
-    event.preventDefault();
-    event.stopPropagation();
+$("html, body").css({ overflow: "hidden", height: "100%" }); // 모달on 중 html,body의 scroll을 hidden시킴
+$("#element").on("scroll touchmove mousewheel", function (event) {
+  // 터치무브 & 마우스휠 스크롤 방지
+  event.preventDefault();
+  event.stopPropagation();
 
-    return false;
+  return false;
 });
 
 // 유진 - 모달 닫을 때 :
-$('html, body').css({'overflow': 'auto', 'height': '100%'}); //scroll hidden 해제
-$('#element').off('scroll touchmove mousewheel'); // 터치무브 & 마우스휠 스크롤 가능
+$("html, body").css({ overflow: "auto", height: "100%" }); //scroll hidden 해제
+$("#element").off("scroll touchmove mousewheel"); // 터치무브 & 마우스휠 스크롤 가능
