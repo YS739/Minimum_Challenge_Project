@@ -1,24 +1,5 @@
 /* 로고 */
 
-.main-logoson {
-  width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-/* .commu-comment {
-  width: 95%;
-  max-width: 800px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-} */
-
 /* 댓글창 */
 .commu-comment {
   position: sticky;
@@ -214,7 +195,6 @@ body {
 }
 
 input[type="checkbox"] {
-  -webkit-appearance: none;
   visibility: hidden;
   display: none;
 }
@@ -229,7 +209,8 @@ input[type="checkbox"] {
   border-radius: 20px;
   overflow: hidden;
   transition: ease-in 0.5s;
-  margin-left: 1500px;
+  left: 1600px;
+  top: 40px;
 }
 
 input[type="checkbox"]:checked ~ .check {
@@ -263,6 +244,7 @@ input[type="checkbox"]:checked ~ .check:before {
   transition: 0.5s;
   transform: translateX(50px);
 }
+
 input[type="checkbox"]:checked ~ .check:after {
   transform: translateX(0px);
 }
