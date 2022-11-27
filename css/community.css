@@ -1,16 +1,5 @@
 /* 로고 */
 
-/* .commu-comment {
-  width: 95%;
-  max-width: 800px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-} */
-
 /* 댓글창 */
 .commu-comment {
   position: sticky;
