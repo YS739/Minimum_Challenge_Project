@@ -62,6 +62,7 @@
 /* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
 
 .plus-btnson {
+  display: none;
   width: 50px;
   height: auto;
 
