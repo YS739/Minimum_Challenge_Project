@@ -16,11 +16,12 @@ a {
   margin-left: 20px;
   margin-bottom: 20px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
 }
 
 
 /* 페이지마다 변경 가능하면 해주세요 */
 /* body * {
   background-color: #dfd1c6;
-  
 } */

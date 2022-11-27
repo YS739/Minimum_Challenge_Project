@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/* loginmain.html */
+.nav-Jeong {
+  position: relative;
+}
+
+@media(max-width:1250px) {
+  .community-Jeong a {
+    position: absolute;
+    top: 90px;
+    right: 350px;
+  }
+}
+
+@media(max-width:1100px) {
+  .book-Jeong a {
+    position: absolute;
+    top: 90px;
+    right: 420px;
+  }
+}
+
+@media(max-width:900px) {
+  .study-Jeong a {
+    position: absolute;
+    top: 90px;
+    right: 530px;
+  }
+}
+
+@media(max-width:1250px) {
+  .logBtn-Jeong {
+    left: 17px;
+  }
+}
+
+@media(max-width:780px) {
+  .logBtn-Jeong {
+    left: -210px;
+    top: 140px;
+  }
+  .welcomeyuns {
+    position: absolute;  
+    right: 85px;
+    top: 140px;
+    left: -10px;
+  }
+  .navBtn-Ys {
+    position: absolute;  
+    right: 180px;
+  }
+}
+/* 
+@media(max-width:780px) {
+  #profileBtn-Ys > ul {
+    top: 148px;
+ }
+} */
