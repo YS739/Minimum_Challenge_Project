@@ -43,7 +43,7 @@ export const handleLocation = async () => {
 
     document.getElementById("profileImg").src =
       authService.currentUser.photoURL ??
-      "https://velog.velcdn.com/images/chmi4/post/b4610eb0-e389-46bd-9bc4-f87a75263c78/image.webp";
+      "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg";
   }
 
   if (path === "community") {
@@ -53,7 +53,7 @@ export const handleLocation = async () => {
 
     document.getElementById("cm-profileImg").src =
       authService.currentUser.photoURL ??
-      "https://velog.velcdn.com/images/chmi4/post/b4610eb0-e389-46bd-9bc4-f87a75263c78/image.webp";
+      "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg";
   }
 
   if (path === "profile") {
@@ -62,7 +62,7 @@ export const handleLocation = async () => {
 
     document.getElementById("profileView").src =
       authService.currentUser.photoURL ??
-      "https://velog.velcdn.com/images/chmi4/post/b4610eb0-e389-46bd-9bc4-f87a75263c78/image.webp";
+      "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg";
   }
 
   // 로그인 모달 기능 구현 자바스크립트
