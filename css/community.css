@@ -263,6 +263,7 @@ input[type="checkbox"]:checked ~ .check:before {
   transition: 0.5s;
   transform: translateX(50px);
 }
+
 input[type="checkbox"]:checked ~ .check:after {
   transform: translateX(0px);
 }
