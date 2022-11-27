@@ -36,9 +36,14 @@ export const getPostList = async () => {
                               <div class="profile-dateWrap">
                               <div class="profileWrap">
                                 <img class="myProfileImg" width="50px" height="50px" 
-                                src="${ptObj.profileImg ?? "/assets/blankProfile.webp"}" 
+                                src="${
+                                  ptObj.profileImg ??
+                                  "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
+                                }" 
                                 alt="profileImg" />
-                                <p class= "nameSim">${ptObj.nickname ?? "회원"}</p>
+                                <p class= "nameSim">${
+                                  ptObj.nickname ?? "회원"
+                                }</p>
                               </div>
                               <div class="postAt">${new Date(ptObj.createdAt)
                                 .toString()
@@ -85,7 +90,8 @@ export const getWorkoutList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/assets/blankProfile.webp"
+          ptObj.profileImg ??
+          "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -127,7 +133,8 @@ export const getStudyList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/assets/blankProfile.webp"
+          ptObj.profileImg ??
+          "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -170,7 +177,8 @@ export const getBookList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/assets/blankProfile.webp"
+          ptObj.profileImg ??
+          "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
