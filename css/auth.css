@@ -1,4 +1,4 @@
-.main-logoson{
+.main-logoson {
   width: 300px;
   margin-top: 20px;
   margin-left: 20px;
@@ -6,13 +6,12 @@
   cursor: pointer;
 }
 
-
 #modal.modal-overlay {
   /*전체화면 시작 */
   width: 100%;
   height: 100%;
   /* position: absolute; */
-  position:fixed;
+  position: fixed;
   left: 0;
   top: 0;
   display: flex; /*여기서부터 3줄까지 웹개발종합반에서 나온거 */

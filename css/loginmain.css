@@ -1,27 +1,13 @@
-* {
-  font-family: "Roboto", sans-serif;
-  font-family: "Jua", sans-serif;
-  text-decoration: none;
-}
+/* main.css */
+.logHead-Jeong {
+  width: 95%;
+  max-width: 1200px;
+  height: 200px;
+  position: relative;
 
-/* 헤더 고정하기 */
-
-a {
-  text-decoration: none;
-}
-
-.main-logoson {
-  width: 300px;
-  cursor: pointer;
-}
-
-.headjeong {
-  position: fixed;
-  width: 100%;
-  height: 100px;
-  margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
+  padding-top: 30px;
 
   display: flex;
   flex-direction: row;
@@ -29,13 +15,8 @@ a {
   align-items: center;
 }
 
-.headcontainerjeong {
-  align-items: center;
-  display: flex;
-  float: left;
-}
-
-.logbtnjeong {
+/* loginBtn */
+.logBtn-Jeong {
   width: 130px;
   height: 45px;
   cursor: pointer;
@@ -58,32 +39,29 @@ a {
   letter-spacing: 4px;
 }
 
-.logbtnjeong:focus {
+.logBtn-Jeong:focus {
   outline: none;
 }
 
-.logbtnjeong:hover {
+.logBtn-Jeong:hover {
   background-color: black;
   color: white;
+  transition: 1s;
 }
 
-/* 여기까지 헤드부분! */
-
+/*  nav */
 * nav {
-  margin-left: 30px;
-  margin-top: 30px;
   font-size: 1.2rem;
 
   flex-direction: row;
   align-items: flex-start;
 }
 
-.navjeong {
+.nav-Jeong {
   text-decoration: none;
-  /* position: fixed; */
-  display : absolute;  
-  /* 수정  position fixed 주석 display fixed 추가  */
-  margin-top: 170px;
+  display: absolute;
+  padding: 20px;
+  margin-bottom: 50px;
 
   color: black;
 
@@ -92,38 +70,157 @@ a {
   align-items: flex-start;
 }
 
-.workoutjeong,
-.studyjeong,
-.bookjeong {
+/* category */
+
+.workout-Jeong,
+.study-Jeong,
+.book-Jeong {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.workoutDesc-Jeong,
+.studyDesc-Jeong,
+.bookDesc-Jeong {
+  margin-top: 10px;
+  display: none;
+}
+
+#allNav-Ys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+#workout-Ys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+#study-Ys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+
+#book-Ys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+
+#community-Ys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+  color: black;
+}
+
+/* 카테고리 선택 전에는 글자 안뜸 */
+
+.workout-Jeong:hover .workoutDesc-Jeong {
+  display: block;
+  opacity: 50%;
+}
+
+.study-Jeong:hover .studyDesc-Jeong {
+  display: block;
+  opacity: 50%;
+}
+
+.book-Jeong:hover .bookDesc-Jeong {
+  display: block;
+  opacity: 50%;
+}
+
+/* 글자뜨기 */
+
+.allNav-Jeong > a {
+  color: black;
+}
+.community-Jeong > a {
+  color: black;
+}
+/* 카테고리 폰트 컬러 검은색으로 */
+
+#workout-Ys,
+#study-Ys,
+#book-Ys {
+  color: black; /* 카테고리 폰트 컬러 검은색으로 */
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.allNav-Jeong,
+.community-Jeong {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* 카테고리 간격맞추기!!! */
+
+/* 커뮤니티버튼 a 태그 css 변경 */
+
+.community-Jeong a {
+  text-decoration: none;
+  color: black;
+}
+
+#community-Ys:focus {
+  text-decoration: none;
+}
+
+/* loginmain.css */
+.usersAll {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+}
+
+.navBtn-Ys {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* 카테고리 위치 */
+.user-Ys Img {
+  border-radius: 50%;
+  margin-left: 10px;
+}
 
-/* 호버 선택자 묶어서는 적용이 안 되나 봅니다ㅠㅠ */
-.allnavjeong :hover {
-  text-shadow: 2px 2px 2px lightgray;
-  cursor: pointer;
-}
-.recentjeong :hover {
-  text-shadow: 2px 2px 2px lightgray;
-  cursor: pointer;
-}
-#workoutys:hover {
-  text-shadow: 2px 2px 2px lightgray;
+.usersAll label {
   cursor: pointer;
 }
 
-#studyys:hover {
-  text-shadow: 2px 2px 2px lightgray;
-  cursor: pointer;
+#profileBtn-Ys > ul {
+  list-style: none;
+  padding: 0px;
+  margin-top: 20px;
+  margin-right: 40px;
 }
-#bookys:hover {
-  text-shadow: 2px 2px 2px lightgray;
-  cursor: pointer;
+
+#userNav-Ys {
+  display: none;
+}
+
+#profileBtn-Ys {
+  display: none;
+}
+
+#userNav-Ys:checked + #profileBtn-Ys {
+  display: block;
+}
+
+#profileBtn-Ys a {
+  text-decoration: none;
+}
+
+.fa-user,
+.fa-pen-to-square {
+  font-size: xx-large;
 }
 
 .goToHome,
@@ -136,156 +233,10 @@ a {
   margin-left: 50px;
 }
 
-.workoutdescjeong,
-.studydescjeong,
-.bookdescjeong {
-  margin-top: 10px;
-  display: none;
-}
-
-/* 카테고리 선택 전에는 글자 안뜸 */
-
-.workoutjeong:hover .workoutdescjeong {
-  display: block;
-  opacity: 50%;
-}
-
-.studyjeong:hover .studydescjeong {
-  display: block;
-  opacity: 50%;
-}
-
-.bookjeong:hover .bookdescjeong {
-  display: block;
-  opacity: 50%;
-}
-
-/* 글자뜨기 */
-
-.allnavjeong > a {
-  color: black;
-}
-.recentjeong > a {
-  color: black;
-}
-/* 카테고리 폰트 컬러 검은색으로 */
-
-#workoutys,
-#studyys,
-#bookys {
-  color: black; /* 카테고리 폰트 컬러 검은색으로 */
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-.allnavjeong,
-.recentjeong {
-  display: flex;
-  align-items: flex-start;
-  margin-left: 50px;
-  margin-right: 50px;
-}
-
-/* 카테고리 간격맞추기!!! */
-
-/* 여기부터는 메인 */
-
-.mainjeong {
-  width: 100%;
-  height: 100%;
-}
-
-.maincontainerjeong {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.postjeong {
-  width: 300px;
-  height: 400px;
-  background-color: rgb(122, 202, 207);
-  margin: 0 auto;
-}
-
-/* loginmain */
-
-.usersall {
-  width: 100px;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-}
-
-label .useryuns {
-  width: 100%;
-  height: 100%;
-}
-
-.useryuns img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.usersall label {
-  cursor: pointer;
-  position: fixed;
-}
-
-ul {
-  list-style: none;
-  padding: 0px;
-  margin-right: 80px;
-}
-
-input#useridyuns {
-  display: none;
-}
-
-nav#profilebtn {
-  display: none;
-}
-
-input#useridyuns:checked + nav#profilebtn {
-  display: block;
-  margin-top: 180px;
-}
-
-#profilebtn a {
-  text-decoration: none;
-}
-
-.fa-pen-to-square,
-.fa-house-chimney {
-  font-size: xx-large;
-  margin-top: 10px;
-}
-
 /* login modal */
 
 .modal-overlay {
   display: none;
-}
-
-/* login-menu */
-
-.postcards {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.postpic {
-  border-radius: 20px;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
 /*뒷배경 */
@@ -400,8 +351,48 @@ input#useridyuns:checked + nav#profilebtn {
   align-items: center;
   justify-content: center;
 }
-/* . {
+
+/* 게시물  CSS */
+#main-page {
+  width: 95%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+.postingBox {
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.postingBox:hover > .postPicImg {
+  width: 400px;
+  height: 400px;
+}
+.postPic {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.postPicImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50, 50);
   width: 100%;
   height: 100%;
   object-fit: cover;
-} */
+}
+
+.postcards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

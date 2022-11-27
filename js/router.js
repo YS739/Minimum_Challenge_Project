@@ -31,6 +31,10 @@ export const handleLocation = async () => {
   document.getElementById("root").innerHTML = html;
 
   // 특정 화면 렌더링 되자마자 DOM 조작 처리
+  if (path === "/") {
+    getPostList();
+  }
+
   if (path === "loginmain") {
     getPostList();
     // 로그인한 회원의 프로필사진과 닉네임을 화면에 표시해줌.
@@ -87,7 +91,7 @@ export const goToProfile = () => {
 };
 
 export const goToHome = () => {
-  window.location.hash = "";
+  window.location.hash = "#loginmain";
 };
 
 export const goToMyWrite = () => {
