@@ -7,6 +7,7 @@ import {
   goToHome,
   goToMyWrite,
   goToMyEdit,
+  goToMain,
 } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin, logout } from "./pages/auth.js";
@@ -80,3 +81,6 @@ window.goToMyWrite = goToMyWrite;
 window.goToMyEdit = goToMyEdit;
 
 window.logout = logout;
+
+// Main에서 Main으로 가는 홈버튼
+window.goToMain = goToMain;

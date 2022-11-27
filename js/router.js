@@ -101,3 +101,7 @@ export const goToMyWrite = () => {
 export const goToMyEdit = () => {
   window.location.hash = "#profile";
 };
+
+export const goToMain = () => {
+  window.location.hash = "";
+};

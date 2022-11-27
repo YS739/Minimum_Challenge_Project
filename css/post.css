@@ -1,14 +1,14 @@
 .post-areason {
-  background-color: #DFD1C6;
+  background-color: #dfd1c6;
   width: 700px;
-  margin: 30px auto;
+  margin: auto;
   padding: 50px;
   border-radius: 5px;
 
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 
   /* 바깥div에 설정해야 가운데정렬됨 */
 }
@@ -21,7 +21,7 @@
 
 .photo-areason {
   background-color: white;
-  border-radius:10px;
+  border-radius: 10px;
   width: 500px;
   height: 300px;
   overflow: hidden;
@@ -29,11 +29,10 @@
   border: none;
   position: relative;
 
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
-
+  align-items: center;
 }
 
 .photo-areason img {
@@ -46,28 +45,27 @@
   height: 100%;
   object-fit: cover;
   margin: auto;
-
 }
 
-.photo-areason label{
+.photo-areason label {
   cursor: pointer;
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 
   outline-style: dotted;
-  
+
   width: 450px;
   height: 250px;
-
 }
 /* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
 
 .plus-btnson {
+  display: none;
   width: 50px;
   height: auto;
-  
+
   opacity: 0.5;
   background-color: white;
   padding: 10px;
@@ -77,9 +75,9 @@
   display: none;
 }
 
-.sel-title-wrapson{
+.sel-title-wrapson {
   justify-content: center;
-  align-items:center;
+  align-items: center;
 
   flex-direction: row;
 }
@@ -111,8 +109,6 @@
   border: none;
 }
 
-
-
 .content-boxson {
   width: 500px;
   height: 150px;
@@ -127,7 +123,8 @@
   padding: 10px;
 }
 
-.hashtag-boxson {
+/* 검색창 구현 실패로 주석 처리 */
+/* .hashtag-boxson {
   width: 500px;
   height: 30px;
   border-radius: 5px;
@@ -138,7 +135,7 @@
   border: none;
 
   font-size: small;
-}
+} */
 
 .post-btnson {
   width: 130px;
@@ -160,14 +157,12 @@
   border: 2px solid black;
   border-radius: 30px;
   letter-spacing: 4px;
-  
+
   margin-top: 30px;
   margin-bottom: 10px;
 
   cursor: pointer;
 }
-
-  
 
 .post-btnson:focus {
   outline: none;

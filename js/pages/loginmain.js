@@ -26,21 +26,21 @@ export const getPostList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingBox">
         <div class="postPic"><img class="postPicImg" 
-          src="${ptObj.postpic}"></div>
+          src="${ptObj.postPic}"></div>
         <div class="contentBox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
               ptObj.profileImg ?? "/assets/blankProfile.webp"
-            }" alt="profileImg" /><span>${
+            }" alt="profileImg" /><p class= "nameSim">${
       ptObj.nickname ?? "회원"
-    }</span></div><div class="postAt">${new Date(ptObj.createdAt)
+    }</p ></div><div class="postAt">${new Date(ptObj.createdAt)
       .toString()
       .slice(0, 25)}</div></footer>
             </div>
           </div>`;
     const div = document.createElement("div");
-    div.classList.add("postcards");
+    div.classList.add("mypost");
     div.innerHTML = temp_html;
     postList.appendChild(div);
   });
@@ -69,7 +69,7 @@ export const getWorkoutList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingBox">
     <div class="postPic"><img class="postPicImg" 
-      src="${ptObj.postpic}"></div>
+      src="${ptObj.postPic}"></div>
     <div class="contentBox" >
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
@@ -111,7 +111,7 @@ export const getStudyList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingBox">
     <div class="postPic"><img class="postPicImg" 
-      src="${ptObj.postpic}"></div>
+      src="${ptObj.postPic}"></div>
     <div class="contentBox" >
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
@@ -154,7 +154,7 @@ export const getBookList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingBox">
     <div class="postPic"><img class="postPicImg" 
-      src="${ptObj.postpic}"></div>
+      src="${ptObj.postPic}"></div>
     <div class="contentBox" >
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>

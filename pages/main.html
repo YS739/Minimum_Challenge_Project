@@ -1,7 +1,11 @@
 <div>
   <header class="logHead-Jeong">
-    <span onclick="goToHome()">
-      <img class="main-logoson" src="../img/로고_black.png" alt="Minimum Challenge" />
+    <span onclick="goToMain()">
+      <img
+        class="main-logoson"
+        src="../img/로고_black.png"
+        alt="Minimum Challenge"
+      />
     </span>
     <button type="submit" class="logBtn-Jeong" id="loginButton">LOGIN</button>
   </header>
@@ -120,9 +124,8 @@
           <div class="lastline">
             <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
             <p>
-              계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-                회원가입하기
-              </span>
+              <span id="letSignIn">계정이 없다면?</span>
+              <span id="authToggle" onclick="onToggle()"> 회원가입하기 </span>
             </p>
           </div>
         </div>

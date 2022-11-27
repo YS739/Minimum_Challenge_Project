@@ -131,3 +131,4 @@ export const getCommunityCommentList = async () => {
     commentList.appendChild(div);
   });
 };
+
