@@ -1,189 +1,250 @@
-/* 커뮤니티 css만 하기 */
+/* 로그인메인 css 시작입니다. */
+a {
+  text-decoration: none;
+}
 
 .main-logoson {
   width: 300px;
+  cursor: pointer;
+}
+
+.headjeong {
+  /* position: fixed; */
+  /* 수정 position fixed 주석  */
+  width: 100%;
+  height: 100px;
   margin-top: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-  cursor: pointer;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* .commu-comment {
-  width: 95%;
-  max-width: 800px;
-  height: 200px;
+.headcontainerjeong {
+  align-items: center;
+  display: flex;
+  float: left;
+  display: absolute;
+  /* 수정 display absolute 추가 */
+}
+
+.logbtnjeong {
+  width: 130px;
+  height: 45px;
+  cursor: pointer;
+  background-color: transparent;
+
+  margin-right: 50px;
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
-} */
-
-/* 댓글창 */
-.commu-comment {
-  width: 700px;
-  margin: 20px auto;
-
-  box-shadow: 0px 0px 3px 0px black;
-  padding: 20px;
-}
-
-.community-leaveCmt {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-}
+/* main-page */
+  font-size: 15px;
+  padding: 15px 20px;
+  background-color: white;
+  color: black;
 
-.commu-user {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: left;
-}
-
-#cm-profileImg {
-  border-radius: 50%;
-}
-
-#community-nickname {
-  padding: 20px;
-  font-size: large;
-}
-
-.leaveBtn {
-  background-color: transparent;
+  border: 2px solid black;
   border-radius: 30px;
-  padding: 10px;
-  cursor: pointer;
-  margin-left: 10px;
+  letter-spacing: 4px;
 }
 
-.leaveBtn:hover {
+.logbtnjeong:focus {
+  outline: none;
+}
+
+.logbtnjeong:hover {
   background-color: black;
   color: white;
-  transition: 1s;
 }
 
-/* 댓글 불러오기 */
-.mycards {
-  width: 95%;
-  max-width: 500px;
-  margin: auto;
+* nav {
+  margin-left: 30px;
+  margin-top: 30px;
+  font-size: 1.2rem;
+
+  flex-direction: row;
+  align-items: flex-start;
 }
 
-.mycards > .card {
-  border-radius: 20px;
+.navjeong {
+  text-decoration: none;
+  /* position: fixed; */
+  /* 수정 position fied 주석  */
+
+  margin-top: 170px;
+
+  color: black;
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.workoutjeong,
+.studyjeong,
+.bookjeong {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 카테고리 위치 */
+
+/* 호버 선택자 묶어서는 적용이 안 되나 봅니다ㅠㅠ */
+.allnavjeong :hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+.recentjeong :hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+#workoutys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+
+#studyys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+#bookys:hover {
+  text-shadow: 2px 2px 2px lightgray;
+  cursor: pointer;
+}
+
+.goToHome,
+.goToMyPost {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 35px;
+  margin-left: 50px;
+}
+
+.workoutdescjeong,
+.studydescjeong,
+.bookdescjeong {
   margin-top: 10px;
-  margin-bottom: 10px;
+  display: none;
 }
 
-.cmtCards {
-  width: 95%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+
+.workoutjeong:hover .workoutdescjeong {
+  display: block;
+  opacity: 50%;
 }
 
-.card {
-  width: 95%;
-  max-width: 1200px;
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.studyjeong:hover .studydescjeong {
+  display: block;
+  opacity: 50%;
 }
 
-.card-body {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.bookjeong:hover .bookdescjeong {
+  display: block;
+  opacity: 50%;
 }
 
-.cmt-img {
-  border-radius: 50%;
-  margin-right: 20px;
-}
 
-.commentText {
-  border: 1px solid black;
-  border-radius: 30px;
-  padding: 5px 10px;
-  margin-right: 20px;
+.allnavjeong > a {
+  color: black;
 }
-
-.cmtImg {
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.quote-footer {
-  margin-top: 20px;
-  color: #6c757d;
-  font-size: 0.875rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.quote-footer span {
-  font-size: large;
+.recentjeong > a {
   color: black;
 }
 
-/* 댓글 수정, 삭제 */
-.updateBtns {
-  display: flex;
-  justify-content: end;
-  margin-top: 5px;
-  gap: 5px;
+
+#workoutys,
+#studyys,
+#bookys {
+  color: black; /* 카테고리 폰트 컬러 검은색으로 */
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
-.noDisplay {
+.allnavjeong,
+.recentjeong {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+/* 카테고리 간격맞추기!!! */
+
+
+.usersall {
+  width: 100px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+label .useryuns {
+  width: 100%;
+  height: 100%;
+}
+
+.useryuns img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.usersall label {
+  cursor: pointer;
+  /* position: fixed; */
+  /* 수정 position: fixed 주석 */
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin-right: 80px;
+}
+
+input#useridyuns {
   display: none;
 }
-.updateBtn {
-  min-width: 70px;
-  border-radius: 30px;
-  margin-left: 10px;
+
+nav#profilebtn {
+  display: none;
 }
 
-.updateBtn:hover {
-  background-color: black;
-  color: white;
-  transition: 1s;
+input#useridyuns:checked + nav#profilebtn {
+  display: block;
+  margin-top: 180px;
 }
 
-.newCmtInput {
-  width: 100%;
-  border-color: pink;
+#profilebtn a {
+  text-decoration: none;
 }
 
-.editBtn,
-.deleteBtn {
-  background-color: transparent;
-  border-radius: 10px;
-  padding: 10px;
-  cursor: pointer;
+.fa-pen-to-square,
+.fa-house-chimney {
+  font-size: xx-large;
+  margin-top: 10px;
 }
 
-.editBtn:hover {
-  background-color: black;
-  color: white;
-  transition: 1s;
-}
 
-.deleteBtn:hover {
-  background-color: black;
-  color: white;
-  transition: 1s;
+/* width : 95% */
+
+#main-page {
+  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
 }
