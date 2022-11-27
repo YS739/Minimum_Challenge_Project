@@ -1,6 +1,9 @@
 /* 메인 배경색 지정 */
 #root {
   background-color: rgba(237, 223, 185, 0.911)
+  /* width: 95%; */
+  /* max-width: 1200px; */
+  /* min-width: 700px; */
 }
 
 /* main.css */
@@ -42,6 +45,7 @@
   border: 2px solid black;
   border-radius: 30px;
   letter-spacing: 4px;
+  position: relative;
 }
 
 .logBtn-Jeong:focus {
@@ -63,6 +67,8 @@
 }
 
 .nav-Jeong {
+  width: 95%;
+  min-width: 700px;
   text-decoration: none;
   display: absolute;
   padding: 20px;
@@ -73,27 +79,6 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-}
-
-/* 반응형 */
-@media(max-width:870px) {
-  .community-Jeong a {
-  padding: 100px;
-  margin-right: -60px;
-  margin-left: -260px;
-  }
-}
-
-/* .book-Jeong a {
-  margin-top: 100px;
-} */
-
-@media(max-width:870px) {
-  .book-Jeong a {
-    margin-left: -40px;
-    padding-left: -20px;
-
-  }
 }
 
 /* category */
@@ -203,6 +188,9 @@
   flex-direction: row;
   justify-content: right;
   align-items: center;
+  position: relative;
+  width: 95%;
+  min-width: 300px;
 }
 
 .navBtn-Ys {
@@ -455,5 +443,12 @@
   align-items: center;
 }
 
+.welcomeyunsr {
+  width: 95%;
+  min-width: 100px;
+}
 
-
+/* .logBtn-Jeong {
+  width: 95%;
+  min-width: 300px;
+} */
