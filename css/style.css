@@ -240,10 +240,12 @@ input#useridyuns:checked + nav#profilebtn {
 
 /* width : 95% */
 
-#main-page {
+/* #main-page {
   
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-}
+} */
+
+

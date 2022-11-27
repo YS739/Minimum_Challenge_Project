@@ -24,21 +24,54 @@ export const getPostList = async () => {
   const postList = document.getElementById("main-page");
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    const temp_html = `<div class="postingbox" >
-        <div class="postPic"><img class="postPicImg" 
-        width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
-        <div class="contentbox" >
-            <p class="postTitle">${ptObj.title}</p>
-            <p class="postContent">${ptObj.post}</p>
-            <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg ?? "/img/강아지.jpg"
-            }" alt="profileImg" /><span>${
-      ptObj.nickname ?? "회원"
-    }</span></div><div class="postAt">${new Date(ptObj.createdAt)
-      .toString()
-      .slice(0, 25)}</div></footer>
-            </div>
-          </div>`;
+    const temp_html = `
+                          <div class="row row-cols-1 row-cols-md-3 g-4">
+                          <div class="col">
+                            <div class="card h-100">
+                              <img src="${ptObj.postpic}" class="card-img-top" alt="이미지없음">
+                              <div class="card-body">
+                                <h5 class="card-title">${ptObj.title}</h5>
+                                <p class="card-text">${ptObj.post}</p>
+                              </div>
+                              <div class="card-footer">
+                              <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
+                                ptObj.profileImg ?? "/img/강아지.jpg"
+                              }" alt="profileImg" /><span>${
+                                ptObj.nickname ?? "회원"
+                              }</span></div><div class="postAt">${new Date(ptObj.createdAt)
+                                .toString()
+                                .slice(0, 25)}</div></footer>
+                              </div>
+                            </div>
+                          </div>
+                        
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>`
+    
+        
     const div = document.createElement("div");
     div.classList.add("mypost");
     div.innerHTML = temp_html;
