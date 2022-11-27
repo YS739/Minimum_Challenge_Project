@@ -24,10 +24,10 @@ export const getPostList = async () => {
   const postList = document.getElementById("main-page");
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
-    const temp_html = `<div class="postingbox">
+    const temp_html = `<div class="postingBox">
         <div class="postPic"><img class="postPicImg" 
-        width="500px" height="500px"  src="${ptObj.postpic}"></div>
-        <div class="contentbox" >
+          src="${ptObj.postpic}"></div>
+        <div class="contentBox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
