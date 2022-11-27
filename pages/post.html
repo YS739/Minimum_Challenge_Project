@@ -7,17 +7,17 @@
 
 <div class="post-areason">
   <!-- 전체영역 -->
-  <!-- <div class="photo-wrapson"> 포토존 전체 wrap -->
   <fieldset class="photo-areason">
     <!-- 사진이 올라올 영역+ -->
     <label>
       <!--변동사항 img - id / input onPostChange 이벤트 추가  -->
-      <img
+      <image
         id="PostView"
         class="photo-inputson"
-        src="https://url.kr/tgq2bh"
-        alt=""
       />
+      <!-- src="https://url.kr/tgq2bh"
+        alt="" -->
+
       <input
         onchange="onPostChange(event)"
         type="file"
@@ -42,21 +42,18 @@
     </label>
     <!-- photo-post와 file-select-btn을 합했음. 누르면 사진 선택 가능 -->
   </fieldset>
-  <!-- </div> -->
   <!-- <img class="camera-iconson" src="https://url.kr/ghxmkf" alt="" /> -->
 
   <!-- 라벨태그 안에 이미지 넣기!!!!! onchange 함수가 실행이 되도록 할 수 있음!!! -->
 
-  <div class="select-wrapson">
+  <div class="sel-title-wrapson">
     <select id="category" class="category-selectson">
-      <option selected>카테고리 선택</option>
+      <option selected>카테고리</option>
       <option value="운동하기">운동하기</option>
       <option value="공부하기">공부하기</option>
       <option value="독서하기">독서하기</option>
     </select>
-  </div>
 
-  <div>
     <!-- 윤숙 - id 추가 -->
     <input
       id="title"
@@ -68,13 +65,6 @@
 
   <!-- <div>
             <textarea placeholder="내용을 입력하세요" type="text"></textarea>
-        </div> -->
-
-  <!-- <div class="content-box content" contenteditable="true"
-        style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 10px;"
-        data-mce-style="overflow-y: hidden; padding-left: 10px; padding-right: 10px; padding-bottom: 50px;"
-        role="textbox" aria-multiline="true" aria-label="글 내용 입력">
-        <p data-ke-size="size16"><br></p>
         </div> -->
 
   <textarea
@@ -90,6 +80,6 @@
   </div>
   <!-- 윤숙 - save_post(event) 추가 / id추가 for disabled=true -->
   <button onclick="save_post(event)" class="post-btnson" type="submit">
-    작성하기
+    POST
   </button>
 </div>
