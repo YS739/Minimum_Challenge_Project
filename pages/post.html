@@ -1,5 +1,9 @@
 <span onclick="goToHome()">
-  <img class="main-logoson" src="../img/로고_black.png" alt="Minimum Challenge" />
+  <img
+    class="main-logoson"
+    src="../img/로고_black.png"
+    alt="Minimum Challenge"
+  />
 </span>
 
 <div class="post-areason">
@@ -8,10 +12,7 @@
     <!-- 사진이 올라올 영역+ -->
     <label>
       <!--변동사항 img - id / input onPostChange 이벤트 추가  -->
-      <image
-        id="PostView"
-        class="photo-inputson"
-      />
+      <image id="PostView" class="photo-inputson" />
       <!-- src="https://url.kr/tgq2bh"
         alt="" -->
 
@@ -72,11 +73,17 @@
 
   <!-- data-mce-src는 게시판 에디터를 수정할 때 게시판 에디터가 이미지를 불러오는 경로-->
 
-  <div>
+  <!-- 검색창 구현 실패로 주석 처리.. -->
+  <!-- <div>
     <input class="hashtag-boxson" placeholder="#태그를 입력해 주세요" />
-  </div>
+  </div> -->
   <!-- 윤숙 - save_post(event) 추가 / id추가 for disabled=true -->
-  <button onclick="save_post(event)" class="post-btnson" type="submit">
+  <button
+    onclick="save_post(event)"
+    id="savePostBtn"
+    class="post-btnson"
+    type="submit"
+  >
     POST
   </button>
 </div>
