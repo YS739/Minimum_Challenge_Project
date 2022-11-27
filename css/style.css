@@ -9,6 +9,14 @@ a {
 }
 
 /* 로고 */
+/* .main-logoson {
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+} */
+
 .main-logoson {
   height: 130px;
   margin-top: 20px;
@@ -16,6 +24,7 @@ a {
   margin-bottom: 20px;
   cursor: pointer;
 }
+
 
 /* 페이지마다 변경 가능하면 해주세요 */
 body * {
