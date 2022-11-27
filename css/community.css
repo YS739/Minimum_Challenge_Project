@@ -1,0 +1,250 @@
+/* 로고 */
+
+/* 댓글창 */
+.commu-comment {
+  position: sticky;
+  width: 95%;
+  max-width: 900px;
+  margin: 50px auto;
+  box-shadow: 0px 0px 10px 0px rgb(179 156 156);
+  padding: 80px;
+  border-top: 10px solid #dfd1c6;
+  border-bottom: 10px solid #dfd1c6;
+}
+
+.community-leaveCmt {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 60px;
+  padding: 20px;
+  background-color: #f9e7dd;
+  border-radius: 100px;
+}
+
+.commu-user {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+#cm-profileImg {
+  border-radius: 50%;
+}
+
+#community-nickname {
+  padding: 20px;
+  font-size: large;
+}
+
+.leaveBtn {
+  background-color: transparent;
+  border-radius: 30px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.leaveBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+/* 댓글 불러오기 */
+.mycards {
+  width: 95%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.mycards > .card {
+  border-radius: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cmtCards {
+  width: 95%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  width: 95%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfd1c6;
+  border-radius: 18px;
+}
+
+.cmt-img {
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.commentText {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 5px 10px;
+  margin-right: 20px;
+  background-color: white;
+}
+
+.cmtImg {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.quote-footer {
+  margin-top: 20px;
+  color: #6c757d;
+  font-size: 0.875rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.quote-footer span {
+  font-size: large;
+  color: black;
+}
+
+/* 댓글 수정, 삭제 */
+.updateBtns {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+  gap: 5px;
+}
+
+.noDisplay {
+  display: none;
+}
+.updateBtn {
+  min-width: 70px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+.updateBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+.newCmtInput {
+  width: 100%;
+  border-color: pink;
+}
+
+.editBtn,
+.deleteBtn {
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.editBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+.deleteBtn:hover {
+  background-color: black;
+  color: white;
+  transition: 1s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
+}
+
+.header-commu {
+  width: 95%;
+  max-width: 1200px;
+}
+
+input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: #584e46;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+  left: 1600px;
+  top: 40px;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  background: #fff;
+  box-shadow: 0 0 0 1200px #584e46;
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input[type="checkbox"]:checked ~ .check:before {
+  transform: translateX(-50px);
+}
+.check::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #584e46;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after {
+  transform: translateX(0px);
+}
