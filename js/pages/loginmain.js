@@ -32,9 +32,9 @@ export const getPostList = async () => {
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
               ptObj.profileImg ?? "/assets/blankProfile.webp"
-            }" alt="profileImg" /><span>${
+            }" alt="profileImg" /><p class= "nameSim">${
       ptObj.nickname ?? "회원"
-    }</span></div><div class="postAt">${new Date(ptObj.createdAt)
+    }</p ></div><div class="postAt">${new Date(ptObj.createdAt)
       .toString()
       .slice(0, 25)}</div></footer>
             </div>
