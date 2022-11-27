@@ -51,6 +51,7 @@ export const handleAuth = (event) => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        alert("로그인 성공!");
         window.location.hash = "#loginmain";
       })
       .catch((error) => {
@@ -68,7 +69,7 @@ export const handleAuth = (event) => {
     createUserWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
-        console.log("회원가입 성공!");
+        alert("회원가입 성공!");
         window.location.hash = "#loginmain";
       })
       .catch((error) => {
