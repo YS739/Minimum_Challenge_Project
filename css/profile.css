@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
 
-  background:  rgba(237, 223, 185, 0.911); /*배경색 넣는방법 */
+  
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /*그림자 효과 넣는방법 */
   /* backdrop-filter: blur(2.5px); /*필터넣는방법 이거쓰시면 됩니다. 
   -webkit-backdrop-filter: blur(2.5px); */ 
@@ -21,7 +21,7 @@
 /*프로필 관리창 */
 .profileBox {
   border-radius: 10px;
-  background-color: rgba(237, 199, 121, 0.575);
+  
   box-shadow: 0 8px 32px 0 rgba(101, 104, 150, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 95%;
