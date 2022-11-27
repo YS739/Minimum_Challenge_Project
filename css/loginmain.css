@@ -1,3 +1,8 @@
+/* 메인 배경색 지정 */
+#root {
+  background-color: rgba(237, 223, 185, 0.911)
+}
+
 /* main.css */
 .logHead-Jeong {
   width: 95%;
@@ -364,10 +369,15 @@
   margin-left: 50px;
 }
 
+
+/* 게시물 글 안에 배경색 */
 .postingBox {
+  background-color: rgba(237, 199, 121, 0.575);
   margin-right: 50px;
   margin-bottom: 50px;
 }
+
+
 
 .postingBox:hover > .postPicImg {
   width: 400px;
@@ -396,3 +406,6 @@
   justify-content: space-between;
   align-items: center;
 }
+
+
+
