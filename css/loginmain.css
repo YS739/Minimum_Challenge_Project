@@ -27,7 +27,7 @@
   cursor: pointer;
   background-color: transparent;
 
-  margin-right: 50px;
+  margin-right: 30px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -176,7 +176,7 @@
 
 /* loginmain.css */
 .usersAll {
-  width: 100px;
+  /* width: 100px; */
   height: 150px;
   display: flex;
   flex-direction: row;
@@ -193,7 +193,7 @@
 
 .user-Ys Img {
   border-radius: 50%;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .usersAll label {
@@ -341,11 +341,10 @@
   /* bottom: 50px;
   right: 110px; */
   border: none;
-  border-radius: 10px;
-  padding: 13px;
-  width: 200px;
-  font-size: 20px;
-  margin: 0 auto;
+  padding: 10px;
+  /* width: 200px; */
+  /* font-size: 20px; */
+  /* margin: 0 auto; */
 }
 
 .nickEdit {

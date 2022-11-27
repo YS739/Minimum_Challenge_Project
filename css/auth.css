@@ -1,11 +1,3 @@
-.main-logoson {
-  width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
 #modal.modal-overlay {
   /*전체화면 시작 */
   width: 100%;
