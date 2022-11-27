@@ -69,7 +69,7 @@ export const getWorkoutList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" 
-        width="500px" height="500px"  src="${ptObj.postpic}"></div>
+          src="${ptObj.postpic}"></div>
         <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -111,7 +111,7 @@ export const getStudyList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" 
-        width="500px" height="500px"  src="${ptObj.postpic}"></div>
+         src="${ptObj.postpic}"></div>
         <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
@@ -154,7 +154,7 @@ export const getBookList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" 
-        width="500px" height="500px"  src="${ptObj.postpic}"></div>
+        src="${ptObj.postpic}"></div>
         <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
