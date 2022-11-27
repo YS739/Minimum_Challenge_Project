@@ -209,7 +209,8 @@ input[type="checkbox"] {
   border-radius: 20px;
   overflow: hidden;
   transition: ease-in 0.5s;
-  margin-left: 1500px;
+  left: 1600px;
+  top: 40px;
 }
 
 input[type="checkbox"]:checked ~ .check {
