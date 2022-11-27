@@ -211,8 +211,8 @@
 #profileBtn-Ys > ul {
   position: absolute;
   list-style: none;
-  top: 190px;
-  right: 3px;
+  top: 160px;
+  right: -24px;
 }
 
 #userNav-Ys {
@@ -236,15 +236,26 @@
   font-size: xx-large;
 }
 
-.goToHome,
+.goToHome {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-size: 35px;
+  position: absolute;
+  top: -20px;
+  left: -37px;
+}
+
 .goToMyPost {
   cursor: pointer;
   background-color: transparent;
   border: none;
   color: black;
   font-size: 35px;
-  margin-left: 50px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 30px;
+  left: -37px;
 }
 
 /* login modal */
