@@ -20,25 +20,24 @@
 } */
 
 .photo-areason {
-  cursor:pointer;
   background-color: white;
-  opacity: 50%;
-  border-radius:5px;
+  border-radius:10px;
   width: 500px;
   height: 300px;
   overflow: hidden;
   margin-top: 20px;
   border: none;
-
   position: relative;
 
   display:flex;
   flex-direction:column;
   justify-content: center;
   align-items:center;
+
 }
 
-.photo-areason iput {
+.photo-areason img {
+  border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
@@ -47,16 +46,18 @@
   height: 100%;
   object-fit: cover;
   margin: auto;
+
 }
 
 .photo-areason label{
+  cursor: pointer;
   display:flex;
   flex-direction:column;
   justify-content: center;
   align-items:center;
 
-  
   outline-style: dotted;
+  
   width: 450px;
   height: 250px;
 
@@ -96,6 +97,7 @@
   margin-bottom: 10px;
   border: none;
   margin-right: 10px;
+  font-size: small;
 }
 
 .title-boxson {
