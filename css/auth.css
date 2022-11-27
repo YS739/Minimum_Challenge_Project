@@ -108,7 +108,7 @@
 .github-btn {
   position: absolute;
   top: 30px;
-  left: 45px; /*깃 버튼 스타일 */
+  left: -5px; /*깃 버튼 스타일 */
   background-color: white;
   border-radius: 50px;
   border: none;
@@ -118,17 +118,29 @@
   font-size: 15px;
   text-align: right;
 }
-
-.google-btn {
+.twitter-btn {
   position: absolute;
   top: 30px;
-  right: 50px; /*구글 버튼 스타일 */
+  left: 160px; /*트위터 버튼 스타일 */
   background-color: white;
   border-radius: 50px;
   border: none;
   width: 150px;
   height: 50px;
-  padding-right: 30px;
+  padding-right: 10px;
+  font-size: 15px;
+  text-align: right;
+}
+.google-btn {
+  position: absolute;
+  top: 30px;
+  right: 0px; /*구글 버튼 스타일 */
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 150px;
+  height: 50px;
+  padding-right: 10px;
   font-size: 15px;
   text-align: right;
 }
@@ -139,15 +151,20 @@
 .github-logo {
   /*깃헙 로고 위치 조정*/
   position: absolute;
-  bottom: -70px;
-  left: 54px;
+  bottom: -75px;
+  left: 3px;
 }
-
+.twitter-logo {
+  /*트위터 로고 위치 조정*/
+  position: absolute;
+  top: 40px;
+  left: 170px;
+}
 .google-logo {
   /*구글 로고 위치 조정*/
   position: absolute;
   top: 40px;
-  left: 270px;
+  left: 340px;
 }
 .github-btn:hover {
   /*이거 hover 왜 다 따로 설정해야하지 한꺼번에 설정 안되나*/
