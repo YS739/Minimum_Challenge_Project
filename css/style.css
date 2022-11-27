@@ -2,6 +2,9 @@
 * {
   font-family: "Roboto", sans-serif;
   font-family: "Jua", sans-serif;
+}
+
+a {
   text-decoration: none;
 }
 
@@ -14,3 +17,6 @@
   cursor: pointer;
 }
 
+body * {
+  background-color: #dfd1c6;
+}
