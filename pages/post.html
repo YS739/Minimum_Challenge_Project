@@ -1,5 +1,9 @@
 <span onclick="goToHome()">
-  <img class="main-logoson" src="../img/로고_black.png" alt="Minimum Challenge" />
+  <img
+    class="main-logoson"
+    src="../img/로고_black.png"
+    alt="Minimum Challenge"
+  />
 </span>
 
 <div class="post-areason">
@@ -8,10 +12,7 @@
     <!-- 사진이 올라올 영역+ -->
     <label>
       <!--변동사항 img - id / input onPostChange 이벤트 추가  -->
-      <image
-        id="PostView"
-        class="photo-inputson"
-      />
+      <image id="PostView" class="photo-inputson" />
       <!-- src="https://url.kr/tgq2bh"
         alt="" -->
 
@@ -76,7 +77,12 @@
     <input class="hashtag-boxson" placeholder="#태그를 입력해 주세요" />
   </div>
   <!-- 윤숙 - save_post(event) 추가 / id추가 for disabled=true -->
-  <button onclick="save_post(event)" class="post-btnson" type="submit">
+  <button
+    onclick="save_post(event)"
+    id="savePostBtn"
+    class="post-btnson"
+    type="submit"
+  >
     POST
   </button>
 </div>
