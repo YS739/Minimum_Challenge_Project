@@ -26,7 +26,7 @@ export const getPostList = async () => {
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingbox">
         <div class="postPic"><img class="postPicImg" 
-        width="300px" height="300px" position : absolute; src="${ptObj.postpic}"></div>
+        width="500px" height="500px" position : absolute; src="${ptObj.postpic}"></div>
         <div class="contentbox" >
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
