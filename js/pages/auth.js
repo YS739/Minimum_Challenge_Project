@@ -87,14 +87,17 @@ export const onToggle = () => {
   const loginBtn = document.querySelector("#loginBtn");
   const authToggle = document.querySelector("#authToggle");
   const authTitle = document.querySelector("#authTitle");
+  const letJoin = document.querySelector("#letSignIn");
   if (loginBtn.value === "로그인") {
     loginBtn.value = "회원가입";
     authToggle.textContent = "로그인하기";
     authTitle.textContent = "회원가입";
+    letJoin.textContent = "환영합니다!";
   } else {
     loginBtn.value = "로그인";
     authToggle.textContent = "회원가입하기";
     authTitle.textContent = "로그인";
+    letJoin.textContent = "계정이 없다면?";
   }
 };
 
