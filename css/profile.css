@@ -21,7 +21,7 @@
 /*프로필 관리창 */
 .profileBox {
   border-radius: 10px;
-  background-color: rgba(224, 220, 215, 0.911);
+  background-color: #dfd1c6;
   box-shadow: 0 8px 32px 0 rgba(101, 104, 150, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 95%;
@@ -41,7 +41,7 @@
   font-size: 30px;
   padding: 15px 30px;
   background-color: white;
-  color: rgb(209, 188, 188);
+  color: black;
 
   border: none;
   border-radius: 30px;
@@ -57,7 +57,7 @@
 
 #profileBtnEdit:hover {
   /*프로필 변경 버튼 호버*/
-  background-color: rgb(209, 188, 188);
+  background-color: black;
   color: white;
   transition: 1s;
 }
@@ -75,6 +75,16 @@
   position: relative;
   top: 25px;
   right: 15px;
+
+  font-size: 50px;
+  cursor: pointer;
+  color: black;
+  transition: all;
+  padding-left: 435px;
+}
+
+fa-xmark:active {
+  transform: translateY(10px);
 }
 
 #imgInput {
@@ -107,18 +117,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-i {
-  font-size: 50px;
-  cursor: pointer;
-  color: rgb(253, 241, 241);
-  transition: all;
-  padding-left: 435px;
-}
-
-i:active {
-  transform: translateY(10px);
 }
 
 #profile-modal {
