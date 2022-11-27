@@ -1,0 +1,27 @@
+/* 폰트 */
+* {
+  font-family: "Roboto", sans-serif;
+  font-family: "Jua", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 로고 */
+
+.main-logoson {
+  height: 70px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+
+/* 페이지마다 변경 가능하면 해주세요 */
+/* body * {
+  background-color: #dfd1c6;
+} */

@@ -51,6 +51,7 @@ export const handleAuth = (event) => {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        alert("로그인 성공!");
         window.location.hash = "#loginmain";
       })
       .catch((error) => {
@@ -68,7 +69,7 @@ export const handleAuth = (event) => {
     createUserWithEmailAndPassword(authService, emailVal, pwVal)
       .then((userCredential) => {
         // Signed in
-        console.log("회원가입 성공!");
+        alert("회원가입 성공!");
         window.location.hash = "#loginmain";
       })
       .catch((error) => {
@@ -86,14 +87,17 @@ export const onToggle = () => {
   const loginBtn = document.querySelector("#loginBtn");
   const authToggle = document.querySelector("#authToggle");
   const authTitle = document.querySelector("#authTitle");
+  const letJoin = document.querySelector("#letSignIn");
   if (loginBtn.value === "로그인") {
     loginBtn.value = "회원가입";
     authToggle.textContent = "로그인하기";
     authTitle.textContent = "회원가입";
+    letJoin.textContent = "환영합니다!";
   } else {
     loginBtn.value = "로그인";
     authToggle.textContent = "회원가입하기";
     authTitle.textContent = "로그인";
+    letJoin.textContent = "계정이 없다면?";
   }
 };
 
@@ -122,6 +126,7 @@ export const logout = () => {
     .then(() => {
       // Sign-out successful.
       localStorage.clear();
+      alert("로그아웃 성공");
       console.log("로그아웃 성공");
     })
     .catch((error) => {
@@ -129,3 +134,17 @@ export const logout = () => {
       console.log("error:", error);
     });
 };
+
+// 유진 - 모달 열 때 :
+$("html, body").css({ overflow: "hidden", height: "100%" }); // 모달on 중 html,body의 scroll을 hidden시킴
+$("#element").on("scroll touchmove mousewheel", function (event) {
+  // 터치무브 & 마우스휠 스크롤 방지
+  event.preventDefault();
+  event.stopPropagation();
+
+  return false;
+});
+
+// 유진 - 모달 닫을 때 :
+$("html, body").css({ overflow: "auto", height: "100%" }); //scroll hidden 해제
+$("#element").off("scroll touchmove mousewheel"); // 터치무브 & 마우스휠 스크롤 가능
