@@ -19,7 +19,7 @@
 #modal .modal-window {
   /*로그인 버튼 누르면 뜨는 화면 */
 
-  background:  rgba(237, 223, 185, 0.911);
+  background: #dfd1c6;
   box-shadow: 0 8px 32px 0 rgba(101, 104, 150, 0.37);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -55,7 +55,7 @@
   color: black;
 }
 
-.close-area > button{
+.close-area > button {
   border: none;
   font-size: 40px;
   background-color: transparent;
@@ -82,19 +82,38 @@
 /* 윤숙 - 로그인 감싸는 div삭제 후 input id로 클래스 변경 후 적용 */
 #loginBtn {
   /*로그인 버튼 스타일*/
+  width: 130px;
+  height: 45px;
+  cursor: pointer;
+  background-color: transparent;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   background-color: white;
-  border-radius: 50px;
-  border: none;
-  width: 150px;
-  height: 50px;
+  color: black;
+
+  border: 2px solid black;
+  border-radius: 30px;
+  letter-spacing: 4px;
+
   padding-right: 10px;
-  font-size: 15px;
+  font-size: 18px;
   position: absolute;
   left: 180px;
 }
 
+#loginBtn:focus {
+  outline: none;
+}
+
 #loginBtn:hover {
-  border: 2px solid gray;
+  background-color: black;
+  color: white;
+  transition: 1s;
 }
 
 .socialbuttons {
@@ -116,7 +135,12 @@
   font-size: 15px;
   text-align: right;
 }
- /*.twitter-btn {
+
+.github-btn:hover {
+  border: 2px solid black;
+}
+
+/*.twitter-btn {
   position: absolute;
   top: 30px;
   left: 160px;         트위터 버튼 스타일 
@@ -142,6 +166,11 @@
   font-size: 15px;
   text-align: right;
 }
+
+.google-btn:hover {
+  border: 2px solid black;
+}
+
 .logos {
   /*로고들 묶어줌*/
   position: relative;
@@ -181,9 +210,14 @@
 /* text-decoration: none;
     color: blue;}  */
 
+#letSignIn {
+  opacity: 70%;
+}
+
 #authToggle {
-  color: blue;
-  margin: 10px 0;
+  color: black;
+  font-size: 1.2rem;
+  margin: 10px;
   cursor: pointer;
   user-select: none;
 }
