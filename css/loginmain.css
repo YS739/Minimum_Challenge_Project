@@ -1,8 +1,5 @@
 /* 메인 배경색 지정 */
 #root {
-  /* width: 95%; */
-  /* max-width: 1200px; */
-  /* min-width: 700px; */
   background-color: #dfd1c6;
 }
 
@@ -99,25 +96,25 @@
 }
 
 #allNav-Ys:hover {
-  text-shadow: 2px 2px 2px lightgray;
+  text-shadow: 2px 2px 2px rgb(182, 182, 182);
   cursor: pointer;
 }
 #workout-Ys:hover {
-  text-shadow: 2px 2px 2px lightgray;
+  text-shadow: 2px 2px 2px rgb(182, 182, 182);
   cursor: pointer;
 }
 #study-Ys:hover {
-  text-shadow: 2px 2px 2px lightgray;
+  text-shadow: 2px 2px 2px rgb(182, 182, 182);
   cursor: pointer;
 }
 
 #book-Ys:hover {
-  text-shadow: 2px 2px 2px lightgray;
+  text-shadow: 2px 2px 2px rgb(182, 182, 182);
   cursor: pointer;
 }
 
 #community-Ys:hover {
-  text-shadow: 2px 2px 2px lightgray;
+  text-shadow: 2px 2px 2px rgb(182, 182, 182);
   cursor: pointer;
   color: black;
 }
