@@ -183,9 +183,6 @@
   flex-direction: row;
   justify-content: right;
   align-items: center;
-  position: relative;
-  width: 95%;
-  min-width: 300px;
 }
 
 .navBtn-Ys {
@@ -208,7 +205,8 @@
 #profileBtn-Ys > ul {
   position: absolute;
   list-style: none;
-  top: 190px;
+
+  top: 160px;
   right: 3px;
 }
 
@@ -241,7 +239,6 @@
   color: black;
   font-size: 35px;
   margin-left: 50px;
-  margin-bottom: 20px;
 }
 
 /* login modal */
