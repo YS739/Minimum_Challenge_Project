@@ -37,7 +37,7 @@
 
 @media(max-width:780px) {
   .logBtn-Jeong {
-    left: -150px;
+    left: -210px;
     top: 140px;
   }
   .welcomeyuns {
@@ -52,3 +52,8 @@
   }
 }
 
+@media(max-width:780px) {
+  #profileBtn-Ys > ul {
+    top: 148px;
+ }
+}
