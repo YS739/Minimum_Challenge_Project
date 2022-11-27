@@ -17,6 +17,7 @@ a {
   cursor: pointer;
 }
 
+/* 페이지마다 변경 가능하면 해주세요 */
 body * {
   background-color: #dfd1c6;
 }

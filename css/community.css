@@ -22,13 +22,13 @@
 /* 댓글창 */
 .commu-comment {
   position: sticky;
-  width: 900px;
+  width: 95%;
+  max-width: 900px;
   margin: 50px auto;
   box-shadow: 0px 0px 10px 0px rgb(179 156 156);
   padding: 80px;
-  border-top: 10px solid #DFD1C6;
-  border-bottom: 10px solid #DFD1C6;
-  
+  border-top: 10px solid #dfd1c6;
+  border-bottom: 10px solid #dfd1c6;
 }
 
 .community-leaveCmt {
@@ -114,7 +114,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #DFD1C6;
+  background-color: #dfd1c6;
   border-radius: 18px;
 }
 
@@ -208,8 +208,12 @@ body {
   min-height: 100vh; */
 }
 
-input[type="checkbox"]
-{
+.header-commu {
+  width: 95%;
+  max-width: 1200px;
+}
+
+input[type="checkbox"] {
   -webkit-appearance: none;
   visibility: hidden;
   display: none;
@@ -230,12 +234,11 @@ input[type="checkbox"]
 
 input[type="checkbox"]:checked ~ .check {
   background: #fff;
-  box-shadow: 0 0 0 10000px #584e46;
+  box-shadow: 0 0 0 1200px #584e46;
 }
 
-.check:before
-{
-  content: '';
+.check:before {
+  content: "";
   position: absolute;
   top: 2px;
   left: 2px;
@@ -245,13 +248,11 @@ input[type="checkbox"]:checked ~ .check {
   border-radius: 50%;
   transition: 0.5s;
 }
-input[type="checkbox"]:checked ~ .check:before
-{
+input[type="checkbox"]:checked ~ .check:before {
   transform: translateX(-50px);
 }
-.check::after
-{
-  content: '';
+.check::after {
+  content: "";
   position: absolute;
   top: 2px;
   right: 2px;
@@ -262,7 +263,6 @@ input[type="checkbox"]:checked ~ .check:before
   transition: 0.5s;
   transform: translateX(50px);
 }
-input[type="checkbox"]:checked ~ .check:after
-{
+input[type="checkbox"]:checked ~ .check:after {
   transform: translateX(0px);
 }
