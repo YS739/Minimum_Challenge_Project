@@ -1,123 +1,134 @@
-<div class="headjeong">
-  <!-- <div class="loginbtnjeong"> -->
-  <!--여기도...-->
-  <button type="submit" class="logbtnjeong" id="loginButton">LOGIN</button>
-  <!-- </div> -->
-</div>
+<div>
+  <header class="logHead-Jeong">
+    <span onclick="goToHome()"
+      ><img
+        class="main-logoson"
+        src="/assets/MinimumChallenge2x.png"
+        alt="Minimum Challenge"
+    /></span>
+    <button type="submit" class="logBtn-Jeong" id="loginButton">LOGIN</button>
+  </header>
 
-<!-- nav bar -->
-<nav class="navjeong">
-  <span class="allnavjeong">
-    <a href="#community" onclick="route(event)">커뮤니티</a>
-  </span>
+  <!-- nav bar -->
+  <nav class="nav-Jeong">
+    <span class="allNav-Jeong">
+      <label for="allNav-Ys">
+        <a onclick="getPostList()" id="allNav-Ys"> 전체보기</a></label
+      >
+    </span>
 
-  <span class="workoutjeong">
-    <label for="workoutys">
-      <a onclick="getWorkoutList()" id="workoutys">운동하기 </a></label
-    >
-    <span class="workoutdescjeong">딱 5분만 운동하자!</span>
-  </span>
+    <span class="workout-Jeong">
+      <label for="workout-Ys">
+        <a onclick="getWorkoutList()" id="workout-Ys">운동하기 </a></label
+      >
+      <span class="workoutDesc-Jeong">딱 5분만 운동하자!</span>
+    </span>
 
-  <span class="studyjeong">
-    <label for="studyys">
-      <a onclick="getStudyList()" id="studyys">공부하기</a></label
-    >
-    <span class="studydescjeong">딱 10분만 공부하자!</span>
-  </span>
+    <span class="study-Jeong">
+      <label for="study-Ys">
+        <a onclick="getStudyList()" id="study-Ys">공부하기</a></label
+      >
+      <span class="studyDesc-Jeong">딱 10분만 공부하자!</span>
+    </span>
 
-  <span class="bookjeong">
-    <label for="bookys">
-      <a onclick="getBookList()" id="bookys">독서하기</a></label
-    >
-    <span class="bookdescjeong">딱 1페이지만 읽자!</span>
-  </span>
-  <span class="recentjeong">
-    <a href="#" onclick="route(event)"
-      ><i class="fa-solid fa-rotate"></i> 최신</a
-    >
-  </span>
-</nav>
-<!-- 게시물 불러오는 곳 -->
+    <span class="book-Jeong">
+      <label for="book-Ys">
+        <a onclick="getBookList()" id="book-Ys">독서하기</a></label
+      >
+      <span class="bookDesc-Jeong">딱 1페이지만 읽자!</span>
+    </span>
+    <span class="community-Jeong">
+      <a href="#community" onclick="route(event)" id="community-Ys">커뮤니티</a>
+    </span>
+  </nav>
 
-<!-- 윤숙 - 여기에 해당 해쉬값을 가진 html이 붙는데 우리팀은 이 부분에 독서하기,
-  공부하기를 누르면 해당 게시물만 불러와지도록 하려고 함 그럼 div main-page가 게시물 불러오는 곳 위에 있고
-해당 폼은 js에서 해야 하는 건가! 그럼 아래 mainjeong 부분은 다 지워야 하는 건가!!-->
-<div id="main-page"></div>
+  <!-- 게시물 불러오는 곳 -->
 
-<!-- 여기서 부터 모듈 -->
-<div id="login-modal">
-  <div id="modal" class="modal-overlay">
-    <div class="modal-window">
-      <div class="title">
-        <p id="authTitle">로그인</p>
-      </div>
-      <div class="close-area">
-        <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
-        <button id="closeBtn">X</button>
-      </div>
-      <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
+  <div id="main-page"></div>
 
-      <div class="content">
-        <!-- 윤숙 - form에 handleAuth 추가 -->
-
-        <!--여기서부터 폼 만들어짐-->
-        <!--윤숙 - input에 각 id 값 추가  -->
-        <form onsubmit="handleAuth(event)">
-          <div>
-            <input
-              id="email"
-              type="text"
-              class="text-field"
-              placeholder="이메일"
-            />
-            <!--이메일폼-->
-          </div>
-
-          <div>
-            <input
-              id="pw"
-              type="password"
-              class="text-field"
-              placeholder="비밀번호"
-            />
-            <!--비밀번호폼-->
-          </div>
-
-          <!-- 윤숙 - 상위 div(login-btn)삭제 후 button을 input으로 바꾸고 id, value 값 추가  -->
-          <input type="submit" id="loginBtn" value="로그인" />
-        </form>
-
-        <div class="socialbuttons">
-          <!--버튼들폼-->
-          <!--윤숙 - button에 onclick, name 추가  -->
-          <button name="github" class="github-btn" onclick="socialLogin(event)">
-            GitHub 로그인
-          </button>
-          <button class="twitter-btn">소셜 로그인</button>
-          <button name="google" class="google-btn" onclick="socialLogin(event)">
-            구글 로그인
-          </button>
+  <!-- 여기서 부터 모듈 -->
+  <div id="login-modal">
+    <div id="modal" class="modal-overlay">
+      <div class="modal-window">
+        <div class="title">
+          <p id="authTitle">로그인</p>
         </div>
+        <div class="close-area">
+          <!-- 윤숙 - X버튼에 a 링크로 홈으로 이동 -->
+          <button id="closeBtn">X</button>
+        </div>
+        <!--x표시 일단 폼 안에 넣어놈 폼밖으로 하고싶으면 하셔두됨-->
 
-        <div class="logos">
-          <!--이미지로고들-->
-          <div class="github-logo">
-            <img src="../img/깃허브로고.png" />
+        <div class="content">
+          <!-- 윤숙 - form에 handleAuth 추가 -->
+
+          <!--여기서부터 폼 만들어짐-->
+          <!--윤숙 - input에 각 id 값 추가  -->
+          <form onsubmit="handleAuth(event)">
+            <div>
+              <input
+                id="email"
+                type="text"
+                class="text-field"
+                placeholder="이메일"
+              />
+              <!--이메일폼-->
+            </div>
+
+            <div>
+              <input
+                id="pw"
+                type="password"
+                class="text-field"
+                placeholder="비밀번호"
+              />
+              <!--비밀번호폼-->
+            </div>
+
+            <!-- 윤숙 - 상위 div(login-btn)삭제 후 button을 input으로 바꾸고 id, value 값 추가  -->
+            <input type="submit" id="loginBtn" value="로그인" />
+          </form>
+
+          <div class="socialbuttons">
+            <!--버튼들폼-->
+            <!--윤숙 - button에 onclick, name 추가  -->
+            <button
+              name="github"
+              class="github-btn"
+              onclick="socialLogin(event)"
+            >
+              GitHub 로그인
+            </button>
+            <button class="twitter-btn">소셜 로그인</button>
+            <button
+              name="google"
+              class="google-btn"
+              onclick="socialLogin(event)"
+            >
+              구글 로그인
+            </button>
           </div>
-          <div class="twitter-logo">
+
+          <div class="logos">
+            <!--이미지로고들-->
+            <div class="github-logo">
+              <img src="../img/깃허브로고.png" />
+            </div>
+            <!-- <div class="twitter-logo">
             <img src="../img/트위터로고 .png" />
+          </div> -->
+            <div class="google-logo">
+              <img src="../img/구글로고 .png" />
+            </div>
           </div>
-          <div class="google-logo">
-            <img src="../img/구글로고 .png" />
+          <div class="lastline">
+            <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
+            <p>
+              계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
+                회원가입하기
+              </span>
+            </p>
           </div>
-        </div>
-        <div class="lastline">
-          <!-- 윤숙 - a태그 = span으로 변경, id, onclick 추가  -->
-          <p>
-            계정이 없으시다면?<span id="authToggle" onclick="onToggle()">
-              회원가입하기
-            </span>
-          </p>
         </div>
       </div>
     </div>
