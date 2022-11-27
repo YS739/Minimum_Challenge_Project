@@ -75,6 +75,27 @@
   align-items: flex-start;
 }
 
+/* 반응형 */
+@media(max-width:870px) {
+  .community-Jeong a {
+  padding: 100px;
+  margin-right: -60px;
+  margin-left: -260px;
+  }
+}
+
+/* .book-Jeong a {
+  margin-top: 100px;
+} */
+
+@media(max-width:870px) {
+  .book-Jeong a {
+    margin-left: -40px;
+    padding-left: -20px;
+
+  }
+}
+
 /* category */
 
 .workout-Jeong,
