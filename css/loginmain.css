@@ -81,7 +81,7 @@ a {
 .navjeong {
   text-decoration: none;
   /* position: fixed; */
-  display : absolute;  
+  display: absolute;
   /* 수정  position fixed 주석 display fixed 추가  */
   margin-top: 170px;
 
@@ -405,3 +405,13 @@ input#useridyuns:checked + nav#profilebtn {
   height: 100%;
   object-fit: cover;
 } */
+
+#main-page {
+  width: 95%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}

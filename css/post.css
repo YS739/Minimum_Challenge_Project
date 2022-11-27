@@ -1,16 +1,16 @@
-.main-logoson {
-  width: 300px;
-  margin-top: 20px;
-  margin-left: 20px;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
 .post-areason {
-  background-color: lightsteelblue;
+  background-color: #DFD1C6;
   width: 700px;
-  margin: 0px auto;
-  padding: 20px;
+  margin: 30px auto;
+  padding: 50px;
+  border-radius: 5px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+
+  /* 바깥div에 설정해야 가운데정렬됨 */
 }
 
 /* .photo-wrapson {
@@ -20,26 +20,53 @@
 } */
 
 .photo-areason {
+  cursor:pointer;
+  background-color: white;
+  opacity: 50%;
+  border-radius:5px;
   width: 500px;
   height: 300px;
   overflow: hidden;
-  margin: 0 auto;
+  margin-top: 20px;
   border: none;
+
   position: relative;
+
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
 }
-.photo-inputson {
+
+.photo-areason iput {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(50, 50);
   width: 100%;
   height: 100%;
   object-fit: cover;
+  margin: auto;
+}
+
+.photo-areason label{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items:center;
+
+  
+  outline-style: dotted;
+  width: 450px;
+  height: 250px;
+
 }
 /* photo-post-area영역에 꽉 차면서 500*300 벗어나는 부분은 자동으로 자름 */
 
 .plus-btnson {
   width: 50px;
   height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  
   opacity: 0.5;
   background-color: white;
   padding: 10px;
@@ -48,19 +75,31 @@
 .file-select-btnson {
   display: none;
 }
+
+.sel-title-wrapson{
+  justify-content: center;
+  align-items:center;
+
+  flex-direction: row;
+}
+
+/* 카테고리+제목칸 한줄로 */
+
 .category-selectson {
   background-color: white;
   padding: 0px 10px 0px 10px;
-  width: 500px;
+  width: 120px;
   height: 40px;
   border-radius: 5px;
 
   margin-top: 50px;
   margin-bottom: 10px;
   border: none;
+  margin-right: 10px;
 }
+
 .title-boxson {
-  width: 500px;
+  width: 360px;
   height: 40px;
   border-radius: 5px;
   padding: 0px 10px 0px 10px;
@@ -69,9 +108,12 @@
   margin-bottom: 10px;
   border: none;
 }
+
+
+
 .content-boxson {
   width: 500px;
-  height: 100px;
+  height: 150px;
   border-radius: 5px;
   padding: 0px 10px 0px 10px;
   background-color: white;
@@ -82,6 +124,7 @@
   border: none;
   padding: 10px;
 }
+
 .hashtag-boxson {
   width: 500px;
   height: 30px;
@@ -91,16 +134,44 @@
   margin-top: 10px;
   margin-bottom: 10px;
   border: none;
+
+  font-size: small;
 }
+
 .post-btnson {
-  width: 100px;
-  height: 30px;
-  border-radius: 5px;
-  background-color: black;
-  color: white;
-  border: none;
-  margin-top: 10px;
+  width: 130px;
+  height: 45px;
+  cursor: pointer;
+  background-color: transparent;
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  padding: 15px 20px;
+  background-color: white;
+  color: black;
+
+  border: 2px solid black;
+  border-radius: 30px;
+  letter-spacing: 4px;
+  
+  margin-top: 30px;
   margin-bottom: 10px;
 
   cursor: pointer;
+}
+
+  
+
+.post-btnson:focus {
+  outline: none;
+}
+
+.post-btnson:hover {
+  background-color: black;
+  color: white;
 }
