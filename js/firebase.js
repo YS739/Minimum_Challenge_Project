@@ -8,12 +8,12 @@ import { getStorage } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-s
 // 윤숙 firebase minimumproject
 // 본인 프로젝트 script 코드 이 부분만 긁어오기
 const firebaseConfig = {
-  apiKey: "AIzaSyBRPVg8-dgA06Dq8JbVllOF04T8e2ZgA4w",
-  authDomain: "spaprac-82004.firebaseapp.com",
-  projectId: "spaprac-82004",
-  storageBucket: "spaprac-82004.appspot.com",
-  messagingSenderId: "91765872556",
-  appId: "1:91765872556:web:4effc865167d38058b0c09",
+  apiKey: "AIzaSyCALyC0y-0Mmu1wyB3zbxmAKUSy0HmuhQU",
+  authDomain: "minimum2-63270.firebaseapp.com",
+  projectId: "minimum2-63270",
+  storageBucket: "minimum2-63270.appspot.com",
+  messagingSenderId: "451802140310",
+  appId: "1:451802140310:web:4171acf3c8754496b93cb7"
 };
 export const app = initializeApp(firebaseConfig);
 export const dbService = getFirestore(app);
