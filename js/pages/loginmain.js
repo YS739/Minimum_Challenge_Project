@@ -31,7 +31,7 @@ export const getPostList = async () => {
             <p class="postTitle">${ptObj.title}</p>
             <p class="postContent">${ptObj.post}</p>
             <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg ?? "/img/강아지.jpg"
+              ptObj.profileImg ?? "/assets/blankProfile.webp"
             }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -74,7 +74,7 @@ export const getWorkoutList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/img/강아지.jpg"
+          ptObj.profileImg ?? "/assets/blankProfile.webp"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -116,7 +116,7 @@ export const getStudyList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/img/강아지.jpg"
+          ptObj.profileImg ?? "/assets/blankProfile.webp"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -159,7 +159,7 @@ export const getBookList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/img/강아지.jpg"
+          ptObj.profileImg ?? "/assets/blankProfile.webp"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
