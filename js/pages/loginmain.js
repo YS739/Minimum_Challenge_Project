@@ -25,20 +25,36 @@ export const getPostList = async () => {
   postList.innerHTML = "";
   pstObjList.forEach((ptObj) => {
     const temp_html = `<div class="postingBox">
-        <div class="postPic"><img class="postPicImg" 
-          src="${ptObj.postPic}"></div>
-        <div class="contentBox" >
-            <p class="postTitle">${ptObj.title}</p>
-            <p class="postContent">${ptObj.post}</p>
-            <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-              ptObj.profileImg ?? "/assets/blankProfile.webp"
-            }" alt="profileImg" /><p class= "nameSim">${
-      ptObj.nickname ?? "회원"
-    }</p ></div><div class="postAt">${new Date(ptObj.createdAt)
-      .toString()
-      .slice(0, 25)}</div></footer>
-            </div>
-          </div>`;
+                        <div class="postPic">
+                          <img class="postPicImg" src="${ptObj.postPic}">
+                        </div>
+                        <div class="contentBox" >
+                            <p class="postTitle">${ptObj.title}</p>
+                            <p class="postContent">${ptObj.post}</p>
+                            <footer class="posting-footer">
+
+                              <div class="profile-dateWrap">
+                              <div class="profileWrap">
+                                <img class="myProfileImg" width="50px" height="50px" 
+                                src="${
+                                  ptObj.profileImg ??
+                                  "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
+                                }" 
+                                alt="profileImg" />
+                                <p class= "nameSim">${
+                                  ptObj.nickname ?? "회원"
+                                }</p>
+                              </div>
+                              <div class="postAt">${new Date(ptObj.createdAt)
+                                .toString()
+                                .slice(0, 25)}
+                              </div>
+                              </div>  
+                              
+
+                            </footer>
+                        </div>
+                      </div>`;
     const div = document.createElement("div");
     div.classList.add("mypost");
     div.innerHTML = temp_html;
@@ -74,7 +90,8 @@ export const getWorkoutList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/assets/blankProfile.webp"
+          ptObj.profileImg ??
+          "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -116,7 +133,8 @@ export const getStudyList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/assets/blankProfile.webp"
+          ptObj.profileImg ??
+          "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
@@ -159,7 +177,8 @@ export const getBookList = async () => {
         <p class="postTitle">${ptObj.title}</p>
         <p class="postContent">${ptObj.post}</p>
         <footer class="posting-footer"><div><img class="myProfileImg" width="50px" height="50px"  src="${
-          ptObj.profileImg ?? "/assets/blankProfile.webp"
+          ptObj.profileImg ??
+          "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
         }" alt="profileImg" /><span>${
       ptObj.nickname ?? "회원"
     }</span></div><div class="postAt">${new Date(ptObj.createdAt)
