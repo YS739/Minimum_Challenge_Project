@@ -42,7 +42,7 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("profileImg").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+      authService.currentUser.photoURL ?? "/assets/blankProfile.webp";
   }
 
   if (path === "community") {
@@ -51,7 +51,7 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("cm-profileImg").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+      authService.currentUser.photoURL ?? "/assets/blankProfile.webp";
   }
 
   if (path === "profile") {
@@ -59,7 +59,7 @@ export const handleLocation = async () => {
       authService.currentUser.displayName ?? "회원";
 
     document.getElementById("profileView").src =
-      authService.currentUser.photoURL ?? "/img/강아지.jpg";
+      authService.currentUser.photoURL ?? "/assets/blankProfile.webp";
   }
 
   // 로그인 모달 기능 구현 자바스크립트
