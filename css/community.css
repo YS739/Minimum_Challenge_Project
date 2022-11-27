@@ -4,25 +4,23 @@
 .commu-comment {
   position: sticky;
   width: 95%;
-  max-width: 900px;
+  max-width: 1200px;
   margin: auto;
-  box-shadow: 0px 0px 10px 0px rgb(179 156 156);
+  box-shadow: 0px 0px 30px 0px rgba(10, 22, 187, 0.37);
   padding: 80px;
-  border-top: 10px solid #dfd1c6;
-  border-bottom: 10px solid #dfd1c6;
 }
 
 .community-leaveCmt {
   width: 100%;
+  position: relative;
+  top:-30px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 20px;
-  margin-bottom: 60px;
-  padding: 20px;
+  padding: 30px;
   background-color: #f9e7dd;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 .commu-user {
@@ -46,7 +44,7 @@
   border-radius: 30px;
   padding: 12px 20px;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 
 .leaveBtn:hover {
@@ -58,8 +56,9 @@
 /* 댓글 불러오기 */
 .mycards {
   width: 95%;
-  max-width: 500px;
-  margin: auto;
+  max-width: 800px;
+  margin-bottom: 50px;
+  margin-left: 110px;
 }
 
 .mycards > .card {
@@ -78,9 +77,13 @@
   margin: 0 auto;
 }
 
+.cmtAt {
+  margin-left: 20px;
+}
+
 .card {
   width: 95%;
-  max-width: 1200px;
+  max-width: 800px;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -91,12 +94,13 @@
 
 .card-body {
   width: 100%;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #dfd1c6;
-  border-radius: 18px;
+  border-radius: 10px;
 }
 
 .cmt-img {
@@ -106,10 +110,10 @@
 
 .commentText {
   border: 1px solid black;
-  border-radius: 30px;
+  border: none;
   padding: 5px 10px;
   margin-right: 20px;
-  background-color: white;
+  background-color: transparent
 }
 
 .cmtImg {
@@ -134,6 +138,8 @@
 
 /* 댓글 수정, 삭제 */
 .updateBtns {
+  position: relative;
+  left: 310px;
   display: flex;
   justify-content: end;
   margin-top: 5px;
@@ -180,14 +186,7 @@
   transition: 1s;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh; */
-}
+
 
 .header-commu {
   width: 95%;
@@ -209,13 +208,13 @@ input[type="checkbox"] {
   border-radius: 20px;
   overflow: hidden;
   transition: ease-in 0.5s;
-  left: 1600px;
-  top: 40px;
+  left: 1000px;
+  top: -50px;
 }
 
 input[type="checkbox"]:checked ~ .check {
   background: #fff;
-  box-shadow: 0 0 0 1200px #584e46;
+  box-shadow: 0 0 0 5000px #584e46;
 }
 
 .check:before {

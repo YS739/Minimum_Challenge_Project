@@ -1,6 +1,7 @@
 /* 메인 배경색 지정 */
 #root {
-  background-color: rgba(237, 223, 185, 0.911)
+  background-color: rgba(237, 223, 185, 0.911);
+  
 }
 
 /* main.css */
@@ -9,11 +10,9 @@
   max-width: 1200px;
   height: 200px;
   position: relative;
-
   margin-left: 20px;
   margin-bottom: 20px;
   padding-top: 30px;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
