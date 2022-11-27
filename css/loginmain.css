@@ -375,33 +375,52 @@
 
 /* 게시물 글 안에 배경색 */
 .postingBox {
-  background-color: rgba(237, 199, 121, 0.575);
+  border-radius: 5px;
+  padding: 15px;
+  background-color: white;
   margin-right: 50px;
   margin-bottom: 50px;
-  box-shadow: 10px 10px 10px 10px rgba(31, 38, 135, 0.37)        /*그림자 색이나 효과 바꾸세요 여기서 */
+  box-shadow: 3px 3px 3px gray;        /*그림자 색이나 효과 바꾸세요 여기서 */
 }
 /* 타이틀 텍스트 글자 크기 */
 .postTitle {
-  font-size: 35px;
+  margin: 15px 10px 15px 10px;
+  font-size: 23px;
 }
 /* 글자 크기 조금 더 크게함*/
 .postContent {
-  font-size: 20px;
+  margin: 10px 10px 20px 10px;
+  font-size: 17px;
 }
 /* 이미지 크기  */
 .myProfileImg {
   border-radius: 50%;
-  margin-left: 10px;
-  margin-right: 15px;
-  margin-top: 20px;
+
 }
 /* 닉네임 크기 위치 조정 */
  .nameSim {
-  position: relative;
+  margin: auto 0 auto 15px;
   font-size: 17px;
-  left: 70px;
-  top: -35px;
  }
+
+.postAt{
+  font-size: 13px;
+  margin-right: 13px;
+}
+.profileWrap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: auto 0 auto 0;
+  margin: 10px;
+}
+
+.profile-dateWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
 
 
@@ -411,7 +430,9 @@
   height: 400px;
 } */
 .postPic {
-  width: 300px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  width: 370px;
   height: 300px;
   overflow: hidden;
   position: relative;
