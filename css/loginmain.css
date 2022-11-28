@@ -374,13 +374,13 @@
 
 #main-page {
   width: 95%;
-  max-width: 1200px;
+  max-width: 1600px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-top: 80px;
-  margin-left: 50px;
+  margin-left: 180px;
 }
 
 /* 게시물 글 안에 배경색 */
