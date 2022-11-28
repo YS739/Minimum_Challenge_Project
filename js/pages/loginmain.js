@@ -40,11 +40,11 @@ export const getPostList = async () => {
                                   ptObj.profileImg ??
                                   "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
                                 }" 
-                                alt="profileImg" />
+                                alt="profileImg" /></div>
                                 <p class= "nameSim">${
                                   ptObj.nickname ?? "회원"
                                 }</p>
-                              </div>
+                              
                               <div class="postAt">${new Date(ptObj.createdAt)
                                 .toString()
                                 .slice(0, 25)}
@@ -99,9 +99,9 @@ export const getWorkoutList = async () => {
               ptObj.profileImg ??
               "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
             }" 
-            alt="profileImg" />
+            alt="profileImg" /></div>
             <p class= "nameSim">${ptObj.nickname ?? "회원"}</p>
-          </div>
+          
           <div class="postAt">${new Date(ptObj.createdAt)
             .toString()
             .slice(0, 25)}
@@ -155,9 +155,9 @@ export const getStudyList = async () => {
               ptObj.profileImg ??
               "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
             }" 
-            alt="profileImg" />
+            alt="profileImg" /></div>
             <p class= "nameSim">${ptObj.nickname ?? "회원"}</p>
-          </div>
+          
           <div class="postAt">${new Date(ptObj.createdAt)
             .toString()
             .slice(0, 25)}
@@ -212,9 +212,9 @@ export const getBookList = async () => {
               ptObj.profileImg ??
               "https://velog.velcdn.com/images/chmi4/post/6d8a9e5f-2255-4c4b-8dd3-daeec31b95f4/image.jpg"
             }" 
-            alt="profileImg" />
+            alt="profileImg" /></div>
             <p class= "nameSim">${ptObj.nickname ?? "회원"}</p>
-          </div>
+          
           <div class="postAt">${new Date(ptObj.createdAt)
             .toString()
             .slice(0, 25)}

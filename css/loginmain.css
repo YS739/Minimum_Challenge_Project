@@ -408,7 +408,7 @@
 }
 /* 닉네임 크기 위치 조정 */
 .nameSim {
-  margin: auto 0 auto 15px;
+  margin: 0 70px 0 0;
   font-size: 17px;
 }
 
