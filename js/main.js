@@ -7,6 +7,7 @@ import {
   goToHome,
   goToMyWrite,
   goToMyEdit,
+  goToMain,
 } from "./router.js";
 // 윤숙 - 새로 만든 이벤트들 이렇게 수입(import)까지 잘 하기!
 import { socialLogin, logout } from "./pages/auth.js";
@@ -14,27 +15,25 @@ import { handleAuth, onToggle } from "./pages/auth.js";
 // 유안 - 프로필.js 수입!
 import { changeProfile, onFileChange } from "./pages/profile.js";
 import { onPostChange, save_post } from "./pages/post.js";
-import { getPostList } from "./pages/mypage.js";
+
 import {
-  save_comment,
-  getFeedCommentList,
-  onEditing,
-  update_comment,
-  delete_comment,
-  getOnePost,
-} from "./pages/feed.js";
-import {
+  getPostList,
   getWorkoutList,
   getStudyList,
   getBookList,
 } from "./pages/loginmain.js";
+import {
+  getCommunityCommentList,
+  save_comment,
+  onEditing,
+  update_comment,
+  delete_comment,
+} from "./pages/community.js";
 
 window.addEventListener("hashchange", handleLocation);
 
 // 첫 랜딩 또는 새로고침 시
 document.addEventListener("DOMContentLoaded", () => {
-  getPostList();
-
   authService.onAuthStateChanged((user) => {
     handleLocation();
     const hash = window.location.hash;
@@ -68,7 +67,7 @@ window.onFileChange = onFileChange;
 window.changeProfile = changeProfile;
 window.goToHome = goToHome;
 // feed에 댓글
-window.getFeedCommentList = getFeedCommentList;
+window.getCommunityCommentList = getCommunityCommentList;
 window.onEditing = onEditing;
 window.update_comment = update_comment;
 window.delete_comment = delete_comment;
@@ -82,5 +81,6 @@ window.goToMyWrite = goToMyWrite;
 window.goToMyEdit = goToMyEdit;
 
 window.logout = logout;
-// feed 글 가져오기
-window.getOnePost = getOnePost;
+
+// Main에서 Main으로 가는 홈버튼
+window.goToMain = goToMain;

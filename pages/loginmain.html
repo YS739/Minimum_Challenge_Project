@@ -1,121 +1,75 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<div class="loginMain-page">
+  <header class="logHead-Jeong">
+    <span onclick="goToHome()">
+      <img
+        class="main-logoson"
+        src="../img/로고_black.png"
+        alt="Minimum Challenge"
+      />
+    </span>
 
-    <link rel="stylesheet" type="text/css" href="./css/index.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
-      rel="stylesheet"
-    />
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/54db7ce8fa.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>Minimum Challenge</title>
-  </head>
-
-  <body>
-    <div class="headjeong">
-      <span onclick="goToHome()"
-        ><img
-          class="main-logoson"
-          src="https://url.kr/nkmebz"
-          alt="Minimum Challenge"
-      /></span>
-
-      <div class="headcontainerjeong">
-        <div class="searchjeong">
-          <a href="#" onclick="route(event)">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </a>
-        </div>
-        <div class="loginbtnjeong">
-          <a onclick="logout()">LOGOUT</a>
-        </div>
-
-        <!-- 윤숙 - 00님에 auth? storage에서 닉네임 불러오고 없으면null "회원님!"이라고 하기 -->
-        <div class="welcomeyuns">반갑습니다 <span id="nickname"></span>님!</div>
-
-        <!-- 윤숙 - 프로필 이미지 누르면 토글로 마이페이지, 글쓰기 버튼 뜸 -->
-        <div class="usersall">
-          <!--  윤숙 - 프로필 이미지는 storage에서 불러와야 함 js-->
-          <label class="useryuns" for="useridyuns"
-            ><img id="profileImg" width="50px" height="50px"
-          /></label>
-          <input id="useridyuns" type="checkbox" />
-          <nav id="profilebtn">
-            <ul>
-              <li>
-                <button id="goMyBtn" onclick="goToProfile()" class="goToHome">
-                  <i class="fa-solid fa-house-chimney"></i>
-                </button>
-              </li>
-              <li>
-                <button id="goPoBtn" onclick="goToPost()" class="goToMyPost">
-                  <i class="fa-regular fa-pen-to-square"></i>
-                </button>
-              </li>
-            </ul>
-          </nav>
-        </div>
+    <div class="usersAll">
+      <a onclick="logout()">
+        <button class="logBtn-Jeong">LOGOUT</button>
+      </a>
+      <div class="welcomeyuns">반갑습니다 <span id="nickname"></span>님!</div>
+      <div class="navBtn-Ys">
+        <label class="user-Ys" for="userNav-Ys"
+          ><img id="profileImg" width="50px" height="50px"
+        /></label>
+        <input id="userNav-Ys" type="checkbox" />
+        <nav id="profileBtn-Ys">
+          <ul>
+            <li>
+              <button id="" onclick="goToProfile()" class="goToHome">
+                <g class="fa-solid fa-user"></g>
+              </button>
+            </li>
+            <li>
+              <button id="goPoBtn" onclick="goToPost()" class="goToMyPost">
+                <g class="fa-regular fa-pen-to-square"></g>
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-
-      <!-- user의 profile 사진이 불러와짐 -->
     </div>
+  </header>
 
-    <!-- nav bar -->
-    <nav class="navjeong">
-      <div class="allnavjeong">
-        <a href="#" onclick="route(event)">전체보기</a>
-      </div>
+  <!-- nav bar -->
+  <nav class="nav-Jeong">
+    <span class="allNav-Jeong">
+      <label for="allNav-Ys">
+        <a onclick="getPostList()" id="allNav-Ys"> 전체보기</a></label
+      >
+    </span>
 
-      <div class="workoutjeong">
-        <label for="workoutys"
-          ><a onclick="getWorkoutList()" id="workoutys"
-            >운동하기
-            <div class="workoutdescjeong">딱 5분만 운동하자!</div>
-          </a></label
-        >
-      </div>
+    <span class="workout-Jeong">
+      <label for="workout-Ys">
+        <a onclick="getWorkoutList()" id="workout-Ys">운동하기 </a></label
+      >
+      <span class="workoutDesc-Jeong">딱 5분만 운동하자!</span>
+    </span>
 
-      <div class="studyjeong">
-        <label for="studyys">
-          <a onclick="getStudyList()" id="studyys"
-            >공부하기
-            <div class="studydescjeong">딱 10분만 공부하자!</div>
-          </a></label
-        >
-      </div>
-      <div class="bookjeong">
-        <label for="studyys">
-          <a onclick="getBookList()" id="bookys"
-            >독서하기
-            <div class="bookdescjeong">딱 1페이지만 읽자!</div>
-          </a></label
-        >
-      </div>
-      <div class="recentjeong">
-        <a href="#" onclick="route(event)"
-          ><i class="fa-solid fa-rotate"></i> 최신</a
-        >
-      </div>
-    </nav>
-    <!-- 게시물 불러오는 곳 -->
+    <span class="study-Jeong">
+      <label for="study-Ys">
+        <a onclick="getStudyList()" id="study-Ys">공부하기</a></label
+      >
+      <span class="studyDesc-Jeong">딱 10분만 공부하자!</span>
+    </span>
 
-    <div id="main-page"></div>
-  </body>
-</html>
+    <span class="book-Jeong">
+      <label for="book-Ys">
+        <a onclick="getBookList()" id="book-Ys">독서하기</a></label
+      >
+      <span class="bookDesc-Jeong">딱 1페이지만 읽자!</span>
+    </span>
+    <span class="community-Jeong">
+      <a href="#community" onclick="route(event)" id="community-Ys">커뮤니티</a>
+    </span>
+  </nav>
+
+  <!-- 게시물 불러오는 곳 -->
+
+  <div id="main-page"></div>
+</div>
