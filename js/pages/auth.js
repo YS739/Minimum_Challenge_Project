@@ -113,6 +113,8 @@ export const socialLogin = (event) => {
   signInWithPopup(authService, provider)
     .then((result) => {
       const user = result.user;
+      window.location.hash = "#loginmain";
+      alert("로그인 성공!");
     })
     .catch((error) => {
       console.log("error:", error);
