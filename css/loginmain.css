@@ -6,7 +6,7 @@
 /* main.css */
 .logHead-Jeong {
   width: 95%;
-  max-width: 1200px;
+  max-width: 1800px;
   height: 200px;
   position: relative;
   margin-left: 20px;
@@ -63,7 +63,7 @@
 
 .nav-Jeong {
   width: 95%;
-  min-width: 700px;
+  min-width: 1800px;
   text-decoration: none;
   display: absolute;
   padding: 20px;
@@ -374,7 +374,7 @@
 
 #main-page {
   width: 95%;
-  max-width: 1200px;
+  max-width: 1800px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -408,7 +408,7 @@
 }
 /* 닉네임 크기 위치 조정 */
 .nameSim {
-  margin: auto 0 auto 15px;
+  margin: 0 70px 0 0;
   font-size: 17px;
 }
 
