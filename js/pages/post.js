@@ -10,7 +10,7 @@ export const save_post = async (event) => {
   // document.getElementById("savePostBtn").disabled = true;
 
   // posting 내용에 따라 const 추가
-  const postpic = document.getElementById("PostView").src;
+  const postPic = document.getElementById("PostView").src;
   const category = document.getElementById("category");
   const title = document.getElementById("title");
   const content = document.getElementById("posting");
@@ -18,7 +18,7 @@ export const save_post = async (event) => {
   // const storage의 포스팅 사진 추가해야 함
   try {
     await addDoc(collection(dbService, "minipost"), {
-      postpic: postpic,
+      postPic: postPic,
       category: category.value,
       title: title.value,
       post: content.value,
