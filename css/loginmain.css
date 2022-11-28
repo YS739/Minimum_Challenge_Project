@@ -374,7 +374,7 @@
 
 #main-page {
   width: 95%;
-  max-width: 1600px;
+  max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -409,8 +409,11 @@
 }
 /* 닉네임 크기 위치 조정 */
 .nameSim {
-  margin: 0 70px 0 0;
+  position: relative;
   font-size: 17px;
+  top: 8px;
+  right: 40px;
+  margin-left: 15px;
 }
 
 .postAt {

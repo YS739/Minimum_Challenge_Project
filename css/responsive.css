@@ -5,6 +5,13 @@
   position: relative;
 }
 
+/* @media (min-width: 1200px) {
+  #main-page {
+    justify-content: space-around;
+    margin-left: 220px;
+  }
+} */
+
 @media (max-width: 1250px) {
   .community-Jeong a {
     position: absolute;
