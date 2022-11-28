@@ -107,16 +107,14 @@ export const socialLogin = (event) => {
   let provider;
   if (name === "google") {
     provider = new GoogleAuthProvider();
-    alert("로그인 성공!");
-    window.location.hash = "#loginmain";
   } else if (name === "github") {
     provider = new GithubAuthProvider();
-    alert("로그인 성공!");
-    window.location.hash = "#loginmain";
   }
   signInWithPopup(authService, provider)
     .then((result) => {
       const user = result.user;
+      window.location.hash = "#loginmain";
+      alert("로그인 성공!");
     })
     .catch((error) => {
       console.log("error:", error);
